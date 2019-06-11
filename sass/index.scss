@@ -2,3 +2,24 @@
 'base/colors',
 'base/reset',
 'base/typography';
+
+@import
+'pages/index';
+
+@import
+'layout/contactBar',
+'layout/footer',
+'layout/header',
+'layout/navigation',
+'layout/socialBar';
+
+@import 
+'components/buttons',
+'components/dropdown';
+
+@import
+'base/colors',
+'base/reset',
+'base/typography';
+
+@import '_shame';
