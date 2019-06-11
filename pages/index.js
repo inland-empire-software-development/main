@@ -1,5 +1,7 @@
 import React from 'react';
 import '../node_modules/@fortawesome/fontawesome-free/js/all.js';
+import 'spectre.css';
+import '../themes/default/main.scss';
 
 import {withRouter} from 'next/router';
 
