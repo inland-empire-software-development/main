@@ -1,28 +1,27 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import '../node_modules/@fortawesome/fontawesome-free/js/all';
 import 'spectre.css';
-import '../themes/default/main';
+import '../sass/index.scss';
  
 import { withRouter } from 'next/router';
  
 // import Fetch from 'isomorphic-unfetch';
 // import Error from './error';
 
-class App extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-    };
-  }
 
-  componentWillMount() {
-    // API calls here
-  }
-  
-  render() {
-    return (<h1>Hello IESD</h1>)
-  }
+function App(){
+  // basic useState hook
+  const [test, setTest] = useState('Hello'); // getter, setter = defaultValue
 
-}
+  // effect (apis, asynchronous stuff, etc.)
+  useEffect(() => {
+    setTimeout(()=> setTest('Goodbye'),5000);
+  });
+
+  // initial render 
+  return(
+    <h1>{test} IESD</h1>
+  )
+} 
 
 export default withRouter(App);
