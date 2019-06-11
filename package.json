@@ -1,5 +1,5 @@
 {
-  "name": "landing",
+  "name": "main",
   "version": "1.0.0",
   "main": "index.js",
   "repository": "git@github.com:inland-empire-software-development/main.git",
@@ -17,19 +17,30 @@
     "next-images": "^1.1.1",
     "next-seo": "^1.11.2",
     "node-sass": "^4.12.0",
+    "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "sanitize-html": "^1.20.1"
+    "sanitize-html": "^1.20.1",
+    "spectre.css": "^0.5.8"
   },
   "scripts": {
     "dev": "node server.js",
     "build": "next build",
-    "start": "NODE_ENV=production node server.js"
+    "start": "NODE_ENV=production node server.js",
+    "lint": "./node_modules/.bin/eslint ./**/*.{js,jsx} --quiet || true"
   },
   "browserslist": [
     ">0.2%",
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.17.3",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-config-prettier": "^4.3.0",
+    "eslint-plugin-react": "^7.13.0"
+  }
 }
