@@ -1,12 +1,16 @@
 {
     "env": {
         "browser": true,
+        "node": true,
         "es6": true
     },
-    "extends": "airbnb",
+    "extends": ["airbnb", "prettier", "prettier/react", "plugin:import/warnings"],
     "globals": {
         "Atomics": "readonly",
-        "SharedArrayBuffer": "readonly"
+        "SharedArrayBuffer": "readonly",
+        "document": true,
+        "window": true,
+        "process": true
     },
     "parserOptions": {
         "ecmaFeatures": {
@@ -18,5 +22,16 @@
         "react"
     ],
     "rules": {
+        "react/jsx-filename-extension": [1, {
+            "extensions" : [".js", ".jsx"]
+        }],
+        "quotes": 0,
+        "one-var": 0,
+        "strict": 2,
+        "camelcase": 2,
+        "import/no-unresolved": 0,
+        "no-mixed-spaces-and-tabs": 2,
+        "no-unused-vars": 2,
+        "no-console": 0
     }
 }
