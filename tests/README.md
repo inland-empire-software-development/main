@@ -11,10 +11,32 @@
 </p>
 
 ## **Getting started**
-The branding guideline document is meant to be used as a guide while working on marketing materials, both print and digital. The guide is available as a PDF for viewing and illustrator file for updating purposes. This document provides you guidance in relation to the branding colors, fonts, logo usage, etc. If you have questions about anything that isn't found in the branding guidelines, please contact <a href="mailto:community@ie-sd.com">community@ie-sd.com</a>. 
+Jest will test all files under the `./tests` directory when running the default script `yarn run test`. 
 
-## **Design and Specs**
-The `specs` folder provides you with both the design and specs for _desktop_ and _mobile_. The design documents provide you a high-res view of the overall design while the spec document provides you detailed informationed to building the design. The specs document provides you with data such as gradient colors, fonts, font sizes, font colors, spacing, special functionality, etc. 
+
+## **Writing a Test**
+To start writing your first test, you must create a test file under the `./tests` directory. The naming convention for tests in this project is `purpose.test.js`. This makes it easier to find specific collections of tests.
+
+Jest is a powerful testing framework, to get started you just need the very basics. The code below is sample code to get you started writing simple tests. You will see three keywords that will be used throughout the whole project, `describe`,`test` and `expect`. 
+
+```JavaScript
+const sum = require('../src/utils/sample');
+
+// sample test suite - (name, callback)
+describe("sample tests", () => {
+  // sample test (name, callback)
+  test('sum should add all numbers', () => {
+    // expected result 
+    expect(sum(1, 2, 3, 4)).toBe(10);
+  });
+
+  // sample test
+  test('sum should only add numbers', () => {
+    // expected result
+    expect(sum(1, 2, 3, 'g')).toBe(6);
+  });
+});
+```
 
 ## **License**
 This work is licensed under a GNU General Public License.
