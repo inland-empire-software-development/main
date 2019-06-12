@@ -13,10 +13,10 @@
     DO NOT USE THESE IN PRODUCTION, FOR REFERENCE ONLY
 
 ## **Branding**
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+The branding guideline document is meant to be used as a guide while working on marketing materials, both print and digital. The guide is available as a PDF for viewing and illustrator file for updating purposes. This document provides you guidance in relation to the branding colors, fonts, logo usage, etc. If you have questions about anything that isn't found in the branding guidelines, please contact <a href="mailto:community@ie-sd.com">community@ie-sd.com</a>. 
 
-## **Specs**
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+## **Design and Specs**
+The `specs` folder provides you with both the design and specs for _desktop_ and _mobile_. The design documents provide you a high-res view of the overall design while the spec document provides you detailed informationed to building the design. The specs document provides you with data such as gradient colors, fonts, font sizes, font colors, spacing, special functionality, etc. 
 
 ## **License**
 This work is licensed under a GNU General Public License.
