@@ -14,9 +14,13 @@
     },
     "parserOptions": {
         "ecmaFeatures": {
-            "jsx": true
+            "jsx": true,
+            "modules": true,
+            "spread": true,
+            "restParams": true
         },
-        "ecmaVersion": 2018
+        "ecmaVersion": 2018,
+        "sourceType": "module"
     },
     "plugins": [
         "react"
@@ -32,6 +36,7 @@
         "import/no-unresolved": 0,
         "no-mixed-spaces-and-tabs": 2,
         "no-unused-vars": 2,
-        "no-console": 0
+        "no-console": 0,
+        "require-jsdoc": 0
     }
 }

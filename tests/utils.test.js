@@ -1,5 +1,3 @@
-'use strict';
-
 const sum = require('../src/utils/sum');
 
 test('adds all numbers', () => {
