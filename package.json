@@ -11,6 +11,7 @@
     "@zeit/next-sass": "^1.0.1",
     "axios": "^0.19.0",
     "calcite-web": "github:Esri/calcite-web#v1.2.5",
+    "eslint-config-google": "^0.13.0",
     "express": "^4.17.1",
     "isomorphic-unfetch": "^3.0.0",
     "next": "^8.1.0",
@@ -27,7 +28,8 @@
     "dev": "node server.js",
     "build": "next build",
     "start": "NODE_ENV=production node server.js",
-    "lint": "./node_modules/.bin/eslint ./**/*.{js,jsx} --quiet || true"
+    "lint": "./node_modules/.bin/eslint ./**/*.{js,jsx} --quiet || true",
+    "test": "jest"
   },
   "browserslist": [
     ">0.2%",
@@ -38,9 +40,10 @@
   "devDependencies": {
     "eslint": "^5.16.0",
     "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-prettier": "^4.3.0",
     "eslint-plugin-import": "^2.17.3",
     "eslint-plugin-jsx-a11y": "^6.2.1",
-    "eslint-config-prettier": "^4.3.0",
-    "eslint-plugin-react": "^7.13.0"
+    "eslint-plugin-react": "^7.13.0",
+    "jest": "^24.8.0"
   }
 }
