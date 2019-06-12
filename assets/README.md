@@ -1,9 +1,4 @@
-<p align="center">
-  <img 
-    alt="Inland Empire Software Development Logo" 
-    src="https://raw.githubusercontent.com/inland-empire-software-development/main/dev/assets/iesd-logo-black.svg" 
-    width="100px" >
-</p>
+<img src="https://raw.github.com/inland-empire-software-development/main/dev/assets/iesd-logo-black.svg?sanitize=true">
 
 <h1 align="center"> 
   Assets
