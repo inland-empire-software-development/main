@@ -4,7 +4,7 @@
         "node": true,
         "es6": true
     },
-    "extends": ["airbnb", "prettier", "prettier/react", "plugin:import/warnings"],
+    "extends": ["google"],
     "globals": {
         "Atomics": "readonly",
         "SharedArrayBuffer": "readonly",
@@ -24,7 +24,7 @@
     "rules": {
         "react/jsx-filename-extension": [1, {
             "extensions" : [".js", ".jsx"]
-        }],
+        }], 
         "quotes": 0,
         "one-var": 0,
         "strict": 2,
