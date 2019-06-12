@@ -6,7 +6,6 @@ import '../sass/index.scss';
 import { withRouter } from 'next/router';
  
 // import Fetch from 'isomorphic-unfetch';
-// import Error from './error';
 
 
 function App(){
