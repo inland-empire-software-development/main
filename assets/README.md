@@ -1,10 +1,11 @@
-<img src="https://raw.github.com/inland-empire-software-development/main/dev/assets/iesd-logo-black.svg?sanitize=true" style="max-width: 300px; margin: 0 auto 15px auto; display: block;">
+<p align="center">
+<img src="https://raw.github.com/inland-empire-software-development/main/dev/assets/iesd-logo-black.svg?sanitize=true" width="50%"> 
+</p>
 
 <h1 align="center"> 
   Assets
 </h1>
  
-
 <p align="center">
   Design Assets<br>Inland Empire Software Development (IESD) non-profit organization main site.
 </p>
