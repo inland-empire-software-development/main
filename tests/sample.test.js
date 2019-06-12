@@ -1,4 +1,4 @@
-const sum = require('../src/utils/sum'); // require what you're trying to test
+const sum = require('../src/utils/sample');
 
 // sample test suite
 describe("sample tests", () => {
