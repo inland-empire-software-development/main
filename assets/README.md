@@ -1,4 +1,4 @@
-<img src="https://raw.github.com/inland-empire-software-development/main/dev/assets/iesd-logo-black.svg?sanitize=true">
+<img src="https://raw.github.com/inland-empire-software-development/main/dev/assets/iesd-logo-black.svg?sanitize=true" style="max-width: 300px; margin: 0 auto 15px auto; display: block;">
 
 <h1 align="center"> 
   Assets
