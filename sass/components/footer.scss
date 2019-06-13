@@ -1,8 +1,76 @@
 footer {
     background: url('../static/images/desktop/inland-empire-software-development-background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-bottom: 150px;
+
+    .footer-logo {
+        width: 304px;
+    }
+
+    .footer-slogan {
+        font-family: 'Block';
+        font-size: 34px;
+        color: $white;
+        line-height: 40px;
+    }
+
+    .footer-copyright {
+        font-family: "Medium";
+        font-size: 18px;
+    }
+
+    .footer-purpose {
+        font-family: "Black";
+        font-size: 74px;
+        line-height: 90px;
+        color: $white;
+    }
+
+    .footer-navigate {
+
+        p:first-child {
+            font-family: "Heavy";
+            font-size: 26px;
+            color: $light-gray;
+            text-transform: uppercase;
+        }
+
+        p:not(:first-child) {
+            line-height: 36px;
+            font-size: 22px;
+            color: $white;
+            margin: 0;
+
+            a {
+                color: $white;
+
+                &:hover {
+                    color: $blue;
+                }
+            }
+        }
+
+        ul {
+            padding: 0;
+
+            li {
+                font-family: "Book";
+                font-size: 20px;
+                color: $white;
+                list-style-type: none;
+    
+                a {
+    
+                }
+            }
+        }
+    }
+
 }
- 
+
 .footer-overlay {
-    background-color: rgba(0,0,0,0.4);
+    background-color: rgba(0, 0, 0, 0.5);
     width: 100%;
 }
