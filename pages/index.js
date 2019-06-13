@@ -1,7 +1,6 @@
 // eslint-disable-next-line no-unused-vars
 import React, {useState, useEffect} from 'react';
-import '../node_modules/@fortawesome/fontawesome-free/js/all';
-import 'spectre.css';
+import '../node_modules/@fortawesome/fontawesome-free/js/all'; 
 import '../sass/index.scss';
 
 import {withRouter} from 'next/router';

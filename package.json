@@ -20,7 +20,6 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "sanitize-html": "^1.20.1",
-    "spectre.css": "^0.5.8"
   },
   "scripts": {
     "dev": "node server.js",
