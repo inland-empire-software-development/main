@@ -1,0 +1,24 @@
+// neutral colors
+$black: #000000;
+$dark-gray: #222222;
+$white: #FFFFFF;
+
+// branding colors
+$navy: #17192D;
+$yellow: #F1AF21;
+$red: #EC2242;
+$blue: #3FB3E1;
+$green: #02AE72;
+
+.yellow-red {
+    background-color: #f1af21; // Old browsers
+    @include filter-gradient(#f1af21, #ec2242, horizontal); // IE6-9
+    @include background-image(linear-gradient(left, #f1af21 0%, #ec2242 100%));
+}
+
+.blue-green {
+    background-color: #3fb3e1; // Old browsers
+    @include filter-gradient(#3fb3e1, #02ae72, horizontal); // IE6-9
+    @include background-image(linear-gradient(left, #3fb3e1 0%, #02ae72 76%));
+
+}
