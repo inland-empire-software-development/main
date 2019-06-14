@@ -5,29 +5,6 @@ footer {
     background-repeat: no-repeat;
     padding-bottom: 150px;
 
-    .footer-logo {
-        width: 304px;
-    }
-
-    .footer-slogan {
-        font-family: 'Block';
-        font-size: 34px;
-        color: $white;
-        line-height: 40px;
-    }
-
-    .footer-copyright {
-        font-family: "Medium";
-        font-size: 18px;
-    }
-
-    .footer-purpose {
-        font-family: "Black";
-        font-size: 74px;
-        line-height: 90px;
-        color: $white;
-    }
-
     .footer-navigate {
 
         p:first-child {
@@ -60,13 +37,68 @@ footer {
                 font-size: 20px;
                 color: $white;
                 list-style-type: none;
-    
-                a {
-    
-                }
             }
         }
     }
+
+    .footer-logo {
+        width: 304px;
+    }
+
+    .footer-slogan {
+        font-family: 'Block';
+        font-size: 24px;
+        color: $white;
+        line-height: 34px;
+    }
+
+    .footer-copyright {
+        font-family: "Medium";
+        font-size: 14px;
+    }
+
+    .footer-purpose {
+        font-family: "Black";
+        font-size: 64px;
+        line-height: 74px;
+        color: $white;
+    }
+
+    .footer-legal {
+        li a {
+            color: $white;
+            font-family: "Medium";
+            font-size: 24px;
+
+            &:hover {
+                color: $blue;
+            }
+        }
+    }
+
+
+
+    .mapouter {
+        position: relative;
+        text-align: right;
+        height: 230px;
+        width: 100% !important;
+    }
+
+    .gmap_canvas {
+        overflow: hidden;
+        background: none !important;
+        height: 230px;
+        width: 100% !important;
+
+        iframe {
+            border: none;
+            height: 230px;
+            width: 100%;
+            margin: 0 auto;
+        }
+    }
+
 
 }
 
