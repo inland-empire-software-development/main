@@ -1,28 +1,28 @@
-import React from 'react';
+/* eslint-disable no-unused-vars */
+// eslint-disable-next-line no-unused-vars
+import React, {useState, useEffect} from 'react';
+import Footer from '../src/components/footer';
 import '../node_modules/@fortawesome/fontawesome-free/js/all';
-import 'spectre.css';
-import '../themes/default/main';
- 
-import { withRouter } from 'next/router';
- 
+import '../sass/index.scss';
+
+import {withRouter} from 'next/router';
+
 // import Fetch from 'isomorphic-unfetch';
-// import Error from './error';
+function App() {
+  // basic useState hook
+  // const [test, setTest] = useState('Hello'); // getter, setter = defaultValue
 
-class App extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-    };
-  }
+  // effect (apis, asynchronous stuff, etc.)
+  // useEffect(() => {
+  //   setTimeout(()=> setTest('Goodbye'), 5000);
+  // });
 
-  componentWillMount() {
-    // API calls here
-  }
-  
-  render() {
-    return (<h1>Hello IESD</h1>)
-  }
-
+  // initial render
+  return (
+    <div>
+      <Footer />
+    </div>
+  );
 }
 
 export default withRouter(App);

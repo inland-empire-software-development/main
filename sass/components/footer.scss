@@ -1,0 +1,108 @@
+footer {
+    background: url('../static/images/desktop/inland-empire-software-development-background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-bottom: 150px;
+
+    .footer-navigate {
+
+        p:first-child {
+            font-family: "Heavy";
+            font-size: 26px;
+            color: $light-gray;
+            text-transform: uppercase;
+        }
+
+        p:not(:first-child) {
+            line-height: 36px;
+            font-size: 22px;
+            color: $white;
+            margin: 0;
+
+            a {
+                color: $white;
+
+                &:hover {
+                    color: $blue;
+                }
+            }
+        }
+
+        ul {
+            padding: 0;
+
+            li {
+                font-family: "Book";
+                font-size: 20px;
+                color: $white;
+                list-style-type: none;
+            }
+        }
+    }
+
+    .footer-logo {
+        width: 304px;
+    }
+
+    .footer-slogan {
+        font-family: 'Block';
+        font-size: 24px;
+        color: $white;
+        line-height: 34px;
+    }
+
+    .footer-copyright {
+        font-family: "Medium";
+        font-size: 14px;
+    }
+
+    .footer-purpose {
+        font-family: "Black";
+        font-size: 64px;
+        line-height: 74px;
+        color: $white;
+    }
+
+    .footer-legal {
+        li a {
+            color: $white;
+            font-family: "Medium";
+            font-size: 24px;
+
+            &:hover {
+                color: $blue;
+            }
+        }
+    }
+
+
+
+    .mapouter {
+        position: relative;
+        text-align: right;
+        height: 230px;
+        width: 100% !important;
+    }
+
+    .gmap_canvas {
+        overflow: hidden;
+        background: none !important;
+        height: 230px;
+        width: 100% !important;
+
+        iframe {
+            border: none;
+            height: 230px;
+            width: 100%;
+            margin: 0 auto;
+        }
+    }
+
+
+}
+
+.footer-overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+}
