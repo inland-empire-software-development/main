@@ -44,17 +44,16 @@ function Footer() {
         {/* navigate */}
         <div className="column-4 pre-2">
           <p>Navigate</p>
-          <p>
-            <ul>
-              <li><a href="#">Join</a></li>
-              <li><a href="#">Speak</a></li>
-              <li><a href="#">Events</a></li>
-              <li><a href="#">Sponsors</a></li>
-              <li><a href="#">Organizers</a></li>
-              <li><a href="#">Contribute</a></li>
-              <li><a href="#">Community</a></li>
-            </ul>
-          </p>
+
+          <ul>
+            <li><a href="#">Join</a></li>
+            <li><a href="#">Speak</a></li>
+            <li><a href="#">Events</a></li>
+            <li><a href="#">Sponsors</a></li>
+            <li><a href="#">Organizers</a></li>
+            <li><a href="#">Contribute</a></li>
+            <li><a href="#">Community</a></li>
+          </ul>
         </div>
 
         <div className="column-14 pre-2 block-group block-group-3-up">
