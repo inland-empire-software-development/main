@@ -26,8 +26,16 @@
   Welcome to the web app repo for the Inland Empire Software Development (IESD) non-profit organization.
 </p>
 
-## **We welcome contributions**
+## **We Welcome Contributions**
 We encourage everyone to contribute to this project as we believe it's a great way to get involved with the free and open source community (FOSS).
+If you're working on a new component, make sure to make use of the design and specification images. These can be found uder `assets/specs/`, four files can be found there.
+
+- desktop-design
+- desktop-specs
+- mobile-design
+- mobile-specs
+
+The design files will give you a high level overview of what the project looks like. The specification files will give you much more information to help you actually build components to match the actual design file. Ask questions if ever in doubt about anything.
 
 ## **Getting Help**
 
