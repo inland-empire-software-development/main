@@ -1,0 +1,33 @@
+$custom-fonts-path : '/static/fonts';
+
+// Avenir
+@font-face {
+    font-family: "Light";
+    src: url($custom-fonts-path + "/AvenirLTStd-Light.otf");
+}
+
+@font-face {
+    font-family: "Book";
+    src: url($custom-fonts-path + "/AvenirLTStd-Book.otf");
+}
+
+@font-face {
+    font-family: "Medium";
+    src: url($custom-fonts-path + "/AvenirLTStd-Medium.otf");
+}
+
+@font-face {
+    font-family: "Heavy";
+    src: url($custom-fonts-path + "/AvenirLTStd-Heavy.otf");
+}
+
+@font-face {
+    font-family: "Black";
+    src: url($custom-fonts-path + "/AvenirLTStd-Black.otf");
+}
+
+// Big John
+@font-face {
+    font-family: "Block";
+    src: url($custom-fonts-path + "/Big-John.otf");
+}

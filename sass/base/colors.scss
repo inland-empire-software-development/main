@@ -1,0 +1,34 @@
+// neutral colors
+$black: #000000;
+$dark-gray: #222222;
+$light-gray: #A8A3A3;
+$white: #FFFFFF;
+
+// branding colors
+$navy: #17192D;
+$yellow: #F1AF21;
+$red: #EC2242;
+$blue: #3FB3E1;
+$green: #02AE72;
+
+.yellow-red {
+    background: -moz-linear-gradient(left, #f1af21 0%, #ec2242 76%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, #f1af21 0%, #ec2242 76%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, #f1af21 0%, #ec2242 76%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f1af21', endColorstr='#ec2242', GradientType=1);
+    /* IE6-9 */
+}
+
+.blue-green {
+    background: -moz-linear-gradient(left, #3fb3e1 0%, #02ae72 76%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, #3fb3e1 0%, #02ae72 76%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, #3fb3e1 0%, #02ae72 76%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#3fb3e1', endColorstr='#02ae72', GradientType=1);
+    /* IE6-9 */
+}
