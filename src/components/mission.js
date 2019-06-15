@@ -1,10 +1,14 @@
 const Mission = () => {
   return (
     <div id="mission" className="grid-container">
-      <div className="column-24">
+      <div>
 
         {/* left section */}
-        <div id="mission-left" className="pre-2 column-9 post-1 leader-2 tablet-column-20 tablet-pre-2 tablet-post-2 tablet-leader-1">
+        <div id="mission-left" 
+          className="
+            pre-2 column-9 post-1 leader-1
+            tablet-column-12 tablet-pre-0
+            phone-column-6 phone-pre-0 phone-leader-2">
 
           {/* mission title */}
           <p className="mission-title">
@@ -12,7 +16,7 @@ const Mission = () => {
           </p>
 
           {/* mission description */}
-          <p className="mission-desc">
+          <p className="mission-desc tablet-hide">
             Part of our mission is to expose the local developer
             community to the process of contributing to free and 
             open source software (FOSS), regardless of their
@@ -28,23 +32,34 @@ const Mission = () => {
             back to their communities.
           </p>
 
+          <p className="mission-desc tablet-show">
+            Part of our mission is to expose the local developer
+            community to the process of contributing to free and 
+            open source software (FOSS), regardless of their
+            development experience. We provide our members with a
+            friendly workspace to work, learn and connect with other
+            developers and industry professionals. 
+          </p>
+
+          <p className="mission-desc tablet-show">
+            By leveraging open
+            source software, our members can develop their skills in
+            various technologies while rubbing elbows with working
+            industry professionals. Industry professionals that 
+            volunteer to speak in our meetups help build stronger
+            communities by sharing their experience in the industry
+            and with the technology they use every day; they give
+            back to their communities.
+          </p>
+
         </div>
 
         {/* right section */}
         <div id="mission-right" className="column-12 tablet-column-24">
 
           {/* mission image */}
-          <div className="column-12">
-            {/*<img 
-              src="../../static/images/mobile/ie-background.jpg"
-              alt="..."
-            />*/}
+          <div>
             <div className="mission-image"></div>
-            <img 
-              className="mission-background-image"
-              src="../../static/images/mobile/ie-background.jpg" 
-              alt="..."
-              />
           </div>
 
           {/* mission image cutout */}
