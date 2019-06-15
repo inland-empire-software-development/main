@@ -4,6 +4,6 @@ function Slogan() {
 			<p>COMMUNITY AND</p>
 			<p>DEVELOPER EXCELLENCE</p>
 		</div>
-	)
+	);
 }
 export default Slogan;
