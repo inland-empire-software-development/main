@@ -24,7 +24,8 @@
 			height: 708px;
 			background: 
 				url("../static/images/mobile/ie-background.jpg"),
-				url("../static/images/mobile/ie-raw-gradient.jpg");
+				// url("../static/images/mobile/ie-raw-gradient.jpg");
+				linear-gradient(to right, #3FB3E1, #EC2242);
 			background-blend-mode: multiply;
 			background-size: cover, cover;
 			img{
