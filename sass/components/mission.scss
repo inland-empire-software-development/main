@@ -1,36 +1,47 @@
 #mission{
-	height: 708px;
+	height: 50%;
 
 	.mission-title{
-		font-size: 65px;
+		font-size: calc(1.5em + 2vw);
 		font-family: 'Block';
 	}
 
 	.mission-desc{
-		font-size: 20px;
+		font-size: calc(0.5em + .75vw);
 		font-family: 'Book';
 		line-height: 32px;
 		letter-spacing: 0.05px;
 	}
 
 	#mission-right{
-		position: relative; 
+		position: relative;
+		// height: 100%;
+		// width: 100%; 
 
 		.mission-image{
 			position: absolute;
 			top: 0;
 			right: 0;
-			width: 720px;
+			// width: 720px;
+			width: 100%;
 			height: 708px;
+			// height: 100%;
+			opacity: 0;
 			background: 
-				url("../static/images/mobile/ie-background.jpg"),
+				// url("../static/images/mobile/ie-background.jpg"),
 				// url("../static/images/mobile/ie-raw-gradient.jpg");
-				linear-gradient(to right, #3FB3E1, #EC2242);
+				linear-gradient(to right, rgba(236, 34, 66, 0.5), rgba(63, 179, 225, 0.5));
 			background-blend-mode: multiply;
 			background-size: cover, cover;
-			img{
-				width: 100%;
-			}
+		}
+
+		.mission-background-image{
+			width: 100%;
+			// height: 100%;
+			// border: red solid 5px;
+			position: absolute;
+			top: 0;
+			left: 0;
 		}
 		
 		.mission-cutout{
