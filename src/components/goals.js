@@ -2,7 +2,7 @@ function Goals() {
 	return (
 		<div className="grid-container">
 
-			<div id="goals" className="column-24 leader-3">
+			<div id="goals" className="column-24">
 				{/* left side */}
 				<div className="column-12">
 					<div>
