@@ -28,11 +28,6 @@
 			margin-top: 12px;
 		}
 
-		@media screen and (max-width: $large){
-			.mission-desc{
-				// font-size: 1.15rem;
-			}
-		}
 		@media screen and (max-width: 1300px){
 			.mission-desc{
 				font-size: 1.15rem;
@@ -80,7 +75,7 @@
 			}
 		}
 		@media screen and (max-width: $small){
-			height: 55%;
+			height: 58%;
 
 			.mission-title{
 				font-size: calc(1.4em + 1.5vw);

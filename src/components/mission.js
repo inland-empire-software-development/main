@@ -32,6 +32,7 @@ const Mission = () => {
             back to their communities.
           </p>
 
+          {/* mission description split for mobile devices*/}
           <p className="mission-desc tablet-show">
             Part of our mission is to expose the local developer
             community to the process of contributing to free and
@@ -66,7 +67,7 @@ const Mission = () => {
           <div className="mission-cutout">
             <img
               src="../../static/images/mobile/ie-cutout.png"
-              alt="..."
+              alt="IE cutout overlay"
             />
           </div>
 
