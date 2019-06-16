@@ -1,0 +1,21 @@
+#goals {
+	height: 50%;
+	padding: 0px;
+
+	.goals-image {
+		height: auto;
+		width: 100%;
+	}
+
+	.goals-heading {
+		font-family: 'Block';
+		font-size: calc(1.5em + 2vw);
+		text-align: right;
+	}
+
+	.goals-desc {
+		font-size: calc(0.5em + .75vw);
+		text-align: right;
+	}
+
+}
