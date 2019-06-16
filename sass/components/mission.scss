@@ -45,7 +45,7 @@
 			}
 		}
 		@media screen and (max-width: $medium){
-			height: 50%;
+			height: 65%;
 
 			.mission-title{
 				font-size: 4rem;
@@ -95,7 +95,6 @@
 	}
 
 	#mission-right{
-		// display: none;
 		position: relative;
 
 		.mission-image{
@@ -128,7 +127,7 @@
 
 	@media screen and (max-width: $medium){
 		max-height: none;
-		height: 1250px;
+		height: 950px;
 	}
 
 	@media screen and (max-width: $small){
