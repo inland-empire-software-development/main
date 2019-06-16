@@ -45,7 +45,7 @@
 			}
 		}
 		@media screen and (max-width: $medium){
-			height: 65%;
+			margin: 5% 0;
 
 			.mission-title{
 				font-size: 4rem;
@@ -75,7 +75,7 @@
 			}
 		}
 		@media screen and (max-width: $small){
-			height: 58%;
+			height: 50%;
 
 			.mission-title{
 				font-size: calc(1.4em + 1.5vw);
@@ -128,10 +128,6 @@
 
 	@media screen and (max-width: $medium){
 		max-height: none;
-		height: 950px;
-	}
-
-	@media screen and (max-width: $small){
-		height: 700px;
+		height: auto;
 	}
 }
