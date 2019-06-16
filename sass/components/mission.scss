@@ -11,6 +11,10 @@
 	}
 
 	#mission-left{
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+
 		.mission-title{
 			font-size: calc(1.4em + 1.5vw);
 			font-family: 'Block';
@@ -26,15 +30,16 @@
 
 		@media screen and (max-width: $large){
 			.mission-desc{
-				font-size: 1rem;
+				// font-size: 1.15rem;
 			}
 		}
-		@media screen and (max-width: 1250px){
+		@media screen and (max-width: 1300px){
 			.mission-desc{
+				font-size: 1.15rem;
 				line-height: 25px;
 			}
 		}
-		@media screen and (max-width: 1100px){
+		@media screen and (max-width: 1105px){
 			.mission-desc{
 				line-height: 20px;
 			}
