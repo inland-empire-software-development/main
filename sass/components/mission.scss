@@ -96,6 +96,7 @@
 
 	#mission-right{
 		position: relative;
+		width: 722px;
 
 		.mission-image{
 			position: absolute;
@@ -123,6 +124,7 @@
 
 		@media screen and (max-width: $medium){
 			height: calc(0.945*100vw);
+			width: 100%;
 		}
 	}
 
