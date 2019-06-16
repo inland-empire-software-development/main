@@ -44,17 +44,16 @@ function Footer() {
         {/* navigate */}
         <div className="column-4 pre-2">
           <p>Navigate</p>
-          <p>
-            <ul>
-              <li><a href="#">Join</a></li>
-              <li><a href="#">Speak</a></li>
-              <li><a href="#">Events</a></li>
-              <li><a href="#">Sponsors</a></li>
-              <li><a href="#">Organizers</a></li>
-              <li><a href="#">Contribute</a></li>
-              <li><a href="#">Community</a></li>
-            </ul>
-          </p>
+
+          <ul>
+            <li><a href="#">Join</a></li>
+            <li><a href="#">Speak</a></li>
+            <li><a href="#">Events</a></li>
+            <li><a href="#">Sponsors</a></li>
+            <li><a href="#">Organizers</a></li>
+            <li><a href="#">Contribute</a></li>
+            <li><a href="#">Community</a></li>
+          </ul>
         </div>
 
         <div className="column-14 pre-2 block-group block-group-3-up">
@@ -92,8 +91,8 @@ function Footer() {
 
           {/* map */}
           <div className="block trailer-half">
-            <div class="mapouter">
-              <div class="gmap_canvas">
+            <div className="mapouter">
+              <div className="gmap_canvas">
                 <iframe
                   id="gmap_canvas"
                   src="https://maps.google.com/maps?q=3499%20Tenth%20St%20Riverside%2C%20CA&t=&z=17&ie=UTF8&iwloc=&output=embed"
