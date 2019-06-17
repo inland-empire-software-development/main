@@ -29,12 +29,12 @@
 			text-align: right;
 		}
 
-		.goals-desc {
+		.goals-info {
 			font-family: 'Book';
 			font-size: 1.25rem;
 			text-align: right;
 
-			.goals-info p br {
+			.goals-desc p br {
 				display: none;
 			}
 
@@ -45,14 +45,14 @@
 				.goals-heading {
 					font-size: calc(1.3em + 2vw);
 				}
-				.goals-desc {
+				.goals-info {
 					font-size: 1rem;
 				}
 
 			}
 
 			@media screen and (max-width: 1240px) {
-				.goals-desc {
+				.goals-info {
 					font-size: .93rem;
 				}
 			}
@@ -61,19 +61,19 @@
 				.goals-heading {
 					font-size: 3rem;
 				}
-				.goals-desc {
+				.goals-info {
 					font-size: .75rem;
 				}
 			}
 
 			@media screen and (max-width: 1035px) {
-				.goals-desc {
+				.goals-info {
 					font-size: .68rem;
 				}
 			}
 
 			@media screen and (max-width: 980px) {
-				.goals-desc {
+				.goals-info {
 					font-size: .6rem;
 				}
 			}
@@ -85,11 +85,11 @@
 					font-size: 4rem;
 					text-align: left;
 				}
-				.goals-desc {
+				.goals-info {
 					font-size: 1.15rem;
 					text-align: left;
 
-					.goals-info p br {
+					.goals-desc p br {
 						display: inline;
 					}
 				}
@@ -104,7 +104,7 @@
 					font-size: calc(1.4em + 1.5vw);
 					text-align: left;
 				}
-				.goals-desc {
+				.goals-info {
 					font-size: 1.05rem;
 					text-align: left;
 				}

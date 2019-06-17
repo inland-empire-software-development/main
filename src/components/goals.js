@@ -15,15 +15,15 @@ function Goals() {
 				<div id="goals-right" className="column-10 post-2 tablet-column-12 phone-post-0">
 
 					{/*goals information*/}
-					<div className="goals-desc">
+					<div className="goals-info">
 
 						{/*goals heading*/}
 						<p className="goals-heading">
 							OUR GOALS
 						</p>
 
-						{/*goals information*/}
-						<div className="goals-info">
+						{/*goals description*/}
+						<div className="goals-desc">
 
 							<p>
 								Inland Empire Software Development (IESD) is an independent
