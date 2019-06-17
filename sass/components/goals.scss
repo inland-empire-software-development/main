@@ -1,3 +1,13 @@
+.goals-container{
+	max-height: 446px;
+	height: 29.7vw;
+
+	@media screen and (max-width: $medium){
+		height: 100%;
+		max-height: none;
+	}
+}
+
 #goals {
 	display: flex;
 	flex-direction: row;

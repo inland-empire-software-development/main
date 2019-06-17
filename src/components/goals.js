@@ -1,6 +1,6 @@
 function Goals() {
 	return (
-		<div className="grid-container">
+		<div className="grid-container goals-container">
 
 			<div id="goals" className="column-24">
 				{/*left side*/}
