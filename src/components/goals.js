@@ -4,7 +4,7 @@ function Goals() {
 
 			<div id="goals" className="column-24">
 				{/* left side */}
-				<div className="column-12">
+				<div id="goals-left" className="column-12">
 					<div>
 						<img
 							className="goals-image"
@@ -14,7 +14,7 @@ function Goals() {
 				</div>
 
 				{/* right side */}
-				<div className="column-10 post-2">
+				<div id="goals-right" className="column-10 post-2 tablet-post-0 phone-post-0">
 
 					{/*goals heading*/}
 					<div className="goals-heading">

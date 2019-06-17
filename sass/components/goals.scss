@@ -2,20 +2,83 @@
 	height: 50%;
 	padding: 0px;
 
-	.goals-image {
-		height: auto;
-		width: 100%;
+	#goals-left {
+
+		.goals-image {
+			height: auto;
+			width: 100%;
+		}
+
 	}
 
-	.goals-heading {
-		font-family: 'Block';
-		font-size: calc(1.5em + 2vw);
-		text-align: right;
-	}
+	#goals-right {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
 
-	.goals-desc {
-		font-size: calc(0.5em + .75vw);
-		text-align: right;
+		.goals-heading {
+			font-family: 'Block';
+			font-size: calc(1.4em + 1.5vw);
+			text-align: right;
+		}
+
+		.goals-desc {
+			font-family: 'Book';
+			font-size: 1.25rem;
+			text-align: right;
+		}
+
+		@media screen and (max-width: 1320px) {
+
+				.goals-heading {
+					font-size: calc(1.3em + 2vw);
+				}
+				.goals-desc {
+					font-size: 1.15rem;
+				}
+				
+			}
+
+			@media screen and (max-width: 1000px) {
+				.goals-desc {
+					font-size: 1.05rem;
+				}
+			}
+
+			@media screen and (max-width: 700px) {
+				.goals-heading {
+					font-size: 4rem;
+				}
+			}
+
+			@media screen and (max-width: $medium) {
+				height: 50%;
+
+				.goals-heading {
+					font-size: 4rem;
+					text-align: left;
+				}
+				.goals-desc {
+					font-size: 1.15rem;
+					text-align: left;
+				}
+
+			}
+
+			@media screen and (max-width: $small) {
+				height: 50%;
+
+				.goals-heading {
+					font-size: calc(1.4em + 1.5vw);
+					text-align: left;
+				}
+				.goals-desc {
+					font-size: 1.05rem;
+					text-align: left;
+				}
+
+			}
+
 	}
 
 }
