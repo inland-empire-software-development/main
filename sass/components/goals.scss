@@ -31,6 +31,10 @@
 			font-size: 1.25rem;
 			text-align: right;
 
+			.goals-info p br {
+				display: none;
+			}
+
 		}
 
 		@media screen and (max-width: 1460px) {
@@ -81,6 +85,10 @@
 				.goals-desc {
 					font-size: 1.15rem;
 					text-align: left;
+
+					.goals-info p br {
+						display: inline;
+					}
 				}
 
 			}
