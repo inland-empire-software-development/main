@@ -15,10 +15,6 @@
 			display: none;
 		}
 
-		@media screen and (max-width: $small) {
-			display: none;
-		}
-
 	}
 
 	#goals-right {
@@ -79,7 +75,6 @@
 			}
 
 			@media screen and (max-width: $medium) {
-				height: 50%;
 
 				.goals-heading {
 					font-size: 4rem;
@@ -92,29 +87,36 @@
 					.goals-desc p br {
 						display: inline;
 					}
+
 				}
 
 			}
 
 			@media screen and (max-width: $small) {
-				height: 50%;
-				padding: 0px;
 
 				.goals-heading {
 					font-size: calc(1.4em + 1.5vw);
-					text-align: left;
 				}
 				.goals-info {
 					font-size: 1.05rem;
-					text-align: left;
 				}
 
 			}
 
-	}
+		@media screen and (max-width: $medium) {
 
-	@media screen and (max-width: $small) {
-		padding: 0px;
+			.goals-info p {
+				margin-top: 12px;
+				margin-bottom: 12px;
+			}
+
+		}
+
+		@media screen and (max-width: $small) {
+			margin: 0px;
+
+		}
+
 	}
 
 }
