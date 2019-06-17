@@ -28,26 +28,29 @@
 			text-align: right;
 		}
 
-		@media screen and (max-width: 1320px) {
+		@media screen and (max-width: 1460px) {
 
 				.goals-heading {
 					font-size: calc(1.3em + 2vw);
 				}
 				.goals-desc {
-					font-size: 1.15rem;
-				}
-				
-			}
-
-			@media screen and (max-width: 1000px) {
-				.goals-desc {
 					font-size: 1.05rem;
 				}
+
 			}
 
-			@media screen and (max-width: 700px) {
+			@media screen and (max-width: 1240px) {
+				.goals-desc {
+					font-size: 1rem;
+				}
+			}
+
+			@media screen and (max-width: 1220px) {
 				.goals-heading {
-					font-size: 4rem;
+					font-size: 3rem;
+				}
+				.goals-desc {
+					font-size: .9rem;
 				}
 			}
 
