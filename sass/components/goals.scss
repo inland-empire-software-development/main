@@ -1,4 +1,7 @@
 #goals {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
 
 	#goals-left {
 		padding: 0px;
