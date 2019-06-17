@@ -14,7 +14,7 @@ function Goals() {
 				</div>
 
 				{/* right side */}
-				<div id="goals-right" className="column-10 post-2 tablet-post-0 phone-post-0">
+				<div id="goals-right" className="column-10 post-2 tablet-column-12 phone-post-0">
 
 					{/*goals heading*/}
 					<div className="goals-heading">
