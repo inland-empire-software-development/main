@@ -1,8 +1,7 @@
 #goals {
-	height: 50%;
-	padding: 0px;
 
 	#goals-left {
+		padding: 0px;
 
 		.goals-image {
 			height: auto;
@@ -20,9 +19,6 @@
 	}
 
 	#goals-right {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
 
 		.goals-heading {
 			font-family: 'Block';
@@ -34,6 +30,7 @@
 			font-family: 'Book';
 			font-size: 1.25rem;
 			text-align: right;
+
 		}
 
 		@media screen and (max-width: 1460px) {
@@ -42,23 +39,35 @@
 					font-size: calc(1.3em + 2vw);
 				}
 				.goals-desc {
-					font-size: 1.05rem;
+					font-size: 1rem;
 				}
 
 			}
 
 			@media screen and (max-width: 1240px) {
 				.goals-desc {
-					font-size: 1rem;
+					font-size: .93rem;
 				}
 			}
 
-			@media screen and (max-width: 1220px) {
+			@media screen and (max-width: 1140px) {
 				.goals-heading {
 					font-size: 3rem;
 				}
 				.goals-desc {
-					font-size: .9rem;
+					font-size: .75rem;
+				}
+			}
+
+			@media screen and (max-width: 1035px) {
+				.goals-desc {
+					font-size: .68rem;
+				}
+			}
+
+			@media screen and (max-width: 980px) {
+				.goals-desc {
+					font-size: .6rem;
 				}
 			}
 
@@ -78,6 +87,7 @@
 
 			@media screen and (max-width: $small) {
 				height: 50%;
+				padding: 0px;
 
 				.goals-heading {
 					font-size: calc(1.4em + 1.5vw);
@@ -90,6 +100,10 @@
 
 			}
 
+	}
+
+	@media screen and (max-width: $small) {
+		padding: 0px;
 	}
 
 }
