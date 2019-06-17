@@ -1,0 +1,135 @@
+#mission{
+	max-height: 708px;
+	height: 47.25vw;
+
+	div{
+		height: 100%;
+	}
+
+	p{
+		margin: 0;
+	}
+
+	#mission-left{
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+
+		.mission-title{
+			font-size: calc(1.4em + 1.5vw);
+			font-family: 'Block';
+		}
+
+		.mission-desc{
+			font-size: 1.25rem;
+			font-family: 'Book';
+			line-height: 32px;
+			letter-spacing: 0.05px;
+			margin-top: 12px;
+		}
+
+		@media screen and (max-width: 1300px){
+			.mission-desc{
+				font-size: 1.15rem;
+				line-height: 25px;
+			}
+		}
+		@media screen and (max-width: 1105px){
+			.mission-desc{
+				line-height: 20px;
+			}
+		}
+		@media screen and (max-width: 1000px){
+			.mission-desc{
+				line-height: 16.5px;
+			}
+		}
+		@media screen and (max-width: $medium){
+			margin: 5% 0;
+
+			.mission-title{
+				font-size: 4rem;
+			}
+
+			.mission-desc{
+				font-size: 1.75rem;
+				line-height: 32px;
+			}
+		}
+		@media screen and (max-width: 700px){
+			.mission-title{
+				font-size: 3rem;
+			}
+
+			.mission-desc{
+				font-size: 1.5rem;
+				line-height: 28px;
+			}
+		}
+		@media screen and (max-width: 600px){
+			.mission-title{
+				font-size: 2.5rem;
+			}
+			.mission-desc{
+				font-size: 1.25rem;
+			}
+		}
+		@media screen and (max-width: $small){
+			height: 50%;
+
+			.mission-title{
+				font-size: calc(1.4em + 1.5vw);
+			}
+
+			.mission-desc{
+				font-size: 1.05rem;
+				line-height: 18px;
+			}
+		}
+		@media screen and (max-width: 400px){
+			.mission-desc{
+				font-size: 1rem;
+				line-height: 16.5px;
+			}
+		}
+	}
+
+	#mission-right{
+		position: relative;
+		width: 722px;
+
+		.mission-image{
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 100%;
+			background: 
+				url("../static/images/mobile/ie-background.jpg"),
+				linear-gradient(to left, rgba(236, 34, 66, 0.5), rgba(63, 179, 225, 0.5));
+			background-blend-mode: multiply;
+			background-size: cover, cover;
+		}
+		
+		.mission-cutout{
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 100%;
+		}
+
+		img{
+			height: inherit;
+			width: 100%;
+		}
+
+		@media screen and (max-width: $medium){
+			height: calc(0.945*100vw);
+			width: 100%;
+		}
+	}
+
+	@media screen and (max-width: $medium){
+		max-height: none;
+		height: auto;
+	}
+}
