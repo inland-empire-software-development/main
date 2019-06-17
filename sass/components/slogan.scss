@@ -1,0 +1,15 @@
+#slogan {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	background: black;
+	height: 250px;
+	p {
+		font-family: 'Block';
+		font-size: calc(1em + 1.5vw);
+		text-align: center; 
+		color: white;
+		margin: 0;
+	}
+}

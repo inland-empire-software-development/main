@@ -7,6 +7,25 @@ footer {
 
     .footer-navigate {
 
+        ul {
+            padding: 0;
+
+            li {
+                font-family: "Book";
+                font-size: 20px;
+                color: $white;
+                list-style-type: none;
+            }
+        }
+
+        a {
+            color: $white;
+            
+            &:hover {
+                color: $blue;
+            }
+        }
+
         p:first-child {
             font-family: "Heavy";
             font-size: 26px;
@@ -19,25 +38,6 @@ footer {
             font-size: 22px;
             color: $white;
             margin: 0;
-
-            a {
-                color: $white;
-
-                &:hover {
-                    color: $blue;
-                }
-            }
-        }
-
-        ul {
-            padding: 0;
-
-            li {
-                font-family: "Book";
-                font-size: 20px;
-                color: $white;
-                list-style-type: none;
-            }
         }
     }
 
@@ -68,7 +68,7 @@ footer {
         li a {
             color: $white;
             font-family: "Medium";
-            font-size: 24px;
+            font-size: 22px;
 
             &:hover {
                 color: $blue;
