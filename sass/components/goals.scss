@@ -9,6 +9,14 @@
 			width: 100%;
 		}
 
+		@media screen and (max-width: $medium) {
+			display: none;
+		}
+
+		@media screen and (max-width: $small) {
+			display: none;
+		}
+
 	}
 
 	#goals-right {
