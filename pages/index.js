@@ -2,8 +2,9 @@
 // eslint-disable-next-line no-unused-vars
 import React, {useState, useEffect} from 'react';
 import Slogan from '../src/components/slogan';
-import Footer from '../src/components/footer';
 import Mission from '../src/components/mission';
+import SuccessStories from '../src/components/successStories';
+import Footer from '../src/components/footer';
 import '../node_modules/@fortawesome/fontawesome-free/js/all';
 import '../sass/index.scss';
 
@@ -24,6 +25,7 @@ function App() {
     <div>
       <Slogan />
       <Mission />
+      <SuccessStories />
       <Footer />
     </div>
   );
