@@ -1,15 +1,29 @@
 #success-stories{
+	display: grid;
+	grid-template-areas:
+		"image header"
+		"image job-title"
+		"image excerpt"
+		"image button";
+	grid-template-columns: 3fr 7fr;
+	grid-template-rows: 1fr 50px 1fr 1fr; 
 	background: $light-gray;
 	color: $white;
-	max-height: 520px;
-	height: 34.75vw;
+	max-height: 468px;
+	height: 31.25vw;
+
+	//reset margin for all p tags inside.
+	p{
+		margin: 0;
+	}
 
 	.success-image-container{
-		max-height: 520px;
+		max-height: 468px;
 		padding: 0;
 		position: relative;
+		grid-area: image;
 
-			img{
+		img{
 			max-height: 600px;
 			position: relative;
 			left: 0;
@@ -20,7 +34,7 @@
 			position: absolute;
 			top: 0;
 			left: 0;
-			height: 34.75vw;
+			height: 31.25vw;
 			max-height: inherit;
 			width: 100%;
 			background: linear-gradient(to right, rgba(241, 175, 33, 0.2), rgba(236, 34, 66, 0.2) 50%);
@@ -29,6 +43,119 @@
 				height: 100%;
 			}
 		}
+	}
+
+	.success-header{
+		grid-area: header;
+		align-self: center;
+		margin-top: 10px;
+		font-family: 'Block';
+		font-size: calc(1.6em + 1.5vw);
+	}
+
+	.success-title-container{
+		grid-area: job-title;
+		font-family: 'Block';
+		display: flex;
+		align-items: center;
+
+		.success-name{
+			font-family:"Heavy";
+			font-size: calc(1.25em + 1vw);
+		}
+
+		.success-slash{
+			color: red;
+			font-size: calc(1.5em + 1vw);
+			font-family: "Book";
+			margin-left: 10px;
+			margin-right: 10px;
+		}
+
+		.success-job-title{
+			font-family: "Book";
+			font-size: calc(.5em + 1vw);
+		}
+
+
+	}
+
+	.success-excerpt{
+		grid-area: excerpt;
+		font-family: "Book";
+		font-size: calc(.5em + .5vw);
+		width: 75%;
+	}
+
+	.success-btn-container{
+		display: flex;
+		grid-area: button;
+		align-self: center;
+		font-family: "Book";
+		justify-content: space-between;
+		width: 75%;
+
+		.success-read-more{
+			width: 25%;
+			height: calc(3vw - 0.5px);
+			background: red;
+			color: $white;
+			font-size: calc(.5em + .5vw);
+			border: none;
+			background: linear-gradient(to right, $yellow, $red);
+			outline: none;
+			float: left;
+		}
+
+		.social-btn-container{
+			display: flex;
+
+			a{
+				color: $white;
+			}
+
+			.social-btn{
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				font-size: 25px;
+				width: 100px;
+				height: 50px;
+				background: url('../static/images/desktop/success-social-network.svg');
+				background-size: cover;
+
+				a{
+					width: 50px;
+					height: 50px;
+					border-radius: 50%;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+
+					&:hover{
+						color: black;
+						background: white;
+					}
+				}
+
+				.fa-facebook-f{
+					margin-right: 2px;
+				}
+
+				@media screen and (max-width: 1200px){
+					width: 76px;
+					height: 38px;
+					font-size: 15px;
+				}
+			}
+		}
+	}
+
+	.success-header,
+	.success-title-container,
+	.success-excerpt,
+	.success-btn-container{
+		margin-left: 5%;
 	}
 
 

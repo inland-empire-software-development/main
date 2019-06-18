@@ -31,24 +31,34 @@ class SuccessStories extends Component{
 			<div id="success-stories" className="grid-container">
 
 				{/* left section - image of person */}
-				<div className="column-8 success-image-container">
+				<div className="success-image-container">
 					<img alt={name} src={imageURL} />
 					<div className="success-image-overlay"></div>
 				</div>
 
 				{/* right section - success story*/}
-				<div className="pre-1 column-15">
-					<p>SUCCESS STORY</p>
-					<div className="success-title-container">
-						<p>{name}</p>
-						<p>/</p>
-						<p>{title}</p>
-					</div>
-					<p className="success-excerpt">{excerpt}</p>
-					<div className="success-btn-container">
-						<button>
-							read full story
-						</button>
+				<p className='success-header'>SUCCESS STORY</p>
+				<div className="success-title-container">
+					<p className="success-name">{name}</p>
+					<p className="success-slash">/</p>
+					<p className="success-job-title">{title}</p>
+				</div>
+				<p className="success-excerpt">{excerpt}</p>
+				<div className="success-btn-container">
+					<button className="success-read-more">
+						read full story
+					</button>
+					<div className="social-btn-container">
+						<div className="social-btn">
+							<a href="#">
+								<i className="fab fa-twitter"></i>
+							</a>
+						</div>
+						<div className="social-btn">
+							<a href="#">
+								<i className="fab fa-facebook-f"></i>
+							</a>
+						</div>
 					</div>
 				</div>
 
