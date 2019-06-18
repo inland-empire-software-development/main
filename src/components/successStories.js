@@ -16,7 +16,7 @@ class SuccessStories extends Component{
 		const randomNum = Math.floor(Math.random() * data.length);
 
 		return this.setState({
-			currentStory: data[randomNum]
+			currentStory: data[0]
 		})
 	}
 
@@ -39,8 +39,10 @@ class SuccessStories extends Component{
 				{/* right section - success story*/}
 				<p className='success-header'>SUCCESS STORY</p>
 				<div className="success-title-container">
-					<p className="success-name">{name}</p>
-					<p className="success-slash">/</p>
+					<div className="success-name-container">
+						<p className="success-name">{name}</p>
+						<p className="success-slash">/</p>
+					</div>
 					<p className="success-job-title">{title}</p>
 				</div>
 				<p className="success-excerpt">{excerpt}</p>
