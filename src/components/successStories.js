@@ -31,12 +31,13 @@ class SuccessStories extends Component{
 			<div id="success-stories" className="grid-container">
 
 				{/* left section - image of person */}
-				<div className="column-7 success-image-container">
+				<div className="column-8 success-image-container">
 					<img alt={name} src={imageURL} />
+					<div className="success-image-overlay"></div>
 				</div>
 
 				{/* right section - success story*/}
-				<div className="column-16">
+				<div className="pre-1 column-15">
 					<p>SUCCESS STORY</p>
 					<div className="success-title-container">
 						<p>{name}</p>

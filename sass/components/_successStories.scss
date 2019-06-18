@@ -1,28 +1,40 @@
 #success-stories{
 	background: $light-gray;
 	color: $white;
-	max-height: 600px;
-	height: 30.32vw;
+	max-height: 520px;
+	height: 34.75vw;
 
 	.success-image-container{
-		max-height: 600px;
-		// height: 100%;
-		width: 100%;
+		max-height: 520px;
 		padding: 0;
+		position: relative;
+
+			img{
+			max-height: 600px;
+			position: relative;
+			left: 0;
+			height: inherit;
+		}
+
+		.success-image-overlay{
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 34.75vw;
+			max-height: inherit;
+			width: 100%;
+			background: linear-gradient(to right, rgba(241, 175, 33, 0.2), rgba(236, 34, 66, 0.2) 50%);
+
+			@media screen and (max-width: $medium){
+				height: 100%;
+			}
+		}
 	}
 
 
 	@media screen and (max-width: $medium) {
 		height: 100%;
 		max-height: none;
-	}
-
-	img{
-		// width: 100%;
-		max-height: 600px;
-		position: relative;
-		left: 0;
-		height: inherit;
 	}
 
 }
