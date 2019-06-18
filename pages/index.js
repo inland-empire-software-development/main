@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 // eslint-disable-next-line no-unused-vars
 import React, {useState, useEffect} from 'react';
+import Goals from '../src/components/goals';
 import Slogan from '../src/components/slogan';
 import Mission from '../src/components/mission';
 import SuccessStories from '../src/components/successStories';
@@ -25,6 +26,7 @@ function App() {
     <div>
       <Slogan />
       <Mission />
+      <Goals />
       <SuccessStories />
       <Footer />
     </div>
