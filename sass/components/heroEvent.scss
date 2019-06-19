@@ -3,13 +3,14 @@
 	width: 515px;
 	p {
 		margin: 0px;
+		color: $white;
 	}
 	.hero-event-info {
 		height: 70%;
 		display: flex;
 		flex-direction: row;
 		padding: 5px;
-		background: yellow;
+		background-color: rgba(0,0,0,0.65);
 		.hero-event-date {
 			height: 130px;
 			width: 30%;
@@ -37,7 +38,6 @@
 			width: 70%;
 			justify-content: space-between;
 			text-align: right;
-			background: blue;
 			p:first-child {
 				font-family: 'Book';
 				font-size: 22px;
@@ -50,6 +50,7 @@
 				p:first-child {
 					font-family: 'Heavy';
 					font-size: 16px;
+					margin-right: 5px;
 				}
 			}
 		}
@@ -60,7 +61,11 @@
 			margin-top: 5px;
 			font-family: 'Book';
 			font-size: 30px;
-			background: orange;
+			color: $white;
+			border: none;
+			cursor: pointer;
+			outline: 0;
+			background-image: linear-gradient(to right, #F0A723, #EC2342);
 		}
 	}
 }

@@ -5,6 +5,7 @@ function HeroEvent() {
 			{/* event details container */}
 			<div className="hero-event-info">
 
+				{/* hero event info left side */}
 				<div className="hero-event-date">
 					
 					<p>12</p>
@@ -13,13 +14,16 @@ function HeroEvent() {
 
 				</div>
 
+				{/* hero event info right side */}
 				<div className="hero-event-desc">
 
 					<p>Exploring Data Structures : Objects, Arrays and the Secret Life of Objects</p>
 
 					<div className="hero-event-location">
+
 						<p>Address:</p>
 						<p>3499 Tenth St. Riverside, CA 92501</p>
+
 					</div>
 
 				</div>
