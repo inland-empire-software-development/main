@@ -1,44 +1,55 @@
-function HeroEvent() {
-	return (
-		<div className="hero-event-container tablet-column-10">
+import React, { Component } from 'react';
 
-			{/* event details container */}
-			<div className="hero-event-info">
+class HeroEvent extends Component {
+	constructor(props) {
+		super(props);
+		this.state = {
 
-				{/* hero event info left side */}
-				<div className="hero-event-date">
-					
-					<p>12</p>
-					<p>May</p>
-					<p>2:00 PM - 5:00 PM</p>
+		};
+	}
 
-				</div>
+	render() {
+		return (
+			<div className="hero-event-container tablet-column-10">
 
-				{/* hero event info right side */}
-				<div className="hero-event-desc">
+				{/* event details container */}
+				<div className="hero-event-info">
 
-					<p>Exploring Data Structures : Objects, Arrays and the Secret Life of Objects</p>
+					{/* hero event info left side */}
+					<div className="hero-event-date">
+						
+						<p>12</p>
+						<p>May</p>
+						<p>2:00 PM - 5:00 PM</p>
 
-					<div className="hero-event-location">
+					</div>
 
-						<p>Address:</p>
-						<p>3499 Tenth St. Riverside, CA 92501</p>
+					{/* hero event info right side */}
+					<div className="hero-event-desc">
+
+						<p>Exploring Data Structures : Objects, Arrays and the Secret Life of Objects</p>
+
+						<div className="hero-event-location">
+
+							<p>Address:</p>
+							<p>3499 Tenth St. Riverside, CA 92501</p>
+
+						</div>
 
 					</div>
 
 				</div>
 
+				{/* reserve a spot buton */}
+				<div className="reserve-wrapper">
+
+					<button className="reserve-button">reserve a spot</button>
+
+				</div>
+
 			</div>
-
-			{/* reserve a spot buton */}
-			<div className="reserve-wrapper">
-
-				<button className="reserve-button">reserve a spot</button>
-
-			</div>
-
-		</div>
-	);
+		);
+	}
 }
 
 export default HeroEvent;
