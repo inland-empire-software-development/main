@@ -22,10 +22,11 @@
 		padding: 0;
 		position: relative;
 		grid-area: image;
-		height: 100%;
+		float: left;
 
 
 		img{
+			display: block;
 			max-height: 468px;
 			position: relative;
 			left: 0;
@@ -52,8 +53,9 @@
 			}
 		}
 
-		@media screen and (max-width: $medium){
-			// max-height: 29.18vw;
+		@media screen and (max-width: 600px){
+			// height: 93%;
+			//LEFT OFF HERE!!!
 		}
 
 	}
@@ -68,6 +70,15 @@
 		@media screen and (max-width: $medium){
 			align-self: start;
 			margin-top: -15px;
+		}
+
+		@media screen and (max-width: 700px){
+			font-size: calc(1em + 1.5vw);
+		}
+
+		@media screen and (max-width: $small){
+			font-size: calc(.5em + 1.5vw);
+			margin-top: -5px;
 		}
 	}
 
@@ -86,6 +97,9 @@
 				height: 30px;
 				margin-top: 10px;
 			}
+			@media screen and (max-width: 595px) and (min-width: 500px){
+				// margin-top: 0px;
+			}
 		}
 
 
@@ -95,6 +109,10 @@
 
 			@media screen and (max-width: $medium){
 				font-size: calc(.75em + 1vw);
+			}
+
+			@media screen and (max-width: $small){
+				font-size: calc(.55em + 1vw);
 			}
 		}
 
@@ -109,6 +127,14 @@
 				font-size: calc(1.15em + 1vw);
 				margin-left: 5px;
 			}
+			@media screen and (max-width: 710px){
+				font-size: calc(.75em + .5vw);
+			}
+			@media screen and (max-width: $small){
+				margin: 0;
+				margin-left: 5px;
+				font-size: calc(.75em + 1vw);
+			}
 		}
 
 		.success-job-title{
@@ -116,14 +142,31 @@
 			font-size: calc(.5em + 1vw);
 
 			@media screen and (max-width: $medium){
-				font-size: calc(.25em + 1.5vw);
+				font-size: calc(.5em + 1.5vw);
 				width: 100%;
+			}
+
+			@media screen and (max-width: 710px){
+				font-size: calc(.75em + .5vw);
+			}
+
+			@media screen and (max-width: $small){
+				font-size: calc(.4em + 1.5vw);
 			}
 		}
 
 		@media screen and (max-width: $medium){
 			flex-direction: column;
 			line-height: 25px;
+			justify-content: center;
+		}
+		@media screen and (max-width: 595px) and (min-width: 535px){
+			height: 0%;
+			min-height: 140px;
+		}
+
+		@media screen and (max-width: $small){
+			line-height: 18px;
 		}
 
 	}
@@ -138,7 +181,17 @@
 			font-size: calc(1em + .5vw);
 			overflow: hidden;
 			height: 84%;
+			width: 90%;
 		}
+
+		@media screen and (max-width: 700px){
+			font-size: calc(0.5em + 1.25vw);
+		}
+
+		@media screen and (max-width: $small){
+			// height: 75%;
+		}
+
 	}
 
 	.success-btn-container{
@@ -164,6 +217,21 @@
 				width: 65%;
 				height: 150%;
 				font-size: calc(1.5em + .5vw);
+			}
+
+			@media screen and (max-width: 600px){
+				height: 120%;
+			}
+
+			@media screen and (max-width: $small){
+				// height: 15vw;
+				height: 80%;
+				font-size: calc(1em + .5vw);
+				width: 61.5%;
+			}
+
+			@media screen and (max-width: 400px){
+				height: 120%;
 			}
 		}
 
@@ -208,14 +276,30 @@
 					font-size: 15px;
 				}
 
+				@media screen and (max-width: 700px){
+					width: 50px;
+					height: 25px;
+					font-size: 10px;
+				}
+
+				@media screen and (max-width: $small){
+					width: 38px;
+					height: 19px;
+					font-size: 8px;
+				}
+
 			}
 		}
 
 		@media screen and (max-width: $medium){
-			width: 90%;
+			width: 95%;
 			height: 100%;
 			flex-direction: row-reverse;
 			align-items: flex-end;
+		}
+
+		@media screen and (max-width: $small){
+			width: 100%;
 		}
 	}
 
@@ -230,6 +314,7 @@
 	@media screen and (max-width: $medium) {
 		padding: 25px;
 		height: 60.25vw;
+		// height: 350px;
 		// max-height: none;
 		grid-template-areas:
 			"image header"
@@ -237,12 +322,22 @@
 			"job-title excerpt"
 			"button button";
 		grid-template-columns: 3fr 7fr;
-		grid-template-rows: 0.5fr 5fr .5fr 1fr; 
+		grid-template-rows: auto auto 1fr .5fr; 
 
 		.success-btn-container,
 		.success-title-container{
 			margin: 0;
 		}
+	}
+
+	@media screen and (max-width: 600px){
+		height: 66.25vw;
+	}
+
+	@media screen and (max-width: $small){
+		grid-template-columns: 3.5fr 6.5fr;
+		grid-template-rows: 20px auto .5fr 1fr;
+		height: 80vw;
 	}
 
 }
