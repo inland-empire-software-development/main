@@ -1,6 +1,6 @@
 function HeroEvent() {
 	return (
-		<div className="hero-event-container">
+		<div className="hero-event-container tablet-column-10">
 
 			{/* event details container */}
 			<div className="hero-event-info">
