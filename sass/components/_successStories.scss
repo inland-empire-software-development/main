@@ -30,6 +30,12 @@
 			position: relative;
 			left: 0;
 			height: inherit;
+
+			@media screen and (max-width: $medium){
+				max-height: none;
+				width: 100%;
+				height: auto;
+			}
 		}
 
 		.success-image-overlay{
@@ -43,14 +49,13 @@
 
 			@media screen and (max-width: $medium){
 				height: 100%;
-				width: 100%;
-
 			}
 		}
 
 		@media screen and (max-width: $medium){
-			width: 100%;
+			// max-height: 29.18vw;
 		}
+
 	}
 
 	.success-header{
@@ -59,6 +64,11 @@
 		margin-top: 10px;
 		font-family: 'Block';
 		font-size: calc(1.6em + 1.5vw);
+
+		@media screen and (max-width: $medium){
+			align-self: start;
+			margin-top: -15px;
+		}
 	}
 
 	.success-title-container{
@@ -84,7 +94,7 @@
 			font-size: calc(1.25em + 1vw);
 
 			@media screen and (max-width: $medium){
-				font-size: calc(1em + 1vw);
+				font-size: calc(.75em + 1vw);
 			}
 		}
 
@@ -106,13 +116,14 @@
 			font-size: calc(.5em + 1vw);
 
 			@media screen and (max-width: $medium){
-				font-size: calc(.75em + 1vw);
+				font-size: calc(.25em + 1.5vw);
 				width: 100%;
 			}
 		}
 
 		@media screen and (max-width: $medium){
 			flex-direction: column;
+			line-height: 25px;
 		}
 
 	}
@@ -122,6 +133,12 @@
 		font-family: "Book";
 		font-size: calc(.5em + .5vw);
 		width: 75%;
+
+		@media screen and (max-width: $medium){
+			font-size: calc(1em + .5vw);
+			overflow: hidden;
+			height: 84%;
+		}
 	}
 
 	.success-btn-container{
@@ -142,6 +159,12 @@
 			background: linear-gradient(to right, $yellow, $red);
 			outline: none;
 			float: left;
+
+			@media screen and (max-width: $medium){
+				width: 65%;
+				height: 150%;
+				font-size: calc(1.5em + .5vw);
+			}
 		}
 
 		.social-btn-container{
@@ -189,7 +212,10 @@
 		}
 
 		@media screen and (max-width: $medium){
+			width: 90%;
+			height: 100%;
 			flex-direction: row-reverse;
+			align-items: flex-end;
 		}
 	}
 
@@ -203,7 +229,7 @@
 
 	@media screen and (max-width: $medium) {
 		padding: 25px;
-		height: 50.25vw;
+		height: 60.25vw;
 		// max-height: none;
 		grid-template-areas:
 			"image header"
@@ -211,7 +237,12 @@
 			"job-title excerpt"
 			"button button";
 		grid-template-columns: 3fr 7fr;
-		grid-template-rows: 3fr 1fr 1fr 1fr; 
+		grid-template-rows: 0.5fr 5fr .5fr 1fr; 
+
+		.success-btn-container,
+		.success-title-container{
+			margin: 0;
+		}
 	}
 
 }
