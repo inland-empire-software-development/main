@@ -15,8 +15,12 @@ function HeroEvent() {
 
 				<div className="hero-event-desc">
 
-					<p>Event Name</p>
-					<p>Address</p>
+					<p>Exploring Data Structures : Objects, Arrays and the Secret Life of Objects</p>
+
+					<div className="hero-event-location">
+						<p>Address:</p>
+						<p>3499 Tenth St. Riverside, CA 92501</p>
+					</div>
 
 				</div>
 

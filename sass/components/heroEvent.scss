@@ -11,6 +11,7 @@
 		padding: 5px;
 		background: yellow;
 		.hero-event-date {
+			height: 130px;
 			width: 30%;
 			p:first-child {
 				margin-bottom: 25px;
@@ -21,8 +22,8 @@
 			}
 			p:not(:first-child) {
 				font-family: 'Medium';
-				font-size: 20px;
-				line-height: 20px;
+				font-size: 22px;
+				line-height: 22px;
 				text-align: center;
 			}
 			p:last-child {
@@ -30,9 +31,27 @@
 			}
 		}
 		.hero-event-desc {
+			display: flex;
+			flex-direction: column;
+			height: 130px;
 			width: 70%;
+			justify-content: space-between;
 			text-align: right;
 			background: blue;
+			p:first-child {
+				font-family: 'Book';
+				font-size: 22px;
+			}
+			.hero-event-location {
+				display: flex;
+				flex-direction: row;
+				justify-content: flex-end;
+				font-family: 'Book';
+				p:first-child {
+					font-family: 'Heavy';
+					font-size: 16px;
+				}
+			}
 		}
 	}
 	.reserve-wrapper {
