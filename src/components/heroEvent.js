@@ -23,9 +23,9 @@ function HeroEvent() {
 			</div>
 
 			{/* reserve a spot buton */}
-			<div className="reserve-button">
+			<div className="reserve-wrapper">
 
-				<p>reserve a spot</p>
+				<button className="reserve-button">reserve a spot</button>
 
 			</div>
 
