@@ -1,8 +1,10 @@
 /* eslint-disable no-unused-vars */
 // eslint-disable-next-line no-unused-vars
 import React, { useState, useEffect } from 'react';
-import Leadership from '../src/components/leadership/leadership.js';
+import Goals from '../src/components/goals';
+import Slogan from '../src/components/slogan';
 import Footer from '../src/components/footer';
+import Mission from '../src/components/mission';
 import '../node_modules/@fortawesome/fontawesome-free/js/all';
 import '../sass/index.scss';
 
@@ -21,7 +23,9 @@ function App() {
   // initial render
   return (
     <div>
-      <Leadership />
+      <Slogan />
+      <Mission />
+      <Goals />
       <Footer />
     </div>
   );

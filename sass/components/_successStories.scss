@@ -1,0 +1,28 @@
+#success-stories{
+	background: $light-gray;
+	color: $white;
+	max-height: 600px;
+	height: 30.32vw;
+
+	.success-image-container{
+		max-height: 600px;
+		// height: 100%;
+		width: 100%;
+		padding: 0;
+	}
+
+
+	@media screen and (max-width: $medium) {
+		height: 100%;
+		max-height: none;
+	}
+
+	img{
+		// width: 100%;
+		max-height: 600px;
+		position: relative;
+		left: 0;
+		height: inherit;
+	}
+
+}

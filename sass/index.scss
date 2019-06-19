@@ -9,6 +9,12 @@
 'pages/index';
  
 @import 
+'components/slogan',
+'components/mission',
+'components/goals',
 'components/footer';
+
+@import
+'layout/grid.scss';
 
 @import '_shame';
