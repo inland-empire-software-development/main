@@ -8,6 +8,10 @@ class HeroEvent extends Component {
 		};
 	}
 
+	componentDidMount() {
+
+	}
+
 	render() {
 		return (
 			<div className="hero-event-container tablet-column-10">
