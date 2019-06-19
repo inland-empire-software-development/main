@@ -5,18 +5,32 @@
 		margin: 0px;
 	}
 	.hero-event-info {
-		height: 65%;
+		height: 70%;
 		display: flex;
 		flex-direction: row;
-		padding: 10px;
+		padding: 5px;
 		background: yellow;
 		.hero-event-date {
-			width: 20%;
-			text-align: center;
-			background: green;
+			width: 30%;
+			p:first-child {
+				margin-bottom: 25px;
+				font-family: 'Block';
+				font-size: 100px;
+				text-align: center;
+				line-height: 62px;	
+			}
+			p:not(:first-child) {
+				font-family: 'Medium';
+				font-size: 20px;
+				line-height: 20px;
+				text-align: center;
+			}
+			p:last-child {
+				font-size: 16px;
+			}
 		}
 		.hero-event-desc {
-			width: 80%;
+			width: 70%;
 			text-align: right;
 			background: blue;
 		}
@@ -25,6 +39,8 @@
 		.reserve-button {
 			width: 100%;
 			margin-top: 5px;
+			font-family: 'Book';
+			font-size: 30px;
 			background: orange;
 		}
 	}

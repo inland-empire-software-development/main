@@ -6,10 +6,10 @@ function HeroEvent() {
 			<div className="hero-event-info">
 
 				<div className="hero-event-date">
-
-					<p>Day</p>
-					<p>Month</p>
-					<p>Time</p>
+					
+					<p>12</p>
+					<p>May</p>
+					<p>2:00 PM - 5:00 PM</p>
 
 				</div>
 
