@@ -66,7 +66,7 @@ function Footer() {
         </div>
 
         {/* connect and legal */}
-        <div className="column-6 phone-leader-2">
+        <div className="column-6 first-column phone-leader-2">
           <div>
             <p>Connect</p>
 
@@ -89,7 +89,7 @@ function Footer() {
         </div>
 
         {/* visit us */}
-        <div className="column-6 pre-1 phone-leader-2">
+        <div className="column-6 first-column pre-1 phone-leader-2">
           <p>Visit Us</p>
           <p>
             3499 Tenth St. <br/>
