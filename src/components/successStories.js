@@ -16,7 +16,7 @@ class SuccessStories extends Component{
 		const randomNum = Math.floor(Math.random() * data.length);
 
 		return this.setState({
-			currentStory: data[0]
+			currentStory: data[randomNum]
 		})
 	}
 

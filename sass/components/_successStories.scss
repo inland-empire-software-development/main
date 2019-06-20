@@ -7,7 +7,7 @@
 		"image button";
 	grid-template-columns: 3fr 7fr;
 	grid-template-rows: 1fr 50px 1fr 1fr; 
-	background: $light-gray;
+	background: $black;
 	color: $white;
 	max-height: 468px;
 	height: 31.25vw;
@@ -198,14 +198,16 @@
 			}
 			@media screen and (max-width: 600px){
 				height: 120%;
+				height: 50px;
 			}
 			@media screen and (max-width: $small){
-				height: 80%;
+				// height: 80%;
+				height: 50px;
 				font-size: calc(1em + .5vw);
 				width: 61.5%;
 			}
 			@media screen and (max-width: 400px){
-				height: 120%;
+				// height: 120%;
 			}
 		}
 
@@ -299,11 +301,15 @@
 	}
 
 	@media screen and (max-width: 600px){
-		height: 66.25vw;
+		height: 70.25vw;
 	}
 	@media screen and (max-width: $small){
 		grid-template-columns: 3.5fr 6.5fr;
-		grid-template-rows: 20px auto .5fr 1fr;
+		grid-template-rows: 20px auto 1fr 1fr;
 		height: 80vw;
+	}
+	@media screen and (max-width: 400px){
+		grid-template-rows: 20px auto 1fr 0.5fr;
+		height: 95vw;
 	}
 }
