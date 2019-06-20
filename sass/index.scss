@@ -2,19 +2,16 @@
 'vendors/calcite/calcite-web.scss';
 
 @import
-'base/colors',
-'base/typography';
+'base/_colors',
+'base/_typography';
   
 @import
-'pages/index';
+'pages/_index';
  
 @import 
-'components/slogan',
-'components/mission',
-'components/goals',
-'components/footer';
-
-@import
-'layout/grid.scss';
+'components/_slogan',
+'components/_mission',
+'components/_goals',
+'components/_footer';
 
 @import '_shame';
