@@ -4,6 +4,8 @@ import { maxTextForContainer } from '../utils/maxTextForContainer';
 
 //components
 import SuccessStoriesImage from './SuccessStoriesImage';
+import SuccessStoriesUserTitle from './SuccessStoriesUserTitle';
+import SuccessStoriesMoreBtn from './SuccessStoriesMoreBtn';
 
 class SuccessStories extends Component{
 	constructor(props){
@@ -31,6 +33,10 @@ class SuccessStories extends Component{
 		});
 	}
 
+	updateSuccessExcerpt = (elem) => {
+		return this.successExcerpt = elem;
+	}
+
 	componentDidMount(){
 		this.randomStorySelector();
 		window.addEventListener('resize', this.truncateExcerpt);
@@ -42,7 +48,7 @@ class SuccessStories extends Component{
 	}
 
 	render(){
-		const { name, title, excerpt, imageURL } = this.currentStory;
+		const { name, title, excerpt, imageURL, linkToStory } = this.currentStory;
 		const { currentExcerpt } = this.state;
 
 		return(
@@ -56,18 +62,20 @@ class SuccessStories extends Component{
 
 				{/* right section - success story*/}
 				<p className='success-header'>SUCCESS STORY</p>
-				<div className="success-title-container">
-					<div className="success-name-container">
-						<p className="success-name">{name}</p>
-						<p className="success-slash">/</p>
-					</div>
-					<p className="success-job-title">{title}</p>
-				</div>
-				<p id="test" ref={p => this.successExcerpt = p} className="success-excerpt">{currentExcerpt}</p>
+
+				<SuccessStoriesUserTitle
+					name={name}
+					title={title}
+				/>
+
+				<p ref={p => this.successExcerpt = p} className="success-excerpt">
+					{currentExcerpt}
+				</p>
+
 				<div className="success-btn-container">
-					<button className="success-read-more">
-						read full story
-					</button>
+					<SuccessStoriesMoreBtn 
+						linkToStory={linkToStory}
+					/>
 					<div className="social-btn-container">
 						<div className="social-btn">
 							<a href="#">

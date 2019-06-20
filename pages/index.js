@@ -4,7 +4,7 @@ import React, {useState, useEffect} from 'react';
 import Goals from '../src/components/goals';
 import Slogan from '../src/components/slogan';
 import Mission from '../src/components/mission';
-import SuccessStories from '../src/components/successStories';
+import SuccessStories from '../src/components/SuccessStories';
 import Footer from '../src/components/footer';
 import '../node_modules/@fortawesome/fontawesome-free/js/all';
 import '../sass/index.scss';

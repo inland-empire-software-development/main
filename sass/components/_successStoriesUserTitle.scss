@@ -1,0 +1,81 @@
+.success-title-container{
+	grid-area: job-title;
+	font-family: 'Block';
+	display: flex;
+	align-items: center;
+
+	.success-name-container{
+		display: flex;
+		align-items: center;
+
+		@media screen and (max-width: $medium){
+			width: 100%;
+			height: 30px;
+			margin-top: 10px;
+		}
+	}
+
+
+	.success-name{
+		font-family:"Heavy";
+		font-size: calc(1.25em + 1vw);
+
+		@media screen and (max-width: $medium){
+			font-size: calc(.75em + 1vw);
+		}
+
+		@media screen and (max-width: $small){
+			font-size: calc(.55em + 1vw);
+		}
+	}
+
+	.success-slash{
+		color: red;
+		font-size: calc(1.5em + 1vw);
+		font-family: "Book";
+		margin-left: 10px;
+		margin-right: 10px;
+
+		@media screen and (max-width: $medium){
+			font-size: calc(1.15em + 1vw);
+			margin-left: 5px;
+		}
+		@media screen and (max-width: 710px){
+			font-size: calc(.75em + .5vw);
+		}
+		@media screen and (max-width: $small){
+			margin: 0;
+			margin-left: 5px;
+			font-size: calc(.75em + 1vw);
+		}
+	}
+
+	.success-job-title{
+		font-family: "Book";
+		font-size: calc(.5em + 1vw);
+
+		@media screen and (max-width: $medium){
+			font-size: calc(.5em + 1.5vw);
+			width: 100%;
+		}
+		@media screen and (max-width: 710px){
+			font-size: calc(.75em + .5vw);
+		}
+		@media screen and (max-width: $small){
+			font-size: calc(.4em + 1.5vw);
+		}
+	}
+
+	@media screen and (max-width: $medium){
+		flex-direction: column;
+		line-height: 25px;
+		justify-content: center;
+	}
+	@media screen and (max-width: 595px) and (min-width: 535px){
+		height: 0%;
+		min-height: 140px;
+	}
+	@media screen and (max-width: $small){
+		line-height: 18px;
+	}
+}

@@ -17,43 +17,6 @@
 		margin: 0;
 	}
 
-	// .success-image-container{
-	// 	max-height: 468px;
-	// 	padding: 0;
-	// 	position: relative;
-	// 	grid-area: image;
-	// 	float: left;
-
-
-	// 	img{
-	// 		display: block;
-	// 		max-height: 468px;
-	// 		position: relative;
-	// 		left: 0;
-	// 		height: inherit;
-
-	// 		@media screen and (max-width: $medium){
-	// 			max-height: none;
-	// 			width: 100%;
-	// 			height: auto;
-	// 		}
-	// 	}
-
-	// 	.success-image-overlay{
-	// 		position: absolute;
-	// 		top: 0;
-	// 		left: 0;
-	// 		height: 31.25vw;
-	// 		max-height: inherit;
-	// 		width: 100%;
-	// 		background: linear-gradient(to right, rgba(241, 175, 33, 0.2), rgba(236, 34, 66, 0.2) 50%);
-
-	// 		@media screen and (max-width: $medium){
-	// 			height: 100%;
-	// 		}
-	// 	}
-	// }
-
 	.success-header{
 		grid-area: header;
 		align-self: center;
@@ -71,88 +34,6 @@
 		@media screen and (max-width: $small){
 			font-size: calc(.5em + 1.5vw);
 			margin-top: -5px;
-		}
-	}
-
-	.success-title-container{
-		grid-area: job-title;
-		font-family: 'Block';
-		display: flex;
-		align-items: center;
-
-		.success-name-container{
-			display: flex;
-			align-items: center;
-
-			@media screen and (max-width: $medium){
-				width: 100%;
-				height: 30px;
-				margin-top: 10px;
-			}
-		}
-
-
-		.success-name{
-			font-family:"Heavy";
-			font-size: calc(1.25em + 1vw);
-
-			@media screen and (max-width: $medium){
-				font-size: calc(.75em + 1vw);
-			}
-
-			@media screen and (max-width: $small){
-				font-size: calc(.55em + 1vw);
-			}
-		}
-
-		.success-slash{
-			color: red;
-			font-size: calc(1.5em + 1vw);
-			font-family: "Book";
-			margin-left: 10px;
-			margin-right: 10px;
-
-			@media screen and (max-width: $medium){
-				font-size: calc(1.15em + 1vw);
-				margin-left: 5px;
-			}
-			@media screen and (max-width: 710px){
-				font-size: calc(.75em + .5vw);
-			}
-			@media screen and (max-width: $small){
-				margin: 0;
-				margin-left: 5px;
-				font-size: calc(.75em + 1vw);
-			}
-		}
-
-		.success-job-title{
-			font-family: "Book";
-			font-size: calc(.5em + 1vw);
-
-			@media screen and (max-width: $medium){
-				font-size: calc(.5em + 1.5vw);
-				width: 100%;
-			}
-			@media screen and (max-width: 710px){
-				font-size: calc(.75em + .5vw);
-			}
-			@media screen and (max-width: $small){
-				font-size: calc(.4em + 1.5vw);
-			}
-		}
-
-		@media screen and (max-width: $medium){
-			flex-direction: column;
-			line-height: 25px;
-			justify-content: center;
-		}
-		@media screen and (max-width: 595px) and (min-width: 535px){
-			height: 0%;
-			min-height: 140px;
-		}
-		@media screen and (max-width: $small){
-			line-height: 18px;
 		}
 	}
 
@@ -180,37 +61,6 @@
 		font-family: "Book";
 		justify-content: space-between;
 		width: 75%;
-
-		.success-read-more{
-			width: 25%;
-			height: calc(3vw - 0.5px);
-			background: red;
-			color: $white;
-			font-size: calc(.5em + .5vw);
-			border: none;
-			background: linear-gradient(to right, $yellow, $red);
-			outline: none;
-			float: left;
-
-			@media screen and (max-width: $medium){
-				width: 65%;
-				height: 150%;
-				font-size: calc(1.5em + .5vw);
-			}
-			@media screen and (max-width: 600px){
-				height: 120%;
-				height: 50px;
-			}
-			@media screen and (max-width: $small){
-				// height: 80%;
-				height: 50px;
-				font-size: calc(1em + .5vw);
-				width: 61.5%;
-			}
-			@media screen and (max-width: 400px){
-				// height: 120%;
-			}
-		}
 
 		.social-btn-container{
 			display: flex;
