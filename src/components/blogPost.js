@@ -1,17 +1,7 @@
-import React, {Component} from 'react';
+import React from 'react';
 
-class BlogPost extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      posts: [],
-    };
-  }
-
-  render() {
-    return {};
-  }
-}
+const BlogPost = (props) => {
+  return {};
+};
 
 export default BlogPost;
