@@ -163,7 +163,8 @@
 		width: 75%;
 		@media screen and (max-width: $medium){
 			font-size: calc(1em + .5vw);
-			overflow: hidden;
+			// overflow: hidden;
+			word-wrap: break-word;
 			height: 84%;
 			width: 90%;
 		}

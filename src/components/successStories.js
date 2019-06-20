@@ -1,31 +1,46 @@
 import React, { Component } from 'react';
 import { data } from '../utils/successStoriesData';
+import { maxTextForContainer } from '../utils/maxTextForContainer';
 
 class SuccessStories extends Component{
 	constructor(props){
 		super(props);
 
-		this.state = {
-			currentStory: ''
-		}
+		this.successExcerpt = React.createRef();
+		this.currentStory = '';
+
+		this.state = {}
 	}
 
-	//Sets this.state.currentStory to a random success story.
+	//Sets this.currentStory to a random success story.
 	randomStorySelector = () => {
-		//sets randomNum to a number between 0 and length of success stories
+		//sets randomNum to a number between 0 and number of success stories
 		const randomNum = Math.floor(Math.random() * data.length);
+		this.currentStory = data[randomNum];
+	}
 
-		return this.setState({
-			currentStory: data[randomNum]
-		})
+	//Calls maxTextForContainer to shorten string according
+	//to string size. Will also add "..." after string.
+	truncateExcerpt = () => {
+		const newText = maxTextForContainer(this.successExcerpt, this.currentStory.excerpt);
+		this.setState({
+			currentExcerpt: newText
+		});
 	}
 
 	componentDidMount(){
 		this.randomStorySelector();
+		window.addEventListener('resize', this.truncateExcerpt);
+		this.truncateExcerpt();
+	}
+
+	componentWillUnmount(){
+		window.removeEventListener('resize', this.truncateExcerpt);
 	}
 
 	render(){
-		const { name, title, excerpt, imageURL } = this.state.currentStory;
+		const { name, title, excerpt, imageURL } = this.currentStory;
+		const { currentExcerpt } = this.state;
 
 		return(
 			<div id="success-stories" className="grid-container">
@@ -45,7 +60,7 @@ class SuccessStories extends Component{
 					</div>
 					<p className="success-job-title">{title}</p>
 				</div>
-				<p className="success-excerpt">{excerpt}</p>
+				<p id="test" ref={p => this.successExcerpt = p} className="success-excerpt">{currentExcerpt}</p>
 				<div className="success-btn-container">
 					<button className="success-read-more">
 						read full story
