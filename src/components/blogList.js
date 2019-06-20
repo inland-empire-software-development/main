@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import BlogPost from 'BlogPost';
 
 class BlogList extends Component {
   constructor(props) {
@@ -14,4 +15,4 @@ class BlogList extends Component {
   }
 }
 
-export default BlogPost;
+export default BlogList;
