@@ -44,7 +44,6 @@
 		width: 75%;
 		@media screen and (max-width: $medium){
 			font-size: calc(1em + .5vw);
-			// overflow: hidden;
 			word-wrap: break-word;
 			height: 84%;
 			width: 90%;
@@ -61,59 +60,6 @@
 		font-family: "Book";
 		justify-content: space-between;
 		width: 75%;
-
-		.social-btn-container{
-			display: flex;
-
-			a{
-				color: $white;
-			}
-
-			.social-btn{
-				display: flex;
-				justify-content: center;
-				align-items: center;
-				font-size: 25px;
-				width: 100px;
-				height: 50px;
-				background: url('../static/images/desktop/success-social-network.svg');
-				background-size: cover;
-
-				a{
-					width: 50px;
-					height: 50px;
-					border-radius: 50%;
-					display: flex;
-					justify-content: center;
-					align-items: center;
-
-					&:hover{
-						color: black;
-						background: white;
-					}
-				}
-
-				.fa-facebook-f{
-					margin-right: 2px;
-				}
-
-				@media screen and (max-width: 1200px){
-					width: 76px;
-					height: 38px;
-					font-size: 15px;
-				}
-				@media screen and (max-width: 700px){
-					width: 50px;
-					height: 25px;
-					font-size: 10px;
-				}
-				@media screen and (max-width: $small){
-					width: 38px;
-					height: 19px;
-					font-size: 8px;
-				}
-			}
-		}
 
 		@media screen and (max-width: $medium){
 			width: 95%;

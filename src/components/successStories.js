@@ -6,6 +6,7 @@ import { maxTextForContainer } from '../utils/maxTextForContainer';
 import SuccessStoriesImage from './SuccessStoriesImage';
 import SuccessStoriesUserTitle from './SuccessStoriesUserTitle';
 import SuccessStoriesMoreBtn from './SuccessStoriesMoreBtn';
+import SocialBtnCircleContainer from './SocialBtnCircleContainer';
 
 class SuccessStories extends Component{
 	constructor(props){
@@ -62,32 +63,20 @@ class SuccessStories extends Component{
 
 				{/* right section - success story*/}
 				<p className='success-header'>SUCCESS STORY</p>
-
 				<SuccessStoriesUserTitle
 					name={name}
 					title={title}
 				/>
-
 				<p ref={p => this.successExcerpt = p} className="success-excerpt">
 					{currentExcerpt}
 				</p>
 
+				{/* right section - buttons*/}
 				<div className="success-btn-container">
 					<SuccessStoriesMoreBtn 
 						linkToStory={linkToStory}
 					/>
-					<div className="social-btn-container">
-						<div className="social-btn">
-							<a href="#">
-								<i className="fab fa-twitter"></i>
-							</a>
-						</div>
-						<div className="social-btn">
-							<a href="#">
-								<i className="fab fa-facebook-f"></i>
-							</a>
-						</div>
-					</div>
+					<SocialBtnCircleContainer />
 				</div>
 
 			</div>
