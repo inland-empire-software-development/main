@@ -1,3 +1,7 @@
+/**
+ * Slogan component
+ * @return {Slogan}
+ */
 function Slogan() {
   return (
     <div id="slogan" className="grid-container">

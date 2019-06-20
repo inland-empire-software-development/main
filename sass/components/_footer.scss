@@ -129,11 +129,3 @@ footer {
     background-color: rgba(0, 0, 0, 0.5);
     width: 100%;
 }
-
-@media screen and (max-width: 859px){
-    html:not([dir="rtl"]) [class*="column-"] [class*="column-"]:last-of-type,
-    html:not([dir="rtl"]) [class*="column-"] [class*="column-"]:first-of-type {
-        margin-right: 0;
-        margin-left: 0;
-    }
-}
