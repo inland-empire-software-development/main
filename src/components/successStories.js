@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import { data } from '../utils/successStoriesData';
 import { maxTextForContainer } from '../utils/maxTextForContainer';
 
+//components
+import SuccessStoriesImage from './SuccessStoriesImage';
+
 class SuccessStories extends Component{
 	constructor(props){
 		super(props);
@@ -46,10 +49,10 @@ class SuccessStories extends Component{
 			<div id="success-stories" className="grid-container">
 
 				{/* left section - image of person */}
-				<div className="success-image-container">
-					<img alt={name} src={imageURL} />
-					<div className="success-image-overlay"></div>
-				</div>
+				<SuccessStoriesImage 
+					name={name}
+					imageURL={imageURL}
+				/>
 
 				{/* right section - success story*/}
 				<p className='success-header'>SUCCESS STORY</p>
