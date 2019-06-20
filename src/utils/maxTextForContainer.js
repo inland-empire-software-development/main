@@ -24,7 +24,6 @@ export const maxTextForContainer = (container, textString) => {
 		newText = newText.slice(0, numChar);
 		container.textContent = newText + "...";
 	} else {
-		console.log(newText.length);
 		return newText;
 	}
 }
