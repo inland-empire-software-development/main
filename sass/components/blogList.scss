@@ -1,0 +1,23 @@
+#blogList {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-column-gap: 30px;
+  grid-row-gap: 30px;
+  padding: 0 15px;
+}
+
+@media screen and (min-width: 700px) {
+  #blogList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 80%;
+  }
+
+  .blog-post-preview {
+    width: 310px;
+    height: 380px;
+  }
+}
+

@@ -11,7 +11,10 @@ class BlogList extends Component {
   }
 
   render() {
-    return {};
+    return (
+      <div id = "blogList">
+      </div>
+    );
   }
 }
 
