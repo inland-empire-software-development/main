@@ -1,3 +1,7 @@
+/**
+ * Goals component
+ * @return {Goals}
+ */
 function Goals() {
   return (
     <div className="grid-container goals-container">

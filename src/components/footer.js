@@ -1,3 +1,7 @@
+/**
+ * Footer component
+ * @return {Footer}
+ */
 function Footer() {
   // initial render
   return (
