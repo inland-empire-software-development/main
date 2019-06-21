@@ -1,4 +1,4 @@
-const SuccessStoriesMoreBtn = (props) => {
+function SuccessStoriesMoreBtn(props){
 	const { linkToStory } = props;
 	return (
 		<a href={linkToStory} className="success-read-more">

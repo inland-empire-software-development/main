@@ -1,4 +1,4 @@
-const SuccessStoriesUserTitle = (props) => {
+function SuccessStoriesUserTitle(props){
 	const { name, title } = props;
 
 	return (

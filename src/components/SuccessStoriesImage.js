@@ -1,4 +1,4 @@
-const SuccessStoriesImage = (props) => {
+function SuccessStoriesImage(props){
 	const { name, imageURL } = props;
 
 	return (

@@ -1,4 +1,4 @@
-const SocialBtnCircle = (props) => {
+function SocialBtnCircle(props){
 	const { href, fontClass } = props;
 
 	return (
