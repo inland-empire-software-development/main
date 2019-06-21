@@ -7,13 +7,13 @@ class Leadership extends React.Component {
       {
         id: 1,
         userName: 'Lloan Alas',
-        title: '',
+        title: 'LAMP Stack Developer',
         image: '../static/images/desktop/placeholder.JPG',
       },
       {
         id: 2,
         userName: 'Tony Nguyen',
-        title: '',
+        title: 'UCR Bootcamp TA',
         image: '../static/images/desktop/placeholder.JPG',
       },
       {
@@ -30,7 +30,7 @@ class Leadership extends React.Component {
       },
       {
         id: 5,
-        userName: 'Luis Javier Fernandez',
+        userName: 'Luis Javier Velazquez',
         title: 'Front End Developer',
         image: '../static/images/desktop/placeholder.JPG',
       },
@@ -75,7 +75,7 @@ class Leadership extends React.Component {
       {
         id: 1,
         userName: 'Lloan Alas',
-        title: '',
+        title: 'Mastermind',
         image: '../static/images/desktop/placeholder.JPG',
       },
       {
@@ -93,7 +93,7 @@ class Leadership extends React.Component {
       {
         id: 2,
         userName: 'Tony Nguyen',
-        title: '',
+        title: 'UCR Bootcamp TA',
         image: '../static/images/desktop/placeholder.JPG',
       },
       {
@@ -109,10 +109,10 @@ class Leadership extends React.Component {
     const { organizers, speakers } = this.state;
     return (
       <div id="leadership" className='grid-container'>
-        <div >
+        <div className='column-20'>
 
-          <h3 className='column-2 '>ORGANIZERS</h3>
-          <div className='organizers scrolling column-18'>
+          <h3 className='column-1 '>ORGANIZERS</h3>
+          <div className='organizers scrolling column-19'>
             <ul>
               {organizers.map(organizer => (
                 <li key={organizer.id}>
@@ -124,8 +124,8 @@ class Leadership extends React.Component {
             </ul>
           </div>
 
-          <h3 className='column-2 '>PAST SPEAKERS</h3>
-          <div className='speakers scrolling column-18'>
+          <h3 className='column-1'>PAST SPEAKERS</h3>
+          <div className='speakers scrolling column-19'>
             <ul>
               {speakers.map(speaker => (
                 <li key={speaker.id}>
