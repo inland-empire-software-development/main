@@ -1,10 +1,10 @@
 import React from 'react';
 
-const BlogPost = (props) => {
+const blogPost = (props) => {
   return (
     <div className = "blog-post-preview">
     </div>
   );
 };
 
-export default BlogPost;
+export default blogPost;

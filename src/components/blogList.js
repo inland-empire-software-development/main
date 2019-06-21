@@ -1,21 +1,18 @@
-import React, {Component} from 'react';
+import React, {useState, useEffect} from 'react';
 import BlogPost from 'BlogPost';
 
-class BlogList extends Component {
-  constructor(props) {
-    super(props);
+const blogList = (props) => {
+  const [posts, setPosts] = useState([]);
 
-    this.state = {
-      posts: [],
-    };
-  }
+  useEffect( async () => {/* API call to retrieve post data */});
 
-  render() {
-    return (
-      <div id = "blogList">
-      </div>
-    );
-  }
-}
+  return (
+    <div id = "blogList">
+      {posts.map((post) => (
+        <BlogPost key = {post[slug]} postData = {post} />
+      ))}
+    </div>
+  );
+};
 
-export default BlogList;
+export default blogList;
