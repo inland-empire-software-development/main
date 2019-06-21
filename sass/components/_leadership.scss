@@ -1,0 +1,36 @@
+#leadership {    
+  max-width: 80vw;
+  margin-top: 3em;
+  
+
+  h3{
+    writing-mode: vertical-rl;
+    text-orientation: sideways;
+    font-family: "Heavy";
+    font-size: 1.875em;
+    display: inline-flex;
+  }
+
+  ul {
+    list-style: none;
+    margin-top: 0;
+  }
+  li {
+    display: inline-block;
+  }
+
+   .scrolling{
+    margin-bottom: 3em;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+  }
+  
+  
+
+}
