@@ -3,8 +3,12 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    padding-bottom: 350px;
-    h1 {
-        color: red;
+    min-height: 628px;
+    @media screen and (max-width: $small) {
+        background: url("../static/images/mobile/hero-gradient.jpg");
+        background-size: cover;
+        background-position: center; //calc(50% - 50px)
+        background-repeat: no-repeat;
+        min-height: 400px;
     }
 }

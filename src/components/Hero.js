@@ -1,9 +1,21 @@
+/**
+ * Hero component
+ * @return {Hero}
+ */
 function Hero() {
     return (
-        <div id="hero" className="grid-container">
-            <h1>Helloooo</h1>
-            
-        </div>
+        <header id="hero" className="grid-container">
+            <div className="column-24">
+                {/* Navigation */}
+                <nav></nav>
+
+                {/* Side bar */}
+                <div></div>
+
+                {/* Event */}
+                <div></div>
+            </div>
+        </header>
     )
 }
 
