@@ -11,33 +11,8 @@ const LeadershipImage = (props) => (
       </figcaption>
     </div>
     <style jsx>{`
-      #leadership-image{
-        display: flex;
-      }
-      img {
-        height: 19.68rem;
-        width: 17.19rem;
-      }
-      .card {
-        max-height: 5.6rem;
-        position: relative;
-        right: 9.37rem;
-        top: 17rem;
-        opacity: 0.5;
-      }
-      .card-content {
-        margin: 0;
-        padding: .3;
-      }
-      .leadership-name {
-        font-family: "Heavy";
-        font-size: 1.375rem;
-        color: black;
-      }
-      .leadership-title {
-        font-family: "Book";
-        font-size: 1.25rem;
-      }
+
+    
     `}</style>
   </div>
 );

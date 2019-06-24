@@ -109,10 +109,10 @@ class Leadership extends React.Component {
     const { organizers, speakers } = this.state;
     return (
       <div id="leadership" className='grid-container'>
-        <div className='column-20'>
+        <div className='column-24'>
 
           <h3 className='column-1 '>ORGANIZERS</h3>
-          <div className='organizers scrolling column-19'>
+          <div className='organizers scrolling column-23'>
             <ul>
               {organizers.map(organizer => (
                 <li key={organizer.id}>
