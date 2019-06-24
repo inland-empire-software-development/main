@@ -20,6 +20,7 @@ function SuccessStories(){
 	const currentStory = useRandomStory(data);
 	let currentExcerpt = currentStory.excerpt;
 
+	//Function used to replace excerpt depending on container size.
 	const truncateExcerpt = (storyContainerElem, storyString) => {
 		const newText = maxTextForContainer(storyContainerElem, storyString);
 		if(successExcerpt !== null){
@@ -27,7 +28,7 @@ function SuccessStories(){
 		}
 	}
 
-	//Changes text depending on size of container
+	//Register event listener to change text depending on size of container
 	useEffect(() => {
 		window.addEventListener('resize', () => truncateExcerpt(successExcerpt, currentExcerpt));
 		truncateExcerpt(successExcerpt, currentStory.excerpt);
@@ -63,7 +64,9 @@ function SuccessStories(){
 				<SuccessStoriesMoreBtn 
 					linkToStory={linkToStory}
 				/>
-				<SocialBtnCircleContainer />
+				<SocialBtnCircleContainer 
+					userStory={currentStory}
+				/>
 			</div>
 
 		</div>

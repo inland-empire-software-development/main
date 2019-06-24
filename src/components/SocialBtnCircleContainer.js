@@ -1,23 +1,18 @@
-import React, { Component } from 'react';
+import React, { Component, useState } from 'react';
 
-//components
-import SocialBtnCircle from './SocialBtnCircle';
+//hooks
+import useGenerateSocialBtn from '../utils/useGenerateSocialBtn';
 
-class SocialBtnCircleContainer extends Component {
-	render(){
-		return (
-			<div className="social-btn-container">
-				<SocialBtnCircle 
-					href="#"
-					fontClass="fab fa-twitter"
-				/>
-				<SocialBtnCircle 
-					href="#"
-					fontClass="fab fa-facebook-f"
-				/>
-			</div>
-		);
-	}
+function SocialBtnCircleContainer(props){
+	const { userStory } = props;
+
+	const socialNetworks = useGenerateSocialBtn(userStory);
+
+	return (
+		<div className="social-btn-container">
+			{socialNetworks}
+		</div>
+	);
 }
 
 export default SocialBtnCircleContainer;
