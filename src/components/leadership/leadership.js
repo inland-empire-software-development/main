@@ -109,13 +109,14 @@ class Leadership extends React.Component {
     const { organizers, speakers } = this.state;
     return (
       <div id="leadership" className='grid-container'>
-        <div className='column-24'>
+        <div className=' pre-1 column-22'>
 
           <h3 className='column-1 '>ORGANIZERS</h3>
-          <div className='organizers scrolling column-23'>
+          <div className='organizers scrolling column-21'>
             <ul>
               {organizers.map(organizer => (
-                <li key={organizer.id}>
+                <li
+                  key={organizer.id}>
                   <LeadershipImage userName={organizer.userName}
                     title={organizer.title}
                     image={organizer.image} />
@@ -125,7 +126,7 @@ class Leadership extends React.Component {
           </div>
 
           <h3 className='column-1'>PAST SPEAKERS</h3>
-          <div className='speakers scrolling column-19'>
+          <div className='speakers scrolling column-21'>
             <ul>
               {speakers.map(speaker => (
                 <li key={speaker.id}>

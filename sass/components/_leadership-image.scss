@@ -1,21 +1,23 @@
 #leadership-image{
     display: inliine-block;
-    width: 23rem;
+    width: 20rem;
+    .profile-photo{
+        height: 15rem;
+        width: 13rem;
 
-    img {
-        height: 19.68rem;
-        width: 17.19rem;
-      }
-      .card {
-        max-height: 5.6rem;
-        position: relative;
-        right: 9.37rem;
-        top: 17rem;
+        img {
+            max-width: 100%;
+          }
+    }
+    
+      .name-title {
+        max-height: 5rem;
+       
         opacity: 0.5;
 
         .card-content {
             margin: 0;
-            padding: .3;
+            padding: .5rem;
           }
           .leadership-name {
             font-family: "Heavy";
