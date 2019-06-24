@@ -1,11 +1,12 @@
 /* eslint-disable no-unused-vars */
 // eslint-disable-next-line no-unused-vars
 import React, {useState, useEffect} from 'react';
-import Goals from '../src/components/goals';
-import Slogan from '../src/components/slogan';
-import Mission from '../src/components/mission';
+
+import Goals from '../src/components/Goals';
+import Slogan from '../src/components/Slogan';
+import Footer from '../src/components/Footer';
+import Mission from '../src/components/Mission';
 import SuccessStories from '../src/components/SuccessStories';
-import Footer from '../src/components/footer';
 import '../node_modules/@fortawesome/fontawesome-free/js/all';
 import '../sass/index.scss';
 
