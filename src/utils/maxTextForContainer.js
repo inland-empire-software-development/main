@@ -22,8 +22,9 @@ export const maxTextForContainer = (container, textString) => {
 		//number of rows to get string length
 		const numChar = (estimateRows * estimateCharPerRow);
 		newText = newText.slice(0, numChar);
-		container.textContent = newText + "...";
+		// container.textContent = newText + "...";
+		return newText + "...";
 	} else {
-		return newText;
+		return textString;
 	}
 }
