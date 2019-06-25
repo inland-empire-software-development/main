@@ -1,13 +1,7 @@
 /* eslint-disable no-unused-vars */
 // eslint-disable-next-line no-unused-vars
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
-||||||| merged common ancestors
-import React, {useState, useEffect} from 'react';
-=======
-import React, {useState, useEffect} from 'react';
 import Hero from '../src/components/Hero';
->>>>>>> 62878f7a78b8773a935f2e550a27363b3bc10f86
 import Goals from '../src/components/Goals';
 import Slogan from '../src/components/Slogan';
 import Footer from '../src/components/Footer';

@@ -4,11 +4,11 @@ const LeadershipImage = (props) => (
       <img className='card-image' src={props.image} alt='Profile picture' />
     </div>
 
-    <div className='card name-title' >
-      <figcaption className='card-content'>
+    <div className='card name-title'>
+      <div className='card-content'>
         <p className='leadership-name'>{props.userName}<br />
           <p className='leadership-title'>{props.title}</p></p>
-      </figcaption>
+      </div>
     </div>
   </div>
 );
