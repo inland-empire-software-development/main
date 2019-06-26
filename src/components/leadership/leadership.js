@@ -8,13 +8,13 @@ class Leadership extends React.Component {
         id: 1,
         userName: 'Lloan Alas',
         title: 'LAMP Stack Developer',
-        image: '../static/images/desktop/lloanalas.JPG',
+        image: '../static/images/desktop/lloanalas.jpg',
       },
       {
         id: 2,
         userName: 'Tony Nguyen',
-        title: 'Treasurer, UCR Bootcamp TA',
-        image: '../static/images/desktop/tonynguyen.JPG',
+        title: 'IESD Treasurer',
+        image: '../static/images/desktop/tonynguyen.jpg',
       },
       {
         id: 3,
@@ -25,20 +25,20 @@ class Leadership extends React.Component {
       {
         id: 6,
         userName: 'Felipe Fernandez',
-        title: 'Front End Developer',
-        image: '../static/images/desktop/felipefernandez.JPG',
+        title: 'IESD Secratary',
+        image: '../static/images/desktop/felipefernandez.jpg',
       },
       {
         id: 4,
         userName: 'Amy Ambard',
         title: 'Front End Developer',
-        image: '../static/images/desktop/placeholder.JPG',
+        image: '../static/images/desktop/amyambard.jpg',
       },
       {
         id: 5,
         userName: 'Luis Javier Velazquez',
         title: 'Front End Developer',
-        image: '../static/images/desktop/placeholder.JPG',
+        image: '../static/images/desktop/luisvelazquez.jpg',
       },
       {
         id: 11,
@@ -62,7 +62,7 @@ class Leadership extends React.Component {
         id: 9,
         userName: 'Jonathan Nguyen',
         title: 'Front End Developer',
-        image: '../static/images/desktop/placeholder.JPG',
+        image: '../static/images/desktop/jonathannguyen.jpg',
       },
       {
         id: 10,
@@ -76,7 +76,7 @@ class Leadership extends React.Component {
         id: 1,
         userName: 'Lloan Alas',
         title: 'Mastermind',
-        image: '../static/images/desktop/placeholder.JPG',
+        image: '../static/images/desktop/lloanalas.jpg',
       },
       {
         id: 7,
@@ -88,13 +88,13 @@ class Leadership extends React.Component {
         id: 6,
         userName: 'Felipe Fernandez',
         title: 'Front End Developer',
-        image: '../static/images/desktop/placeholder.JPG',
+        image: '../static/images/desktop/felipefernandez.jpg',
       },
       {
         id: 2,
         userName: 'Tony Nguyen',
         title: 'UCR Bootcamp TA',
-        image: '../static/images/desktop/placeholder.JPG',
+        image: '../static/images/desktop/tonynguyen.jpg',
       },
       {
         id: 4,
