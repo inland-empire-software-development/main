@@ -7,7 +7,7 @@ const LeadershipImage = (props) => (
     <div className='card name-title'>
       <div className='card-content'>
         <p className='leadership-name'>{props.userName}<br />
-          <p className='leadership-title'>{props.title}</p></p>
+          <span className='leadership-title'>{props.title}</span></p>
       </div>
     </div>
   </div>

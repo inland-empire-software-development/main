@@ -8,19 +8,25 @@ class Leadership extends React.Component {
         id: 1,
         userName: 'Lloan Alas',
         title: 'LAMP Stack Developer',
-        image: '../static/images/desktop/placeholder.JPG',
+        image: '../static/images/desktop/lloanalas.JPG',
       },
       {
         id: 2,
         userName: 'Tony Nguyen',
-        title: 'UCR Bootcamp TA',
-        image: '../static/images/desktop/placeholder.JPG',
+        title: 'Treasurer, UCR Bootcamp TA',
+        image: '../static/images/desktop/tonynguyen.JPG',
       },
       {
         id: 3,
         userName: 'Amber Macbain',
         title: 'Front End Developer',
         image: '../static/images/desktop/placeholder.JPG',
+      },
+      {
+        id: 6,
+        userName: 'Felipe Fernandez',
+        title: 'Front End Developer',
+        image: '../static/images/desktop/felipefernandez.JPG',
       },
       {
         id: 4,
@@ -31,12 +37,6 @@ class Leadership extends React.Component {
       {
         id: 5,
         userName: 'Luis Javier Velazquez',
-        title: 'Front End Developer',
-        image: '../static/images/desktop/placeholder.JPG',
-      },
-      {
-        id: 6,
-        userName: 'Felipe Fernandez',
         title: 'Front End Developer',
         image: '../static/images/desktop/placeholder.JPG',
       },
