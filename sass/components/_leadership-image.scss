@@ -2,9 +2,18 @@
     display: inliine-block;
     width: 20rem;
 
+    @media screen and (max-width: $medium){
+        width: 17rem;
+      }
+
     .profile-photo{
         height: 14.5rem;
         width: 13rem;
+
+        @media screen and (max-width: $medium){
+            height: 11.5rem;
+            width: 10rem;
+          }
 
         img {
             width: auto;
@@ -22,7 +31,11 @@
         float: right;  
         max-height: 5rem;      
         opacity: 0.5;
-        width: 16rem;       
+        width: 16rem;  
+        
+        @media screen and (max-width: $medium){
+            width: 14rem;
+        }
 
         .card-content {           
             margin: 0;
@@ -32,10 +45,17 @@
                 font-family: "Heavy";
                 font-size: 1.2rem;
                 color: $black;
+                @media screen and (max-width: $medium){
+                    font-size: 1.2rem;
+                }
               }
               .leadership-title {
                 font-family: "Book";
                 font-size: 1.1rem;
+
+                @media screen and (max-width: $medium){
+                    font-size: .9rem;
+                }
               }
           }
           
