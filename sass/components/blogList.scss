@@ -6,6 +6,33 @@
   padding: 0 15px;
 }
 
+.blog-preview-image {
+  width: 100%;
+}
+
+.blog-preview-content {
+  font-family: "Book";
+  font-size: 14px;
+  width: 100%;
+}
+
+.blog-preview-category {
+  display: none;
+}
+
+.blog-preview-title {
+  font-family: "Black";
+}
+
+.blog-preview-author, .blog-preview-date {
+  font-size: 12px;
+}
+
+.full-article-button {
+  color: $white;
+  width: 100%;
+}
+
 
 @media screen and (min-width: 700px) {
   #blogList {
@@ -15,9 +42,36 @@
     width: 80%;
   }
 
-  .blog-post-preview {
+  .blog-preview {
     max-width: 310px;
     height: 380px;
   }
+
+  .blog-preview-content {
+    padding: 0 15px;
+  }
+
+  .blog-preview-category {
+    font-family: "Medium";
+    font-size: 12px;
+    background-color: rgba(255,255,255,0.8);
+  }
+
+  .blog-preview-title {
+    font-size: 20px;
+  }
+
+  .blog-preview-author {
+    font-size: 18px;
+  }
+
+  .blog-preview-date {
+    font-size: 16px;
+  }
+
+  .full-article-button {
+    width: 140px;
+  }
+
 }
 
