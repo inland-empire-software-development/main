@@ -35,6 +35,10 @@
     overflow-y: hidden;
     white-space: nowrap;
     -webkit-overflow-scrolling: touch;
+
+    @media screen and (max-width: $medium){
+      max-height: 15.5rem;
+    }
     &::-webkit-scrollbar {
       display: none;
     }

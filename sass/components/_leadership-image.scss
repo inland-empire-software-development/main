@@ -2,8 +2,12 @@
     display: inliine-block;
     width: 20rem;
 
+    @media screen and (max-width: $large){
+        width: 18rem;
+      }
+
     @media screen and (max-width: $medium){
-        width: 17rem;
+        width: 16rem;
       }
 
     .profile-photo{
@@ -35,6 +39,7 @@
         
         @media screen and (max-width: $medium){
             width: 14rem;
+            opacity: 0.8;
         }
 
         .card-content {           

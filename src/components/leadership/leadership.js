@@ -7,7 +7,7 @@ class Leadership extends React.Component {
       {
         id: 1,
         userName: 'Lloan Alas',
-        title: 'LAMP Stack Developer',
+        title: 'IESD Executive Director',
         image: '../static/images/desktop/lloanalas.jpg',
       },
       {
@@ -15,12 +15,6 @@ class Leadership extends React.Component {
         userName: 'Tony Nguyen',
         title: 'IESD Treasurer',
         image: '../static/images/desktop/tonynguyen.jpg',
-      },
-      {
-        id: 3,
-        userName: 'Amber Macbain',
-        title: 'Front End Developer',
-        image: '../static/images/desktop/placeholder.JPG',
       },
       {
         id: 6,
@@ -37,38 +31,32 @@ class Leadership extends React.Component {
       {
         id: 5,
         userName: 'Luis Javier Velazquez',
-        title: 'Front End Developer',
+        title: 'Lead React Developer',
         image: '../static/images/desktop/luisvelazquez.jpg',
-      },
-      {
-        id: 11,
-        userName: 'Cesar Gomez',
-        title: 'Front End Developer',
-        image: '../static/images/desktop/placeholder.JPG',
-      },
-      {
-        id: 7,
-        userName: 'Ixshel Escamilla',
-        title: 'Front End Developer',
-        image: '../static/images/desktop/placeholder.JPG',
       },
       {
         id: 8,
         userName: 'Jen Latchman',
-        title: 'Front End Developer',
-        image: '../static/images/desktop/placeholder.JPG',
+        title: 'Digital Marketing',
+        image: '../static/images/desktop/jenlatchman.png'
       },
       {
         id: 9,
         userName: 'Jonathan Nguyen',
-        title: 'Front End Developer',
+        title: 'Application Developer',
         image: '../static/images/desktop/jonathannguyen.jpg',
       },
       {
         id: 10,
         userName: 'Kelly Lam',
+        title: 'Internal Relations Director',
+        image: '../static/images/desktop/kellylam.jpg',
+      },
+      {
+        id: 3,
+        userName: 'Amber Macbain',
         title: 'Front End Developer',
-        image: '../static/images/desktop/placeholder.JPG',
+        image: '../static/images/desktop/ambermacbain.jpg',
       },
     ],
     speakers: [
@@ -82,7 +70,7 @@ class Leadership extends React.Component {
         id: 7,
         userName: 'Ixshel Escamilla',
         title: 'Front End Developer',
-        image: '../static/images/desktop/placeholder.JPG',
+        image: '../static/images/desktop/placeholder.jpg',
       },
       {
         id: 6,
@@ -100,7 +88,7 @@ class Leadership extends React.Component {
         id: 4,
         userName: 'Amy Ambard',
         title: 'Front End Developer',
-        image: '../static/images/desktop/placeholder.JPG',
+        image: '../static/images/desktop/placeholder.jpg',
       },
     ],
   };
