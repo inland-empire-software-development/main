@@ -6,18 +6,18 @@
   padding: 0 15px;
 }
 
-.blog-preview-image {
+.blog-preview, .blog-preview-image {
   width: 100%;
+}
+
+.blog-preview-category {
+  display: none;
 }
 
 .blog-preview-content {
   font-family: "Book";
   font-size: 14px;
   width: 100%;
-}
-
-.blog-preview-category {
-  display: none;
 }
 
 .blog-preview-title {
@@ -29,6 +29,7 @@
 }
 
 .full-article-button {
+  display: block;
   color: $white;
   width: 100%;
 }
@@ -47,14 +48,20 @@
     height: 380px;
   }
 
-  .blog-preview-content {
-    padding: 0 15px;
+  .blog-preview-header {
+    position: relative;
   }
 
   .blog-preview-category {
+    position: absolute;
+    bottom: 0;
     font-family: "Medium";
     font-size: 12px;
     background-color: rgba(255,255,255,0.8);
+  }
+
+  .blog-preview-content {
+    padding: 15px;
   }
 
   .blog-preview-title {
