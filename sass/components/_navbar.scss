@@ -1,0 +1,27 @@
+.navbar-container{
+	position: absolute;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: red;
+
+	nav{
+		display: flex;
+		border: green solid 2px;
+		height: 150px;
+		width: 1152px;
+		justify-content: space-between;
+		align-items: center;
+
+		a {
+			color: $white;
+			font-family: "Medium";
+			font-size: 24px;
+		}
+
+		img {
+			width: 235px;
+		}
+	}
+}
