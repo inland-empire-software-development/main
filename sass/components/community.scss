@@ -1,0 +1,192 @@
+
+#iesdBg {
+  background: url('../static/images/desktop/inland-empire-software-development-background-light.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+ html, body {
+  position: relative;
+  height: 100%;
+} 
+body {
+  background: #eee;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color:#000;
+  margin: 0;
+  padding: 0;
+
+}
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  height: 40vh;
+  /* Center slide text verticalldy */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+
+
+.circle_container{
+  display: flex;
+  position: absolute;
+  width: 15%;
+  height: auto;
+  top: 0;
+  bottom: 0;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  justify-content: center;
+}
+.circle {
+  width: 180px;
+  height: 180px;
+  left: 300%;
+  border-radius: 50%;
+  font-size: 2em;
+  color: #fff;
+  line-height: 180px;
+  text-align: center;
+  background: linear-gradient(to right, #fc5c88, #175cde);
+  position: absolute;
+  z-index: 10;  
+  opacity: .8;
+  transition: left 0.5s;
+
+}
+
+
+.swiper-button-next{
+  right: 20vw;
+  display: flex;
+  position: absolute;
+  width: 15%;
+  height: auto;
+  top: 0;
+  bottom: 0;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  justify-content: center;
+  background-image: none;
+  color: #175cde;  /* fallback for old browsers */
+  color: -webkit-linear-gradient(to right, #ec2242, #f1af21);  /* Chrome 10-25, Safari 5.1-6 */
+  color: linear-gradient(to right, #ec2242, #f1af21); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  
+}
+.swiper-button-prev{
+  left: 20vw;
+  display: flex;
+  position: absolute;
+  width: 15%;
+  height: auto;
+  top: 0;
+  bottom: 0;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  justify-content: center;
+  background-image: none;
+  color: #fc5c88;  /* fallback for old browsers */
+  color: -webkit-linear-gradient(to right, #ec2242, #f1af21);  /* Chrome 10-25, Safari 5.1-6 */
+  color: linear-gradient(to right, #ec2242, #f1af21); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.swiper-button-prev-sm{
+ 
+  font-size: 5em;
+  position: relative;
+  left: -20px;
+}
+.swiper-button-prev-lg {
+  font-size: 7em;
+}
+.swiper-button-next-sm{
+
+  font-size: 5em;
+  position: relative;
+  left: 20px;
+
+}
+.swiper-button-next-lg {
+  font-size: 7em;
+}
+
+
+
+
+#spred{
+  min-width: 300px !important;
+  margin: 15px !important;
+
+  
+}
+
+
+
+@media only screen and (max-width: 1050px) {
+  .circle {
+  width: 150px;
+  height: 150px;
+  left: 270%;
+  line-height: 150px;
+  }
+  .swiper-button-prev-lg,.swiper-button-next-lg{ 
+    font-size: 6em;
+  }
+  .swiper-button-next-sm,.swiper-button-prev-sm{ 
+    font-size: 4em;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .circle {
+  width: 130px;
+  height: 130px;
+  left: 240%;
+  line-height: 130px;
+
+  } 
+}
+
+@media only screen and (max-width: 650px) {
+  .circle {
+  width: 80px;
+  height: 80px;
+  left: 270%;
+  line-height: 80px;
+  font-size: 2.5em;
+  }
+  .swiper-button-prev-lg,.swiper-button-next-lg{ 
+    font-size: 6em;
+  }
+  .swiper-button-next-sm,.swiper-button-prev-sm{ 
+    display: none;
+  }
+  .swiper-button-next{
+    right: 10vw;
+  }
+  .swiper-button-prev{
+    left: 10vw;
+  }
+
+}
