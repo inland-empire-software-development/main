@@ -13,22 +13,6 @@
     .profile-photo{
         height: 14.5rem;
         width: 13rem;
-
-    .overlay {
-        position: absolute;
-        height: 14.5rem;
-        width: 13rem;
-        background-color: -moz-linear-gradient(left, rgba(63, 179, 225, 0.7), rgba(2, 174, 114, 0.76));
-        /* FF3.6-15 */
-        background: -webkit-linear-gradient(left, rgba(63, 179, 225, 0.7), rgba(2, 174, 114, 0.76));
-        /* Chrome10-25,Safari5.1-6 */
-        background: linear-gradient(to right, rgba(63, 179, 225, 0.7), rgba(2, 174, 114, 0.76));
-        /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#3fb3e1', endColorstr='#02ae72', GradientType=1);
-        /* IE6-9 */
-        background-size: inherit;
-        opacity: .5;
-    } 
         @media screen and (max-width: $medium){
             height: 11.5rem;
             width: 10rem;
@@ -39,6 +23,23 @@
             width: auto;
             height: 100%;
           }
+
+        .overlay {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            background-color: -moz-linear-gradient(left, rgba(63, 179, 225, 0.8), rgba(2, 174, 114, 0.7));
+            /* FF3.6-15 */
+            background: -webkit-linear-gradient(left, rgba(63, 179, 225, 0.8), rgba(2, 174, 114, 0.7));
+            /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(to right, rgba(63, 179, 225, 0.8), rgba(2, 174, 114, 0.7));
+            /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#3fb3e1', endColorstr='#02ae72', GradientType=1);
+            /* IE6-9 */
+            background-size: inherit;
+            opacity: .5;
+        } 
+        
     }
     .card {
         border: none;
