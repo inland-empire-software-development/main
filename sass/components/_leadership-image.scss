@@ -14,12 +14,28 @@
         height: 14.5rem;
         width: 13rem;
 
+    .overlay {
+        position: absolute;
+        height: 14.5rem;
+        width: 13rem;
+        background-color: -moz-linear-gradient(left, rgba(63, 179, 225, 0.7), rgba(2, 174, 114, 0.76));
+        /* FF3.6-15 */
+        background: -webkit-linear-gradient(left, rgba(63, 179, 225, 0.7), rgba(2, 174, 114, 0.76));
+        /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to right, rgba(63, 179, 225, 0.7), rgba(2, 174, 114, 0.76));
+        /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#3fb3e1', endColorstr='#02ae72', GradientType=1);
+        /* IE6-9 */
+        background-size: inherit;
+        opacity: .5;
+    } 
         @media screen and (max-width: $medium){
             height: 11.5rem;
             width: 10rem;
           }
 
         img {
+            position: absolute;
             width: auto;
             height: 100%;
           }
@@ -30,6 +46,7 @@
     }
 
       .name-title {
+        background-color: rgba(255, 255, 255, 1);
         position: relative;
         bottom: 2.5rem;
         float: right;  
@@ -41,7 +58,6 @@
             width: 14rem;
             opacity: 0.8;
         }
-
         .card-content {           
             margin: 0;
             padding: .5rem;
@@ -49,7 +65,7 @@
             .leadership-name {
                 font-family: "Heavy";
                 font-size: 1.2rem;
-                color: $black;
+                color: rgba(0, 0, 0, 1);
                 @media screen and (max-width: $medium){
                     font-size: 1.2rem;
                 }
