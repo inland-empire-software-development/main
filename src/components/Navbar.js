@@ -5,19 +5,33 @@ function Navbar(){
 		<div className="navbar-container">
 			<nav>
 				<div className="dropdown">
-					<a href="#" className="nav-about">ABOUT</a>
+					<a href="#about" className="nav-main">ABOUT</a>
 					<div className="dropdown-content">
-						<a href="#" className="">MISSION</a>
-						<a href="#" className="">GOALS & VALUES</a>
-						<a href="#" className="">COMMUNITY</a>
+						<a href="#mission" className="">MISSION</a>
+						<a href="#goals" className="">GOALS & VALUES</a>
+						<a href="#community" className="">COMMUNITY</a>
 					</div>
 				</div>
-				<a href="#">EVENTS</a>
-				<a href="#">LEADERSHIP</a>
+				<a href="#events">EVENTS</a>
+				<div className="dropdown">
+					<a href="#leadership" className="nav-main">LEADERSHIP</a>
+					<div className="dropdown-content">
+						<a href="#organizers" className="">ORGANIZERS</a>
+						<a href="#speakers" className="">PAST SPEAKERS</a>
+						<a href="#success" className="">SUCCESS STORIES</a>
+					</div>
+				</div>
 				<img src={navLogo} alt="iesd logo" />
-				<a href="#">SPONSORS</a>
-				<a href="#">BLOG</a>
-				<a href="#">JOIN</a>
+				<div className="dropdown">
+					<a href="#sponsors" className="nav-main">SPONSORS</a>
+					<div className="dropdown-content">
+						<a href="#ourSponsors" className="">OUR SPONSORS</a>
+						<a href="#sponsorPacket" className="">SPONSOR PACKET</a>
+						<a href="#applyToSpeak" className="">APPLY TO SPEAK</a>
+					</div>
+				</div>
+				<a href="#blog">BLOG</a>
+				<a href="#join">JOIN</a>
 			</nav>
 		</div>
 	);
