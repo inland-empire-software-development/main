@@ -70,7 +70,7 @@ class Leadership extends React.Component {
         id: 7,
         userName: 'Ixshel Escamilla',
         title: 'Front End Developer',
-        image: '../static/images/desktop/placeholder.jpg',
+        image: '',
       },
       {
         id: 6,
@@ -88,7 +88,7 @@ class Leadership extends React.Component {
         id: 4,
         userName: 'Amy Ambard',
         title: 'Front End Developer',
-        image: '../static/images/desktop/placeholder.jpg',
+        image: '',
       },
     ],
   };
