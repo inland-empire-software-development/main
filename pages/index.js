@@ -11,6 +11,9 @@ import '../sass/index.scss';
 
 import {withRouter} from 'next/router';
 
+//Test 
+import Events from '../src/components/Events'
+
 // import Fetch from 'isomorphic-unfetch';
 function App() {
   // basic useState hook
