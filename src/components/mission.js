@@ -1,4 +1,8 @@
-const Mission = () => {
+/**
+ * Mission component
+ * @return {Mission}
+ */
+function Mission() {
   return (
     <div id="mission" className="grid-container">
       <div>
