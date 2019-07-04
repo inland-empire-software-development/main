@@ -3,6 +3,7 @@
 import React, {useState, useEffect} from 'react';
 import Goals from '../src/components/goals';
 import Slogan from '../src/components/slogan';
+import Join from '../src/components/join';
 import Footer from '../src/components/footer';
 import Mission from '../src/components/mission';
 import '../node_modules/@fortawesome/fontawesome-free/js/all';
@@ -26,6 +27,7 @@ function App() {
       <Slogan />
       <Mission />
       <Goals />
+      <Join />
       <Footer />
     </div>
   );

@@ -1,0 +1,12 @@
+#join {
+  background: url('/./static/images/desktop/member-join-gradient.jpg');
+  height: 250px;
+  background-size: cover;
+
+  @media screen and (max-width: $medium){
+  	background: url('/./static/images/mobile/join-gradient.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-bottom: 0px; 
+  }
+}
