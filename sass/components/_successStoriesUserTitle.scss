@@ -2,11 +2,12 @@
 	grid-area: job-title;
 	font-family: 'Block';
 	display: flex;
-	align-items: center;
+	height: 100%;
 
 	.success-name-container{
 		display: flex;
 		align-items: center;
+		height: 81%;
 
 		@media screen and (max-width: $medium){
 			width: 100%;
@@ -53,6 +54,8 @@
 	.success-job-title{
 		font-family: "Book";
 		font-size: calc(.5em + 1vw);
+		display: flex;
+		align-items: center;
 
 		@media screen and (max-width: $medium){
 			font-size: calc(.5em + 1.5vw);
@@ -70,6 +73,7 @@
 		flex-direction: column;
 		line-height: 25px;
 		justify-content: center;
+		height: auto;
 	}
 	@media screen and (max-width: 595px) and (min-width: 535px){
 		height: 0%;
