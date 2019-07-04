@@ -8,10 +8,20 @@ import NavbarMobile from './NavbarMobile';
 import {isMobile} from '../utils/isMobile';
 
 function Navbar(){
-	const navbar = isMobile() ? <NavbarMobile /> : <NavbarDesktop />;
-	
+	// const navbar = isMobile() ? <NavbarMobile /> : <NavbarDesktop />;
+
+	const [navbar, setNavBar] = useState(null);
+
+	useEffect(() => {
+		if(isMobile()){
+			setNavBar(<NavbarMobile />);
+		} else {
+			setNavBar(<NavbarDesktop />);
+		}
+	});
+
 	return (
-		<div>
+		<div id="navbar">
 			{navbar}
 		</div>
 	);
