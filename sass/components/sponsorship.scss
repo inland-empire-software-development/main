@@ -1,0 +1,48 @@
+#sponsor-1{
+    background: -webkit-linear-gradient(left, #f1af21 0%, #ec2242 76%);
+    font-family: 'book';
+    font-size: 22px;
+    color: white;
+    text-align: center;
+    
+}
+
+#sponsor-title{
+    font-size: 26px;
+    font-family: 'black';
+    color: white;
+}
+
+#one-time{
+ background: -webkit-linear-gradient(left, #f1af21 0%, #ec2242 76%);
+ border:none;
+ height: 60px;
+ width: 200%;
+ font-family: 'Book';
+ color: white;
+ font-size: 20px;
+ 
+}
+
+#recurring{
+    background: -webkit-linear-gradient(left, #3fb3e1 0%, #02ae72 76%);
+    border:none;
+    height: 60px;
+    width: 200%;
+    font-family: 'Book';
+    color: white;
+    font-size: 20px;
+}
+
+section{
+
+    display: flex;
+    flex-direction: column;
+    padding-left: 45px;
+   
+}
+
+.btn{
+    display: inline-block;
+    margin: 5px;
+}
