@@ -17,7 +17,7 @@ class Leadership extends React.Component {
         image: '../static/images/desktop/tonynguyen.jpg',
       },
       {
-        id: 6,
+        id: 3,
         userName: 'Felipe Fernandez',
         title: 'IESD Secratary',
         image: '../static/images/desktop/felipefernandez.jpg',
@@ -35,25 +35,25 @@ class Leadership extends React.Component {
         image: '../static/images/desktop/luisvelazquez.jpg',
       },
       {
-        id: 8,
+        id: 6,
         userName: 'Jen Latchman',
         title: 'Digital Marketing',
         image: '../static/images/desktop/jenlatchman.png'
       },
       {
-        id: 9,
+        id: 7,
         userName: 'Jonathan Nguyen',
         title: 'Application Developer',
         image: '../static/images/desktop/jonathannguyen.jpg',
       },
       {
-        id: 10,
+        id: 8,
         userName: 'Kelly Lam',
         title: 'Internal Relations Director',
         image: '../static/images/desktop/kellylam.jpg',
       },
       {
-        id: 3,
+        id: 9,
         userName: 'Amber Macbain',
         title: 'Front End Developer',
         image: '../static/images/desktop/ambermacbain.jpg',
@@ -67,25 +67,25 @@ class Leadership extends React.Component {
         image: '../static/images/desktop/lloanalas.jpg',
       },
       {
-        id: 7,
+        id: 2,
         userName: 'Ixshel Escamilla',
         title: 'Front End Developer',
         image: '',
       },
       {
-        id: 6,
+        id: 3,
         userName: 'Felipe Fernandez',
         title: 'Front End Developer',
         image: '../static/images/desktop/felipefernandez.jpg',
       },
       {
-        id: 2,
+        id: 4,
         userName: 'Tony Nguyen',
         title: 'UCR Bootcamp TA',
         image: '../static/images/desktop/tonynguyen.jpg',
       },
       {
-        id: 4,
+        id: 5,
         userName: 'Amy Ambard',
         title: 'Front End Developer',
         image: '',
@@ -96,7 +96,7 @@ class Leadership extends React.Component {
   render() {
     const { organizers, speakers } = this.state;
     return (
-      <div id="leadership" className='grid-container'>
+      <div id='leadership' className='grid-container'>
         <div className='center-column column-22 tablet-column-10'>
 
           <h3 className='column-1 phone-column-6 tablet-column-12'>ORGANIZERS</h3>

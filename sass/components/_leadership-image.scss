@@ -28,6 +28,9 @@
             position: absolute;
             height: 100%;
             width: 100%;
+
+            /** To ficilitate overlay effect & deter inheritance all colors changed to RGBA **/
+
             background-color: -moz-linear-gradient(left, rgba(2, 174, 114, 0.6), rgba(63, 179, 225, 0.3));
             /* FF3.6-15 */
             background: -webkit-linear-gradient(left, rgba(2, 174, 114, 0.6), rgba(63, 179, 225, 0.3));
