@@ -1,11 +1,11 @@
 const express = require('express');
 const next = require('next');
 
-const env = process.env.NODE_ENV.trim();
+const env = process.env.NODE_ENV;
 const dev = env !== 'production';
 const app = next({dev});
 const handle = app.getRequestHandler();
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 3001;
 
 app.prepare().then(() => {
   const server = express();

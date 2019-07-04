@@ -25,9 +25,7 @@
   "scripts": {
     "dev": "node server.js",
     "build": "next build",
-    "serveDev": "set PORT=5101 & set NODE_ENV=development & node server.js",
-    "serveStg": "set PORT=5102 & set NODE_ENV=staging &  node server.js",
-    "servePrd": "set PORT=5103 & set NODE_ENV=production &  node server.js",
+    "start": "NODE_ENV=production node server.js",
     "lint": "./node_modules/.bin/eslint ./**/*.{js,jsx} --quiet || true",
     "test": "jest || true"
   },
