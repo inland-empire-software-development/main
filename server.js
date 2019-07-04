@@ -23,7 +23,7 @@ app.prepare().then(() => {
   });
 
   // start server on given port
-  server.listen(5100, (err) => {
+  server.listen(5101, (err) => {
     if (err) throw err;
     console.log('> Ready on http://localhost:5100');
   });
