@@ -1,4 +1,6 @@
 .hero-event-container {
+	position: absolute;
+	top: 25%;
 	height: 185px;
 	width: 515px;
 	p {
@@ -10,6 +12,7 @@
 		display: flex;
 		flex-direction: row;
 		padding: 5px;
+		padding-right: 10px;
 		background-color: rgba(0,0,0,0.65);
 		.hero-event-date {
 			height: 130px;
@@ -66,10 +69,15 @@
 				flex-direction: row;
 				justify-content: flex-end;
 				font-family: 'Book';
+				margin-top: 10px;
 				p:first-child {
 					font-family: 'Heavy';
-					font-size: 16px;
+					font-size: 14px;
+					line-height: 18px;
 					margin-right: 5px;
+				}
+				p:last-child {
+					font-size: 13px;
 				}
 				@media screen and (max-width: $small) {
 					p:first-child {
@@ -94,7 +102,7 @@
 			border: none;
 			cursor: pointer;
 			outline: 0;
-			background-image: linear-gradient(to right, #F0A723, #EC2342);
+			background-image: linear-gradient(to right, $yellow, $red);
 		}
 	}
 }

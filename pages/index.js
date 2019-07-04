@@ -27,7 +27,6 @@ function App() {
   // initial render
   return (
     <div>
-      <HeroEvent />
       <Hero />
       <Slogan />
       <Mission />

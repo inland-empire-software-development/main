@@ -1,3 +1,4 @@
+import HeroEvent from './heroEvent';
 /**
  * Hero component
  * @return {Hero}
@@ -13,7 +14,9 @@ function Hero() {
         <div></div>
 
         {/* Event */}
-        <div></div>
+        <div>
+          <HeroEvent />
+        </div>
       </div>
     </header>
   );
