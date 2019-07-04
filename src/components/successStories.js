@@ -1,5 +1,7 @@
 import React, {useEffect} from 'react';
 import {data} from '../utils/successStoriesData';
+
+// utils
 import {maxTextForContainer} from '../utils/maxTextForContainer';
 
 // components
