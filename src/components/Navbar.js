@@ -8,8 +8,6 @@ import NavbarMobile from './NavbarMobile';
 import {isMobile} from '../utils/isMobile';
 
 function Navbar(){
-	// const navbar = isMobile() ? <NavbarMobile /> : <NavbarDesktop />;
-
 	const [navbar, setNavBar] = useState(null);
 
 	useEffect(() => {
