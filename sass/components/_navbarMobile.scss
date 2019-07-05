@@ -1,7 +1,7 @@
 .navbar-mobile{
 
 	#navbar-mobile-button{
-		background: linear-gradient(to bottom, $yellow, $red);
+		background: linear-gradient(to bottom, rgba(241, 175, 33, 0.8), rgba(236, 34, 66, 0.8));
 		border-radius: 100%;
 		width: 65px;
 		height: 65px;
@@ -13,6 +13,10 @@
 		justify-content: center;
 		align-items: center;
 		box-shadow: 0px 2px 2px 0px $dark-gray;
+
+		&:active{
+			background: linear-gradient(to bottom, $yellow, $red);
+		}
 
 		.navbar-hamburger-container{
 			display: flex;
