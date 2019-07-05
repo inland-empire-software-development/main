@@ -1,6 +1,8 @@
 import {useState, useEffect} from 'react';
 
 function NavbarMobile() {
+
+	// State to manage if menu is open
 	const [menuStyle, setMenuStyle] = useState({
 		menuOpen: false,
 		menuElemContainer: {
@@ -8,6 +10,7 @@ function NavbarMobile() {
 		}
 	});
 
+	// State to manage if about dropdown is open
 	const [aboutStyle, setAboutStyle] = useState({
 		aboutOpen: false,
 		aboutElem: {
@@ -15,6 +18,7 @@ function NavbarMobile() {
 		}
 	});
 
+	// State to manage if leadership dropdown is open
 	const [leadershipStyle, setLeadershipStyle] = useState({
 		leadershipOpen: false,
 		leadershipElem: {
@@ -22,6 +26,7 @@ function NavbarMobile() {
 		}
 	});
 
+	// State to manage if sponsorship is open
 	const [sponsorsStyle, setSponsorsStyle] = useState({
 		sponsorsOpen: false,
 		sponsorsElem: {
@@ -29,6 +34,8 @@ function NavbarMobile() {
 		}
 	});
 
+	// Function to check if menu is open
+	// and then open/close menu
 	const handleHamburgerClick = () => {
 		if(menuStyle.menuOpen){
 			setMenuStyle({
@@ -47,6 +54,7 @@ function NavbarMobile() {
 		}
 	}
 
+	// open/close about dropdown
 	const handleAboutClick = () => {
 		if(aboutStyle.aboutOpen){
 			setAboutStyle({
@@ -65,6 +73,7 @@ function NavbarMobile() {
 		}
 	}
 
+  // open/close leadership dropdown
 	const handleLeadershipClick = () => {
 		if(leadershipStyle.leadershipOpen){
 			setLeadershipStyle({
@@ -83,6 +92,7 @@ function NavbarMobile() {
 		}
 	}
 
+	// open/close sponsors dropdown
 	const handleSponsorsClick = () => {
 		if(sponsorsStyle.sponsorsOpen){
 			setSponsorsStyle({
@@ -101,6 +111,7 @@ function NavbarMobile() {
 		}
 	}
 
+	// Register event listener for hamburger icon
 	useEffect(() => {
 		const navMobileBtn = document.getElementById('navbar-mobile-button');
 		navMobileBtn.addEventListener('click', handleHamburgerClick);
@@ -109,6 +120,7 @@ function NavbarMobile() {
 		});
 	})
 
+	// Register event listener for about item
 	useEffect(() => {
 		const mobileAbout = document.getElementById("mobile-about");
 		mobileAbout.addEventListener("click", handleAboutClick);
@@ -117,6 +129,7 @@ function NavbarMobile() {
 		})
 	})
 
+	// Register event listener for leadership item
 	useEffect(() => {
 		const mobileLeadership = document.getElementById("mobile-leadership");
 		mobileLeadership.addEventListener("click", handleLeadershipClick);
@@ -125,6 +138,7 @@ function NavbarMobile() {
 		})
 	})
 
+	// Register event listener for sponsors item
 	useEffect(() => {
 		const mobileSponsors = document.getElementById("mobile-sponsors");
 		mobileSponsors.addEventListener("click", handleSponsorsClick);
@@ -133,6 +147,7 @@ function NavbarMobile() {
 		})
 	})
 
+	// Register event listener for all nav items
 	useEffect(() => {
 		const navbarItems = document.getElementsByClassName("navbar-mobile-button");
 		for(let i = 0; i < navbarItems.length; i++){
@@ -148,6 +163,8 @@ function NavbarMobile() {
 
 	return (
 		<div className="navbar-mobile">
+
+			{/* Navbar Hamburger Icon */}
 			<div id="navbar-mobile-button">
 				<div className="navbar-hamburger-container">
 					<div className="navbar-hamburger-long"></div>
@@ -156,6 +173,7 @@ function NavbarMobile() {
 				</div>
 			</div>
 
+			{/* Navbar Menu */}
 			<div className="navbar-mobile-menu-container" style={menuStyle.menuElemContainer}>
 				<div className="navbar-mobile-menu">
 					<div className="dropdown-mobile" style={aboutStyle.aboutElem}>

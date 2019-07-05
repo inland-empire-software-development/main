@@ -10,6 +10,9 @@ import {isMobile} from '../utils/isMobile';
 function Navbar(){
 	const [navbar, setNavBar] = useState(null);
 
+	// Uses the util function isMobile to 
+	// check if screen width is below 860px
+	// Displays appropriate navbar for screen width
 	useEffect(() => {
 		if(isMobile()){
 			setNavBar(<NavbarMobile />);

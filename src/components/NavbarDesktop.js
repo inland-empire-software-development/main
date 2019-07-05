@@ -4,6 +4,8 @@ function NavbarDesktop() {
 	return (
 		<div className="navbar-container">
 			<nav>
+
+				{/* About Dropdown Item */}
 				<div className="dropdown">
 					<a href="#about" className="nav-main">ABOUT</a>
 					<div className="dropdown-content">
@@ -12,7 +14,10 @@ function NavbarDesktop() {
 						<a href="#community" className="">COMMUNITY</a>
 					</div>
 				</div>
+
 				<a href="#events">EVENTS</a>
+
+				{/* Leadership Dropdown Item */}
 				<div className="dropdown">
 					<a href="#leadership" className="nav-main">LEADERSHIP</a>
 					<div className="dropdown-content">
@@ -21,7 +26,11 @@ function NavbarDesktop() {
 						<a href="#success" className="">SUCCESS STORIES</a>
 					</div>
 				</div>
+
+				{/* IESD Logo */}
 				<img src={navLogo} alt="iesd logo" />
+
+				{/* Sponsors Dropdown Item */}
 				<div className="dropdown">
 					<a href="#sponsors" className="nav-main">SPONSORS</a>
 					<div className="dropdown-content">
@@ -30,8 +39,11 @@ function NavbarDesktop() {
 						<a href="#applyToSpeak" className="">APPLY TO SPEAK</a>
 					</div>
 				</div>
+
 				<a href="#blog">BLOG</a>
+
 				<a href="#join">JOIN</a>
+				
 			</nav>
 		</div>
 	);
