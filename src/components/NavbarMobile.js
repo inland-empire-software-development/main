@@ -29,7 +29,7 @@ function NavbarMobile() {
 		}
 	});
 
-	const handleHamburgerClick = (menuElemContainer, menuElem) => {
+	const handleHamburgerClick = () => {
 		if(menuStyle.menuOpen){
 			setMenuStyle({
 				menuOpen: false,
@@ -133,6 +133,19 @@ function NavbarMobile() {
 		})
 	})
 
+	useEffect(() => {
+		const navbarItems = document.getElementsByClassName("navbar-mobile-button");
+		for(let i = 0; i < navbarItems.length; i++){
+			navbarItems[i].addEventListener("click", handleHamburgerClick);
+		}
+
+		return (() => {
+			for(let i = 0; i < navbarItems.length; i++){
+				navbarItems[i].removeEventListener("click", handleHamburgerClick);
+			}
+		});
+	});
+
 	return (
 		<div className="navbar-mobile">
 			<div id="navbar-mobile-button">
@@ -148,30 +161,30 @@ function NavbarMobile() {
 					<div className="dropdown-mobile" style={aboutStyle.aboutElem}>
 						<a href="#about" id="mobile-about" className="navbar-mobile-item">ABOUT</a>
 						<div className="dropdown-mobile-content">
-							<a href="#mission" className="">MISSION</a>
-							<a href="#goals" className="">GOALS & VALUES</a>
-							<a href="#community" className="">COMMUNITY</a>
+							<a href="#mission" className="navbar-mobile-button">MISSION</a>
+							<a href="#goals" className="navbar-mobile-button">GOALS & VALUES</a>
+							<a href="#community" className="navbar-mobile-button">COMMUNITY</a>
 						</div>
 					</div>
-					<a href="#" className="navbar-mobile-item">EVENTS</a>
+					<a href="#" className="navbar-mobile-item navbar-mobile-button">EVENTS</a>
 					<div className="dropdown-mobile" style={leadershipStyle.leadershipElem}>
 						<a href="#about" id="mobile-leadership" className="navbar-mobile-item">LEADERSHIP</a>
 						<div className="dropdown-mobile-content">
-							<a href="#mission" className="">ORGANIZERS</a>
-							<a href="#goals" className="">PAST SPEAKERS</a>
-							<a href="#community" className="">SUCCESS STORIES</a>
+							<a href="#mission" className="navbar-mobile-button">ORGANIZERS</a>
+							<a href="#goals" className="navbar-mobile-button">PAST SPEAKERS</a>
+							<a href="#community" className="navbar-mobile-button">SUCCESS STORIES</a>
 						</div>
 					</div>
 					<div className="dropdown-mobile" style={sponsorsStyle.sponsorsElem}>
 						<a href="#about" id="mobile-sponsors" className="navbar-mobile-item">SPONSORS</a>
 						<div className="dropdown-mobile-content">
-							<a href="#mission" className="">OUT SPONSORS</a>
-							<a href="#goals" className="">SPONSOR PACKET</a>
-							<a href="#community" className="">APPLY TO SPEAK</a>
+							<a href="#mission" className="navbar-mobile-button">OUT SPONSORS</a>
+							<a href="#goals" className="navbar-mobile-button">SPONSOR PACKET</a>
+							<a href="#community" className="navbar-mobile-button">APPLY TO SPEAK</a>
 						</div>
 					</div>
-					<a href="#" className="navbar-mobile-item">BLOG</a>
-					<a href="#" className="navbar-mobile-item">JOIN</a>
+					<a href="#" className="navbar-mobile-item navbar-mobile-button">BLOG</a>
+					<a href="#" className="navbar-mobile-item navbar-mobile-button">JOIN</a>
 				</div>					
 			</div>
 		</div>
