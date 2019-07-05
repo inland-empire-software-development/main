@@ -178,7 +178,7 @@ function NavbarMobile() {
 					<div className="dropdown-mobile" style={sponsorsStyle.sponsorsElem}>
 						<a href="#about" id="mobile-sponsors" className="navbar-mobile-item">SPONSORS</a>
 						<div className="dropdown-mobile-content">
-							<a href="#mission" className="navbar-mobile-button">OUT SPONSORS</a>
+							<a href="#mission" className="navbar-mobile-button">OUR SPONSORS</a>
 							<a href="#goals" className="navbar-mobile-button">SPONSOR PACKET</a>
 							<a href="#community" className="navbar-mobile-button">APPLY TO SPEAK</a>
 						</div>
