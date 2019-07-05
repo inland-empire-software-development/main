@@ -3,10 +3,11 @@
 import React, {useState, useEffect} from 'react';
 
 // Components
+import Navbar from '../src/components/Navbar';
 import Hero from '../src/components/Hero';
 import Goals from '../src/components/Goals';
 import Slogan from '../src/components/Slogan';
-import Join from '../src/components/join';
+import Join from '../src/components/Join';
 import Footer from '../src/components/Footer';
 import Mission from '../src/components/Mission';
 import SuccessStories from '../src/components/SuccessStories';
@@ -29,6 +30,7 @@ function App() {
   // initial render
   return (
     <div>
+      <Navbar />
       <Hero />
       <Slogan />
       <Mission />
