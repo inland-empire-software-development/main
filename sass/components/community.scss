@@ -11,24 +11,18 @@
   height: 100%;
 } 
 body {
-  background: #eee;
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 14px;
   color:#000;
   margin: 0;
   padding: 0;
 
-}
-.swiper-container {
-  width: 100%;
-  height: 100%;
-}
-.swiper-slide {
+}    .swiper-slide {
   text-align: center;
   font-size: 18px;
   background: #fff;
-  height: 40vh;
-  /* Center slide text verticalldy */
+  width: 30%;
+  /* Center slide text vertically */
   display: -webkit-box;
   display: -ms-flexbox;
   display: -webkit-flex;
@@ -42,8 +36,15 @@ body {
   -webkit-align-items: center;
   align-items: center;
 }
+#communitypic{
+  min-width: 90% !important;
+  width: 200px;
+  margin: 20px;
+}
 
-
+#myCirlce{
+  display: block;
+}
 
 .circle_container{
   display: flex;
@@ -70,9 +71,10 @@ body {
   position: absolute;
   z-index: 10;  
   opacity: .8;
-  transition: left 0.5s;
-
+  transition: left 0.5s;    
 }
+ 
+
 
 
 .swiper-button-next{
@@ -132,14 +134,6 @@ body {
 }
 
 
-
-
-#spred{
-  min-width: 300px !important;
-  margin: 15px !important;
-
-  
-}
 
 
 
