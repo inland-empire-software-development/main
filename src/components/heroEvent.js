@@ -16,7 +16,8 @@ function HeroEvent() {
     	setEventName(result[0].name);
     	setEventStartTime(calcStartTime(result[0].local_time));
     	setEventEndTime(calcEndTime(result[0].local_time, result[0].duration));
-    	console.log(splitMonth(result[0].local_date))
+    	setEventMonth(splitMonth(result[0].local_date));
+    	setEventDay(splitDay(result[0].local_date));
 	// YOUR DATA IS THE PARAMETER RESULT
 		})
 	})
@@ -30,8 +31,8 @@ function HeroEvent() {
 				{/* hero event info left side */}
 				<div className="hero-event-date">
 					
-					<p>12</p>
-					<p>May</p>
+					<p>{eventDay}</p>
+					<p>{eventMonth}</p>
 					<p>{eventStartTime} - {eventEndTime}</p>
 
 				</div>
