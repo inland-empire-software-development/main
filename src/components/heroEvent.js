@@ -8,6 +8,7 @@ function HeroEvent() {
 	const [eventDay, setEventDay] = useState('');
 	const [eventStartTime, setEventStartTime] = useState('');
 	const [eventEndTime, setEventEndTime] = useState('');
+	const [eventLink, setEventLink] = useState('');
 
 	useEffect(() => {
 		fetch("https://cors-anywhere.herokuapp.com/https://api.meetup.com/iesd-meetup/events?&sign=true&photo-host=public&page=20")
@@ -18,7 +19,7 @@ function HeroEvent() {
     	setEventEndTime(calcEndTime(result[0].local_time, result[0].duration));
     	setEventMonth(splitMonth(result[0].local_date));
     	setEventDay(splitDay(result[0].local_date));
-	// YOUR DATA IS THE PARAMETER RESULT
+    	setEventLink(result[0].link);
 		})
 	})
 
@@ -56,7 +57,9 @@ function HeroEvent() {
 			{/* reserve a spot buton */}
 			<div className="reserve-wrapper">
 
-				<button className="reserve-button">reserve a spot</button>
+				<button 
+					onClick={() => window.open('https://www.meetup.com/iesd-meetup/events/xrdssqyzjbmc/')}
+					className="reserve-button">reserve a spot</button>
 
 			</div>
 
