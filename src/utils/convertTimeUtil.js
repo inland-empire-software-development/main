@@ -13,14 +13,11 @@ export const calcStartTime = (startTime) => {
 
 export const calcEndTime = (startTime, duration) => {
 	const endTime = calcEventDuration(startTime, duration);
-  let milliseconds = parseInt((endTime % 1000) / 100),
-    seconds = Math.floor((endTime / 1000) % 60),
-    minutes = Math.floor((endTime / (1000 * 60)) % 60),
-    hours = Math.floor((endTime / (1000 * 60 * 60)) % 24);
+		let minutes = Math.floor((endTime / (1000 * 60)) % 60);
+		let hours = Math.floor((endTime / (1000 * 60 * 60)) % 24);
 
 	  hours = (hours < 10) ? "0" + hours : hours;
 	  minutes = (minutes < 10) ? "0" + minutes : minutes;
-	  seconds = (seconds < 10) ? "0" + seconds : seconds;
 
   	// return hours + ":" + minutes 
   	if (hours > 12) {
