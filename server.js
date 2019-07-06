@@ -27,7 +27,7 @@ app.prepare().then(() => {
   // proxy to make fetch requests to meetup
   server.use('/meetup', (req, res) => {
     if (req.method === 'GET') {
-      // remove https://meetup/ from apiUrl
+      // remove /meetup/ from apiUrl
       let apiUrl = req.originalUrl;
       apiUrl = apiUrl.slice(8);
 
