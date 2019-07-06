@@ -3,19 +3,23 @@
 	height: 185px;
 	width: 450px;
 	top: 25%;
+
 	p {
 		margin: 0px;
 		color: $white;
 	}
+
 	@media screen and (max-width: $medium) {
 		left: 0;
 		right: 0;
 		margin-left: auto;
 		margin-right: auto;
 	}
+
 	@media screen and (max-width: $small) {
 		width: 320px;
 	}
+
 	.hero-event-info {
 		height: 70%;
 		display: flex;
@@ -23,9 +27,11 @@
 		padding: 5px;
 		padding-right: 10px;
 		background-color: rgba(0,0,0,0.65);
+
 		.hero-event-date {
 			height: 130px;
 			width: 30%;
+
 			.hero-event-day {
 				margin-bottom: 25px;
 				font-family: 'Block';
@@ -33,37 +39,44 @@
 				text-align: center;
 				line-height: 62px;	
 			}
+
 			.hero-event-month {
 				font-family: 'Medium';
 				font-size: 22px;
 				line-height: 22px;
 				text-align: center;
 			}
+
 			.hero-event-time {
 				font-family: 'Medium';
 				font-size: 14px;
 				text-align: center;
 			}
+
 			@media screen and (max-width: $medium) {
 				.hero-event-time {
 					margin-top: 3px;
 					font-size: 12px;
 				}
 			}
+
 			@media screen and (max-width: $small) {
 				.hero-event-day {
 					font-size: 80px;
 				}
+
 				.hero-event-month {
 					font-family: 'Medium';
 					font-size: 20px;
 				}
+
 				.hero-event-time {
 					margin-top: 8px;
 					font-size: 10px;
 				}
 			}
 		}
+
 		.hero-event-desc {
 			display: flex;
 			flex-direction: column;
@@ -72,53 +85,64 @@
 			padding-left: 10px;
 			justify-content: space-between;
 			text-align: right;
+
 			@media screen and (max-width: $small) {
 				padding-left: 10px;
 			}
+
 			.event-name {
 				font-family: 'Book';
 				font-size: 22px;
 			}
+
 			@media screen and (max-width: $medium) {
 				.event-name {
 					font-size: 20px;
 				}
 			}
+
 			@media screen and (max-width: $small) {
 				.event-name {
 					margin-top: 5px;
 					font-size: 18px;
 				}
 			}
+
 			.hero-event-location {
 				display: flex;
 				flex-direction: row;
 				justify-content: flex-end;
 				font-family: 'Book';
 				margin-top: 10px;
+
 				p:first-child {
 					font-family: 'Heavy';
 					font-size: 14px;
 					line-height: 18px;
 					margin-right: 5px;
 				}
+
 				p:last-child {
 					font-size: 13px;
 				}
+
 				@media screen and (max-width: $medium) {
 					p:first-child {
 						font-size: 12px;
 						line-height: 14px;
 					}
+
 					p:last-child {
 						font-size: 11px;
 					}
 				}
+
 				@media screen and (max-width: $small) {
 					p:first-child {
 						font-size: 10px;
 						line-height: 12px;
 					}
+
 					p:last-child {
 						font-size: 9px;
 					}
@@ -126,6 +150,7 @@
 			}
 		}
 	}
+	
 	.reserve-wrapper {
 		.reserve-button {
 			height: 39px;
