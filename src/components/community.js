@@ -30,15 +30,15 @@ let swiper = new Swiper('.swiper-container', {
 
 function Community() {
   // // Similar to componentDidMount and componentDidUpdate:
-  // useEffect(() => {
-  //   const x = document.getElementById("myCirlce");
-  //   // x.addEventListener("click", changeTohidden);
-  //   console.log("hey");
-  //   function changeTohidden () {
-  //     x.style.display="none";
-  //     console.log("yo");
-  //   }
-  // }, []);
+  useEffect(() => {
+    const x = document.getElementById("myCirlce");
+    // x.addEventListener("click", changeTohidden);
+    console.log("hey");
+    function changeTohidden () {
+      x.style.display="none";
+      console.log("yo");
+    }
+  }, []);
   return (
     <div id="iesdBg" className="grid-container  ">
       <div className="column-24 " onclick={changeTohidden} >
