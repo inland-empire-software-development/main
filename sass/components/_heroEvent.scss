@@ -17,31 +17,40 @@
 		.hero-event-date {
 			height: 130px;
 			width: 30%;
-			p:first-child {
+			.hero-event-day {
 				margin-bottom: 25px;
 				font-family: 'Block';
 				font-size: 100px;
 				text-align: center;
 				line-height: 62px;	
 			}
-			p:not(:first-child) {
+			.hero-event-month {
 				font-family: 'Medium';
 				font-size: 22px;
 				line-height: 22px;
 				text-align: center;
 			}
-			p:last-child {
+			.hero-event-time {
+				font-family: 'Medium';
 				font-size: 16px;
+				text-align: center;
+			}
+			@media screen and (max-width: $medium) {
+				.hero-event-time {
+					margin-top: 3px;
+					font-size: 12px;
+				}
 			}
 			@media screen and (max-width: $small) {
-				p:first-child {
+				.hero-event-day {
 					font-size: 80px;
 				}
-				p:not(:first-child) {
-					font-size: 18px;
+				.hero-event-month {
+					font-size: 20px;
 				}
-				p:last-child {
-					font-size: 12px;
+				.hero-event-time {
+					margin-top: 8px;
+					font-size: 10px;
 				}
 			}
 		}
@@ -50,17 +59,22 @@
 			flex-direction: column;
 			height: 130px;
 			width: 70%;
-			justify-content: space-around;
+			justify-content: space-between;
 			text-align: right;
 			@media screen and (max-width: $small) {
 				padding-left: 10px;
 			}
-			p:first-child {
+			.event-name {
 				font-family: 'Book';
 				font-size: 22px;
 			}
+			@media screen and (max-width: $medium) {
+				.event-name {
+					font-size: 20px;
+				}
+			}
 			@media screen and (max-width: $small) {
-				p:first-child {
+				.event-name {
 					font-size: 18px;
 				}
 			}
@@ -79,13 +93,22 @@
 				p:last-child {
 					font-size: 13px;
 				}
-				@media screen and (max-width: $small) {
+				@media screen and (max-width: $medium) {
 					p:first-child {
 						font-size: 12px;
 						line-height: 14px;
 					}
 					p:last-child {
 						font-size: 11px;
+					}
+				}
+				@media screen and (max-width: $small) {
+					p:first-child {
+						font-size: 10px;
+						line-height: 12px;
+					}
+					p:last-child {
+						font-size: 9px;
 					}
 				}
 			}

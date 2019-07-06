@@ -32,16 +32,16 @@ function HeroEvent() {
 				{/* hero event info left side */}
 				<div className="hero-event-date">
 					
-					<p>{eventDay}</p>
-					<p>{eventMonth}</p>
-					<p>{eventStartTime} - {eventEndTime}</p>
+					<p className="hero-event-day">{eventDay}</p>
+					<p className="hero-event-month">{eventMonth}</p>
+					<p className="hero-event-time">{eventStartTime} - {eventEndTime}</p>
 
 				</div>
 
 				{/* hero event info right side */}
 				<div className="hero-event-desc">
 
-					<p id="eventName">{eventName}</p>
+					<p className="event-name">{eventName}</p>
 
 					<div className="hero-event-location">
 
