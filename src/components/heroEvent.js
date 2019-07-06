@@ -1,7 +1,23 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import { calcStartTime, calcEndTime } from '../utils/convertTimeUtil';
 
 function HeroEvent() {
+	const [eventName, setEventName] = useState('');
+	const [eventStartTime, setEventStartTime] = useState('');
+	const [eventEndTime, setEventEndTime] = useState('');
+
+	useEffect(() => {
+		fetch("https://cors-anywhere.herokuapp.com/https://api.meetup.com/iesd-meetup/events?&sign=true&photo-host=public&page=20")
+    .then(response => response.json())
+    .then(result => { 
+    	console.log(result);
+    	setEventName(result[0].name);
+    	setEventStartTime(calcStartTime(result[0].local_time));
+    	setEventEndTime(calcEndTime(result[0].local_time, result[0].duration));
+	// YOUR DATA IS THE PARAMETER RESULT
+		})
+	})
+
 	return (
 		<div className="hero-event-container tablet-column-10">
 
@@ -13,14 +29,14 @@ function HeroEvent() {
 					
 					<p>12</p>
 					<p>May</p>
-					<p>2:00 PM - 5:00 PM</p>
+					<p>{eventStartTime} - {eventEndTime}</p>
 
 				</div>
 
 				{/* hero event info right side */}
 				<div className="hero-event-desc">
 
-					<p>Exploring Data Structures : Objects, Arrays and the Secret Life of Objects</p>
+					<p id="eventName">{eventName}</p>
 
 					<div className="hero-event-location">
 
