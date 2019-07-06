@@ -23,7 +23,7 @@ function HeroEvent() {
           setEventDay(splitDay(result[0].local_date));
           setEventLink(result[0].link);
         });
-  });
+  }, []);
 
   return (
     <div className="hero-event-container">
