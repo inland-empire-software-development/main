@@ -1,0 +1,36 @@
+#join {
+	background: url('/./static/images/desktop/member-join-gradient.jpg');
+	height: 250px;
+	background-size: cover;
+	background-position: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	.join-button {
+		background: linear-gradient(to right, $yellow, $red);
+		height: 65px;
+		width: 400px;
+		color: $white;
+		font-family: "Light";
+		font-size: 30px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-decoration: none;
+		cursor: pointer;
+
+		@media screen and (max-width: $medium){
+			height: 50px;
+			width: 250px;
+			font-size: 20px;
+		}
+	}
+
+	@media screen and (max-width: $medium){
+		background: url('/./static/images/mobile/join-gradient.jpg');
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+}
