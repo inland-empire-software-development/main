@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { calcStartTime, calcEndTime } from '../utils/convertTimeUtil';
+import { splitMonth, splitDay } from '../utils/splitDateUtil';
 
 function HeroEvent() {
 	const [eventName, setEventName] = useState('');
+	const [eventMonth, setEventMonth] = useState('');
+	const [eventDay, setEventDay] = useState('');
 	const [eventStartTime, setEventStartTime] = useState('');
 	const [eventEndTime, setEventEndTime] = useState('');
 
@@ -10,10 +13,10 @@ function HeroEvent() {
 		fetch("https://cors-anywhere.herokuapp.com/https://api.meetup.com/iesd-meetup/events?&sign=true&photo-host=public&page=20")
     .then(response => response.json())
     .then(result => { 
-    	console.log(result);
     	setEventName(result[0].name);
     	setEventStartTime(calcStartTime(result[0].local_time));
     	setEventEndTime(calcEndTime(result[0].local_time, result[0].duration));
+    	console.log(splitMonth(result[0].local_date))
 	// YOUR DATA IS THE PARAMETER RESULT
 		})
 	})
