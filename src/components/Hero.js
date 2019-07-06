@@ -14,7 +14,7 @@ function Hero() {
         <div></div>
 
         {/* Event */}
-        <div>
+        <div className="column-24 pre-12 tablet-leader-6">
           <HeroEvent />
         </div>
       </div>

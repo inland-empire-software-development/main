@@ -1,11 +1,20 @@
 .hero-event-container {
 	position: absolute;
-	top: 25%;
 	height: 185px;
-	width: 515px;
+	width: 450px;
+	top: 25%;
 	p {
 		margin: 0px;
 		color: $white;
+	}
+	@media screen and (max-width: $medium) {
+		left: 0;
+		right: 0;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	@media screen and (max-width: $small) {
+		width: 320px;
 	}
 	.hero-event-info {
 		height: 70%;
@@ -32,7 +41,7 @@
 			}
 			.hero-event-time {
 				font-family: 'Medium';
-				font-size: 16px;
+				font-size: 14px;
 				text-align: center;
 			}
 			@media screen and (max-width: $medium) {
@@ -46,6 +55,7 @@
 					font-size: 80px;
 				}
 				.hero-event-month {
+					font-family: 'Medium';
 					font-size: 20px;
 				}
 				.hero-event-time {
@@ -59,6 +69,7 @@
 			flex-direction: column;
 			height: 130px;
 			width: 70%;
+			padding-left: 10px;
 			justify-content: space-between;
 			text-align: right;
 			@media screen and (max-width: $small) {
@@ -75,6 +86,7 @@
 			}
 			@media screen and (max-width: $small) {
 				.event-name {
+					margin-top: 5px;
 					font-size: 18px;
 				}
 			}

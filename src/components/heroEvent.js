@@ -24,7 +24,7 @@ function HeroEvent() {
 	})
 
 	return (
-		<div className="hero-event-container tablet-column-10">
+		<div className="hero-event-container">
 
 			{/* event details container */}
 			<div className="hero-event-info">
