@@ -1,6 +1,6 @@
 import Swiper from 'swiper';
 import '../../node_modules/swiper/dist/css/swiper.min.css';
-// import React, { useState, useEffect } from 'react';
+import React, {useEffect} from 'react';
 
 let swiper = new Swiper('.swiper-container', {
   slidesPerView: 'auto',
@@ -28,18 +28,20 @@ let swiper = new Swiper('.swiper-container', {
 //   cir.style.display = "none";
 // });
 
-
 function Community() {
-  // const [x, y] = useState(null);
-
   // // Similar to componentDidMount and componentDidUpdate:
   // useEffect(() => {
-  //     const x = document.getElementById("myCirlce");
+  //   const x = document.getElementById("myCirlce");
+  //   // x.addEventListener("click", changeTohidden);
+  //   console.log("hey");
+  //   function changeTohidden () {
+  //     x.style.display="none";
+  //     console.log("yo");
   //   }
-  // });
+  // }, []);
   return (
     <div id="iesdBg" className="grid-container  ">
-      <div className="column-24 " onclick="myFunction()" >
+      <div className="column-24 " onclick={changeTohidden} >
         <div className="swiper-container leader-2 trailer-2" >
           <div className="swiper-wrapper" >
             <div className="swiper-slide"><img id="communitypic" src="../../static/images/community/community_1.jpg" alt="community img"></img></div>
@@ -60,6 +62,12 @@ function Community() {
             <span className="swiper-button-next-sm">&gt;</span>
             <span className="swiper-button-next-lg">&gt;</span>
           </div>
+        </div>
+        <div>
+          <p>You clicked {count} times</p>
+          <button onClick={() => setCount(count + 1)}>
+            Click me
+          </button>
         </div>
       </div>
     </div>
