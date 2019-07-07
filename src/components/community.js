@@ -1,7 +1,6 @@
 import Swiper from 'swiper';
 import '../../node_modules/swiper/dist/css/swiper.min.css';
-// import React, { useState, useEffect } from 'react';
-
+import React, { useEffect } from 'react';
 let swiper = new Swiper('.swiper-container', {
   slidesPerView: 'auto',
   spaceBetween: 10,
@@ -14,33 +13,32 @@ let swiper = new Swiper('.swiper-container', {
 // function myFunction() {
 //   document.getElementById("myCirlce").style.display = "none";
 // }
-
-// function myFunction() {
-//   const x = document.getElementById("myCirlce");
-//   if (x.style.display === "block") {
-//     x.style.display = "none";
-//   }
-// }
-
 // const cir = document.document.getElementById('myCirlce');
 
-// cir.addEventListener('click', event => {
-//   cir.style.display = "none";
-// });
+
 
 
 function Community() {
   // const [x, y] = useState(null);
+  function myFunction() {
+    const x = document.getElementById("myCirlce");
+    if (x.style.display === "block") {
+      x.style.display = "none";
+    }
+    console.log("hi");
+  }
 
-  // // Similar to componentDidMount and componentDidUpdate:
-  // useEffect(() => {
-  //     const x = document.getElementById("myCirlce");
-  //   }
-  // });
+  // Similar to componentDidMount and componentDidUpdate:
+  useEffect(() => {
+    const x = document.getElementById("myCirlce");
+    x.addEventListener('click', event => {
+      myFunction()
+    }); 
+  });
   return (
-    <div id="iesdBg" className="grid-container  ">
-      <div className="column-24 " onclick="myFunction()" >
-        <div className="swiper-container leader-2 trailer-2" >
+    <div className="grid-container  ">
+      <div className="column-24 " onClick="myFunction()" >
+        <div id="iesdBg" className="swiper-container leader-1 trailer-1" >
           <div className="swiper-wrapper" >
             <div className="swiper-slide"><img id="communitypic" src="../../static/images/community/community_1.jpg" alt="community img"></img></div>
             <div className="swiper-slide"><img id="communitypic" src="../../static/images/community/community_2.jpg" alt="community img"></img></div>
