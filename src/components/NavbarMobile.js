@@ -1,5 +1,8 @@
 import {useState, useEffect} from 'react';
 
+//components
+import NavbarMobileDropdownItem from './NavbarMobileDropdownItem';
+
 function NavbarMobile() {
   // State to manage if menu is open
   const [menuStyle, setMenuStyle] = useState({
@@ -9,33 +12,9 @@ function NavbarMobile() {
     },
   });
 
-  // State to manage if about dropdown is open
-  const [aboutStyle, setAboutStyle] = useState({
-    aboutOpen: false,
-    aboutElem: {
-      height: "50px",
-    },
-  });
-
-  // State to manage if leadership dropdown is open
-  const [leadershipStyle, setLeadershipStyle] = useState({
-    leadershipOpen: false,
-    leadershipElem: {
-      height: "50px",
-    },
-  });
-
-  // State to manage if sponsorship is open
-  const [sponsorsStyle, setSponsorsStyle] = useState({
-    sponsorsOpen: false,
-    sponsorsElem: {
-      height: "50px",
-    },
-  });
-
   // Function to check if menu is open
   // and then open/close menu
-  const handleHamburgerClick = () => {
+  const handleMenuClick = () => {
     if (menuStyle.menuOpen) {
       setMenuStyle({
         menuOpen: false,
@@ -53,112 +32,29 @@ function NavbarMobile() {
     }
   };
 
-  // open/close about dropdown
-  const handleAboutClick = () => {
-    if (aboutStyle.aboutOpen) {
-      setAboutStyle({
-        aboutOpen: false,
-        aboutElem: {
-          height: "50px",
-        },
-      });
-    } else {
-      setAboutStyle({
-        aboutOpen: true,
-        aboutElem: {
-          height: "125px",
-        },
-      });
-    }
-  };
-
-  // open/close leadership dropdown
-  const handleLeadershipClick = () => {
-    if (leadershipStyle.leadershipOpen) {
-      setLeadershipStyle({
-        leadershipOpen: false,
-        leadershipElem: {
-          height: "50px",
-        },
-      });
-    } else {
-      setLeadershipStyle({
-        leadershipOpen: true,
-        leadershipElem: {
-          height: "125px",
-        },
-      });
-    }
-  };
-
-  // open/close sponsors dropdown
-  const handleSponsorsClick = () => {
-    if (sponsorsStyle.sponsorsOpen) {
-      setSponsorsStyle({
-        sponsorsOpen: false,
-        sponsorsElem: {
-          height: "50px",
-        },
-      });
-    } else {
-      setSponsorsStyle({
-        sponsorsOpen: true,
-        sponsorsElem: {
-          height: "125px",
-        },
-      });
-    }
-  };
-
   // Register event listener for hamburger icon
   useEffect(() => {
     const navMobileBtn = document.getElementById('navbar-mobile-button');
-    navMobileBtn.addEventListener('click', handleHamburgerClick);
+    navMobileBtn.addEventListener('click', handleMenuClick);
     return (() => {
-      navMobileBtn.removeEventListener('click', handleHamburgerClick);
+      navMobileBtn.removeEventListener('click', handleMenuClick);
     });
-  });
-
-  // Register event listener for about item
-  useEffect(() => {
-    const mobileAbout = document.getElementById("mobile-about");
-    mobileAbout.addEventListener("click", handleAboutClick);
-    return (() => {
-      mobileAbout.removeEventListener("click", handleAboutClick);
-    });
-  });
-
-  // Register event listener for leadership item
-  useEffect(() => {
-    const mobileLeadership = document.getElementById("mobile-leadership");
-    mobileLeadership.addEventListener("click", handleLeadershipClick);
-    return (() => {
-      mobileLeadership.removeEventListener("click", handleLeadershipClick);
-    });
-  });
-
-  // Register event listener for sponsors item
-  useEffect(() => {
-    const mobileSponsors = document.getElementById("mobile-sponsors");
-    mobileSponsors.addEventListener("click", handleSponsorsClick);
-    return (() => {
-      mobileSponsors.removeEventListener("click", handleSponsorsClick);
-    });
-  });
+  }, [menuStyle]);
 
   // Register event listener for all nav items
   useEffect(() => {
+    console.log('ran');
     const navbarItems = document.getElementsByClassName("navbar-mobile-button");
     for (let i = 0; i < navbarItems.length; i++) {
-      navbarItems[i].addEventListener("click", handleHamburgerClick);
+      navbarItems[i].addEventListener("click", handleMenuClick);
     }
 
     return (() => {
       for (let i = 0; i < navbarItems.length; i++) {
-        navbarItems[i].removeEventListener("click", handleHamburgerClick);
+        navbarItems[i].removeEventListener("click", handleMenuClick);
       }
     });
-  });
+  }, [menuStyle]);
 
   return (
     <div className="navbar-mobile">
@@ -178,100 +74,66 @@ function NavbarMobile() {
         style={menuStyle.menuElemContainer}>
 
         <div className="navbar-mobile-menu">
-          <div
-            className="dropdown-mobile"
-            style={aboutStyle.aboutElem}>
+          <NavbarMobileDropdownItem 
+            mainItem={"ABOUT"}
+            subItemList={[
+              {
+                href: "#mission",
+                text: "MISSION"
+              },
+              {
+                href: "#goals",
+                text: "GOALS & VALUES"
+              },
+              {
+                href: "#community",
+                text: "COMMUNITY"
+              }
+            ]}
+          />
 
-            <a
-              href="#about" id="mobile-about"
-              className="navbar-mobile-item">
-                ABOUT
-            </a>
-            <div className="dropdown-mobile-content">
-              <a
-                href="#mission"
-                className="navbar-mobile-button">
-                MISSION
-              </a>
-              <a
-                href="#goals"
-                className="navbar-mobile-button">
-                GOALS & VALUES
-              </a>
-              <a
-                href="#community"
-                className="navbar-mobile-button">
-                COMMUNITY
-              </a>
-            </div>
-          </div>
           <a
             href="#"
             className="navbar-mobile-item navbar-mobile-button">
             EVENTS
           </a>
-          <div
-            className="dropdown-mobile"
-            style={leadershipStyle.leadershipElem}>
 
-            <a
-              href="#about" id="mobile-leadership"
-              className="navbar-mobile-item">
-              LEADERSHIP
-            </a>
+          <NavbarMobileDropdownItem 
+            mainItem={"LEADERSHIP"}
+            subItemList={[
+              {
+                href: "#organizers",
+                text: "ORGANIZERS"
+              },
+              {
+                href: "#past-speakers",
+                text: "PAST SPEAKERS"
+              },
+              {
+                href: "#success-stories",
+                text: "SUCCESS STORIES"
+              }
+            ]}
+          />
 
-            <div className="dropdown-mobile-content">
+          <NavbarMobileDropdownItem 
+            mainItem={"SPONSORS"}
+            subItemList={[
+              {
+                href: "#our-sponsors",
+                text: "OUR SPONSORS"
+              },
+              {
+                href: "#sponsor-packet",
+                text: "SPONSOR PACKET"
+              },
+              {
+                href: "#apply-to-speak",
+                text: "APPLY TO SPEAK"
+              }
+            ]}
+          />
 
-              <a
-                href="#mission"
-                className="navbar-mobile-button">
-                ORGANIZERS
-              </a>
-              <a
-                href="#goals"
-                className="navbar-mobile-button">
-                PAST SPEAKERS
-              </a>
-              <a
-                href="#community"
-                className="navbar-mobile-button">
-                SUCCESS STORIES
-              </a>
-            </div>
-          </div>
-
-          <div
-            className="dropdown-mobile"
-            style={sponsorsStyle.sponsorsElem}>
-
-            <a
-              href="#about"
-              id="mobile-sponsors"
-              className="navbar-mobile-item">
-              SPONSORS
-            </a>
-
-            <div className="dropdown-mobile-content">
-
-              <a
-                href="#mission"
-                className="navbar-mobile-button">
-                OUR SPONSORS
-              </a>
-              <a
-                href="#goals"
-                className="navbar-mobile-button">
-                SPONSOR PACKET
-              </a>
-              <a
-                href="#community"
-                className="navbar-mobile-button">
-                APPLY TO SPEAK
-              </a>
-
-            </div>
-
-          </div>
           <a
             href="#"
             className="navbar-mobile-item navbar-mobile-button">
