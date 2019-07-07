@@ -1,6 +1,7 @@
 import {useState, useEffect} from 'react';
 
 //components
+import NavbarHamburgerIcon from './NavbarHamburgerIcon';
 import NavbarMobileDropdownItem from './NavbarMobileDropdownItem';
 
 function NavbarMobile() {
@@ -32,16 +33,9 @@ function NavbarMobile() {
     }
   };
 
-  // Register event listener for hamburger icon
-  useEffect(() => {
-    const navMobileBtn = document.getElementById('navbar-mobile-button');
-    navMobileBtn.addEventListener('click', handleMenuClick);
-    return (() => {
-      navMobileBtn.removeEventListener('click', handleMenuClick);
-    });
-  }, [menuStyle]);
-
   // Register event listener for all nav items
+  // Makes it so when mobile nav items are clicked
+  // screen scrolls & menu closes
   useEffect(() => {
     console.log('ran');
     const navbarItems = document.getElementsByClassName("navbar-mobile-button");
@@ -60,13 +54,7 @@ function NavbarMobile() {
     <div className="navbar-mobile">
 
       {/* Navbar Hamburger Icon */}
-      <div id="navbar-mobile-button">
-        <div className="navbar-hamburger-container">
-          <div className="navbar-hamburger-long"></div>
-          <div className="navbar-hamburger-short"></div>
-          <div className="navbar-hamburger-long"></div>
-        </div>
-      </div>
+      <NavbarHamburgerIcon handleClick={handleMenuClick}/>
 
       {/* Navbar Menu */}
       <div
@@ -74,6 +62,8 @@ function NavbarMobile() {
         style={menuStyle.menuElemContainer}>
 
         <div className="navbar-mobile-menu">
+
+          {/* ABOUT, mission, goals&values, community */}
           <NavbarMobileDropdownItem 
             mainItem={"ABOUT"}
             subItemList={[
@@ -98,6 +88,7 @@ function NavbarMobile() {
             EVENTS
           </a>
 
+          {/* LEADERSHIP, organizers, past speakers, success stories */}
           <NavbarMobileDropdownItem 
             mainItem={"LEADERSHIP"}
             subItemList={[
@@ -116,6 +107,7 @@ function NavbarMobile() {
             ]}
           />
 
+          {/* SPONSORS, our sponsors, sponsor packet, apply to speak */}
           <NavbarMobileDropdownItem 
             mainItem={"SPONSORS"}
             subItemList={[
