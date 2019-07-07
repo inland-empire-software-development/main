@@ -11,7 +11,7 @@ function HeroEvent() {
   const [eventLink, setEventLink] = useState('');
 
   useEffect(() => {
-    fetch("https://cors-anywhere.herokuapp.com/https://api.meetup.com/iesd-meetup/events?&sign=true&photo-host=public&page=20")
+    fetch("/meetup/upcoming")
         .then((response) => response.json())
         .then((result) => {
           setEventName(result[0].name);
