@@ -1,7 +1,7 @@
 function NavbarHamburgerIcon(props) {
-	const {handleClick} = props;
+  const {handleClick} = props;
 
-	return (
+  return (
     <div className="navbar-hamburger" onClick={handleClick}>
       <div className="navbar-hamburger-container">
         <div className="navbar-hamburger-long"></div>
@@ -9,7 +9,7 @@ function NavbarHamburgerIcon(props) {
         <div className="navbar-hamburger-long"></div>
       </div>
     </div>
-	);
+  );
 }
 
-export default NavbarHamburgerIcon
+export default NavbarHamburgerIcon;

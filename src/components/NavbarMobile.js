@@ -1,6 +1,6 @@
 import {useState, useEffect} from 'react';
 
-//components
+// components
 import NavbarHamburgerIcon from './NavbarHamburgerIcon';
 import NavbarMobileDropdownItem from './NavbarMobileDropdownItem';
 
@@ -64,21 +64,21 @@ function NavbarMobile() {
         <div className="navbar-mobile-menu">
 
           {/* ABOUT, mission, goals&values, community */}
-          <NavbarMobileDropdownItem 
+          <NavbarMobileDropdownItem
             mainItem={"ABOUT"}
             subItemList={[
               {
                 href: "#mission",
-                text: "MISSION"
+                text: "MISSION",
               },
               {
                 href: "#goals",
-                text: "GOALS & VALUES"
+                text: "GOALS & VALUES",
               },
               {
                 href: "#community",
-                text: "COMMUNITY"
-              }
+                text: "COMMUNITY",
+              },
             ]}
           />
 
@@ -89,40 +89,40 @@ function NavbarMobile() {
           </a>
 
           {/* LEADERSHIP, organizers, past speakers, success stories */}
-          <NavbarMobileDropdownItem 
+          <NavbarMobileDropdownItem
             mainItem={"LEADERSHIP"}
             subItemList={[
               {
                 href: "#organizers",
-                text: "ORGANIZERS"
+                text: "ORGANIZERS",
               },
               {
                 href: "#past-speakers",
-                text: "PAST SPEAKERS"
+                text: "PAST SPEAKERS",
               },
               {
                 href: "#success-stories",
-                text: "SUCCESS STORIES"
-              }
+                text: "SUCCESS STORIES",
+              },
             ]}
           />
 
           {/* SPONSORS, our sponsors, sponsor packet, apply to speak */}
-          <NavbarMobileDropdownItem 
+          <NavbarMobileDropdownItem
             mainItem={"SPONSORS"}
             subItemList={[
               {
                 href: "#our-sponsors",
-                text: "OUR SPONSORS"
+                text: "OUR SPONSORS",
               },
               {
                 href: "#sponsor-packet",
-                text: "SPONSOR PACKET"
+                text: "SPONSOR PACKET",
               },
               {
                 href: "#apply-to-speak",
-                text: "APPLY TO SPEAK"
-              }
+                text: "APPLY TO SPEAK",
+              },
             ]}
           />
 

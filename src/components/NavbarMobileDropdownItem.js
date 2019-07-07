@@ -1,13 +1,20 @@
 import {useState} from 'react';
 
 function NavbarMobileDropdownItem(props) {
-	//Destructure props
-	const {mainItem, subItemList} = props;
+  // Destructure props
+  const {mainItem, subItemList} = props;
 
   // Generate anchor elements for sub items
   const subItemElements = subItemList.map((item, index) => {
-  	return (<a key={index} href={item.href} className="navbar-mobile-button">{item.text}</a>);
-  })
+    return (
+      <a
+        key={index}
+        href={item.href}
+        className="navbar-mobile-button">
+        {item.text}
+      </a>
+    );
+  });
 
   // State to manage if about dropdown is open/close
   const [dropdownStyle, setDropdownStyle] = useState({
@@ -17,7 +24,7 @@ function NavbarMobileDropdownItem(props) {
     },
   });
 
-  // Function that handles logic for 
+  // Function that handles logic for
   // when to call setDropdownStyle above
   const handleDropdownClick = () => {
     if (dropdownStyle.dropdownOpen) {
@@ -37,19 +44,19 @@ function NavbarMobileDropdownItem(props) {
     }
   };
 
-	return (
+  return (
     <div className="dropdown-mobile" style={dropdownStyle.dropdownElem}>
-	    <a href="#about" 
-	    	className="navbar-mobile-item" 
-	    	onClick={handleDropdownClick}
-	    >
-	      {mainItem}
-	    </a>
-	    <div className="dropdown-mobile-content">
-	    	{subItemElements}
-	    </div>
-	  </div>
-	);
+      <a href="#about"
+        className="navbar-mobile-item"
+        onClick={handleDropdownClick}
+      >
+        {mainItem}
+      </a>
+      <div className="dropdown-mobile-content">
+        {subItemElements}
+      </div>
+    </div>
+  );
 }
 
 export default NavbarMobileDropdownItem;
