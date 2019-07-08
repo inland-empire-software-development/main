@@ -23,6 +23,9 @@ function NavbarMobile() {
           left: "100%",
         },
       });
+      // Enable scrolling when menu is closed
+      document.body.style.overflow = "visible";
+      document.documentElement.style.overflow = "visible";
     } else {
       setMenuStyle({
         menuOpen: true,
@@ -30,6 +33,9 @@ function NavbarMobile() {
           left: "0%",
         },
       });
+      // Disable scrolling when menu is open
+      document.body.style.overflow = "hidden";
+      document.documentElement.style.overflow = "hidden";
     }
   };
 
@@ -37,16 +43,43 @@ function NavbarMobile() {
   // Makes it so when mobile nav items are clicked
   // screen scrolls & menu closes
   useEffect(() => {
-    console.log('ran');
     const navbarItems = document.getElementsByClassName("navbar-mobile-button");
     for (let i = 0; i < navbarItems.length; i++) {
-      navbarItems[i].addEventListener("click", handleMenuClick);
+      navbarItems[i].addEventListener(
+          "click",
+          handleMenuClick,
+          {passive: true}
+      );
     }
 
     return (() => {
       for (let i = 0; i < navbarItems.length; i++) {
-        navbarItems[i].removeEventListener("click", handleMenuClick);
+        navbarItems[i].removeEventListener(
+            "click",
+            handleMenuClick,
+            {passive: true}
+        );
       }
+    });
+  }, [menuStyle]);
+
+  // non-passive event listener to prevent
+  // scrolling on iOS devices since since
+  // CSS overflow doesn't work on mobile iOS
+  useEffect(() => {
+    document.getElementById("navbar-mobile-menu-container")
+        .addEventListener(
+            "touchmove",
+            (e) => e.preventDefault(),
+            {passive: false}
+        );
+    return (() => {
+      document.getElementById("navbar-mobile-menu-container")
+          .removeEventListener(
+              "touchmove",
+              (e) => e.preventDefault(),
+              {passive: false}
+          );
     });
   }, [menuStyle]);
 
@@ -58,7 +91,7 @@ function NavbarMobile() {
 
       {/* Navbar Menu */}
       <div
-        className="navbar-mobile-menu-container"
+        id="navbar-mobile-menu-container"
         style={menuStyle.menuElemContainer}>
 
         <div className="navbar-mobile-menu">
@@ -133,7 +166,7 @@ function NavbarMobile() {
           </a>
 
           <a
-            href="#"
+            href="#join"
             className="navbar-mobile-item navbar-mobile-button">
             JOIN
           </a>
