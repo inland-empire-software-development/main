@@ -17,7 +17,6 @@ let swiper = new Swiper('.swiper-container', {
 
 
 
-
 function Community() {
   // const [x, y] = useState(null);
   function myFunction() {
@@ -58,6 +57,12 @@ function Community() {
             <span className="swiper-button-next-sm">&gt;</span>
             <span className="swiper-button-next-lg">&gt;</span>
           </div>
+        </div>
+        <div>
+          <p>You clicked {count} times</p>
+          <button onClick={() => setCount(count + 1)}>
+            Click me
+          </button>
         </div>
       </div>
     </div>
