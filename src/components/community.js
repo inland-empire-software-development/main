@@ -15,25 +15,23 @@ let swiper = new Swiper('.swiper-container', {
 // }
 // const cir = document.document.getElementById('myCirlce');
 
-
-
 function Community() {
   // const [x, y] = useState(null);
-  function myFunction() {
-    const x = document.getElementById("myCirlce");
-    if (x.style.display === "block") {
-      x.style.display = "none";
-    }
-    console.log("hi");
-  }
+  // function myFunction() {
+  //   const x = document.getElementById("myCirlce");
+  //   if (x.style.display === "block") {
+  //     x.style.display = "none";
+  //   }
+  //   console.log("hi");
+  // }
 
   // Similar to componentDidMount and componentDidUpdate:
-  useEffect(() => {
-    const x = document.getElementById("myCirlce");
-    x.addEventListener('click', event => {
-      myFunction()
-    }); 
-  });
+  // useEffect(() => {
+  //   const x = document.getElementById("myCirlce");
+  //   x.addEventListener('click', event => {
+  //     myFunction()
+  //   }); 
+  // });
   return (
     <div className="grid-container  ">
       <div className="column-24 " onClick="myFunction()" >
@@ -58,12 +56,12 @@ function Community() {
             <span className="swiper-button-next-lg">&gt;</span>
           </div>
         </div>
-        <div>
+        {/* <div>
           <p>You clicked {count} times</p>
           <button onClick={() => setCount(count + 1)}>
             Click me
           </button>
-        </div>
+        </div> */}
       </div>
     </div>
   );
