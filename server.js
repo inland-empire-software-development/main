@@ -25,13 +25,11 @@ app.prepare().then(() => {
   });
 
   // proxy to make fetch requests to meetup
-  server.use('/api/events', (req, res) => {
-    if (req.method === 'GET') {
-      let apiUrl = "https://api.meetup.com/2/events?group_urlname=iesd-meetup"
-      fetch(apiUrl)
-      .then((response) => response.json())
-      .then((result) => res.json(result))
-    }// end if 
+  server.get('/api/events', (req, res) => {
+    let apiUrl = "https://api.meetup.com/2/events?group_urlname=iesd-meetup"
+    fetch(apiUrl)
+    .then((response) => response.json())
+    .then((result) => res.json(result))
   });
 
   // default
