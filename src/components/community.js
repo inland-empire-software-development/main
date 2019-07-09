@@ -1,6 +1,21 @@
 import Swiper from 'swiper';
 import '../../node_modules/swiper/dist/css/swiper.min.css';
 import React, { useEffect } from 'react';
+// import window from 'global.window';
+
+
+// function myFunction(numS) {
+//   if (numS.matches) { // If media query matches
+//     x = 2;
+//   } else {
+//     x= 4;
+//   }
+// }
+
+// let numS = window.matchMedia("(max-width: 700px)")
+// myFunction(numS); // Call listener function at run time
+// numS.addListener(myFunction); // Attach listener function on state changes
+
 let swiper = new Swiper('.swiper-container', {
   slidesPerView: 'auto',
   spaceBetween: 10,

@@ -1,7 +1,7 @@
 
 #iesdBg {
-  background: blue;
-  // url('../static/images/desktop/inland-empire-software-development-background-light.jpg')
+  background: url('../static/images/desktop/inland-empire-software-development-background-light.jpg');
+  // 
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -18,7 +18,7 @@ body {
   margin: 0;
   padding: 0;
 
-}
+} 
 
 .swiper-container{
 height: 45vh;
@@ -28,7 +28,7 @@ height: 45vh;
   text-align: center;
   font-size: 18px;
   background: #fff;
-  width: 30%;
+  width: 90%;
   /* Center slide text vertically */
   display: -webkit-box;
   display: -ms-flexbox;
@@ -42,6 +42,8 @@ height: 45vh;
   -ms-flex-align: center;
   -webkit-align-items: center;
   align-items: center;
+  background: none;
+
 }
 #communitypic{
   min-width: 90% !important;
