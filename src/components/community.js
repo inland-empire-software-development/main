@@ -48,10 +48,12 @@ function Community() {
   //   }); 
   // });
   return (
-    <div className="grid-container  ">
+    <div className="grid-container community  ">
       <div className="column-24 " onClick="myFunction()" >
         <div id="iesdBg" className="swiper-container leader-1 trailer-1" >
           <div className="swiper-wrapper" >
+            <div className="swiper-slide"><img id="communitypic" src="../../static/images/community/community_1.jpg" alt="community img"></img></div>
+            <div className="swiper-slide"><img id="communitypic" src="../../static/images/community/community_2.jpg" alt="community img"></img></div>
             <div className="swiper-slide"><img id="communitypic" src="../../static/images/community/community_1.jpg" alt="community img"></img></div>
             <div className="swiper-slide"><img id="communitypic" src="../../static/images/community/community_2.jpg" alt="community img"></img></div>
             <div className="swiper-slide"><img id="communitypic" src="../../static/images/community/community_3.jpg" alt="community img"></img></div>

@@ -5,6 +5,8 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  min-height: 9vh;
+
 }
 
  html, body {
@@ -20,6 +22,7 @@ body {
 
 } 
 
+ 
 .swiper-container{
 height: 45vh;
 }
@@ -88,7 +91,7 @@ height: 45vh;
 
 
 .swiper-button-next{
-  right: 23vw;
+  right: 20vw;
   display: flex;
   position: absolute;
   width: 15%;
@@ -106,7 +109,7 @@ height: 45vh;
   
 }
 .swiper-button-prev{
-  left: 23vw;
+  left: 20vw;
   display: flex;
   position: absolute;
   width: 15%;
@@ -143,6 +146,79 @@ height: 45vh;
   font-size: 4em;
 }
 
+@media only screen and (min-width: 766px) {
+  .swiper-slide {
+    width: 40%;
+  }
+  .circle_container{
+    top: 38vh;
+    left: 40vw;
+  }
+  .circle {
+    width: 110px;
+    height: 110px;
+    font-size: 3em;
+    line-height: 110px;
+
+  }
+  .swiper-button-next{
+    top: 32vh;
+    right: 24vw;
+  }
+  .swiper-button-prev{
+    top: 32vh;
+    left: 24vw;
+  }
+
+  .swiper-button-prev-lg {
+    font-size: 9em;
+  }
+  .swiper-button-next-lg {
+    font-size: 9em;
+  }
+  .swiper-button-prev-sm{
+  
+    font-size: 6em;
+  }
+  .swiper-button-next-sm{
+  
+    font-size: 6em;
+  }
+
+
+}
+
+@media only screen and (min-width: 1023px) {
+  .swiper-slide {
+    width: 25%;
+  }
+  .circle {
+    width: 150px;
+    height: 150px;
+    font-size: 4em;
+    line-height: 140px;
+  }
+  
+}
+
+
+@media only screen and (min-width: 1439px) {
+  .swiper-slide {
+    width: 25%;
+  }
+  .circle_container {
+ 
+    left: 600px;
+  }
+  .swiper-button-next{
+    right: 400px;
+  }
+  .swiper-button-prev{
+    
+    left: 400px;
+  }
+  
+}
 
 
 
