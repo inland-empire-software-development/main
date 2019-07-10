@@ -1,26 +1,10 @@
-
 #iesdBg {
   background: url('../static/images/desktop/inland-empire-software-development-background-light.jpg');
-  // 
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  min-height: 9vh;
-
+  min-height: 280px;
 }
-
- html, body {
-  position: relative;
-  height: 100%;
-} 
-body {
-  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  color:#000;
-  margin: 0;
-  padding: 0;
-
-} 
 
  
 .swiper-container{
@@ -31,7 +15,7 @@ height: 45vh;
   text-align: center;
   font-size: 18px;
   background: #fff;
-  width: 90%;
+  width: 100%;
   /* Center slide text vertically */
   display: -webkit-box;
   display: -ms-flexbox;
@@ -65,7 +49,6 @@ height: 45vh;
   width: 15%;
   height: auto;
   top: 40px;
-  // bottom: 0;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -86,18 +69,14 @@ height: 45vh;
   opacity: .8;
   transition: left 0.5s;    
 }
- 
-
-
 
 .swiper-button-next{
-  right: 20vw;
+  right: 18vw;
   display: flex;
   position: absolute;
   width: 15%;
   height: auto;
   top: 20px;
-  // bottom: 0;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -109,13 +88,12 @@ height: 45vh;
   
 }
 .swiper-button-prev{
-  left: 20vw;
+  left: 18vw;
   display: flex;
   position: absolute;
   width: 15%;
   height: auto;
   top: 20px;
-  // bottom: 0;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -126,25 +104,19 @@ height: 45vh;
   color: linear-gradient(to right, #ec2242, #f1af21); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
-.swiper-button-prev-sm{
- 
+.swiper-button-prev-sm{ 
   font-size: 2em;
   position: relative;
   left: -10px;
 }
-.swiper-button-prev-lg {
+.swiper-button-prev-lg,.swiper-button-next-lg {
   font-size: 4em;
 }
 .swiper-button-next-sm{
-
   font-size: 2em;
   position: relative;
   left: 10px;
-
-}
-.swiper-button-next-lg {
-  font-size: 4em;
-}
+} 
 
 @media only screen and (min-width: 766px) {
   .swiper-slide {
@@ -170,17 +142,10 @@ height: 45vh;
     left: 24vw;
   }
 
-  .swiper-button-prev-lg {
+  .swiper-button-prev-lg, .swiper-button-next-lg {
     font-size: 9em;
   }
-  .swiper-button-next-lg {
-    font-size: 9em;
-  }
-  .swiper-button-prev-sm{
-  
-    font-size: 6em;
-  }
-  .swiper-button-next-sm{
+  .swiper-button-prev-sm,.swiper-button-next-sm{
   
     font-size: 6em;
   }
@@ -203,10 +168,7 @@ height: 45vh;
 
 
 @media only screen and (min-width: 1439px) {
-  .swiper-slide {
-    width: 25%;
-  }
-  .circle_container {
+ .circle_container {
  
     left: 600px;
   }
@@ -222,51 +184,3 @@ height: 45vh;
 
 
 
-
-// @media only screen and (max-width: 1050px) {
-//   .circle {
-//   width: 150px;
-//   height: 150px;
-//   left: 270%;
-//   line-height: 150px;
-//   }
-//   .swiper-button-prev-lg,.swiper-button-next-lg{ 
-//     font-size: 6em;
-//   }
-//   .swiper-button-next-sm,.swiper-button-prev-sm{ 
-//     font-size: 4em;
-//   }
-// }
-
-// @media only screen and (max-width: 650px) {
-//   .circle {
-//   width: 130px;
-//   height: 130px;
-//   left: 240%;
-//   line-height: 130px;
-
-//   } 
-// }
-
-// @media only screen and (max-width: 650px) {
-//   .circle {
-//   width: 80px;
-//   height: 80px;
-//   left: 270%;
-//   line-height: 80px;
-//   font-size: 2.5em;
-//   }
-//   .swiper-button-prev-lg,.swiper-button-next-lg{ 
-//     font-size: 6em;
-//   }
-//   .swiper-button-next-sm,.swiper-button-prev-sm{ 
-//     display: none;
-//   }
-//   .swiper-button-next{
-//     right: 10vw;
-//   }
-//   .swiper-button-prev{
-//     left: 10vw;
-//   }
-
-// }
