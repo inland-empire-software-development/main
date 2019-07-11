@@ -122,11 +122,20 @@
 			.event-name {
 				font-family: 'Book';
 				font-size: 22px;
+
+				&.event-name-short {
+					font-size: 36px;
+					line-height: 48px;
+				}
 			}
 
 			@media screen and (max-width: $medium) {
 				.event-name {
 					font-size: 20px;
+
+					&.event-name-short {
+						font-size: 26px;
+					  }
 				}
 			}
 

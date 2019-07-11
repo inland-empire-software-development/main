@@ -13,6 +13,8 @@ function HeroEvent() {
 
   useEffect(() => {
     fetchEvents().then((result) => {
+
+      console.log(result);
       setEventName(result[0].name);
       setEventStartTime(calcStartTime(result[0].local_time));
       setEventEndTime(
@@ -42,7 +44,7 @@ function HeroEvent() {
         {/* hero event info right side */}
         <div className="hero-event-desc">
 
-          <p className="event-name">{eventName}</p>
+          <p className={`event-name ${eventName.length < 30 ? "event-name-short" : ""}`}>{eventName}</p>
 
           <div className="hero-event-location">
 
