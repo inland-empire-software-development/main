@@ -49,6 +49,14 @@
 				font-size: 100px;
 				text-align: center;
 				line-height: 62px;	
+
+				@media screen and (max-width: $small){
+					margin-bottom: 0;
+					height: 87px;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+				}
 			}
 
 			.hero-event-month {
@@ -65,6 +73,9 @@
 			}
 
 			@media screen and (max-width: $medium) {
+				height: 75%;
+				align-items: flex-end;
+
 				.hero-event-time {
 					margin-top: 3px;
 					font-size: 12px;
@@ -73,7 +84,7 @@
 
 			@media screen and (max-width: $small) {
 				.hero-event-day {
-					font-size: 80px;
+					font-size: 70px;
 				}
 
 				.hero-event-month {
