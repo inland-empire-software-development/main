@@ -21,33 +21,32 @@
 		font-family:"Heavy";
 		font-size: calc(1.25em + 1vw);
 
+		span{
+			color: red;
+			margin-left: 10px;
+			margin-right: 10px;
+		}
+
 		@media screen and (max-width: $medium){
 			font-size: calc(.75em + 1vw);
+			span{
+				margin-left: 5px;
+			}
+		}
+
+		@media screen and (max-width: 600px){
+			font-size: calc(.58em + 1vw);
+			span{
+				margin-left: 3px;
+			}
 		}
 
 		@media screen and (max-width: $small){
 			font-size: calc(.55em + 1vw);
-		}
-	}
-
-	.success-slash{
-		color: red;
-		font-size: calc(1.5em + 1vw);
-		font-family: "Book";
-		margin-left: 10px;
-		margin-right: 10px;
-
-		@media screen and (max-width: $medium){
-			font-size: calc(1.15em + 1vw);
-			margin-left: 5px;
-		}
-		@media screen and (max-width: 710px){
-			font-size: calc(.75em + .5vw);
-		}
-		@media screen and (max-width: $small){
-			margin: 0;
-			margin-left: 5px;
-			font-size: calc(.75em + 1vw);
+			span{
+				margin: 0;
+				margin-left: 5px;
+			}
 		}
 	}
 
@@ -63,6 +62,9 @@
 		}
 		@media screen and (max-width: 710px){
 			font-size: calc(.75em + .5vw);
+		}
+		@media screen and (max-width: 600px){
+			font-size: calc(.45em + 1vw);
 		}
 		@media screen and (max-width: $small){
 			font-size: calc(.4em + 1.5vw);
