@@ -31,13 +31,19 @@ let swiper = new Swiper('.swiper-container', {
 // const cir = document.document.getElementById('myCirlce');
 
 
-let commPic = [
-  {id: 1, image: '../../static/images/community/community_1.jpg'},
-  {id: 2, image: '../../static/images/community/community_2.jpg'},
-  {id: 3, image: '../../static/images/community/community_3.jpg'},
-  {id: 4, image: '../../static/images/community/community_4.jpg'},
-  {id: 5, image: '../../static/images/community/community_5.jpg'},
-  {id: 6, image: '../../static/images/community/community_6.jpg'},
+const commPic = [
+  {id: 1, image: '../../static/images/community/community_1.jpg',
+    alt: 'community pic'},
+  {id: 2, image: '../../static/images/community/community_2.jpg', 
+    alt: 'community pic'},
+  {id: 3, image: '../../static/images/community/community_3.jpg', 
+    alt: 'community pic'},
+  {id: 4, image: '../../static/images/community/community_4.jpg', 
+    alt: 'community pic'},
+  {id: 5, image: '../../static/images/community/community_5.jpg', 
+    alt: 'community pic'},
+  {id: 6, image: '../../static/images/community/community_6.jpg', 
+    alt: 'community pic'},
 ];
 
 
@@ -56,21 +62,15 @@ function Community() {
   //   const x = document.getElementById("myCirlce");
   //   x.addEventListener('click', event => {
   //     myFunction()
-  //   }); 
+  //   });
   // });
   return (
     <div className="grid-container community  ">
       <div className="column-24 " onClick="myFunction()" >
         <div id="iesdBg" className="swiper-container leader-1 trailer-1" >
           <div className="swiper-wrapper" >
-            <div className="swiper-slide"><img id="communitypic" src="../../static/images/community/community_1.jpg" alt="community img"></img></div>
-            <div className="swiper-slide"><img id="communitypic" src="../../static/images/community/community_2.jpg" alt="community img"></img></div>
-            <div className="swiper-slide"><img id="communitypic" src="../../static/images/community/community_1.jpg" alt="community img"></img></div>
-            <div className="swiper-slide"><img id="communitypic" src="../../static/images/community/community_2.jpg" alt="community img"></img></div>
-            <div className="swiper-slide"><img id="communitypic" src="../../static/images/community/community_3.jpg" alt="community img"></img></div>
-            <div className="swiper-slide"><img id="communitypic" src="../../static/images/community/community_4.jpg" alt="community img"></img></div>
-            <div className="swiper-slide"><img id="communitypic" src="../../static/images/community/community_5.jpg" alt="community img"></img></div>
-            <div className="swiper-slide"><img id="communitypic" src="../../static/images/community/community_6.jpg" alt="community img"></img></div>
+            { commPic.map(({id, image, alt}) => <div className="swiper-slide"> 
+              <img id="communitypic" key={id} src={image}  alt={alt} /> </div>)}
           </div>
           <div className="swiper-button-prev">
             <span className="swiper-button-prev-lg">&lt;</span>
