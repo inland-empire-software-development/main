@@ -9,6 +9,13 @@
 		color: $white;
 	}
 
+	@media screen and (max-width: 1000px) {
+		left: 0;
+		right: 0;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
 	@media screen and (max-width: $medium) {
 		left: 0;
 		right: 0;
@@ -18,6 +25,10 @@
 
 	@media screen and (max-width: $small) {
 		width: 320px;
+	}
+
+	@media screen and (max-width: 320px) {
+		width: 280px;
 	}
 
 	.hero-event-info {
@@ -73,6 +84,13 @@
 				.hero-event-time {
 					margin-top: 8px;
 					font-size: 10px;
+				}
+			}
+
+			@media screen and (max-width: 320px) {
+				.hero-event-time {
+					margin-top: 9px;
+					font-size: 9px;
 				}
 			}
 		}
@@ -145,6 +163,17 @@
 
 					p:last-child {
 						font-size: 9px;
+					}
+				}
+
+				@media screen and (max-width: 320px) {
+					p:first-child {
+						font-size: 9px;
+						line-height: 12px;
+					}
+
+					p:last-child {
+						font-size: 8.2px;
 					}
 				}
 			}
