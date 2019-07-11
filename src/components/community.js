@@ -30,6 +30,17 @@ let swiper = new Swiper('.swiper-container', {
 // }
 // const cir = document.document.getElementById('myCirlce');
 
+
+let commPic = [
+  {id: 1, image: '../../static/images/community/community_1.jpg'},
+  {id: 2, image: '../../static/images/community/community_2.jpg'},
+  {id: 3, image: '../../static/images/community/community_3.jpg'},
+  {id: 4, image: '../../static/images/community/community_4.jpg'},
+  {id: 5, image: '../../static/images/community/community_5.jpg'},
+  {id: 6, image: '../../static/images/community/community_6.jpg'},
+];
+
+
 function Community() {
   // const [x, y] = useState(null);
   // function myFunction() {
