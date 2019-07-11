@@ -24,17 +24,11 @@ app.prepare().then(() => {
     app.render(req, res, actualPage, queryParams);
   });
 
-  // proxy to make fetch requests to meetup
-  server.get('/meetup/upcoming', (req, res) => {
-    if (req.method === 'GET') {
-      const apiUrl = 'https://api.meetup.com/iesd-meetup/events?&sign=true&photo-host=public&page=20';
-
-      fetch(apiUrl)
-          .then((response) => response.json())
-          .then((result) => {
-            res.json(result);
-          });
-    }
+  server.get('/api/events', (req, res) => {
+    let apiUrl = "https://api.meetup.com/2/events?group_urlname=iesd-meetup"
+    fetch(apiUrl)
+    .then((response) => response.json())
+    .then((result) => res.json(result))
   });
 
   // default
