@@ -13,8 +13,6 @@ function HeroEvent() {
 
   useEffect(() => {
     fetchEvents().then((result) => {
-
-      console.log(result);
       setEventName(result[0].name);
       setEventStartTime(calcStartTime(result[0].local_time));
       setEventEndTime(
