@@ -131,23 +131,27 @@ height: 45vh;
     height: 110px;
     font-size: 3em;
     line-height: 110px;
+    bottom: 0px;
+    bottom: -45px;
 
   }
   .swiper-button-next{
     top: 32vh;
     right: 24vw;
+    bottom: 0px;
   }
   .swiper-button-prev{
     top: 32vh;
     left: 24vw;
+    bottom: 0px;
   }
 
   .swiper-button-prev-lg, .swiper-button-next-lg {
-    font-size: 9em;
+    font-size: 8em;
   }
   .swiper-button-prev-sm,.swiper-button-next-sm{
   
-    font-size: 6em;
+    font-size: 5em;
   }
 
 
@@ -161,9 +165,11 @@ height: 45vh;
     width: 150px;
     height: 150px;
     font-size: 4em;
-    line-height: 140px;
+    line-height: 150px;
   }
-  
+  .circle_container { 
+    top: 40vh;
+  }
 }
 
 
