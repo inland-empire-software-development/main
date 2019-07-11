@@ -25,10 +25,14 @@ app.prepare().then(() => {
   });
 
   server.get('/api/events', (req, res) => {
-    let apiUrl = "https://api.meetup.com/2/events?group_urlname=iesd-meetup"
+    const apiUrl = "https://api.meetup.com/iesd-meetup/events";
     fetch(apiUrl)
-    .then((response) => response.json())
-    .then((result) => res.json(result))
+        .then((response) => {
+          return response.json();
+        })
+        .then((result) => {
+          return res.json(result);
+        });
   });
 
   // default

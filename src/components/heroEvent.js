@@ -1,4 +1,5 @@
 import {useState, useEffect} from 'react';
+import {fetchEvents} from '../utils/meetupApiUtil';
 import {calcStartTime, calcEndTime} from '../utils/convertTimeUtil';
 import {splitMonth, splitDay} from '../utils/splitDateUtil';
 
@@ -11,18 +12,16 @@ function HeroEvent() {
   const [eventLink, setEventLink] = useState('');
 
   useEffect(() => {
-    fetch("/meetup/upcoming")
-        .then((response) => response.json())
-        .then((result) => {
-          setEventName(result[0].name);
-          setEventStartTime(calcStartTime(result[0].local_time));
-          setEventEndTime(
-              calcEndTime(result[0].local_time, result[0].duration
-              ));
-          setEventMonth(splitMonth(result[0].local_date));
-          setEventDay(splitDay(result[0].local_date));
-          setEventLink(result[0].link);
-        });
+    fetchEvents().then((result) => {
+      setEventName(result[0].name);
+      setEventStartTime(calcStartTime(result[0].local_time));
+      setEventEndTime(
+          calcEndTime(result[0].local_time, result[0].duration
+          ));
+      setEventMonth(splitMonth(result[0].local_date));
+      setEventDay(splitDay(result[0].local_date));
+      setEventLink(result[0].link);
+    });
   }, []);
 
   return (
