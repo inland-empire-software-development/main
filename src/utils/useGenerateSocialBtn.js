@@ -21,11 +21,11 @@ function useGenerateSocialBtn(data) {
       props.fontClass = '';
       props.href = data.socialNetworks[socialNetwork];
       switch (socialNetwork) {
-        case 'facebook':
-          props.fontClass = 'fab fa-facebook-f';
+        case 'linkedin':
+          props.fontClass = 'fab fa-linkedin-in';
           break;
-        case 'twitter':
-          props.fontClass = 'fab fa-twitter';
+        case 'github':
+          props.fontClass = 'fab fa-github';
           break;
         default:
           continue;

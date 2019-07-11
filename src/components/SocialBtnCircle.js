@@ -3,7 +3,7 @@ function SocialBtnCircle(props) {
 
   return (
     <div className="social-btn-circle">
-      <a href={href}>
+      <a href={href} target="_blank">
         <i className={fontClass}></i>
       </a>
     </div>
