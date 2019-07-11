@@ -1,8 +1,8 @@
 require('dotenv').config();
-const fetch = require('isomorphic-unfetch');
 
 const express = require('express');
 const next = require('next');
+const fetch = require('isomorphic-unfetch');
 
 const env = process.env.NODE_ENV;
 const dev = env !== 'production';
@@ -24,12 +24,15 @@ app.prepare().then(() => {
     app.render(req, res, actualPage, queryParams);
   });
 
-  // proxy to make fetch requests to meetup
   server.get('/api/events', (req, res) => {
-    let apiUrl = "https://api.meetup.com/2/events?group_urlname=iesd-meetup"
+    const apiUrl = "https://api.meetup.com/iesd-meetup/events";
     fetch(apiUrl)
-    .then((response) => response.json())
-    .then((result) => res.json(result))
+        .then((response) => {
+          return response.json();
+        })
+        .then((result) => {
+          return res.json(result);
+        });
   });
 
   // default
