@@ -1,3 +1,4 @@
+
 #leadership {    
   max-width: 80vw;
   margin-top: 3em;
@@ -14,7 +15,7 @@
     font-family: "Block";
     font-size: 1.4em;
     display: inline-flex;
-
+    
     @media screen and (max-width: $medium){
       writing-mode: horizontal-tb;
     } 
@@ -26,6 +27,7 @@
     padding-inline-start: 0;
     li {
       display: inline-block;
+      margin-top: 0;
     }
   }
   

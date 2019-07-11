@@ -95,35 +95,41 @@ class Leadership extends React.Component {
 
   render() {
     const { organizers, speakers } = this.state;
+
     return (
       <div id='leadership' className='grid-container'>
         <div className='center-column column-22 tablet-column-10'>
-
-          <h3 className='column-1 phone-column-6 tablet-column-12'>ORGANIZERS</h3>
-          <div className='organizers scrolling column-21 tablet-column-12 phone-column-6'>
-            <ul>
-              {organizers.map(organizer => (
-                <li
-                  key={organizer.id}>
-                  <LeadershipImage userName={organizer.userName}
-                    title={organizer.title}
-                    image={organizer.image} />
-                </li>)
-              )}
-            </ul>
+          <div className='column-22'>
+            <h3 className='column-1 phone-column-6 tablet-column-12'>ORGANIZERS</h3>
+            <div className='organizers scrolling column-21 tablet-column-12 phone-column-6'>
+              <ul>
+                {organizers.map(organizer => (
+                  <li
+                    key={organizer.id}>
+                    <LeadershipImage
+                      userName={organizer.userName}
+                      title={organizer.title}
+                      image={organizer.image} />
+                  </li>)
+                )}
+              </ul>
+            </div>
           </div>
 
-          <h3 className='column-1 tablet-column-12 phone-column-6'>PAST SPEAKERS</h3>
-          <div className='speakers scrolling column-21 tablet-column-12 phone-column-6'>
-            <ul>
-              {speakers.map(speaker => (
-                <li key={speaker.id}>
-                  <LeadershipImage userName={speaker.userName}
-                    title={speaker.title}
-                    image={speaker.image} />
-                </li>)
-              )}
-            </ul>
+          <div className='column-22'>
+            <h3 className='column-1 tablet-column-12 phone-column-6'>PAST SPEAKERS</h3>
+            <div className='speakers scrolling column-21  tablet-column-12 phone-column-6'>
+              <ul>
+                {speakers.map(speaker => (
+                  <li key={speaker.id}>
+                    <LeadershipImage userName={speaker.userName}
+                      title={speaker.title}
+                      image={speaker.image} />
+                  </li>)
+                )}
+              </ul>
+            </div>
+
           </div>
 
         </div>
