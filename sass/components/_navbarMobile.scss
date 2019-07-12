@@ -1,5 +1,16 @@
 .navbar-mobile{
 
+	.navbar-mobile-logo{
+		margin-top: 10px;
+		margin-left: 10px;
+		width: 125px;
+
+		@media screen and (max-width: $small){
+			width: 100px;
+			margin-left: 5px;
+		}
+	}
+
 	#navbar-mobile-menu-container{
 		position: fixed;
 		width: 100vw;

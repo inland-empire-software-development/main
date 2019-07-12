@@ -4,6 +4,9 @@ import {useState, useEffect} from 'react';
 import NavbarHamburgerIcon from './NavbarHamburgerIcon';
 import NavbarMobileDropdownItem from './NavbarMobileDropdownItem';
 
+// images
+import iesdLogo from '../../assets/iesd-initials-white.svg';
+
 function NavbarMobile() {
   // State to manage if menu is open
   const [menuStyle, setMenuStyle] = useState({
@@ -85,6 +88,8 @@ function NavbarMobile() {
 
   return (
     <div className="navbar-mobile">
+
+      <img className="navbar-mobile-logo" src={iesdLogo} />
 
       {/* Navbar Hamburger Icon */}
       <NavbarHamburgerIcon handleClick={handleMenuClick}/>
