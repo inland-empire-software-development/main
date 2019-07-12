@@ -20,7 +20,7 @@ function NavbarMobileDropdownItem(props) {
   const [dropdownStyle, setDropdownStyle] = useState({
     dropdownOpen: false,
     dropdownElem: {
-      height: "50px",
+      height: "45px",
     },
   });
 
@@ -31,7 +31,7 @@ function NavbarMobileDropdownItem(props) {
       setDropdownStyle({
         dropdownOpen: false,
         dropdownElem: {
-          height: "50px",
+          height: "45px",
         },
       });
     } else {
@@ -50,7 +50,7 @@ function NavbarMobileDropdownItem(props) {
         className="navbar-mobile-item"
         onClick={handleDropdownClick}
       >
-        {mainItem}
+        {mainItem} <i className="fas fa-caret-down dropdown-indicator"></i>
       </a>
       <div className="dropdown-mobile-content">
         {subItemElements}

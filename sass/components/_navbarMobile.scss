@@ -38,6 +38,15 @@
 				margin-top: 10px;
 				cursor: pointer;
 				text-decoration: none;
+				position: relative;
+
+				.dropdown-indicator{
+					color: $yellow;
+					position: absolute;
+					top: 6px;
+					right: -18px;
+					font-size: 20px;
+				}
 			}
 
 			.dropdown-mobile{
@@ -45,6 +54,7 @@
 				flex-direction: column;
 				align-items: center;
 				overflow: hidden;
+				width: 100%;
 				height: 50px;
 				transition: 300ms all ease-in;
 
