@@ -1,13 +1,14 @@
 .navbar-mobile{
 
 	.navbar-mobile-logo{
-		margin-top: 10px;
-		margin-left: 10px;
+		position: absolute;
+		top: 15px;
+		left: 30px;
 		width: 125px;
 
 		@media screen and (max-width: $small){
 			width: 100px;
-			margin-left: 5px;
+			left: 25px;
 		}
 	}
 
