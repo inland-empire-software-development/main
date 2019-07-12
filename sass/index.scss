@@ -8,11 +8,16 @@
 @import
 'pages/_index';
  
-@import 
+@import
+'components/_navbar',
+'components/_navbarDesktop',
+'components/_navbarMobile',
 'components/_hero',
+'components/_heroEvent',
 'components/_slogan',
 'components/_mission',
 'components/_goals',
+'components/join',
 'components/_footer';
 
 @import '_shame';

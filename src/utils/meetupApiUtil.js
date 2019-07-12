@@ -1,15 +1,14 @@
-import Fetch from 'isomorphic-unfetch';
+import fetch from 'isomorphic-unfetch';
 
 export const fetchEvents = () => {
-    let id = "iesd-meetup"
-    let meetApi = `https://api.meetup.com/${id}/`
-    let config = { mode: 'no-cors'}
+  const apiUrl = `/api/events`;
 
-    return Fetch(meetApi, config)
-    .then(function(response) {
-      return response
-    })
-    .then(function(myJson) {
-      return JSON.stringify(myJson);
-    })
-}
+  return fetch(apiUrl)
+      .then( (response) => response.json());
+};
+
+export const getEvents = () => {
+  return fetchEvents().then( (resp) => {
+    return resp.results;
+  });
+};
