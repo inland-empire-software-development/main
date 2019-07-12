@@ -25,7 +25,7 @@ function Navbar() {
 
     return () => {
       window.removeEventListener('resize', () => setWidth(window.innerWidth));
-    }
+    };
   }, [width]);
 
   return (

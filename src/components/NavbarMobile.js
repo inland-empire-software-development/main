@@ -5,7 +5,8 @@ import NavbarHamburgerIcon from './NavbarHamburgerIcon';
 import NavbarMobileDropdownItem from './NavbarMobileDropdownItem';
 
 // images
-import iesdLogo from '../../assets/iesd-initials-white.svg';
+import iesdNavLogo from '../../assets/iesd-initials-white.svg';
+import iesdMenuLogo from '../../assets/logo/iesd-logo-white.svg';
 
 function NavbarMobile() {
   // State to manage if menu is open
@@ -89,7 +90,7 @@ function NavbarMobile() {
   return (
     <div className="navbar-mobile">
 
-      <img className="navbar-mobile-logo" src={iesdLogo} />
+      <img className="navbar-mobile-logo" src={iesdNavLogo} />
 
       {/* Navbar Hamburger Icon */}
       <NavbarHamburgerIcon handleClick={handleMenuClick}/>
@@ -98,6 +99,8 @@ function NavbarMobile() {
       <div
         id="navbar-mobile-menu-container"
         style={menuStyle.menuElemContainer}>
+
+        <img className="navbar-mobile-menu-logo" src={iesdMenuLogo} />
 
         <div className="navbar-mobile-menu">
 
