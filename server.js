@@ -27,12 +27,12 @@ app.prepare().then(() => {
   server.get('/api/events', (req, res) => {
     const apiUrl = "https://api.meetup.com/iesd-meetup/events";
     fetch(apiUrl)
-        .then((response) => {
-          return response.json();
-        })
-        .then((result) => {
-          return res.json(result);
-        });
+      .then((response) => {
+        return response.json();
+      })
+      .then((result) => {
+        return res.json(result);
+      });
   });
 
   // default
