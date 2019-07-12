@@ -2,6 +2,7 @@ require('dotenv').config();
 
 const express = require('express');
 const next = require('next');
+const fetch = require('isomorphic-unfetch');
 
 const env = process.env.NODE_ENV;
 const dev = env !== 'production';
@@ -21,6 +22,17 @@ app.prepare().then(() => {
       slug: req.params.id,
     };
     app.render(req, res, actualPage, queryParams);
+  });
+
+  server.get('/api/events', (req, res) => {
+    const apiUrl = "https://api.meetup.com/iesd-meetup/events";
+    fetch(apiUrl)
+        .then((response) => {
+          return response.json();
+        })
+        .then((result) => {
+          return res.json(result);
+        });
   });
 
   // default
