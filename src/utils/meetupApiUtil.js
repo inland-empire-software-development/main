@@ -9,6 +9,6 @@ export const fetchEvents = () => {
 
 export const getEvents = () => {
   return fetchEvents().then( (resp) => {
-    return resp.results;
+    return resp;
   });
 };
