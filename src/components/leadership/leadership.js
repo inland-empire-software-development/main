@@ -72,37 +72,65 @@ class Leadership extends React.Component {
       {
         id: 1,
         userName: 'Lloan Alas',
-        title: 'Mastermind',
+        title: 'Eloquent Javascript Series',
         image: '../static/images/desktop/lloanalas.jpg',
         overlay: 'overlay-green-blue'
       },
       {
         id: 2,
-        userName: 'Ixshel Escamilla',
-        title: 'Front End Developer',
+        userName: 'Spencer Trumbore',
+        title: 'Node.js & Wolfram Alpha API',
         image: '',
         overlay: ''
       },
       {
         id: 3,
+        userName: 'Ixshel Escamilla',
+        title: 'Introduction to Angular',
+        image: '',
+        overlay: ''
+      },
+      {
+        id: 4,
+        userName: 'Rey Santiago',
+        title: 'Designers and Developers',
+        image: '',
+        overlay: ''
+      },
+      {
+        id: 5,
         userName: 'Felipe Fernandez',
-        title: 'Front End Developer',
+        title: 'Arrow Functions',
         image: '../static/images/desktop/felipefernandez.jpg',
         overlay: 'overlay-purple-red'
       },
       {
-        id: 4,
-        userName: 'Tony Nguyen',
-        title: 'UCR Bootcamp TA',
-        image: '../static/images/desktop/tonynguyen.jpg',
-        overlay: 'overlay-red-yellow'
-      },
-      {
-        id: 5,
-        userName: 'Amy Ambard',
-        title: 'Front End Developer',
+        id: 6,
+        userName: 'Csaba Balough',
+        title: 'Javascript Closures',
         image: '',
         overlay: ''
+      },
+      {
+        id: 7,
+        userName: 'Nicholas Twohig',
+        title: 'Project Management & Agile',
+        image: '',
+        overlay: ''
+      },
+      {
+        id: 8,
+        userName: 'Anisha Joshipura',
+        title: 'Flexbox',
+        image: '',
+        overlay: ''
+      },
+      {
+        id: 9,
+        userName: 'Tony Nguyen',
+        title: 'Exploring Jest',
+        image: '../static/images/desktop/tonynguyen.jpg',
+        overlay: 'overlay-red-yellow'
       },
     ],
   };
