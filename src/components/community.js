@@ -1,7 +1,6 @@
 import Swiper from 'swiper';
 import '../../node_modules/swiper/dist/css/swiper.min.css';
-import React, { useEffect } from 'react';
-// import window from 'global.window';
+import React, { useState, useEffect } from 'react';
 
 
 // function myFunction(numS) {
@@ -45,9 +44,26 @@ const commPic = [
   {id: 6, image: '../../static/images/community/community_6.jpg', 
     alt: 'community pic'},
 ];
-
+let vv;
 
 function Community() {
+  const [count, setCount] = useState(0);
+
+  // Similar to componentDidMount and componentDidUpdate:
+  useEffect(() => {
+    const x = document.getElementsByClassName("circle_container");
+    vv = () => {
+      if (x.id.style.display === "block") {
+        x.style.display = "none";
+        console.log("ff");
+      }
+      console.log("ff");
+    };
+    console.log(x);
+
+    console.log("hey");
+  });
+
   // const [x, y] = useState(null);
   // function myFunction() {
   //   const x = document.getElementById("myCirlce");
@@ -66,11 +82,11 @@ function Community() {
   // });
   return (
     <div className="grid-container community  ">
-      <div className="column-24 " onClick="myFunction()" >
+      <div className="column-24 " onClick={vv}>
         <div id="iesdBg" className="swiper-container leader-1 trailer-1" >
           <div className="swiper-wrapper" >
-            { commPic.map(({id, image, alt}) => <div className="swiper-slide"> 
-              <img id="communitypic" key={id} src={image}  alt={alt} /> </div>)}
+            { commPic.map(({id, image, alt}) => <div className="swiper-slide">
+              <img id="communitypic" key={id} src={image} alt={alt} /> </div>)}
           </div>
           <div className="swiper-button-prev">
             <span className="swiper-button-prev-lg">&lt;</span>
@@ -83,6 +99,7 @@ function Community() {
             <span className="swiper-button-next-sm">&gt;</span>
             <span className="swiper-button-next-lg">&gt;</span>
           </div>
+          <p>You clicked {count} times</p>
         </div>
         {/* <div>
           <p>You clicked {count} times</p>
