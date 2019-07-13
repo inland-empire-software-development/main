@@ -1,6 +1,5 @@
 import Swiper from 'swiper';
 import '../../node_modules/swiper/dist/css/swiper.min.css';
-import React, { useEffect } from 'react';
 
 
 let swiper = new Swiper('.swiper-container', {
@@ -28,7 +27,6 @@ const commPic = [
     alt: 'community pic'},
 ];
 
-
 function Community() {
   return (
     <div className="grid-container community  ">
@@ -49,6 +47,7 @@ function Community() {
             <span className="swiper-button-next-sm">&gt;</span>
             <span className="swiper-button-next-lg">&gt;</span>
           </div>
+          <p>You clicked {count} times</p>
         </div>
 
       </div>
