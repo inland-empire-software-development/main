@@ -4,9 +4,7 @@
   background-position: center;
   background-repeat: no-repeat;
   min-height: 280px;
-}
-
- 
+} 
 .swiper-container{
 height: 45vh;
 }
@@ -37,7 +35,12 @@ height: 45vh;
   width: 200px;
   margin: 20px;
 }
-
+.community{
+  &:hover #myCirlce,
+  &:active #myCircle{
+    display: none;
+  }
+}
 #myCirlce{
   display: block;
 }
@@ -123,7 +126,7 @@ height: 45vh;
     width: 40%;
   }
   .circle_container{
-    top: 38vh;
+    top: 37vh;
     left: 40vw;
   }
   .circle {
@@ -136,12 +139,12 @@ height: 45vh;
 
   }
   .swiper-button-next{
-    top: 32vh;
+    top: 31vh;
     right: 24vw;
     bottom: 0px;
   }
   .swiper-button-prev{
-    top: 32vh;
+    top: 31vh;
     left: 24vw;
     bottom: 0px;
   }
@@ -167,9 +170,13 @@ height: 45vh;
     font-size: 4em;
     line-height: 150px;
   }
-  .circle_container { 
-    top: 40vh;
+  .swiper-button-prev{
+    top: 28vh;
   }
+  .swiper-button-next{
+    top: 28vh;
+  }
+
 }
 
 
