@@ -1,0 +1,107 @@
+floatingBar{
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:-moz-box;
+    display:-webkit-flex;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position:fixed;
+    height:40%;
+    width:92%;
+    top:50%;
+    left:4%;
+    z-index: 1;
+    
+
+    .left-floating-bar {
+        flex-direction: column;
+        
+        .fa-phone{
+            font-size:25px;
+            color: #FFFFFF;
+            display: block;
+            text-align: center;
+        }
+        .fa-envelope{
+            font-size:25px;
+            color:#FFFFFF;
+            display: block;
+        }
+        .fa-comment-dots{
+            font-size: 25px;
+            color:#FFFFFF;
+            display: block;
+        }
+        .floating-bar-contact{
+            font-family: "Book";
+            font-size: 16px;
+            color:#FFFFFF;
+            -moz-transform: rotate(-90deg);  /* FF3.5+ */
+	        -o-transform: rotate(-90deg);  /* Opera 10.5 */
+            -webkit-transform: rotate(-90deg);  /* Safari 3.1+, Chrome */
+            transform:rotate(-90deg);
+            display: block;
+        }
+    }
+
+    .right-floating-bar {
+        flex-direction: column;
+        top: 10%;
+
+        .fa-twitter {
+            font-size:18px;
+            color:#FFFFFF;
+            display: block;
+        }
+        .fa-facebook-f {
+            font-size:18px;
+            color:#FFFFFF;
+            display:block;
+        }
+        .share-inner-div{
+            font-family: "Book";
+            font-size:16px;
+            color:#FFFFFF;
+            display:block;
+            -moz-transform: rotate(-90deg) translateX(90px);  /* FF3.5+ */
+	        -o-transform: rotate(-90deg) translateX(90px);  /* Opera 10.5 */
+            -webkit-transform: rotate(-90deg) translateX(90px);  /* Safari 3.1+, Chrome */
+            transform:rotate(-90deg) translateX(90px);
+        }
+        .fa-meetup{
+            font-size: 18px;
+            color:#FFFFFF;
+            display:block;
+        }
+        .fa-slack{
+            font-size: 18px;
+            color:#FFFFFF;
+            display:block;
+        }
+        .join-inner-div{
+            font-family: "Book";
+            font-size:16px;
+            color:#FFFFFF;
+            display:block;
+            -moz-transform: rotate(-90deg) translateX(90px);  /* FF3.5+ */
+	        -o-transform: rotate(-90deg) translateX(90px);  /* Opera 10.5 */
+            -webkit-transform: rotate(-90deg) translateX(90px);  /* Safari 3.1+, Chrome */
+            transform:rotate(-90deg) translateX(90px);
+        }
+        .floating-bar-inner-line{
+            -moz-transform: translateY(-97px);
+            -o-transform: translateY(-97px);
+            -webkit-transform: translateY(-97px);
+            transform: translateY(-97px);
+            background-color: #EC2242;
+            border:none;
+            height:1px;
+        }
+    }
+}
+@media (max-width:860px){
+    .floating-bar-main{
+        display:none;
+    }
+}
