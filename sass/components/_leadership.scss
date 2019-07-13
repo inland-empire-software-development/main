@@ -28,9 +28,21 @@
     li {
       display: inline-block;
       margin-top: 0;
+
+      
     }
   }
   
+  .overlay.blue-green {
+    background-color: -moz-linear-gradient(left, rgba(2, 174, 114, 0.3), rgba(63, 179, 225, 0.1));
+          /* FF3.6-15 */
+          background: -webkit-linear-gradient(left, rgba(2, 174, 114, 0.3), rgba(63, 179, 225, 0.1));
+          /* Chrome10-25,Safari5.1-6 */
+          background: linear-gradient(to right, rgba(2, 174, 114, 0.3), rgba(63, 179, 225, 0.1));
+          /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+          filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#3fb3e1', endColorstr='#02ae72', GradientType=1);
+          /* IE6-9 */
+  }
 
    .scrolling{
     overflow-x: auto;
