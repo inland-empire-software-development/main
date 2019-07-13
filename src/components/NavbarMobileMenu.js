@@ -1,5 +1,5 @@
 // components
-import NavbarMobileDropdownItem from './NavbarMobileDropdownItem';
+import NavbarMobileDropdownItems from './NavbarMobileDropdownItems';
 
 // images
 import iesdMenuLogo from '../../assets/logo/iesd-logo-white.svg';
@@ -16,7 +16,7 @@ function NavbarMobileMenu(props) {
       <div className="navbar-mobile-menu">
 
         {/* ABOUT, mission, goals&values, community */}
-        <NavbarMobileDropdownItem
+        <NavbarMobileDropdownItems
           mainItem={"ABOUT"}
           subItemList={[
             {
@@ -41,7 +41,7 @@ function NavbarMobileMenu(props) {
         </a>
 
         {/* LEADERSHIP, organizers, past speakers, success stories */}
-        <NavbarMobileDropdownItem
+        <NavbarMobileDropdownItems
           mainItem={"LEADERSHIP"}
           subItemList={[
             {
@@ -60,7 +60,7 @@ function NavbarMobileMenu(props) {
         />
 
         {/* SPONSORS, our sponsors, sponsor packet, apply to speak */}
-        <NavbarMobileDropdownItem
+        <NavbarMobileDropdownItems
           mainItem={"SPONSORS"}
           subItemList={[
             {
