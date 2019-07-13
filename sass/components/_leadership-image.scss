@@ -32,6 +32,7 @@
             height: 100%;
         }
         
+         /** Gradient color effect--To ficilitate overlay & deter inheritance all colors changed to RGBA **/
         .overlay,
         .overlay-green-blue,
         .overlay-blue-purple,
@@ -42,8 +43,7 @@
           height: 100%;
           width: 100%;
         }
-        .overlay-green-blue {
-          /** To ficilitate overlay effect & deter inheritance all colors changed to RGBA **/            
+        .overlay-green-blue {            
           background-color: -moz-linear-gradient(left, rgba(2, 174, 114, 0.3), rgba(63, 179, 225, 0.1));
           /* FF3.6-15 */                background: -webkit-linear-gradient(left, rgba(2, 174, 114, 0.3), rgba(63, 179, 225, 0.1));
           /* Chrome10-25,Safari5.1-6 */
@@ -85,10 +85,7 @@
         /* IE6-9 */
      } 
     }
-            
-    
-        
-    
+             
     .card {
         border: none;
         box-shadow: 0 0 0 0;
@@ -127,7 +124,7 @@
                 }
                 @media screen and (max-width: $small){
                   font-size: 1rem;
-              }
+                }
               }
               .leadership-title {
                 font-family: "Book";

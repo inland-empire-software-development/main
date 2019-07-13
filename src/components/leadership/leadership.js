@@ -143,6 +143,7 @@ class Leadership extends React.Component {
     return (
       <div id='leadership' className='grid-container'>
         <div className='center-column column-22 tablet-column-10'>
+
           <div className='column-22'>
             <h3 className='column-1 phone-column-6 tablet-column-12'>ORGANIZERS</h3>
             <div className='organizers scrolling column-21 tablet-column-12 phone-column-6'>
@@ -151,7 +152,6 @@ class Leadership extends React.Component {
                   <li
                     key={organizer.id}>
                     <LeadershipImage
-
                       userName={organizer.userName}
                       title={organizer.title}
                       image={organizer.image}
@@ -169,7 +169,8 @@ class Leadership extends React.Component {
               <ul>
                 {speakers.map(speaker => (
                   <li key={speaker.id}>
-                    <LeadershipImage userName={speaker.userName}
+                    <LeadershipImage
+                      userName={speaker.userName}
                       title={speaker.title}
                       image={speaker.image}
                       overlay={speaker.overlay}
@@ -185,7 +186,6 @@ class Leadership extends React.Component {
     );
   }
 }
-
 
 // eslint-disable-next-line eol-last
 export default Leadership;
