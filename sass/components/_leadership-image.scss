@@ -4,15 +4,19 @@
 
     @media screen and (max-width: $large){
         width: 17.5rem;
-      }
+    }
 
     @media screen and (max-width: $medium){
         width: 15rem;
-      }
+    }
 
-      @media screen and (max-width: $small){
-        width: 12.5rem;
-      }
+    @media screen and (max-width: $small){
+      width: 12.5rem;
+    }
+
+    @media screen and (max-width: 376px){
+      width: 10.5rem;
+    }
 
     .profile-photo{
         height: 13.5rem;
@@ -20,11 +24,15 @@
         @media screen and (max-width: $medium){
             height: 11rem;
             width: 9.5rem;
-          }
-          @media screen and (max-width: $small){
-            height: 9.5rem;
-            width: 8rem;
-          }
+        }
+        @media screen and (max-width: $small){
+          height: 9.5rem;
+          width: 8rem;
+        }
+        @media screen and (max-width: 376px){
+          height: 7.5rem;
+          width: 6.5rem;
+        }
 
         img {
             position: absolute;
@@ -51,7 +59,7 @@
           /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
           filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#3fb3e1', endColorstr='#02ae72', GradientType=1);
           /* IE6-9 */
-            }
+        }
         .overlay-blue-purple {
           background-color: -moz-linear-gradient(left, rgba(0, 0, 255, 0.3), rgba(128, 0, 128, 0.2));
           /* FF3.6-15 */
@@ -83,7 +91,7 @@
         /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
         filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=rgba(209, 0, 0, 0.4), endColorstr=rgba(240, 226, 28, 0.1), GradientType=1);
         /* IE6-9 */
-     } 
+      } 
     }
              
     .card {
@@ -107,12 +115,20 @@
         @media screen and (max-width: $small){
           max-height: 4rem;
         }
+        @media screen and (max-width: 376px){
+          width: 10.5rem;
+          max-height: 3rem;
+          bottom: 1rem;
+        }
         .card-content {           
             margin: 0;
             padding: .5rem;
             @media screen and (max-width: $small){
               padding-top: .3rem;
-          }
+            }
+            @media screen and (max-width: 376px) {
+              padding-top: 0;
+            }
 
             .leadership-name {
                 font-family: "Heavy";
@@ -125,6 +141,10 @@
                 @media screen and (max-width: $small){
                   font-size: 1rem;
                 }
+                @media screen and (max-width: 376px) {
+                  font-size: .9rem;
+                }
+
               }
               .leadership-title {
                 font-family: "Book";
@@ -132,6 +152,9 @@
 
                 @media screen and (max-width: $medium){
                     font-size: .9rem;
+                }
+                @media screen and (max-width: 376px) {
+                  font-size: .75rem;
                 }
               }
           }
