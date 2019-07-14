@@ -1,7 +1,7 @@
   #blogList {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: min-content 1fr;
   grid-gap: 30px;
   padding: 0 15px;
 }
@@ -30,6 +30,7 @@
 
 .full-article-button {
   display: block;
+  text-align: center;
   color: $white;
   width: 100%;
 }
@@ -41,6 +42,8 @@
     justify-content: space-between;
     padding: 0;
     width: 80%;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .blog-preview {
