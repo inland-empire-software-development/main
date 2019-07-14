@@ -26,13 +26,6 @@ class Leadership extends React.Component {
         overlay: 'overlay-purple-red',
       },
       {
-        id: 4,
-        userName: 'Amy Ambard',
-        title: 'Front End Developer',
-        image: '../static/images/desktop/amyambard.jpg',
-        overlay: 'overlay-red-yellow',
-      },
-      {
         id: 5,
         userName: 'Luis Javier Velazquez',
         title: 'Lead React Developer',
@@ -59,6 +52,13 @@ class Leadership extends React.Component {
         title: 'Internal Relations Director',
         image: '../static/images/desktop/kellylam.jpg',
         overlay: 'overlay-red-yellow'
+      },
+      {
+        id: 4,
+        userName: 'Amy Ambard',
+        title: 'Front End Developer',
+        image: '../static/images/desktop/amyambard.jpg',
+        overlay: 'overlay-red-yellow',
       },
       {
         id: 9,

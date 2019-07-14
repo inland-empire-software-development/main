@@ -7,6 +7,12 @@
   @media screen and (max-width: $medium){
     margin-top: 0;
   }
+
+  .organizers, .speakers {
+    @media screen and (max-width: $medium){
+      padding-left: 0;
+    }
+  }
   
   h3{
     writing-mode: vertical-rl;
@@ -17,6 +23,7 @@
     
     @media screen and (max-width: $medium){
       writing-mode: horizontal-tb;
+      padding-left: 0;
     } 
   }
 
@@ -24,6 +31,9 @@
     list-style: none;
     margin-top: 0;
     padding-inline-start: 0;
+    @media screen and (max-width: $medium){
+      padding-left: 0;
+    }
     @media screen and (max-width: $small){
       margin: 0;
       padding: 0;
@@ -34,7 +44,21 @@
       margin-top: 0;     
     }
     li:last-child {
-      margin-right: 45px;
+      padding-right: 2rem;
+      @media screen and (max-width: $large){
+        margin-right: 25px;
+      }
+      @media screen and (max-width: 1025px){
+        margin-right: 10px;
+      }
+      @media screen and (max-width: $medium){
+        margin-right: 60px;
+      }
+      @media screen and (max-width: $small){
+        padding-right: 0;
+        margin-right: 25px;
+      }
+
     } 
   }
   
