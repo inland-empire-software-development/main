@@ -10,6 +10,10 @@
   width: 100%;
 }
 
+.blog-preview-header {
+  display: flex;
+}
+
 .blog-preview-category {
   display: none;
 }
@@ -18,6 +22,7 @@
   font-family: "Book";
   font-size: 14px;
   width: 100%;
+  box-sizing: border-box;
 }
 
 .blog-preview-title {
@@ -51,13 +56,19 @@
     height: 380px;
   }
 
+  .blog-preview-image {
+  }
+
   .blog-preview-header {
     position: relative;
   }
 
   .blog-preview-category {
+    display: block;
+    width: 100%;
     position: absolute;
     bottom: 0;
+    padding: 5px 0 5px 15px;
     font-family: "Medium";
     font-size: 12px;
     background-color: rgba(255,255,255,0.8);
