@@ -13,8 +13,12 @@ let swiper = new Swiper('.swiper-container', {
   },
   // here are the breakpoints you can alter how many sides are seen and and the margin.
   breakpoints: {
-    1840: {
+    2040: {
       slidesPerView: 5,
+      spaceBetween: 20,
+    },
+    1840: {
+      slidesPerView: 4,
       spaceBetween: 20,
     },
     1024: {
@@ -39,17 +43,31 @@ let swiper = new Swiper('.swiper-container', {
 // place holder example of an array of objects that hold each image.
 
 const commPic = [
-  {key: 1, image: '../../static/images/community/community_1.jpg',
+  {key: 11, image: '../../static/images/community/Img_11.jpg',
     alt: 'community pic'},
-  {key: 2, image: '../../static/images/community/community_2.jpg', 
+  {key: 12, image: '../../static/images/community/Img_12.jpg', 
     alt: 'community pic'},
-  {key: 3, image: '../../static/images/community/community_3.jpg', 
+  {key: 13, image: '../../static/images/community/Img_13.jpg', 
     alt: 'community pic'},
-  {key: 4, image: '../../static/images/community/community_4.jpg', 
+  {key: 4, image: '../../static/images/community/Img_4.jpg', 
     alt: 'community pic'},
-  {key: 5, image: '../../static/images/community/community_5.jpg', 
+  {key: 5, image: '../../static/images/community/Img_5.jpg', 
     alt: 'community pic'},
-  {key: 6, image: '../../static/images/community/community_6.jpg', 
+  {key: 6, image: '../../static/images/community/Img_6.jpg', 
+    alt: 'community pic'},
+  {key: 7, image: '../../static/images/community/Img_7.jpg', 
+    alt: 'community pic'},
+  {key: 8, image: '../../static/images/community/Img_8.jpg', 
+    alt: 'community pic'},
+  {key: 9, image: '../../static/images/community/Img_9.jpg', 
+    alt: 'community pic'},
+  {key: 10, image: '../../static/images/community/Img_10.jpg', 
+    alt: 'community pic'},
+  {key: 2, image: '../../static/images/community/Img_2.jpg', 
+    alt: 'community pic'},
+  {key: 3, image: '../../static/images/community/Img_3.jpg', 
+    alt: 'community pic'},
+  {key: 1, image: '../../static/images/community/Img_1.jpg', 
     alt: 'community pic'},
 ];
 
