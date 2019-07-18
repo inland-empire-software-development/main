@@ -6,7 +6,7 @@ const blogList = (props) => {
   const [posts, setPosts] = useState([]);
 
   async function getPostData() {
-    const result = await axios.get('http://localhost/blog/wp-json/wp/v2/posts?_embed');
+    const result = await axios.get('https://blog.ie-sd.com/wp-json/wp/v2/posts?_embed');
     console.log(result.data);
     setPosts(result.data);
   }
