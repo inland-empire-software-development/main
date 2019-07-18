@@ -19,4 +19,23 @@ export const data = [
       github: 'https://github.com/HeyItsFelipe',
     },
   },
+  {
+    imageURL: 'https://user-images.githubusercontent.com/36907562/61363950-b385bf80-a839-11e9-849a-9baa5fa4f992.jpg',
+    name: 'Amy Ambard',
+    title: 'Web CMS Coordinator',
+    excerpt: `In one way or another, technology has always been 
+    a driving force in Amy’s life. Growing up, she could often be 
+    found taking apart, and as she got older, successfully reassembling 
+    the family’s electronics. Later, she chased her passion and 
+    paired her interest in technology with her love for teaching 
+    others as a trainer and mentor for Apple. Recently, Amy’s love 
+    for technology took a new turn as she tackled learning front-end 
+      web development. Amy works at Esri, in Redlands, CA, where she 
+    works with Adobe Experience Manager (AEM) and WordPress.`,
+    linkToStory: 'https://blog.ie-sd.com/',
+    socialNetworks: {
+      linkedin: 'https://www.linkedin.com/in/amyambard/',
+      github: 'https://github.com/amyFEND',
+    },
+  },
 ];
