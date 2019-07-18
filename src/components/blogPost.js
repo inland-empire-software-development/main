@@ -4,12 +4,16 @@ import sanitizeHtml from 'sanitize-html';
 const blogPost = (props) => {
   const imageURL = props.postData.featured_media ?
    props.postData._embedded["wp:featuredmedia"][0].source_url : "";
+  const category = props.postData._embedded['wp:term'][0][0].slug;
+  const excerpt = sanitizeHtml(props.postData.excerpt.rendered, {allowedTags: []});
 
   return (
     <div className = "blog-preview">
       <div className = "blog-preview-header">
-        <img src = {imageURL} className = "blog-preview-image" />
-        <div className = "blog-preview-category">{props.postData._embedded['wp:term'][0][0].slug}</div>
+        <div className = "blog-preview-image-container">
+          <img src = {imageURL} className = "blog-preview-image" />
+        </div>
+        <div className = "blog-preview-category">{category[0].toUpperCase() + category.slice(1)}</div>
       </div>
       <div className = "blog-preview-content">
         <div className = "blog-preview-title">{props.postData.title.rendered}</div>
@@ -19,10 +23,13 @@ const blogPost = (props) => {
             {new Intl.DateTimeFormat('en-US', {year: 'numeric', month: 'long', day: 'numeric'})
                 .format(new Date(props.postData.date))}</span>
         </div>
-        {sanitizeHtml(props.postData.excerpt.rendered, {allowedTags: []})}
-        <div className="full-article-button yellow-red">read this article</div>
+        {excerpt.length < 100 ? excerpt : excerpt.substring(0, 100) + "..."}
       </div>
-      
+      <a href = {props.postData.link}>
+        <div className="full-article-button yellow-red">
+          read this article
+        </div>
+      </a>
     </div>
   );
 };
