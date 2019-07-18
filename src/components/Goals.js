@@ -19,26 +19,26 @@ function Goals() {
         <div id="goals-right" className="column-10 post-2
         tablet-column-12 phone-post-0">
 
-            {/* goals heading*/}
-            <p className="goals-heading">
-              OUR GOALS
-            </p>
+          {/* goals heading*/}
+          <p className="goals-heading">
+            OUR GOALS
+          </p>
 
           {/* goals description*/}
 
-            <p className="goals-desc">
-              Inland Empire Software Development (IESD) is an independent
-              community organization dedicated to bringing community
-              members together to network, educate and share knowledge
-              - all with the goal of increasing the technology presence
-              in the Inland Empire.
-              IESD is spearheaded by an organizing group that is
-              passionate about increasing technology awareness by
-              increasing industry professional involvement
-              with the community, exposing developers to new technologies
-              and creating partnerships with community entities that
-              benefit the community.
-            </p>
+          <p className="goals-desc">
+            Inland Empire Software Development (IESD) is an independent
+            community organization dedicated to bringing community
+            members together to network, educate and share knowledge
+            - all with the goal of increasing the technology presence
+            in the Inland Empire.
+            IESD is spearheaded by an organizing group that is
+            passionate about increasing technology awareness by
+            increasing industry professional involvement
+            with the community, exposing developers to new technologies
+            and creating partnerships with community entities that
+            benefit the community.
+          </p>
 
         </div>
 
