@@ -1,3 +1,4 @@
+//Background Image
 #iesdBg {
   background: url('../static/images/desktop/inland-empire-software-development-background-light.jpg');
   background-size: cover;
@@ -5,6 +6,8 @@
   background-repeat: no-repeat;
   min-height: 280px;
 } 
+
+// Drag container and slider
 .swiper-container{
 height: 45vh;
 }
@@ -30,11 +33,14 @@ height: 45vh;
   background: none;
 
 }
+
+//Pictures
 #communitypic{
   min-width: 90% !important;
   width: 200px;
   margin: 20px;
 }
+//makes drag circle disapear
 .community{
   &:hover #myCirlce,
   &:active #myCircle{
@@ -45,6 +51,7 @@ height: 45vh;
   display: block;
 }
 
+// drag circle 
 .circle_container{
   display: flex;
   position: absolute;
@@ -73,6 +80,7 @@ height: 45vh;
   transition: left 0.5s;    
 }
 
+//Prev and next buttons 
 .swiper-button-next{
   right: 18vw;
   display: flex;

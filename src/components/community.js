@@ -1,7 +1,9 @@
 import Swiper from 'swiper';
 import '../../node_modules/swiper/dist/css/swiper.min.css';
 
-
+// Main config of the slider, check all varations here. https://idangero.us/swiper/demos/
+// click on cource code to look for diff, options.
+// Contact VelazquezLuis on github for any questions
 let swiper = new Swiper('.swiper-container', {
   slidesPerView: 'auto',
   spaceBetween: 10,
@@ -9,8 +11,32 @@ let swiper = new Swiper('.swiper-container', {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
+  // here are the breakpoints you can alter how many sides are seen and and the margin.
+  breakpoints: {
+    1840: {
+      slidesPerView: 5,
+      spaceBetween: 20,
+    },
+    1024: {
+      slidesPerView: 4,
+      spaceBetween: 30,
+    },
+    768: {
+      slidesPerView: 3,
+      spaceBetween: 30,
+    },
+    640: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 10,
+    },
+  },
 });
 
+// place holder example of an array of objects that hold each image.
 
 const commPic = [
   {key: 1, image: '../../static/images/community/community_1.jpg',
@@ -47,9 +73,7 @@ function Community() {
             <span className="swiper-button-next-sm">&gt;</span>
             <span className="swiper-button-next-lg">&gt;</span>
           </div>
-          <p>You clicked {count} times</p>
         </div>
-
       </div>
     </div>
   );
