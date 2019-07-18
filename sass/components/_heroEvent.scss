@@ -2,7 +2,8 @@
 	position: absolute;
 	height: 185px;
 	width: 450px;
-	top: 25%;
+	top: 180px;
+	z-index: 0;
 
 	p {
 		margin: 0px;
@@ -12,6 +13,7 @@
 	@media screen and (max-width: 1000px) {
 		left: 0;
 		right: 0;
+		top: 180px;
 		margin-left: auto;
 		margin-right: auto;
 	}
@@ -19,6 +21,7 @@
 	@media screen and (max-width: $medium) {
 		left: 0;
 		right: 0;
+		top: 150px;
 		margin-left: auto;
 		margin-right: auto;
 	}
