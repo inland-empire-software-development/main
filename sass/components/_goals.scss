@@ -68,41 +68,5 @@
 			padding-top: 50px;
 			padding-bottom: 50px;
 		}
-
-			@media screen and (max-width: $medium) {
-
-				.goals-heading {
-					font-size: 4rem;
-					text-align: left;
-				}
-
-				.goals-info {
-					text-align: left;
-
-					.goals-desc {
-						font-size: 1.75rem;
-						line-height: 32px;
-					}
-				}
-			}
-
-			@media screen and (max-width: $small) {
-
-				.goals-heading {
-					font-size: calc(1.4em + 1.5vw);
-				}
-
-				.goals-info {
-
-					.goals-desc{
-						font-size: 1.05rem;
-						line-height: 18px;
-					}
-				}
-			}
-	}
-
-	@media screen and (max-width: $medium) {
-		padding: 0px;
 	}
 }
