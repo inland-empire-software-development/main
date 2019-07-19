@@ -1,0 +1,148 @@
+.goals-container{
+	max-height: 446px;
+	height: 29.7vw;
+
+	@media screen and (max-width: $medium){
+		height: 100%;
+		max-height: none;
+	}
+}
+
+#goals {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+
+	p {
+		margin-bottom: 0px;
+		margin-top: 12px;
+	}
+
+	#goals-left {
+		padding: 0px;
+		max-height: 446px;
+		height: 29.7vw;
+
+		.goals-image {
+			height: auto;
+			width: 100%;
+		}
+
+		@media screen and (max-width: $medium) {
+			display: none;
+		}
+	}
+
+	#goals-right {
+
+		.goals-heading {
+			font-family: 'Block';
+			font-size: calc(1.4em + 1.5vw);
+			text-align: right;
+		}
+
+		.goals-info {
+			font-family: 'Book';
+			font-size: 1.25rem;
+			text-align: right;
+
+			.goals-desc p br {
+				display: none;
+			}
+		}
+
+		@media screen and (max-width: 1460px) {
+
+				.goals-heading {
+					font-size: calc(1.4em + 1.5vw);
+				}
+
+				.goals-info {
+
+					.goals-desc {
+						font-size: 1.15rem;
+						line-height: 25px;
+					}
+				}
+			}
+
+			@media screen and (max-width: 1240px) {
+
+				.goals-info {
+
+					.goals-desc {
+						line-height: 20px;
+					}
+				}
+			}
+
+			@media screen and (max-width: 1140px) {
+
+				.goals-info {
+
+					.goals-desc {
+						font-size: .75rem;
+						line-height: 16.5px;
+					}
+				}
+			}
+
+			@media screen and (max-width: 1035px) {
+
+				.goals-info {
+
+					.goals-desc {
+						line-height: 16.5px;
+					}
+				}
+			}
+
+			@media screen and (max-width: $medium) {
+
+				.goals-heading {
+					font-size: 4rem;
+					text-align: left;
+				}
+
+				.goals-info {
+					text-align: left;
+
+					.goals-desc p br {
+						display: inline;
+					}
+
+					.goals-desc {
+						font-size: 1.75rem;
+						line-height: 32px;
+					}
+				}
+
+				.goals-info p {
+					margin-top: 4%;
+				}
+
+				.goals-info p:last-child {
+					margin-bottom: 4%;
+				}
+			}
+
+			@media screen and (max-width: $small) {
+
+				.goals-heading {
+					font-size: calc(1.4em + 1.5vw);
+				}
+
+				.goals-info {
+
+					.goals-desc{
+						font-size: 1.05rem;
+						line-height: 18px;
+					}
+				}
+			}
+	}
+
+	@media screen and (max-width: $medium) {
+		padding: 0px;
+	}
+}

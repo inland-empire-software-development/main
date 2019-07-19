@@ -1,11 +1,36 @@
 footer {
-    background: url('../static/images/desktop/inland-empire-software-development-background.jpg');
+    background: url('../static/images/desktop/footer-background-repeatable.jpg');
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
     padding-bottom: 150px;
 
+    .block {
+        @media screen and (max-width: 479px){
+            margin-left: 0;
+            margin-right: 0;
+        }
+    }
+
     .footer-navigate {
+
+        ul {
+            padding: 0;
+
+            li {
+                font-family: "Book";
+                font-size: 20px;
+                color: $white;
+                list-style-type: none;
+            }
+        }
+
+        a {
+            color: $white;
+            
+            &:hover {
+                color: $blue;
+            }
+        }
 
         p:first-child {
             font-family: "Heavy";
@@ -19,30 +44,15 @@ footer {
             font-size: 22px;
             color: $white;
             margin: 0;
-
-            a {
-                color: $white;
-
-                &:hover {
-                    color: $blue;
-                }
-            }
-        }
-
-        ul {
-            padding: 0;
-
-            li {
-                font-family: "Book";
-                font-size: 20px;
-                color: $white;
-                list-style-type: none;
-            }
         }
     }
 
     .footer-logo {
         width: 304px;
+
+        @media screen and (max-width: 479px) {
+            width: 250px;
+        }
     }
 
     .footer-slogan {
@@ -62,13 +72,22 @@ footer {
         font-size: 64px;
         line-height: 74px;
         color: $white;
+
+        @media screen and (min-width: 860px) and (max-width: 1196px) {
+            font-size: 44px;
+            line-height: 54px;
+        }
+        @media screen and (max-width: 479px) {
+            font-size: 32px;
+            line-height: 48px;
+        }
     }
 
     .footer-legal {
         li a {
             color: $white;
             font-family: "Medium";
-            font-size: 24px;
+            font-size: 22px;
 
             &:hover {
                 color: $blue;
@@ -83,6 +102,10 @@ footer {
         text-align: right;
         height: 230px;
         width: 100% !important;
+
+        @media screen and (max-width: 480px){
+            max-width: 320px;
+        }
     }
 
     .gmap_canvas {
