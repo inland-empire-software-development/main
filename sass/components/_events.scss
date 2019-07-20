@@ -1,2 +1,46 @@
-.event {
+.events-container {
+    outline: 1px solid red;
+    padding-top: 2rem;
+    @media screen and (max-width: 1000px) {
+		left: 0;
+		right: 0;
+		margin-left: auto;
+		margin-right: auto;
+	}   
+    .event-name {
+        outline: 1px solid green;
+        text-align: right;
+    }
+
+    .event-day{
+        font-family: 'Block';
+        font-size: 5.25rem;
+        text-align: center;
+        line-height: 62px;
+    }
+
+    .event-month {
+        font-family: 'Medium';
+        font-size: 1.5rem;
+        line-height: 22px;
+        text-align: center;
+    }
+
+    .event-time{
+        font-family: 'Medium';
+        font-size: 0.7rem;
+        text-align: center;        
+    }
+}
+
+
+
+div.info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+div.event-buttons {
+    outline: 1px dashed;
 }

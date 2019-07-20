@@ -10,16 +10,18 @@ function Event(prop) {
     let {name} = event
 
     return (
-        <div className="event grid-container column-8">
+        <div className="event grid-container column-11">
           <div className="date column-3">
-            <h1>{day}</h1>
-            <h3>{month}</h3>   
-            <div>{startTime} - {endTime}</div>         
+            <p className="event-day">{day}</p>
+            <p className="event-month">{month}</p>   
+            <p className="event-time">{startTime} - {endTime}</p>         
           </div>
-          <div className="info column-5">
-            <div className="font-size-3">{name}</div>
-            <div>details</div>
-            <div>reserve a spot</div>
+          <div className="info column-8">
+            <div className="event-name font-size-3">{name}</div>
+            <div className="event-buttons column-7">
+              <button className="btn btn-half">details</button>
+              <button className="btn btn-half">reserve a spot</button>
+            </div>
           </div>
         </div>
     );

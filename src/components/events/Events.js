@@ -12,14 +12,16 @@ function Events() {
   }, []);
 
   const eventItems = (events) => {
-    return events.map((event)=>{
+    return events.map((event)=> {
       return <Event key={event.id} event={event} />
     })
   }
 
   return (
-    <div className="events column-8">
-      {eventItems(events)}
+    <div className="events-container column-24">
+      <div className="events-list">
+        {eventItems(events)}
+      </div>
     </div>
   );
 }
