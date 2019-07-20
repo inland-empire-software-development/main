@@ -81,13 +81,13 @@
 			width: 100%;
 		}
 
-		@media screen and (max-width: 860px) {
+		@media screen and (max-width: 859px) {
 			height: 80vw;
 		}
  
 	}
 
-	@media screen and (max-width: $medium){
+	@media screen and (max-width: 859px){
 		max-height: none;
 		height: auto;
 	}
