@@ -8,6 +8,7 @@ import Slogan from '../src/components/Slogan';
 import Join from '../src/components/Join';
 import Footer from '../src/components/Footer';
 import Mission from '../src/components/Mission';
+import Sponsors from '../src/components/Sponsors';
 
 import '../node_modules/@fortawesome/fontawesome-free/js/all';
 import '../sass/index.scss';
@@ -32,6 +33,7 @@ function App() {
       <Mission />
       <Goals />
       <Join />
+      <Sponsors />
       <Footer />
     </div>
   );
