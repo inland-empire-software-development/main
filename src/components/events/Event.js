@@ -18,9 +18,9 @@ function Event(prop) {
           </div>
           <div className="info column-8">
             <div className="event-name font-size-3">{name}</div>
-            <div className="event-buttons column-7">
-              <button className="btn btn-half">details</button>
-              <button className="btn btn-half">reserve a spot</button>
+            <div className="event-buttons column-8">
+              <button className="event-button btn btn-half">details</button>
+              <button className="event-button btn btn-half">reserve a spot</button>
             </div>
           </div>
         </div>
