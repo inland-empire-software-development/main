@@ -1,4 +1,4 @@
-floatingbar{
+.floating-bar-main {
     text-align: center;
     display:-webkit-box;
     display:-ms-flexbox;
@@ -60,30 +60,19 @@ floatingbar{
     }
 
     .right-floating-bar {
-        .fa-twitter {
-            font-size:18px;
-            color:#FFFFFF;
-            display: block;
-            -moz-transform: translateX(5px) translateY(-120px);
-            -o-transform: translateX(5px) translateY(-120px);
-            -webkit-transform: translateX(5px) translateY(-120px);
-            transform: translateX(5px) translateY(-120px);
-            border-width: 0px;
-            padding-left: 20px;
-            padding-right: 20px;
-        }
-        .fa-facebook-f {
-            font-size:18px;
-            color:#FFFFFF;
-            display:block;
-            -moz-transform: translateX(5px) translateY(-115px);
-            -o-transform: translateX(5px) translateY(-115px);
-            -webkit-transform: translateX(5px) translateY(-115px);
-            transform: translateX(5px) translateY(-115px);
-            border-width: 0px;
-            padding-right:20px;
-            padding-left: 20px;
-        }
+        a {
+             
+                img {
+                    transition: all .20s ease-in-out;
+                    opacity: 0.85;
+                    width: 30px;
+                    max-height: 30px;
+                }
+
+                &:hover *{
+                    opacity: 1;
+                } 
+        } 
         .share-inner-div{
             font-family: "Book";
             font-size:16px;
@@ -94,29 +83,10 @@ floatingbar{
             -webkit-transform: rotate(-90deg) translateX(90px);  /* Safari 3.1+, Chrome */
             transform:rotate(-90deg) translateX(90px);
         }
-        .fa-meetup{
-            font-size: 18px;
-            color:#FFFFFF;
-            display:block;
-            -moz-transform: translateX(0px) translateY(-115px);
-            -o-transform: translateX(0px) translateY(-115px);
-            -webkit-transform: translateX(0px) translateY(-115px);
-            transform: translateX(0px) translateY(-115px);
-            border-width: 0px;
-            padding-right:20px;
-            padding-left: 20px;
-        }
-        .fa-slack{
-            font-size: 18px;
-            color:#FFFFFF;
-            display:block;
-            -moz-transform: translateX(0px) translateY(-115px);
-            -o-transform: translateX(0px) translateY(-115px);
-            -webkit-transform: translateX(0px) translateY(-115px);
-            transform: translateX(0px) translateY(-115px);
-            border-width: 0px;
-            padding-right:20px;
-            padding-left: 20px;
+         
+        .social-slack-link {
+            position: relative;
+            top: -105px; 
         }
         .join-inner-div{
             font-family: "Book";
