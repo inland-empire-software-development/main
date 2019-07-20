@@ -10,8 +10,6 @@ const app = next({dev});
 const handle = app.getRequestHandler();
 const PORT = process.env.ENV_PORT || 3000;
 
-console.log(process.env);
-
 app.prepare().then(() => {
   const server = express();
 
