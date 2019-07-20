@@ -15,7 +15,6 @@
 
 	p {
 		margin-bottom: 0px;
-		margin-top: 12px;
 	}
 
 	#goals-left {
@@ -28,121 +27,46 @@
 			width: 100%;
 		}
 
-		@media screen and (max-width: $medium) {
+		@media screen and (max-width: 859px) {
 			display: none;
 		}
 	}
 
 	#goals-right {
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
 
 		.goals-heading {
 			font-family: 'Block';
-			font-size: calc(1.4em + 1.5vw);
+			font-size: calc(20px + 1.5vw);
+			margin-bottom: 10px;
 			text-align: right;
 		}
 
-		.goals-info {
+		.goals-desc {
+			font-size: calc(16px + 0.5vw);
 			font-family: 'Book';
-			font-size: 1.25rem;
+			line-height: 36px;
 			text-align: right;
+		}
 
-			.goals-desc p br {
-				display: none;
+		@media screen and (max-width: 1337px){
+			.goals-desc {
+				font-size: calc(14px + 0.25vw);
+				line-height: 24px
 			}
 		}
 
-		@media screen and (max-width: 1460px) {
-
-				.goals-heading {
-					font-size: calc(1.4em + 1.5vw);
-				}
-
-				.goals-info {
-
-					.goals-desc {
-						font-size: 1.15rem;
-						line-height: 25px;
-					}
-				}
+		@media screen and (max-width: 991px){
+			.goals-desc {
+				font-size: 16px 
 			}
+		}
 
-			@media screen and (max-width: 1240px) {
-
-				.goals-info {
-
-					.goals-desc {
-						line-height: 20px;
-					}
-				}
-			}
-
-			@media screen and (max-width: 1140px) {
-
-				.goals-info {
-
-					.goals-desc {
-						font-size: .75rem;
-						line-height: 16.5px;
-					}
-				}
-			}
-
-			@media screen and (max-width: 1035px) {
-
-				.goals-info {
-
-					.goals-desc {
-						line-height: 16.5px;
-					}
-				}
-			}
-
-			@media screen and (max-width: $medium) {
-
-				.goals-heading {
-					font-size: 4rem;
-					text-align: left;
-				}
-
-				.goals-info {
-					text-align: left;
-
-					.goals-desc p br {
-						display: inline;
-					}
-
-					.goals-desc {
-						font-size: 1.75rem;
-						line-height: 32px;
-					}
-				}
-
-				.goals-info p {
-					margin-top: 4%;
-				}
-
-				.goals-info p:last-child {
-					margin-bottom: 4%;
-				}
-			}
-
-			@media screen and (max-width: $small) {
-
-				.goals-heading {
-					font-size: calc(1.4em + 1.5vw);
-				}
-
-				.goals-info {
-
-					.goals-desc{
-						font-size: 1.05rem;
-						line-height: 18px;
-					}
-				}
-			}
-	}
-
-	@media screen and (max-width: $medium) {
-		padding: 0px;
+		@media screen and (max-width: 859px){
+			padding-top: 50px;
+			padding-bottom: 50px;
+		}
 	}
 }

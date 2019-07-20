@@ -16,87 +16,39 @@
 		flex-direction: column;
 
 		.mission-title{
-			font-size: calc(1.4em + 1.5vw);
+			font-size: calc(20px + 1.5vw);
 			font-family: 'Block';
+			margin-bottom: 10px;
 		}
 
 		.mission-desc{
-			font-size: 1.25rem;
+			font-size: calc(16px + 0.5vw);
 			font-family: 'Book';
-			line-height: 32px;
-			letter-spacing: 0.05px;
-			margin-top: 12px;
+			line-height: 36px;
 		}
 
-		@media screen and (max-width: 1300px){
-			.mission-desc{
-				font-size: 1.15rem;
-				line-height: 25px;
+		@media screen and (max-width: 1337px){
+			.mission-desc {
+				font-size: calc(14px + 0.25vw);
+				line-height: 24px
 			}
 		}
-		@media screen and (max-width: 1105px){
-			.mission-desc{
-				line-height: 20px;
-			}
-		}
-		@media screen and (max-width: 1000px){
-			.mission-desc{
-				line-height: 16.5px;
-			}
-		}
-		@media screen and (max-width: $medium){
-			margin: 5% 0;
 
-			.mission-title{
-				font-size: 4rem;
+		@media screen and (max-width: 991px){
+			.mission-desc {
+				font-size: 16px 
 			}
+		}
 
-			.mission-desc{
-				font-size: 1.75rem;
-				line-height: 32px;
-			}
+		@media screen and (max-width: 859px){
+			padding-top: 50px;
+			padding-bottom: 50px;
 		}
-		@media screen and (max-width: 700px){
-			.mission-title{
-				font-size: 3rem;
-			}
-
-			.mission-desc{
-				font-size: 1.5rem;
-				line-height: 28px;
-			}
-		}
-		@media screen and (max-width: 600px){
-			.mission-title{
-				font-size: 2.5rem;
-			}
-			.mission-desc{
-				font-size: 1.25rem;
-			}
-		}
-		@media screen and (max-width: $small){
-			height: 50%;
-
-			.mission-title{
-				font-size: calc(1.4em + 1.5vw);
-			}
-
-			.mission-desc{
-				font-size: 1.05rem;
-				line-height: 18px;
-			}
-		}
-		@media screen and (max-width: 400px){
-			.mission-desc{
-				font-size: 1rem;
-				line-height: 16.5px;
-			}
-		}
+  
 	}
 
 	#mission-right{
-		position: relative;
-		width: 722px;
+		position: relative; 
 
 		.mission-image{
 			position: absolute;
@@ -104,10 +56,17 @@
 			right: 0;
 			width: 100%;
 			background: 
-				url("../static/images/mobile/ie-background.jpg"),
+				url("../static/images/desktop/ie-cutout-image-background.jpg"),
 				linear-gradient(to left, rgba(236, 34, 66, 0.5), rgba(63, 179, 225, 0.5));
 			background-blend-mode: multiply;
-			background-size: cover, cover;
+		    background-attachment: fixed;
+			background-size: 100%;
+			background-repeat: no-repeat;
+			background-position: 50% 90%;	
+
+			@media screen and (max-width: 1250px){
+				background-size: cover;
+			}
 		}
 		
 		.mission-cutout{
@@ -122,13 +81,13 @@
 			width: 100%;
 		}
 
-		@media screen and (max-width: $medium){
-			height: calc(0.945*100vw);
-			width: 100%;
+		@media screen and (max-width: 859px) {
+			height: 80vw;
 		}
+ 
 	}
 
-	@media screen and (max-width: $medium){
+	@media screen and (max-width: 859px){
 		max-height: none;
 		height: auto;
 	}

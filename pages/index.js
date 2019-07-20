@@ -2,7 +2,6 @@
 // eslint-disable-next-line no-unused-vars
 import React, {useState, useEffect} from 'react';
 
-import Navbar from '../src/components/Navbar';
 import Hero from '../src/components/Hero';
 import Goals from '../src/components/Goals';
 import Slogan from '../src/components/Slogan';
@@ -10,6 +9,7 @@ import Join from '../src/components/Join';
 import Footer from '../src/components/Footer';
 import Mission from '../src/components/Mission';
 import FloatingBar from '../src/components/floatingBar';
+import Sponsors from '../src/components/Sponsors';
 
 import '../node_modules/@fortawesome/fontawesome-free/js/all';
 import '../sass/index.scss';
@@ -29,12 +29,12 @@ function App() {
   // initial render
   return (
     <div>
-      <Navbar />
       <Hero />
       <Slogan />
       <Mission />
       <Goals />
       <Join />
+      <Sponsors />
       <Footer />
       <FloatingBar />
     </div>
