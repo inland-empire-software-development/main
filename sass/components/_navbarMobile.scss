@@ -4,12 +4,11 @@
 	.navbar-mobile-logo{
 		position: absolute;
 		top: 15px;
-		left: 30px;
+		left: 15px;
 		width: 125px;
 
 		@media screen and (max-width: $small){
-			width: 100px;
-			left: 25px;
+			width: 100px; 
 		}
 	}
 }

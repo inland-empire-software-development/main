@@ -11,7 +11,7 @@
 	align-items: center;
 
 	.navbar-mobile-menu-logo{
-		width: 175px;
+		width: 200px;
 		margin-top: 40px;
 	}
 
@@ -24,6 +24,10 @@
 		align-items: center;
 		margin-top: 125px;
 		transition: 300ms all ease-in;
+
+		.navbar-mobile-menu * {
+			margin-bottom: 10px;
+		}
 
 		.navbar-mobile-item {
 			// color: $red;
