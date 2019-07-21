@@ -2,14 +2,16 @@ function FloatingBar() {
   return (
     <div className="floating-bar-main">
       <div className="left-floating-bar">
-        <a target="_blank" href="tel:18004370267">
+        <a target="_blank" href="tel:18004370267" title="Give us a call!">
           <div id="phone-svg">
             <i class="fas fa-phone fa-2x fa-border" />
           </div>
         </a>
-        <a target="_blank" href="mailto:community@ie-sd.com">
+        <a target="_blank"
+          href="mailto:community@ie-sd.com"
+          title="Send us a message!">
           <i class="fas fa-envelope fa-border"></i>
-        </a> 
+        </a>
       </div>
 
       <div className="right-floating-bar">
