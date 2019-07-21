@@ -9,28 +9,23 @@ function FloatingBar() {
         </a>
         <a target="_blank" href="mailto:community@ie-sd.com">
           <i class="fas fa-envelope fa-border"></i>
-        </a>
-        <div className="floating-bar-contact">contact:</div>
-      </div>
-      <div className="floating-empty-div">
+        </a> 
       </div>
 
       <div className="right-floating-bar">
-        <a target="_blank" className="social-twitter-link" href="https://twitter.com/iesdevinc">
-          <img src="../../static/logos/twitter.svg" />
-        </a>
-        <a target="_blank" className="social-facebook-link" href="https://www.facebook.com/groups/IESoftwareDevelopment/">
-          <img src="../../static/logos/facebook.svg" />
-        </a>
-        <div className="share-inner-div">share:</div>
+        <img className="social-twitter-link"
+          src="../../static/logos/twitter.svg"
+          title="Follow us on Twitter!" />
+        <img className="social-facebook-link"
+          src="../../static/logos/facebook.svg"
+          title="Follow us on Facebook!" />
         <hr className="floating-bar-inner-line"/>
-        <a target="_blank" className="social-mmetup-link" href="https://www.meetup.com/iesd-meetup/">
-          <img src="../../static/logos/meetup.svg" />
-        </a>
-        <a target="_blank" className="social-slack-link" href="https://bit.ly/2C0umfQ">
-          <img src="../../static/logos/slack.svg" />
-        </a>
-        <div className="join-inner-div">join:</div>
+        <img className="social-meetup-link"
+          src="../../static/logos/meetup.svg"
+          title="Join us on Meetup!" />
+        <img className="social-slack-link"
+          src="../../static/logos/slack.svg"
+          title="Join us on Slack!" />
       </div>
     </div>
   );
