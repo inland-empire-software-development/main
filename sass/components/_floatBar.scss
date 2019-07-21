@@ -11,31 +11,30 @@
     height: 40%;
     max-width: 1400px;
     width: 96%;
-    top: 40vh;
+    top: 30vh;
     left: 2%;
     z-index: 1;
 
     .left-floating-bar {
-        .fa-phone {
-            font-size: 25px;
-            color: #FFFFFF;
-            display: block;
-            -moz-transform: translateX(10px) translateY(-50px);
-            -o-transform: translateX(10px) translateY(-50px);
-            -webkit-transform: translateX(10px) translateY(-50px);
-            transform: translateX(10px) translateY(-50px);
-            border-width: 0px;
-        }
+        transition: all .5s ease-in-out;
+        background-color: rgba(0,0,0,0.75);
+        height: 100px;
+        position: relative;
+        top: 55px;
 
+        .fa-phone,
         .fa-envelope {
             font-size: 25px;
             color: #FFFFFF;
-            display: block;
-            -moz-transform: translateX(10px) translateY(-50px);
-            -o-transform: translateX(10px) translateY(-50px);
-            -webkit-transform: translateX(10px) translateY(-50px);
-            transform: translateX(10px) translateY(-50px);
+            display: block; 
             border-width: 0px;
+            opacity: 0.85;
+
+            &:hover {
+                opacity: 1;
+                cursor: pointer;
+                filter: contrast(3.5);
+            }
         }
 
         .fa-comment-dots {
