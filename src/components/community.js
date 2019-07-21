@@ -14,24 +14,24 @@ let swiper = new Swiper('.swiper-container', {
   // here are the breakpoints you can alter how many sides are seen and and the margin.
   breakpoints: {
     2040: {
-      slidesPerView: 5,
-      spaceBetween: 20,
+      slidesPerView: 4,
+      spaceBetween: 10,
     },
     1840: {
       slidesPerView: 4,
-      spaceBetween: 20,
+      spaceBetween: 10,
     },
     1024: {
-      slidesPerView: 4,
-      spaceBetween: 30,
+      slidesPerView: 3,
+      spaceBetween: 10,
     },
     768: {
-      slidesPerView: 3,
-      spaceBetween: 30,
+      slidesPerView: 2,
+      spaceBetween: 10,
     },
     640: {
-      slidesPerView: 2,
-      spaceBetween: 20,
+      slidesPerView: 1,
+      spaceBetween: 10,
     },
     320: {
       slidesPerView: 1,
@@ -43,7 +43,7 @@ let swiper = new Swiper('.swiper-container', {
 // place holder example of an array of objects that hold each image.
 
 const commPic = [
-  {key: 11, image: '../../static/images/community/Img_11.jpg',
+  {key: 11, image: '../../static/images/community/Img_7.jpg',
     alt: 'community pic'},
   {key: 12, image: '../../static/images/community/Img_12.jpg',
     alt: 'community pic'},
@@ -55,7 +55,7 @@ const commPic = [
     alt: 'community pic'},
   {key: 6, image: '../../static/images/community/Img_6.jpg',
     alt: 'community pic'},
-  {key: 7, image: '../../static/images/community/Img_7.jpg',
+  {key: 7, image: '../../static/images/community/Img_11.jpg',
     alt: 'community pic'},
   {key: 8, image: '../../static/images/community/Img_8.jpg',
     alt: 'community pic'},

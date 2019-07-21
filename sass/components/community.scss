@@ -42,17 +42,18 @@ height: 45vh;
 }
 //makes drag circle disapear
 .community{
-  &:hover #myCirlce,
-  &:active #myCircle{
-    display: none;
+  &:hover .circle,
+  &:active .circle{
+    opacity: .0;
+    transition: .3s ease-in;
+    
   }
 }
-#myCirlce{
-  display: block;
-}
+
 
 // drag circle 
 .circle_container{
+
   display: flex;
   position: absolute;
   left: 39vw;
@@ -66,6 +67,7 @@ height: 45vh;
   
 }
 .circle {
+  
   width: 80px;
   height: 80px;
   border-radius: 50%;
