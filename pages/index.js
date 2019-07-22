@@ -9,7 +9,6 @@ import Slogan from '../src/components/Slogan';
 import Join from '../src/components/Join';
 import Footer from '../src/components/Footer';
 import Mission from '../src/components/Mission';
-import LoadingTester from '../src/components/LoadingTester';
 
 import '../node_modules/@fortawesome/fontawesome-free/js/all';
 import '../sass/index.scss';
@@ -31,7 +30,6 @@ function App() {
     <div>
       <Navbar />
       <Hero />
-      <LoadingTester loading={false}/>
       <Slogan />
       <Mission />
       <Goals />
