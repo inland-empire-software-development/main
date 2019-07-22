@@ -17,15 +17,14 @@
 
     .left-floating-bar {
         transition: all .5s ease-in-out;
-        background-color: rgba(0,0,0,0.75);
         height: 100px;
         position: relative;
-        top: 55px;
+        top: 60px;
 
         .fa-phone,
         .fa-envelope {
-            font-size: 25px;
-            color: #FFFFFF;
+            font-size: 20px;
+            color: #F1AF21;
             display: block; 
             border-width: 0px;
             opacity: 0.85;
