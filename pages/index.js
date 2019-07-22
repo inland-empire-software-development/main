@@ -8,6 +8,7 @@ import Slogan from '../src/components/Slogan';
 import Join from '../src/components/Join';
 import Footer from '../src/components/Footer';
 import Mission from '../src/components/Mission';
+import Leadership from '../src/components/Leadership';
 import FloatingBar from '../src/components/floatingBar';
 import Sponsors from '../src/components/Sponsors';
 
@@ -28,11 +29,12 @@ function App() {
 
   // initial render
   return (
-    <div>
+    <div className="grid-container">
       <Hero />
       <Slogan />
       <Mission />
       <Goals />
+      <Leadership />
       <Join />
       <Sponsors />
       <Footer />
