@@ -1,0 +1,94 @@
+#leadership {
+  max-width: 80vw;
+  margin-top: 3em;
+  overflow-x: hidden;
+
+  @media screen and (max-width: $medium) {
+    margin-top: 0;
+  }
+
+  .organizers,
+  .speakers {
+    @media screen and (max-width: $medium) {
+      padding-left: 0;
+    }
+  }
+
+  h3 {
+    writing-mode: vertical-rl;
+    text-orientation: sideways;
+    font-family: "Block";
+    font-size: 1.4em;
+    display: inline-flex;
+
+    @media screen and (max-width: $medium) {
+      writing-mode: horizontal-tb;
+      padding-left: 0;
+    }
+  }
+
+  ul {
+    list-style: none;
+    margin-top: 0;
+    padding-inline-start: 0;
+
+    @media screen and (max-width: $medium) {
+      padding-left: 0;
+    }
+
+    @media screen and (max-width: $small) {
+      margin: 0;
+      padding: 0;
+      max-height: 190px;
+    }
+
+    li {
+      display: inline-block;
+      margin-top: 0;
+    }
+
+    li:last-child {
+      padding-right: 2rem;
+
+      @media screen and (max-width: $large) {
+        margin-right: 25px;
+      }
+
+      @media screen and (max-width: 1025px) {
+        margin-right: 10px;
+      }
+
+      @media screen and (max-width: $medium) {
+        margin-right: 60px;
+      }
+
+      @media screen and (max-width: $small) {
+        padding-right: 0;
+        margin-right: 25px;
+      }
+
+    }
+  }
+
+  .scrolling {
+    overflow-x: auto;
+    /*revisit once drag component is added*/
+    overflow-y: hidden;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+
+
+    @media screen and (max-width: $medium) {
+      max-height: 15.5rem;
+    }
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+}
+
+/*  overflow: -moz scrollbars-none;
+    -ms-overflow-style: none;
+*/

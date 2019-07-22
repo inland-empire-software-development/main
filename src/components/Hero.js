@@ -1,3 +1,5 @@
+import Navbar from './Navbar';
+import HeroEvent from './HeroEvent';
 /**
  * Hero component
  * @return {Hero}
@@ -7,13 +9,10 @@ function Hero() {
     <header id="hero" className="grid-container">
       <div className="column-24">
         {/* Navigation */}
-        <nav></nav>
-
-        {/* Side bar */}
-        <div></div>
+        <Navbar />
 
         {/* Event */}
-        <div></div>
+        <HeroEvent />
       </div>
     </header>
   );

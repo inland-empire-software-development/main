@@ -1,12 +1,18 @@
 /* eslint-disable no-unused-vars */
 // eslint-disable-next-line no-unused-vars
 import React, {useState, useEffect} from 'react';
+
 import Hero from '../src/components/Hero';
 import Goals from '../src/components/Goals';
 import Slogan from '../src/components/Slogan';
-import Footer from '../src/components/Footer';
-import Mission from '../src/components/Mission';
+import Join from '../src/components/Join';
 import Community from '../src/components/community';
+import Mission from '../src/components/Mission';
+import Leadership from '../src/components/Leadership';
+import FloatingBar from '../src/components/floatingBar';
+import Sponsors from '../src/components/Sponsors';
+import Footer from '../src/components/Footer';
+ 
 
 import '../node_modules/@fortawesome/fontawesome-free/js/all';
 import '../sass/index.scss';
@@ -24,13 +30,17 @@ function App() {
 
   // initial render
   return (
-    <div>
+    <div className="grid-container">
       <Hero />
       <Slogan />
       <Mission />
       <Goals />
+      <Leadership />
+      <Join />
+      <Sponsors />
       <Community />
       <Footer />
+      <FloatingBar />
     </div>
   );
 }
