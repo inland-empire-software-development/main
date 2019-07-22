@@ -1,10 +1,13 @@
 function Sponsors() {
+  let numbers = 1;
+
   const sponsorList = [
     '../../static/images/desktop/UCRlogo.png',
     '../../static/images/desktop/ExCITElogo.jpg',
   ];
   // initial render
   return (
+
     <div id="sponsors" className='grid-container'>
       <div className="column-20 pre-2 leader-3 trailer-3">
         <h1>Our Sponsors</h1>
@@ -12,14 +15,15 @@ function Sponsors() {
          possible by the following sponsors</p>
         <div className="sponsor-gallery">
           {sponsorList.map((sponsor) => (
-            <div className="column-6">
-              <img src={sponsor}/>
+            <div key={numbers.toString()} value={numbers++} className="column-6">
+              <img src={sponsor} />
             </div>
           ))}
         </div>
       </div>
     </div>
   );
+
 }
 
 export default Sponsors;
