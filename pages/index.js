@@ -6,17 +6,18 @@ import Hero from '../src/components/Hero';
 import Goals from '../src/components/Goals';
 import Slogan from '../src/components/Slogan';
 import Join from '../src/components/Join';
-import Footer from '../src/components/Footer';
+import Community from '../src/components/community';
 import Mission from '../src/components/Mission';
 import Leadership from '../src/components/Leadership';
 import FloatingBar from '../src/components/floatingBar';
 import Sponsors from '../src/components/Sponsors';
+import Footer from '../src/components/Footer';
+ 
 
 import '../node_modules/@fortawesome/fontawesome-free/js/all';
 import '../sass/index.scss';
 
 import {withRouter} from 'next/router';
-
 // import Fetch from 'isomorphic-unfetch';
 function App() {
   // basic useState hook
@@ -37,6 +38,7 @@ function App() {
       <Leadership />
       <Join />
       <Sponsors />
+      <Community />
       <Footer />
       <FloatingBar />
     </div>
