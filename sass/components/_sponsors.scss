@@ -1,0 +1,22 @@
+#sponsors {
+	background: url('/./static/images/desktop/inland-empire-software-development-background-light.jpg');
+	background-size: cover;
+	background-position: center; 
+
+	h1 {
+		font-family: 'Block'
+	}
+
+	p {
+		font-size: calc(16px + 0.5vw);
+	}
+
+	img {
+		width: auto;
+		min-height: 130px;
+		margin: auto auto;
+		display: block;
+		max-height: 150px;
+		height: auto;
+	}
+}
