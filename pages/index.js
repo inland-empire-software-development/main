@@ -8,16 +8,10 @@ import Slogan from '../src/components/Slogan';
 import Join from '../src/components/Join';
 import Footer from '../src/components/Footer';
 import Mission from '../src/components/Mission';
-<<<<<<< HEAD
-import Leadership from '../src/components/leadership/Leadership';
-||||||| merged common ancestors
-import Leadership from '../src/components/leadership/leadership';
-=======
 import Leadership from '../src/components/Leadership';
 import FloatingBar from '../src/components/floatingBar';
 import Sponsors from '../src/components/Sponsors';
 
->>>>>>> 7226d3e46dab6ff1040791e4daf394af5ca52875
 import '../node_modules/@fortawesome/fontawesome-free/js/all';
 import '../sass/index.scss';
 
