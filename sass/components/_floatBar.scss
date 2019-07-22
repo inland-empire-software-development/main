@@ -19,12 +19,16 @@
         transition: all .5s ease-in-out;
         height: 100px;
         position: relative;
-        top: 60px;
+        top: 45px;
+
+        .left-floating-bar svg {
+            margin: 10px auto;
+        }
 
         .fa-phone,
         .fa-envelope {
             font-size: 20px;
-            color: #F1AF21;
+            color: #3FB3E1 ;
             display: block; 
             border-width: 0px;
             opacity: 0.85;
@@ -67,7 +71,7 @@
         img {
             transition: all .25s ease-in-out;
             opacity: 0.8;
-            margin: 15px auto;
+            margin: 20px auto;
             display: block;
 
             &:hover {
