@@ -71,4 +71,5 @@ function HeroEvent() {
   );
 }
 
+// TODO: clean the formatting of the JSX
 export default HeroEvent;
