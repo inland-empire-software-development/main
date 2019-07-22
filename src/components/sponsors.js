@@ -1,4 +1,5 @@
 function Sponsors() {
+
   const sponsorList = [
     '../../static/images/desktop/UCRlogo.png',
     '../../static/images/desktop/ExCITElogo.jpg',
@@ -11,9 +12,9 @@ function Sponsors() {
         <p>The work at <strong>IESD</strong> is made
          possible by the following sponsors</p>
         <div className="sponsor-gallery">
-          {sponsorList.map((sponsor) => (
-            <div className="column-6">
-              <img src={sponsor}/>
+          {sponsorList.map((sponsor, index) => (
+            <div key={index} className="column-6">
+              <img src={sponsor} />
             </div>
           ))}
         </div>
