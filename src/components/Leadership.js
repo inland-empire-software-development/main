@@ -112,9 +112,9 @@ class Leadership extends React.Component {
               className='organizers scrolling column-21
                tablet-column-12 phone-column-6'>
               <ul>
-                {organizers.map((organizer) => (
+                {organizers.map((organizer, index) => (
                   <li
-                    key={organizer.id}>
+                    key={index}>
                     <LeadershipImage
                       userName={organizer.userName}
                       title={organizer.title}
@@ -131,8 +131,8 @@ class Leadership extends React.Component {
             <h3 className='column-1 tablet-column-12 phone-column-6'>PAST SPEAKERS</h3>
             <div className='speakers scrolling column-21  tablet-column-12 phone-column-6'>
               <ul>
-                {speakers.map((speaker) => (
-                  <li key={speaker.id}>
+                {speakers.map((speaker, index) => (
+                  <li key={index}>
                     <LeadershipImage
                       userName={speaker.userName}
                       title={speaker.title}

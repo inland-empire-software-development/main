@@ -4,14 +4,15 @@ import '../../node_modules/swiper/dist/css/swiper.min.css';
 // Main config of the slider, check all varations here. https://idangero.us/swiper/demos/
 // click on cource code to look for diff, options.
 // Contact VelazquezLuis on github for any questions
-let swiper = new Swiper('.swiper-container', {
+const swiper = new Swiper('.swiper-container', {
   slidesPerView: 'auto',
   spaceBetween: 10,
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
-  // here are the breakpoints you can alter how many sides are seen and and the margin.
+  // here are the breakpoints you can alter how many
+  // sides are seen and and the margin.
   breakpoints: {
     2040: {
       slidesPerView: 4,
@@ -77,8 +78,10 @@ function Community() {
       <div className="column-24 " >
         <div id="iesdBg" className="swiper-container" >
           <div className="swiper-wrapper" >
-            { commPic.map(({key, image, alt}) => <div className="swiper-slide">
-              <img id="communitypic" key={key} src={image} alt={alt} /> </div>)}
+            { commPic.map(({key, image, alt}) =>
+              (<div className="swiper-slide" key={key}>
+                <img id="communitypic" src={image} alt={alt} />
+              </div>))}
           </div>
           <div className="swiper-button-prev">
             <span className="swiper-button-prev-lg">&lt;</span>
