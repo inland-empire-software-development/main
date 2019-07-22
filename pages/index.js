@@ -8,6 +8,7 @@ import Slogan from '../src/components/Slogan';
 import Join from '../src/components/Join';
 import Footer from '../src/components/Footer';
 import Mission from '../src/components/Mission';
+import FloatingBar from '../src/components/floatingBar';
 import Sponsors from '../src/components/Sponsors';
 
 import '../node_modules/@fortawesome/fontawesome-free/js/all';
@@ -35,6 +36,7 @@ function App() {
       <Join />
       <Sponsors />
       <Footer />
+      <FloatingBar />
     </div>
   );
 }
