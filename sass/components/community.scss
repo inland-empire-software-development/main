@@ -5,11 +5,13 @@
   background-position: center;
   background-repeat: no-repeat;
   min-height: 280px;
+  background-repeat: space;
 } 
 
 // Drag container and slider
 .swiper-container{
-height: 45vh;
+height: 50vh;
+margin: auto auto 20px;
 }
 
 .swiper-slide {
@@ -130,6 +132,11 @@ height: 45vh;
   position: relative;
   left: 10px;
 } 
+@media only screen and (min-width:500px) {
+ .communitypic {
+  margin: auto auto 20px; 
+  } 
+}
 
 @media only screen and (min-width: 766px) {
   .swiper-slide {

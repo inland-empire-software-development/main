@@ -75,7 +75,7 @@ function Community() {
   return (
     <div className="grid-container community  ">
       <div className="column-24 " >
-        <div id="iesdBg" className="swiper-container leader-1 trailer-1" >
+        <div id="iesdBg" className="swiper-container" >
           <div className="swiper-wrapper" >
             { commPic.map(({key, image, alt}) => <div className="swiper-slide">
               <img id="communitypic" key={key} src={image} alt={alt} /> </div>)}
