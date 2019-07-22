@@ -12,7 +12,6 @@ import Leadership from '../src/components/Leadership';
 import FloatingBar from '../src/components/floatingBar';
 import Sponsors from '../src/components/Sponsors';
 import Footer from '../src/components/Footer';
- 
 
 import '../node_modules/@fortawesome/fontawesome-free/js/all';
 import '../sass/index.scss';
