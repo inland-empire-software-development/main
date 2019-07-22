@@ -1,9 +1,11 @@
 .hero-event-container {
-	position: absolute;
+	position: relative;
 	height: 185px;
 	width: 450px;
 	z-index: 99;
 	top: 180px;
+	margin: 0 auto;
+	display: block;
 
 	p {
 		margin: 0px;

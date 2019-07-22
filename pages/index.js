@@ -29,7 +29,7 @@ function App() {
 
   // initial render
   return (
-    <div>
+    <div className="grid-container">
       <Hero />
       <Slogan />
       <Mission />

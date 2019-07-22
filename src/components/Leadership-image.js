@@ -1,11 +1,11 @@
+const defaultImage = '../static/images/desktop/placeholder.jpg';
 const LeadershipImage = (props) => (
   <div id='leadership-image' >
     <div className='card profile-photo'>
       <img className='card-image'
-        src={props.image || '../static/images/desktop/placeholder.jpg'}
+        src={props.image || defaultImage}
         alt='Profile picture'
       />
-      <div className={props.overlay || 'overlay'}></div>
     </div>
     <div className='card name-title'>
       <div className='card-content'>
