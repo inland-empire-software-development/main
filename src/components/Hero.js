@@ -1,5 +1,5 @@
 import Navbar from './Navbar';
-import HeroEvent from './heroEvent';
+import HeroEvent from './HeroEvent';
 /**
  * Hero component
  * @return {Hero}
@@ -11,13 +11,8 @@ function Hero() {
         {/* Navigation */}
         <Navbar />
 
-        {/* Side bar */}
-        <div></div>
-
         {/* Event */}
-        <div className="column-24 pre-12 tablet-leader-6">
-          <HeroEvent />
-        </div>
+        <HeroEvent />
       </div>
     </header>
   );
