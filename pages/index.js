@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 // eslint-disable-next-line no-unused-vars
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 
 import Navbar from '../src/components/Navbar';
 import Hero from '../src/components/Hero';
@@ -9,7 +9,7 @@ import Slogan from '../src/components/Slogan';
 import Join from '../src/components/Join';
 import Footer from '../src/components/Footer';
 import Mission from '../src/components/Mission';
-import Leadership from '../src/components/leadership/leadership';
+import Leadership from '../src/components/leadership/Leadership';
 import '../node_modules/@fortawesome/fontawesome-free/js/all';
 import '../sass/index.scss';
 import { withRouter } from 'next/router';
