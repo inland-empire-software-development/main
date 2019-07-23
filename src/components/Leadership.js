@@ -184,7 +184,7 @@ function Leadership() {
             </ul>
           </div>
         </div>
-        <div className="column-22">
+        <div className="column-22 leader-1">
           <p className="text-center">
             <small>You can drag images left and right to see more.</small>
           </p>

@@ -2,13 +2,6 @@ import Swiper from 'swiper';
 import {useEffect} from 'react';
 import '../../node_modules/swiper/dist/css/swiper.min.css';
 
-// Main config of the slider, check all varations here. https://idangero.us/swiper/demos/
-// click on cource code to look for diff, options.
-// Contact VelazquezLuis on github for any questions
-
-
-// place holder example of an array of objects that hold each image.
-
 const commPic = [
   {key: 11, image: '../../static/images/community/Img_7.jpg',
     alt: 'community pic'},
@@ -90,9 +83,6 @@ function Community() {
           </div>
 
         </div>
-      </div>
-
-      <div className="column-24">
         <p className="text-center">
           <small>You can drag images left and right to see more.</small>
         </p>
