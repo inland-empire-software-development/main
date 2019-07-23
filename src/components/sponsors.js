@@ -11,8 +11,8 @@ function Sponsors() {
         <p>The work at <strong>IESD</strong> is made
          possible by the following sponsors</p>
         <div className="sponsor-gallery">
-          {sponsorList.map((sponsor) => (
-            <div className="column-6">
+          {sponsorList.map((sponsor, index) => (
+            <div className="column-6" key={index}>
               <img src={sponsor}/>
             </div>
           ))}
