@@ -1,13 +1,9 @@
-  #blogList {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: min-content 1fr;
-  grid-gap: 30px;
-  padding: 0 15px;
-}
+  
+  
+  @import "../node_modules/swiper/dist/css/swiper.min.css";
 
-.blog-preview {
-  width: 100%;
+#bloglist .swiper-slide {
+  height: 380px;
 }
 
 .blog-preview-header {
@@ -37,9 +33,9 @@
 
 .blog-preview-content {
   font-family: "Book";
-  font-size: 14px;
-  width: 100%;
   box-sizing: border-box;
+  padding-bottom: 15px;
+  width: 100%;
 }
 
 .blog-preview-title {
@@ -48,6 +44,14 @@
 
 .blog-preview-author, .blog-preview-date {
   font-size: 12px;
+}
+
+.blog-preview-excerpt {
+  font-size: 14px;
+  line-height: 1.3em;
+  height: 70px;
+  overflow: hidden;
+  margin-top: 5px;
 }
 
 .full-article-button {
@@ -62,22 +66,20 @@
 }
 
 @media screen and (min-width: 768px) {
-  #blogList {
-    grid-template-columns: 1fr 1fr 1fr;
-    justify-content: space-between;
-    padding: 0;
+  .blog-preview {
+    padding: 0 10px;
+    box-sizing: border-box;
+  }
+  
+  .swiper-container {
     width: 80%;
     margin-left: auto;
     margin-right: auto;
   }
 
-  .blog-preview {
-    max-width: 310px;
-    height: 380px;
-  }
-
   .blog-preview-header {
     position: relative;
+    max-width: 310px;
   }
 
   .blog-preview-category {
@@ -92,8 +94,9 @@
   }
 
   .blog-preview-content {
-    padding: 15px;
-    overflow: hidden;
+    max-width: 310px;
+    padding: 10px 15px 15px;
+    box-sizing: border-box;
   }
 
   .blog-preview-title {
@@ -113,11 +116,5 @@
     margin-left: 15px;
   }
 
-}
-
-@media screen and (min-width: 1024px) {
-  #blogList {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-  }
 }
 

@@ -5,10 +5,9 @@ const blogPost = (props) => {
   const imageURL = props.postData.featured_media ?
    props.postData._embedded["wp:featuredmedia"][0].source_url : "";
   const category = props.postData._embedded['wp:term'][0][0].slug;
-  const excerpt = sanitizeHtml(props.postData.excerpt.rendered, {allowedTags: []});
 
   return (
-    <div className = "blog-preview">
+    <div className = "swiper-slide blog-preview">
       <div className = "blog-preview-header">
         <div className = "blog-preview-image-container">
           <img src = {imageURL} className = "blog-preview-image" />
@@ -23,7 +22,9 @@ const blogPost = (props) => {
             {new Intl.DateTimeFormat('en-US', {year: 'numeric', month: 'long', day: 'numeric'})
                 .format(new Date(props.postData.date))}</span>
         </div>
-        {excerpt.length < 100 ? excerpt : excerpt.substring(0, 100) + "..."}
+        <div className = "blog-preview-excerpt">
+          {sanitizeHtml(props.postData.excerpt.rendered, {allowedTags: []})}
+        </div>
       </div>
       <a href = {props.postData.link}>
         <div className="full-article-button yellow-red">
