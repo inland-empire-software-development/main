@@ -13,8 +13,8 @@ function Sponsors() {
          possible by the following sponsors</p>
         <div className="sponsor-gallery">
           {sponsorList.map((sponsor, index) => (
-            <div key={index} className="column-6">
-              <img src={sponsor} />
+            <div className="column-6" key={index}>
+              <img src={sponsor}/>
             </div>
           ))}
         </div>

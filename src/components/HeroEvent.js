@@ -1,5 +1,5 @@
 import {useState, useEffect} from 'react';
-import {fetchEvents} from '../utils/meetupApiUtil';
+import {fetchEvents, controller} from '../utils/meetupApiUtil';
 import {calcStartTime, calcEndTime} from '../utils/convertTimeUtil';
 import {splitMonth, splitDay} from '../utils/splitDateUtil';
 
@@ -21,7 +21,8 @@ function HeroEvent() {
       setEventMonth(splitMonth(result[0].local_date));
       setEventDay(splitDay(result[0].local_date));
       setEventLink(result[0].link);
-    });
+    }).then(()=> controller.abort())
+        .catch((err) => console.log(err));
   }, []);
 
   return (
