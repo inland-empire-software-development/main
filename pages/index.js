@@ -8,6 +8,7 @@ import Slogan from '../src/components/Slogan';
 import Join from '../src/components/Join';
 import Community from '../src/components/community';
 import Mission from '../src/components/Mission';
+import SuccessStories from '../src/components/SuccessStories';
 import Leadership from '../src/components/Leadership';
 import FloatingBar from '../src/components/floatingBar';
 import Sponsors from '../src/components/Sponsors';
@@ -34,10 +35,11 @@ function App() {
       <Slogan />
       <Mission />
       <Goals />
-      <Leadership />
-      <Join />
-      <Sponsors />
       <Community />
+      <Join />
+      <Leadership />
+      <SuccessStories />
+      <Sponsors />
       <Footer />
       <FloatingBar />
     </div>

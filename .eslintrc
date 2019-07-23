@@ -38,7 +38,7 @@
         "no-unused-vars": 2,
         "no-console": 0,
         "linebreak-style": 0,
-        "react/jsx-uses-vars": 2,
-        "require-jsdoc": 0
+        "require-jsdoc": 0,
+        "react/jsx-uses-vars": 2
     }
 }
