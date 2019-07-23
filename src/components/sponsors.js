@@ -1,4 +1,5 @@
 function Sponsors() {
+
   const sponsorList = [
     '../../static/images/desktop/UCRlogo.png',
     '../../static/images/desktop/ExCITElogo.jpg',
