@@ -1,45 +1,11 @@
 import Swiper from 'swiper';
+import {useEffect} from 'react';
 import '../../node_modules/swiper/dist/css/swiper.min.css';
 
 // Main config of the slider, check all varations here. https://idangero.us/swiper/demos/
 // click on cource code to look for diff, options.
 // Contact VelazquezLuis on github for any questions
-const swiper = new Swiper('.swiper-container', {
-  slidesPerView: 'auto',
-  spaceBetween: 10,
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-  // here are the breakpoints you can alter how many
-  // sides are seen and and the margin.
-  breakpoints: {
-    2040: {
-      slidesPerView: 4,
-      spaceBetween: 10,
-    },
-    1840: {
-      slidesPerView: 4,
-      spaceBetween: 10,
-    },
-    1024: {
-      slidesPerView: 3,
-      spaceBetween: 10,
-    },
-    768: {
-      slidesPerView: 2,
-      spaceBetween: 10,
-    },
-    640: {
-      slidesPerView: 1,
-      spaceBetween: 10,
-    },
-    320: {
-      slidesPerView: 1,
-      spaceBetween: 10,
-    },
-  },
-});
+
 
 // place holder example of an array of objects that hold each image.
 
@@ -73,6 +39,45 @@ const commPic = [
 ];
 
 function Community() {
+  useEffect(() => {
+    new Swiper('.swiper-container', {
+      slidesPerView: 'auto',
+      spaceBetween: 10,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      // here are the breakpoints you can alter how many
+      // sides are seen and and the margin.
+      breakpoints: {
+        2040: {
+          slidesPerView: 4,
+          spaceBetween: 10,
+        },
+        1840: {
+          slidesPerView: 4,
+          spaceBetween: 10,
+        },
+        1024: {
+          slidesPerView: 3,
+          spaceBetween: 10,
+        },
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 10,
+        },
+        640: {
+          slidesPerView: 1,
+          spaceBetween: 10,
+        },
+        320: {
+          slidesPerView: 1,
+          spaceBetween: 10,
+        },
+      },
+    });
+  }, []);
+
   return (
     <div className="grid-container community  ">
       <div className="column-24 " >
@@ -88,7 +93,7 @@ function Community() {
             <span className="swiper-button-prev-sm">&lt;</span>
           </div>
           <div className="circle_container">
-            <div id="myCirlce" className="circle">Drag</div>
+            <div id="myCirlce" className="circle">Dragging</div>
           </div>
           <div className="swiper-button-next">
             <span className="swiper-button-next-sm">&gt;</span>
