@@ -21,7 +21,8 @@ function HeroEvent() {
       setEventMonth(splitMonth(result[0].local_date));
       setEventDay(splitDay(result[0].local_date));
       setEventLink(result[0].link);
-    }).then(()=> controller.abort());
+    }).then(()=> controller.abort())
+        .catch((err) => console.log(err));
   }, []);
 
   return (

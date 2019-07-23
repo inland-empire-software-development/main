@@ -88,18 +88,14 @@ function Community() {
                 <img id="communitypic" src={image} alt={alt} />
               </div>))}
           </div>
-          <div className="swiper-button-prev">
-            <span className="swiper-button-prev-lg">&lt;</span>
-            <span className="swiper-button-prev-sm">&lt;</span>
-          </div>
-          <div className="circle_container">
-            <div id="myCirlce" className="circle">Dragging</div>
-          </div>
-          <div className="swiper-button-next">
-            <span className="swiper-button-next-sm">&gt;</span>
-            <span className="swiper-button-next-lg">&gt;</span>
-          </div>
+
         </div>
+      </div>
+
+      <div className="column-24">
+        <p className="text-center">
+          <small>You can drag images left and right to see more.</small>
+        </p>
       </div>
     </div>
   );
