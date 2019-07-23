@@ -1,5 +1,39 @@
 
 import LeadershipImage from './Leadership-image.js';
+import Swiper from 'swiper';
+import '../../node_modules/swiper/dist/css/swiper.min.css';
+
+let swiper = new Swiper('.swiper-container', {
+  slidesPerView: 'auto',
+  spaceBetween: 10,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+// here are the breakpoints you can alter how many sides are seen and and the margin.
+  breakpoints: {
+    1840: {
+      slidesPerView: 5,
+      spaceBetween: 0,
+    },
+    1024: {
+      slidesPerView: 4,
+      spaceBetween: 0,
+    },
+    768: {
+      slidesPerView: 3,
+      spaceBetween: 0,
+    },
+    640: {
+      slidesPerView: 2,
+      spaceBetween: 0,
+    },
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 0,
+    },
+  },
+});
 
 class Leadership extends React.Component {
   render() {
@@ -103,18 +137,18 @@ class Leadership extends React.Component {
     return (
       <div id='leadership' className='grid-container'>
         <div className='center-column column-22 tablet-column-10'>
-
+          
           <div className='column-22'>
             <h3 className='column-1 phone-column-6 tablet-column-12'>
-              ORGANIZERS
+                ORGANIZERS
             </h3>
             <div
               className='organizers scrolling column-21
-               tablet-column-12 phone-column-6'>
-              <ul>
-                {organizers.map((organizer, index) => (
-                  <li
-                    key={index}>
+                tablet-column-12 phone-column-6 swiper-container'>
+              <ul className='swiper-wrapper'>
+                {organizers.map((organizer) => (
+                  <li className='swiper-slide'
+                    key={organizer.id}>
                     <LeadershipImage
                       userName={organizer.userName}
                       title={organizer.title}
@@ -128,11 +162,14 @@ class Leadership extends React.Component {
           </div>
 
           <div className='column-22'>
-            <h3 className='column-1 tablet-column-12 phone-column-6'>PAST SPEAKERS</h3>
-            <div className='speakers scrolling column-21  tablet-column-12 phone-column-6'>
-              <ul>
-                {speakers.map((speaker, index) => (
-                  <li key={index}>
+            <h3 className='column-1 tablet-column-12 phone-column-6'>
+                PAST SPEAKERS</h3>
+            <div className='speakers scrolling column-21 tablet-column-12
+                phone-column-6 swiper-container'>
+              <ul className='swiper-wrapper'>
+                {speakers.map((speaker) => (
+                  <li className='swiper-slide'
+                    key={speaker.id}>
                     <LeadershipImage
                       userName={speaker.userName}
                       title={speaker.title}
@@ -145,6 +182,20 @@ class Leadership extends React.Component {
             </div>
           </div>
 
+          <div className='column-22' >
+            <div className="swiper-button-prev">
+              <span className="swiper-button-prev-lg">&lt;</span>
+              <span className="swiper-button-prev-sm">&lt;</span>
+            </div>
+            <div className="circle_container">
+              <div id="myCirlce" className="circle">Drag</div>
+            </div>
+            <div className="swiper-button-next">
+              <span className="swiper-button-next-sm">&gt;</span>
+              <span className="swiper-button-next-lg">&gt;</span>
+            </div>
+          </div>
+                  
         </div>
       </div>
     );

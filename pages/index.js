@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 // eslint-disable-next-line no-unused-vars
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 
 import Hero from '../src/components/Hero';
 import Goals from '../src/components/Goals';
