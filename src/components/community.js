@@ -72,7 +72,7 @@ function Community() {
   }, []);
 
   return (
-    <div className="grid-container community  ">
+    <div className="grid-container community">
       <div className="column-24 " >
         <div id="iesdBg" className="swiper-container" >
           <div className="swiper-wrapper" >
@@ -90,6 +90,5 @@ function Community() {
     </div>
   );
 };
-
 
 export default Community;

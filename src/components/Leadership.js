@@ -5,9 +5,9 @@ import '../../node_modules/swiper/dist/css/swiper.min.css';
 
 function Leadership() {
   useEffect(() => {
-    new Swiper('.swiper-container.leadership-swiper', {
+    new Swiper('.swiper-container', {
       slidesPerView: 'auto',
-      spaceBetween: 10,
+      spaceBetween: 20,
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
@@ -164,7 +164,7 @@ function Leadership() {
           </div>
         </div>
 
-        <div className='column-22'>
+        <div className='column-22 leader-2'>
           <h3 className='column-1 tablet-column-12 phone-column-6'>
                 PAST SPEAKERS</h3>
           <div className='speakers scrolling column-21 tablet-column-12
