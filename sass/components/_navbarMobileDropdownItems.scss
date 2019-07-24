@@ -1,0 +1,24 @@
+.dropdown-mobile{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	overflow: hidden;
+	width: 100%;
+	height: 50px;
+	transition: 300ms all ease-in;
+
+	.dropdown-mobile-content{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		
+		a{
+			color: $yellow;
+			margin-bottom: 10px;
+		}
+
+	    .navbar-mobile-button:first-child {
+			margin-top: 5px;
+		}
+	}
+}

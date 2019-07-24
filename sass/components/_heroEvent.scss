@@ -1,0 +1,222 @@
+.hero-event-container {
+	position: relative;
+	height: 185px;
+	width: 450px;
+	z-index: 99;
+	top: 180px;
+	margin: 0 auto;
+	display: block;
+
+	p {
+		margin: 0px;
+		color: $white;
+	}
+
+	@media screen and (max-width: 1100px) {
+		left: 0;
+		right: 0;
+		top: 180px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	@media screen and (max-width: $medium) {
+		left: 0;
+		right: 0;
+		top: 150px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	@media screen and (max-width: $small) {
+		width: 320px;
+	}
+
+	@media screen and (max-width: 320px) {
+		width: 280px;
+	}
+
+	.hero-event-info {
+		height: 70%;
+		display: flex;
+		flex-direction: row;
+		padding: 5px;
+		padding-right: 10px;
+		background-color: rgba(0,0,0,0.65);
+
+		.hero-event-date {
+			height: 130px;
+			width: 30%;
+
+			.hero-event-day {
+				margin-bottom: 25px;
+				font-family: 'Block';
+				font-size: 100px;
+				text-align: center;
+				line-height: 62px;	
+
+				@media screen and (max-width: $small){
+					margin-bottom: 0;
+					height: 87px;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+				}
+			}
+
+			.hero-event-month {
+				font-family: 'Medium';
+				font-size: 22px;
+				line-height: 22px;
+				text-align: center;
+			}
+
+			.hero-event-time {
+				font-family: 'Medium';
+				font-size: 14px;
+				text-align: center;
+			}
+
+			@media screen and (max-width: $medium) {
+				height: 75%;
+				align-items: flex-end;
+
+				.hero-event-time {
+					margin-top: 3px;
+					font-size: 12px;
+				}
+			}
+
+			@media screen and (max-width: $small) {
+				.hero-event-day {
+					font-size: 70px;
+				}
+
+				.hero-event-month {
+					font-family: 'Medium';
+					font-size: 20px;
+				}
+
+				.hero-event-time {
+					margin-top: 8px;
+					font-size: 10px;
+				}
+			}
+
+			@media screen and (max-width: 320px) {
+				.hero-event-time {
+					margin-top: 9px;
+					font-size: 9px;
+				}
+			}
+		}
+
+		.hero-event-desc {
+			display: flex;
+			flex-direction: column;
+			height: 130px;
+			width: 70%;
+			padding-left: 10px;
+			justify-content: space-between;
+			text-align: right;
+
+			@media screen and (max-width: $small) {
+				padding-left: 10px;
+			}
+
+			.event-name {
+				font-family: 'Book';
+				font-size: 22px;
+
+				&.event-name-short {
+					font-size: 36px;
+					line-height: 48px;
+				}
+			}
+
+			@media screen and (max-width: $medium) {
+				.event-name {
+					font-size: 20px;
+
+					&.event-name-short {
+						font-size: 26px;
+					  }
+				}
+			}
+
+			@media screen and (max-width: $small) {
+				.event-name {
+					margin-top: 5px;
+					font-size: 18px;
+				}
+			}
+
+			.hero-event-location {
+				display: flex;
+				flex-direction: row;
+				justify-content: flex-end;
+				font-family: 'Book';
+				margin-top: 10px;
+
+				p:first-child {
+					font-family: 'Heavy';
+					font-size: 14px;
+					line-height: 18px;
+					margin-right: 5px;
+				}
+
+				p:last-child {
+					font-size: 13px;
+				}
+
+				@media screen and (max-width: $medium) {
+					p:first-child {
+						font-size: 12px;
+						line-height: 14px;
+					}
+
+					p:last-child {
+						font-size: 11px;
+					}
+				}
+
+				@media screen and (max-width: $small) {
+					p:first-child {
+						font-size: 10px;
+						line-height: 12px;
+					}
+
+					p:last-child {
+						font-size: 9px;
+					}
+				}
+
+				@media screen and (max-width: 320px) {
+					p:first-child {
+						font-size: 9px;
+						line-height: 12px;
+					}
+
+					p:last-child {
+						font-size: 8.2px;
+					}
+				}
+			}
+		}
+	}
+	
+	.reserve-wrapper {
+		.reserve-button {
+			height: 39px;
+			width: 100%;
+			margin-top: 5px;
+			font-family: 'Book';
+			font-size: 26px;
+			color: $white;
+			border: none;
+			cursor: pointer;
+			outline: 0;
+			background-image: linear-gradient(to right, $yellow, $red);
+		}
+	}
+}
