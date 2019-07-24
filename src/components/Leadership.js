@@ -1,4 +1,4 @@
-import LeadershipImage from './Leadership-image.js';
+import LeadershipImage from './LeadershipImage';
 import Swiper from 'swiper';
 import {useEffect} from 'react';
 import '../../node_modules/swiper/dist/css/swiper.min.css';

@@ -6,11 +6,11 @@ import Hero from '../src/components/Hero';
 import Goals from '../src/components/Goals';
 import Slogan from '../src/components/Slogan';
 import Join from '../src/components/Join';
-import Community from '../src/components/community';
+import Community from '../src/components/Community';
 import Mission from '../src/components/Mission';
 import SuccessStories from '../src/components/SuccessStories';
 import Leadership from '../src/components/Leadership';
-import FloatingBar from '../src/components/floatingBar';
+import FloatingBar from '../src/components/FloatingBar';
 import Sponsors from '../src/components/Sponsors';
 import Footer from '../src/components/Footer';
 
