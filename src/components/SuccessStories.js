@@ -1,59 +1,80 @@
-import React, { Component } from 'react';
-import { data } from '../utils/successStoriesData';
+import React, {useEffect} from 'react';
+import {data} from '../utils/successStoriesData';
 
-class SuccessStories extends Component{
-	constructor(props){
-		super(props);
+// utils
+import {maxTextForContainer} from '../utils/maxTextForContainer';
 
-		this.state = {
-			currentStory: ''
-		}
-	}
+// components
+import SuccessStoriesImage from './SuccessStoriesImage';
+import SuccessStoriesUserTitle from './SuccessStoriesUserTitle';
+import SuccessStoriesMoreBtn from './SuccessStoriesMoreBtn';
+import SocialBtnCircleContainer from './SocialBtnCircleContainer';
 
-	//Sets this.state.currentStory to a random success story.
-	randomStorySelector = () => {
-		//sets randomNum to a number between 0 and length of success stories
-		const randomNum = Math.floor(Math.random() * data.length);
+// hooks
+import useRandomStory from '../utils/useRandomStory';
 
-		return this.setState({
-			currentStory: data[randomNum]
-		})
-	}
+function SuccessStories() {
+  let successExcerpt = React.createRef();
 
-	componentDidMount(){
-		this.randomStorySelector();
-	}
+  // custom hook that chooses random story.
+  const currentStory = useRandomStory(data);
+  const currentExcerpt = currentStory.excerpt;
 
-	render(){
-		const { name, title, excerpt, imageURL } = this.state.currentStory;
+  // Function used to replace excerpt depending on container size.
+  const truncateExcerpt = (storyContainerElem, storyString) => {
+    const newText = maxTextForContainer(storyContainerElem, storyString);
+    if (successExcerpt !== null) {
+      successExcerpt.textContent = newText;
+    }
+  };
 
-		return(
-			<div id="success-stories" className="grid-container">
+  // Register event listener to change text depending on size of container
+  useEffect(() => {
+    window.addEventListener('resize', () =>
+      truncateExcerpt(successExcerpt, currentExcerpt)
+    );
+    truncateExcerpt(successExcerpt, currentStory.excerpt);
 
-				{/* left section - image of person */}
-				<div className="column-7 success-image-container">
-					<img alt={name} src={imageURL} />
-				</div>
+    return () => {
+      window.removeEventListener('resize', () =>
+        truncateExcerpt(successExcerpt, currentStory.excerpt)
+      );
+    };
+  });
 
-				{/* right section - success story*/}
-				<div className="column-16">
-					<p>SUCCESS STORY</p>
-					<div className="success-title-container">
-						<p>{name}</p>
-						<p>/</p>
-						<p>{title}</p>
-					</div>
-					<p className="success-excerpt">{excerpt}</p>
-					<div className="success-btn-container">
-						<button>
-							read full story
-						</button>
-					</div>
-				</div>
+  const {name, title, imageURL, linkToStory} = currentStory;
 
-			</div>
-		);
-	}
+  return (
+    <div id="success-stories" className="grid-container">
+
+      {/* left section - image of person */}
+      <SuccessStoriesImage
+        name={name}
+        imageURL={imageURL}
+      />
+
+      {/* right section - success story*/}
+      <p className='success-header'>SUCCESS STORY</p>
+      <SuccessStoriesUserTitle
+        name={name}
+        title={title}
+      />
+      <p ref={(p) => successExcerpt = p} className="success-excerpt">
+        {/* currentExcerpt */}
+      </p>
+
+      {/* right section - buttons*/}
+      <div className="success-btn-container">
+        <SuccessStoriesMoreBtn
+          linkToStory={linkToStory}
+        />
+        <SocialBtnCircleContainer
+          userStory={currentStory}
+        />
+      </div>
+
+    </div>
+  );
 }
 
 export default SuccessStories;
