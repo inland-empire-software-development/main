@@ -15,8 +15,7 @@ import '../node_modules/@fortawesome/fontawesome-free/js/all';
 import '../sass/index.scss';
 
 import {withRouter} from 'next/router';
-
-//Test 
+ 
 
 // import Fetch from 'isomorphic-unfetch';
 function App() {

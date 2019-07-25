@@ -17,9 +17,12 @@ function Events() {
     })
   }
 
+  const calciteClass = "events-container column-24 center-column"
+
   return (
-    <div className="events-container column-24">
-      <div className="events-list">
+    <div className={calciteClass}>
+      <h1 className="event-header leader-1">Upcoming Events</h1>
+      <div className="events-list pre-1">
         {eventItems(events)}
       </div>
     </div>

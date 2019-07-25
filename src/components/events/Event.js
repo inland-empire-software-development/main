@@ -5,12 +5,12 @@ function Event(prop) {
     let month = date
       .toLocaleDateString('default', { month: 'short' })
       .toLocaleUpperCase()
-    let startTime = date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit'})
-    let endTime = new Date(event.time + event.duration).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit'})
-    let {name} = event
+    let startTime = date.toLocaleTimeString([], { hour: 'numeric', minute: 'numeric'})
+    let endTime = new Date(event.time + event.duration).toLocaleTimeString([], { hour: 'numeric', minute: 'numeric'})
+    let {name, link} = event
 
     return (
-        <div className="event grid-container column-11">
+        <div className="event grid-container column-11 trailer-1">
           <div className="date column-3">
             <p className="event-day">{day}</p>
             <p className="event-month">{month}</p>   
@@ -19,8 +19,8 @@ function Event(prop) {
           <div className="info column-8">
             <div className="event-name font-size-3">{name}</div>
             <div className="event-buttons column-8">
-              <button className="event-button btn btn-half">details</button>
-              <button className="event-button btn btn-half">reserve a spot</button>
+              <button onClick={() => window.open(`${link}`)}
+              className="details-button btn btn-fill">details</button>
             </div>
           </div>
         </div>

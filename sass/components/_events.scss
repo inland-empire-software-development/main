@@ -1,35 +1,46 @@
 .events-container {
     // outline: 1px solid red;
-    padding-top: 2rem;
-    @media screen and (max-width: 1000px) {
-		left: 0;
-		right: 0;
-		margin-left: auto;
-		margin-right: auto;
-	}   
+     
     .event-name {
         // outline: 1px solid green;
         text-align: right;
     }
 
-    .event-day{
+    .event-header {
         font-family: 'Block';
-        font-size: 5.25rem;
-        text-align: center;
-        line-height: 62px;
     }
 
-    .event-month {
-        font-family: 'Medium';
-        font-size: 1.5rem;
-        line-height: 22px;
-        text-align: center;
-    }
+    .date {
+        height: 9em;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    
 
-    .event-time{
-        font-family: 'Medium';
-        font-size: 0.7rem;
-        text-align: center;        
+        .event-day{
+            font-family: 'Block';
+            font-size: 5rem;
+            text-align: center;
+            margin-bottom: -5vh;
+            background-image: linear-gradient(to left, #3F63E1, #62AE72);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    
+        .event-month {
+            font-family: 'Medium';
+            font-size: 1.5rem;
+            line-height: 22px;
+            text-align: center;
+            margin-bottom: 0px;
+        }
+    
+        .event-time{
+            font-family: 'Medium';
+            font-size: 0.7rem;
+            text-align: center;  
+            margin-bottom: 0px;      
+        }
     }
 
     .info {
@@ -39,8 +50,13 @@
         .event-buttons {
             margin-top: auto;
 
-            .event-button{
-                margin-right: 1em;
+            button {
+                font-family: 'Book';
+                font-size: 1rem;
+                color: $white;
+                border: none;
+                cursor: pointer;
+                background-image: linear-gradient(to right, $yellow, $red);
             }
         }
     }
@@ -52,8 +68,4 @@ div.info {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-div.event-buttons {
-    outline: 1px dashed;
 }
