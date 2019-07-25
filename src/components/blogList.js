@@ -6,13 +6,13 @@ import BlogPost from './blogPost';
 
 const blogList = (props) => {
   const [posts, setPosts] = useState([]);
-  let swiper;
+  let blogSwiper;
 
   async function getPostData() {
     const result = await axios.get('https://blog.ie-sd.com/wp-json/wp/v2/posts?_embed');
     setPosts(result.data);
 
-    swiper = new Swiper('.swiper-container', {
+    blogSwiper = new Swiper('.blog-swiper', {
       slidesPerColumn: 2,
       slidesPerColumnFill: result.data.length < 8 ? 'row' : 'column'
     });
@@ -21,17 +21,19 @@ const blogList = (props) => {
   }
 
   const resizeGrid = () => {
+console.log(blogSwiper);
+
     if (window.innerWidth < 900) {
-      swiper.params.slidesPerView = 2;
-      swiper.params.spaceBetween = 30;
+      blogSwiper.params.slidesPerView = 2;
+      blogSwiper.params.spaceBetween = 30;   
     } else if (window.innerWidth < 1200) {
-      swiper.params.slidesPerView = 3;
-      swiper.params.spaceBetween = 0;
+      blogSwiper.params.slidesPerView = 3;
+      blogSwiper.params.spaceBetween = 0;
     } else {
-      swiper.params.slidesPerView = 4;
-      swiper.params.spaceBetween = 0;
+      blogSwiper.params.slidesPerView = 4;
+      blogSwiper.params.spaceBetween = 0;
     }
-    swiper.update();
+    blogSwiper.update();
   }
   
   useEffect( () => {
@@ -48,8 +50,8 @@ const blogList = (props) => {
   }, [])
 
   return (
-    <div id = "bloglist">
-      <div class = "swiper-container">
+    <div id = "bloglist" >
+      <div class = "swiper-container blog-swiper">
         <div class = "swiper-wrapper">
           {posts.map((post) => (
             <BlogPost key = {post.slug} postData = {post} />

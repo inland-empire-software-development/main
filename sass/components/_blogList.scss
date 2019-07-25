@@ -2,8 +2,16 @@
   
   @import "../node_modules/swiper/dist/css/swiper.min.css";
 
+.blog-swiper {
+  height: auto;
+}
+
 #bloglist .swiper-slide {
   height: 380px;
+  max-width: 310px;
+  display: block;
+  text-align: left;
+  font-size: 14px;
 }
 
 .blog-preview-header {
@@ -47,7 +55,6 @@
 }
 
 .blog-preview-excerpt {
-  font-size: 14px;
   line-height: 1.3em;
   height: 70px;
   overflow: hidden;
@@ -65,7 +72,7 @@
   text-decoration: none;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: $medium) {
   .blog-preview {
     padding: 0 10px;
     box-sizing: border-box;
