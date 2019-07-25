@@ -5,6 +5,7 @@ import React, {useState, useEffect} from 'react';
 import Navbar from '../src/components/Navbar';
 import Hero from '../src/components/Hero';
 import Goals from '../src/components/Goals';
+import Events from '../src/components/Events/Events'
 import Slogan from '../src/components/Slogan';
 import Join from '../src/components/Join';
 import Footer from '../src/components/Footer';
@@ -16,7 +17,6 @@ import '../sass/index.scss';
 import {withRouter} from 'next/router';
 
 //Test 
-import Events from '../src/components/Events'
 
 // import Fetch from 'isomorphic-unfetch';
 function App() {
@@ -36,6 +36,7 @@ function App() {
       <Slogan />
       <Mission />
       <Goals />
+      <Events />
       <Join />
       <Footer />
     </div>
