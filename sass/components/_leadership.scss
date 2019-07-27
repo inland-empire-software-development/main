@@ -79,7 +79,7 @@
   }
 
   .scrolling {
-    
+    overflow-x: hidden;
     /*revisit once drag component is added*/
     overflow-y: hidden;
     white-space: nowrap;

@@ -17,7 +17,7 @@ function Leadership() {
       breakpoints: {
         1840: {
           slidesPerView: 4,
-          spaceBetween: 0,
+          spaceBetween: 5,
         },
         1024: {
           slidesPerView: 4,
@@ -53,7 +53,7 @@ function Leadership() {
       },
       {
         userName: 'Felipe Fernandez',
-        title: 'Secratary',
+        title: 'Secretary',
         image: '../static/images/desktop/felipefernandez.jpg',
       },
       {
