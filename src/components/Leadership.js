@@ -5,7 +5,7 @@ import '../../node_modules/swiper/dist/css/swiper.min.css';
 
 function Leadership() {
   useEffect(() => {
-    new Swiper('.swiper-container', {
+    new Swiper('.leadership-swiper', {
       slidesPerView: 'auto',
       spaceBetween: 20,
       navigation: {
@@ -16,7 +16,7 @@ function Leadership() {
       // how many sides are seen and and the margin.
       breakpoints: {
         1840: {
-          slidesPerView: 5,
+          slidesPerView: 4,
           spaceBetween: 0,
         },
         1024: {
@@ -147,7 +147,7 @@ function Leadership() {
           <div
             className='organizers scrolling column-21
                 tablet-column-12 phone-column-6
-                swiper-container leadership-swiper'>
+                 leadership-swiper'>
             <ul className='swiper-wrapper'>
               {organizers.map((organizer, index) => (
                 <li className='swiper-slide'
@@ -168,7 +168,7 @@ function Leadership() {
           <h3 className='column-1 tablet-column-12 phone-column-6'>
                 PAST SPEAKERS</h3>
           <div className='speakers scrolling column-21 tablet-column-12
-                phone-column-6 swiper-container'>
+                phone-column-6 leadership-swiper'>
             <ul className='swiper-wrapper'>
               {speakers.map((speaker, index) => (
                 <li className='swiper-slide'
