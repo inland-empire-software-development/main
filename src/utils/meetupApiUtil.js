@@ -28,3 +28,11 @@ export const getEvents = () => {
     return resp;
   });
 };
+
+//generate multiple events
+export const getFakeEvents = () => {
+  return fetchEvents().then((resp) => {
+    let newResp = [...resp, resp[0], resp[0]]
+    return newResp;
+  });
+};
