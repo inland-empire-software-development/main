@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 // eslint-disable-next-line no-unused-vars
 import React, {useState, useEffect} from 'react';
-
+import BlogList from '../src/components/blogList';
 import Hero from '../src/components/Hero';
 import Goals from '../src/components/Goals';
 import Events from '../src/components/Events/Events'
@@ -42,6 +42,7 @@ function App() {
       <Leadership />
       <SuccessStories />
       <Sponsors />
+      <BlogList />
       <Footer />
       <FloatingBar />
     </div>
