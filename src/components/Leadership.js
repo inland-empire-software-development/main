@@ -7,27 +7,24 @@ function Leadership() {
   useEffect(() => {
     new Swiper('.leadership-swiper', {
       slidesPerView: 'auto',
-      spaceBetween: 20,
-      navigation: {
+      spaceBetween: 0,
+      loop: true,
+      /*navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
-      },
+      },*/
       // here are the breakpoints you can alter
       // how many sides are seen and and the margin.
       breakpoints: {
         1840: {
           slidesPerView: 4,
-          spaceBetween: 5,
-        },
-        1024: {
-          slidesPerView: 4,
           spaceBetween: 0,
         },
-        768: {
+        1275: {
           slidesPerView: 3,
           spaceBetween: 0,
         },
-        640: {
+        768: {
           slidesPerView: 2,
           spaceBetween: 0,
         },
@@ -57,7 +54,7 @@ function Leadership() {
         image: '../static/images/desktop/felipefernandez.jpg',
       },
       {
-        userName: 'Luis Javier Velazquez',
+        userName: 'Luis Velazquez',
         title: 'Lead React Developer',
         image: '../static/images/desktop/luisvelazquez.jpg',
       },
@@ -89,9 +86,19 @@ function Leadership() {
     ],
     speakers: [
       {
+        userName: 'Vast Lee',
+        title: 'What Employers Want',
+        image: '',
+      },
+      {
+        userName: 'Tim Jenkins',
+        title: 'From Dev to Co-Founder',
+        image: '',
+      },
+      {
         userName: 'Spencer Trumbore',
         title: 'Node.js & Wolfram Alpha API',
-        image: '',
+        image: '../static/images/desktop/spencertrumbore.png',
       },
       {
         userName: 'Ixshel Escamilla',
@@ -164,7 +171,7 @@ function Leadership() {
           </div>
         </div>
 
-        <div className='column-22 leader-2'>
+        <div className='column-22'>
           <h3 className='column-1 tablet-column-12 phone-column-6'>
                 PAST SPEAKERS</h3>
           <div className='speakers scrolling column-21 tablet-column-12
@@ -184,7 +191,7 @@ function Leadership() {
             </ul>
           </div>
         </div>
-        <div className="column-22 leader-1">
+        <div className="column-22 leader-1 center-column">
           <p className="text-center">
             <small>You can drag images left and right to see more.</small>
           </p>
