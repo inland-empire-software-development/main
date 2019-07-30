@@ -5,6 +5,10 @@
 'base/_colors',
 'base/_typography';
   
+
+@import 
+'components/_community';
+
 @import
 'pages/_index';
  
@@ -12,12 +16,25 @@
 'components/_navbar',
 'components/_navbarDesktop',
 'components/_navbarMobile',
+'components/_navbarHamburgerIcon',
+'components/_navbarMobileDropdownItems',
+'components/_navbarMobileMenu',
 'components/_hero',
 'components/_heroEvent',
 'components/_slogan',
 'components/_mission',
 'components/_goals',
-'components/join',
+'components/_successStories',
+'components/_successStoriesImage',
+'components/_successStoriesUserTitle',
+'components/_successStoriesMoreBtn',
+'components/_socialBtnCircleContainer',
+'components/_socialBtnCircle',
+'components/_leadership',
+'components/_leadership-image',
+'components/_join',
+'components/_floatBar',
+'components/_sponsors',
 'components/_footer';
 
 @import '_shame';

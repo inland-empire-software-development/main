@@ -1,0 +1,192 @@
+#leadership {
+  max-width: 80vw;
+  margin-top: 3em;
+  overflow-x: hidden;
+
+  .name-title p {
+    text-align: left;
+  }
+
+  @media screen and (max-width: $medium) {
+    margin-top: 0;
+  }
+
+  .organizers,
+  .speakers {
+    @media screen and (max-width: $medium) {
+      padding-left: 0;
+    }
+  }
+
+  .swiper-container {
+    height: 40vh;
+  }
+
+  h3 {
+    writing-mode: vertical-rl;
+    text-orientation: sideways;
+    font-family: "Block";
+    font-size: 1.4em;
+    display: inline-flex;
+
+    @media screen and (max-width: $medium) {
+      writing-mode: horizontal-tb;
+      padding-left: 0;
+    }
+  }
+
+  ul {
+    list-style: none;
+    margin-top: 0;
+    padding-inline-start: 0;
+
+    @media screen and (max-width: $medium) {
+      padding-left: 0;
+    }
+
+    @media screen and (max-width: $small) {
+      margin: 0;
+      padding: 0;
+      max-height: 190px;
+    }
+
+    li {
+      display: inline-block;
+      margin-top: 0;
+    }
+
+    li:last-child {
+      padding-right: 2rem;
+
+      @media screen and (max-width: $large) {
+        margin-right: 25px;
+      }
+
+      @media screen and (max-width: 1025px) {
+        margin-right: 10px;
+      }
+
+      @media screen and (max-width: $medium) {
+        margin-right: 60px;
+      }
+
+      @media screen and (max-width: $small) {
+        padding-right: 0;
+        margin-right: 25px;
+      }
+
+    }
+  }
+
+  .scrolling {
+    overflow-x: auto;
+    /*revisit once drag component is added*/
+    overflow-y: hidden;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+
+
+    @media screen and (max-width: $medium) {
+      max-height: 15.5rem;
+    }
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+
+
+  .swiper-button-prev {
+    left: 18vw;
+    display: flex;
+    position: relative;
+    width: 15%;
+    height: auto;
+    margin: 0;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    justify-content: center;
+
+    color: #fc5c88;
+    /* fallback for old browsers */
+    color: -webkit-linear-gradient(to right, #ec2242, #f1af21);
+    /* Chrome 10-25, Safari 5.1-6 */
+    color: linear-gradient(to right, #ec2242, #f1af21);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    .swiper-button-prev-lg {
+      font-size: 4em;
+
+    }
+
+    .swiper-button-prev-sm {
+      font-size: 2em;
+      position: relative;
+      left: -10px;
+    }
+  }
+
+  .circle_container {
+    display: flex;
+    position: absolute;
+    left: 45vw;
+    right: 45VW;
+    width: auto;
+    height: auto;
+    margin: 0;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    justify-content: center;
+
+    #myCircle,
+    .circle {
+      display: block;
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      font-size: 2em;
+      color: #fff;
+      line-height: 80px;
+      text-align: center;
+      background: linear-gradient(to right, #fc5c88, #175cde);
+      position: absolute;
+      z-index: 10;
+      opacity: .8;
+      transition: left 0.5s;
+    }
+  }
+
+  .swiper-button-next {
+
+    display: flex;
+    position: relative;
+
+    height: auto;
+
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+
+    color: #175cde;
+    /* fallback for old browsers */
+    color: -webkit-linear-gradient(to right, rgba(209, 0, 0, 1), rgba(240, 226, 28, 1));
+    /* Chrome 10-25, Safari 5.1-6 */
+    color: linear-gradient(to right, #ec2242, #f1af21);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    .swiper-button-next-lg {
+      font-size: 4em;
+    }
+
+    .swiper-button-next-sm {
+      font-size: 2em;
+      position: relative;
+      left: 10px;
+    }
+  }
+}

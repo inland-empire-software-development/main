@@ -2,19 +2,22 @@
 // eslint-disable-next-line no-unused-vars
 import React, {useState, useEffect} from 'react';
 
-import Navbar from '../src/components/Navbar';
 import Hero from '../src/components/Hero';
 import Goals from '../src/components/Goals';
 import Slogan from '../src/components/Slogan';
 import Join from '../src/components/Join';
-import Footer from '../src/components/Footer';
+import Community from '../src/components/Community';
 import Mission from '../src/components/Mission';
+import SuccessStories from '../src/components/SuccessStories';
+import Leadership from '../src/components/Leadership';
+import FloatingBar from '../src/components/FloatingBar';
+import Sponsors from '../src/components/Sponsors';
+import Footer from '../src/components/Footer';
 
 import '../node_modules/@fortawesome/fontawesome-free/js/all';
 import '../sass/index.scss';
 
 import {withRouter} from 'next/router';
-
 // import Fetch from 'isomorphic-unfetch';
 function App() {
   // basic useState hook
@@ -27,14 +30,18 @@ function App() {
 
   // initial render
   return (
-    <div>
-      <Navbar />
+    <div className="grid-container">
       <Hero />
       <Slogan />
       <Mission />
       <Goals />
+      <Community />
       <Join />
+      <Leadership />
+      <SuccessStories />
+      <Sponsors />
       <Footer />
+      <FloatingBar />
     </div>
   );
 }
