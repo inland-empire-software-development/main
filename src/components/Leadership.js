@@ -9,12 +9,8 @@ function Leadership() {
       slidesPerView: 'auto',
       spaceBetween: 0,
       loop: true,
-      /*navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },*/
       // here are the breakpoints you can alter
-      // how many sides are seen and and the margin.
+      // how many slides are seen and the margins.
       breakpoints: {
         1840: {
           slidesPerView: 4,
@@ -88,7 +84,7 @@ function Leadership() {
       {
         userName: 'Vast Lee',
         title: 'What Employers Want',
-        image: '',
+        image: '../static/images/desktop/vastlee.png',
       },
       {
         userName: 'Tim Jenkins',
