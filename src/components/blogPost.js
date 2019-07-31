@@ -12,14 +12,19 @@ const blogPost = (props) => {
         <div className = "blog-preview-image-container">
           <img src = {imageURL} className = "blog-preview-image" />
         </div>
-        <div className = "blog-preview-category">{category[0].toUpperCase() + category.slice(1)}</div>
+        <div className = "blog-preview-category">
+          {category[0].toUpperCase() + category.slice(1)}
+        </div>
       </div>
       <div className = "blog-preview-content">
-        <div className = "blog-preview-title">{props.postData.title.rendered}</div>
+        <div className = "blog-preview-title">
+          {props.postData.title.rendered}
+        </div>
         <div className = "blog-preview-author">
           {props.postData._embedded.author[0].name} /
           <span className = "blog-preview-date">
-            {new Intl.DateTimeFormat('en-US', {year: 'numeric', month: 'long', day: 'numeric'})
+            {new Intl.DateTimeFormat('en-US',
+                {year: 'numeric', month: 'long', day: 'numeric'})
                 .format(new Date(props.postData.date))}</span>
         </div>
         <div className = "blog-preview-excerpt">
