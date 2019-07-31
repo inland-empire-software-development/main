@@ -11,6 +11,7 @@
     font-size: 26px;
     font-family: 'black';
     color: white;
+    padding-top: 16px;
 }
 
 #one-time{
@@ -38,7 +39,7 @@ section{
 
     display: flex;
     flex-direction: column;
-    padding-left: 45px;
+    padding-left: 15px;
    
 }
 
@@ -47,3 +48,10 @@ section{
     margin: 5px;
 }
 
+
+
+@media only screen and (max-width: 900px) {
+    section {
+        display: flex;
+    }
+  }
