@@ -1,57 +1,56 @@
-#sponsor-1{
-    background: -webkit-linear-gradient(left, #f1af21 0%, #ec2242 76%);
-    font-family: 'book';
-    font-size: 22px;
-    color: white;
-    text-align: center;
-    
-}
-
-#sponsor-title{
-    font-size: 26px;
-    font-family: 'black';
-    color: white;
-    padding-top: 16px;
-}
-
-#one-time{
- background: -webkit-linear-gradient(left, #f1af21 0%, #ec2242 76%);
- border:none;
- height: 60px;
- width: 200%;
- font-family: 'Book';
- color: white;
- font-size: 20px;
- 
-}
-
-#recurring{
-    background: -webkit-linear-gradient(left, #3fb3e1 0%, #02ae72 76%);
-    border:none;
-    height: 60px;
-    width: 200%;
-    font-family: 'Book';
-    color: white;
-    font-size: 20px;
-}
-
-section{
-
-    display: flex;
-    flex-direction: column;
-    padding-left: 15px;
-   
-}
-
-.btn{
-    display: inline-block;
-    margin: 5px;
-}
-
-
-
-@media only screen and (max-width: 900px) {
+#sponsorship {
+    #sponsorship-description {
+        background: -webkit-linear-gradient(left, #f1af21 0%, #ec2242 76%);
+        font-family: "book";
+        font-size: 22px;
+        color: white;
+        text-align: left;
+        padding: 0 9%; 
+        min-height: 270px;
+        @media only screen and (max-width: 1107px) {
+            font-size: 18px;
+        }
+    }
+    #sponsor-title {
+        font-size: 26px;
+        font-family: "black";
+        color: white;
+        padding-top: 16px; 
+         
+    }
+    button {
+        border: none;
+        height: 60px;
+        width: 90%;
+        font-family: "Book";
+        color: white;
+        font-size: 20px;
+        display: block;
+        margin: 50px auto;
+        cursor: pointer;
+        &#one-time {
+            background: -webkit-linear-gradient(left, #f1af21 0%, #ec2242 76%);
+        }
+        &#recurring {
+            background: -webkit-linear-gradient(left, #3fb3e1 0%, #02ae72 76%);
+        }
+        &:hover {
+            filter: saturate(1.5);
+            transition: all 0.25s ease-in;
+        }
+    }
     section {
         display: flex;
+        flex-direction: column;
+        padding-left: 15px;
     }
-  }
+    .btn {
+        display: inline-block;
+        margin: 5px;
+    }
+    @media only screen and (max-width: 900px) {
+        section {
+            display: flex;
+        }
+    }
+}
