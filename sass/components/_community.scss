@@ -14,7 +14,8 @@
   margin: auto auto 20px;
 }
 
-.swiper-slide {
+/*.swiper-slide*/
+.community-swiper {
   text-align: center;
   font-size: 18px;
   background: #fff;
@@ -151,7 +152,8 @@
 }
 
 @media only screen and (min-width: 766px) {
-  .swiper-slide {
+  /*.swiper-slide*/
+  .community-swiper {
     width: 40%;
   }
 
@@ -197,7 +199,8 @@
 }
 
 @media only screen and (min-width: 1023px) {
-  .swiper-slide {
+  /*.swiper-slide*/ 
+  .community-swiper {
     width: 25%;
   }
 
