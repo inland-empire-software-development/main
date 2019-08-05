@@ -13,11 +13,13 @@ import Leadership from '../src/components/Leadership';
 import FloatingBar from '../src/components/FloatingBar';
 import Sponsors from '../src/components/Sponsors';
 import Footer from '../src/components/Footer';
+import Announcements from '../src/components/Announcement';
 
 import '../node_modules/@fortawesome/fontawesome-free/js/all';
 import '../sass/index.scss';
 
 import {withRouter} from 'next/router';
+
 // import Fetch from 'isomorphic-unfetch';
 function App() {
   // basic useState hook
@@ -31,6 +33,7 @@ function App() {
   // initial render
   return (
     <div className="grid-container">
+      <Announcements />
       <Hero />
       <Slogan />
       <Mission />

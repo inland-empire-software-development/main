@@ -1,13 +1,3 @@
-//Background Image
-#iesdBg {
-  background: url('../static/images/desktop/inland-empire-software-development-background-light.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  min-height: 280px;
-  background-repeat: space;
-}
-
 // Drag container and slider
 .swiper-container {
   height: 50vh;
@@ -46,6 +36,12 @@
 
 //makes drag circle disapear
 .community {
+  background: url('../static/images/desktop/inland-empire-software-development-background-light.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 280px;
+  background-repeat: space;
 
   &:hover .circle,
   &:active .circle {
@@ -152,6 +148,7 @@
 }
 
 @media only screen and (min-width: 766px) {
+
   /*.swiper-slide*/
   .community-swiper {
     width: 40%;
@@ -199,7 +196,8 @@
 }
 
 @media only screen and (min-width: 1023px) {
-  /*.swiper-slide*/ 
+
+  /*.swiper-slide*/
   .community-swiper {
     width: 25%;
   }

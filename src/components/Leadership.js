@@ -94,7 +94,7 @@ function Leadership() {
       {
         userName: 'Spencer Trumbore',
         title: 'Node.js & Wolfram Alpha API',
-        image: '../static/images/desktop/spencertrumbore.png',
+        image: '../static/images/desktop/spencer.jpg',
       },
       {
         userName: 'Ixshel Escamilla',
