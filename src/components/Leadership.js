@@ -7,14 +7,14 @@ function Leadership() {
   useEffect(() => {
     new Swiper('.leadership-swiper', {
       slidesPerView: 'auto',
-      spaceBetween: 0,
+      spaceBetween: 75,
       loop: true,
+      slidesPerView: 4,
       // here are the breakpoints you can alter
       // how many slides are seen and the margins.
       breakpoints: {
         1840: {
           slidesPerView: 4,
-          spaceBetween: 0,
         },
         1275: {
           slidesPerView: 3,
