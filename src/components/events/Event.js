@@ -1,5 +1,5 @@
 function Event(prop) {   
-    let {event} = prop
+    let {event, swiperBool} = prop
     let date = new Date(event.time)
     let day = date.getDate()
     let month = date
@@ -9,8 +9,11 @@ function Event(prop) {
     let endTime = new Date(event.time + event.duration).toLocaleTimeString([], { hour: 'numeric', minute: 'numeric'})
     let {name, link} = event
 
+    let swiperStyle = swiperBool ? "swiper-slide" : ""
+    let eventClass = `${swiperStyle} event grid-container column-11 trailer-1`
+
     return (
-        <div className="event grid-container column-11 trailer-1">
+        <div className={eventClass}>
           <div className="date column-3">
             <p className="event-day">{day}</p>
             <p className="event-month">{month}</p>   
