@@ -12,9 +12,8 @@ function EventsSwiper() {
   useEffect(() => {
     getFakeEvents().then( (events) => {
       setEvents(events);
-      eventsSwiper = new Swiper('.events-swiper', {
-        slidesPerColumn: 1,
-        slidesPerColumnFill: events.length < 8 ? 'row' : 'column'
+      eventsSwiper = new Swiper('.events-container', {
+        centeredSlides: false
       });
     });
   }, []);
@@ -25,7 +24,7 @@ function EventsSwiper() {
     })
   }
 
-  const containerClass = "swiper-container events-swiper column-24 center-column"
+  const containerClass = "swiper-container events-container column-24 center-column"
 
   return (
     <div className={containerClass}>

@@ -10,18 +10,19 @@ function Event(prop) {
     let {name, link} = event
 
     let swiperStyle = swiperBool ? "swiper-slide" : ""
-    let eventClass = `${swiperStyle} event grid-container column-11 trailer-1`
+    let eventClass = `${swiperStyle} event grid-container column-11 phone-column-6 trailer-1`
 
     return (
         <div className={eventClass}>
-          <div className="date column-3">
+          <div className="date column-3 phone-column-2
+          ">
             <p className="event-day">{day}</p>
             <p className="event-month">{month}</p>   
             <p className="event-time">{startTime} - {endTime}</p>         
           </div>
-          <div className="info column-8">
+          <div className="info column-8 phone-column-4">
             <div className="event-name font-size-3">{name}</div>
-            <div className="event-buttons column-8">
+            <div className="event-buttons column-8 phone-column-4">
               <button onClick={() => window.open(`${link}`)}
               className="details-button btn btn-fill">details</button>
             </div>
