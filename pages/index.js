@@ -5,10 +5,6 @@ import BlogList from '../src/components/blogList';
 import Hero from '../src/components/Hero';
 import Goals from '../src/components/Goals';
 import Events from '../src/components/Events/Events'
-
-//testing
-import EventsSwiper from '../src/components/Events/EventsSwiper'
-
 import Slogan from '../src/components/Slogan';
 import Join from '../src/components/Join';
 import Community from '../src/components/Community';
@@ -36,7 +32,7 @@ function App() {
   // initial render
   return (
     <div className="grid-container">
-      {/* <Hero />
+      <Hero />
       <Slogan />
       <Mission />
       <Goals />
@@ -48,8 +44,7 @@ function App() {
       <Sponsors />
       <BlogList />
       <Footer />
-      <FloatingBar /> */}
-      <EventsSwiper />
+      <FloatingBar />
     </div>
   );
 }
