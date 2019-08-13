@@ -1,8 +1,8 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 import Swiper from 'swiper';
-import _debounce from 'lodash.debounce'
-import BlogPost from './blogPost';
+import _debounce from 'lodash.debounce';
+import BlogPost from './BlogPost';
 
 const blogList = (props) => {
   const [posts, setPosts] = useState([]);
@@ -14,18 +14,16 @@ const blogList = (props) => {
 
     blogSwiper = new Swiper('.blog-swiper', {
       slidesPerColumn: 2,
-      slidesPerColumnFill: result.data.length < 8 ? 'row' : 'column'
+      slidesPerColumnFill: result.data.length < 8 ? 'row' : 'column',
     });
 
     resizeGrid();
   }
 
   const resizeGrid = () => {
-console.log(blogSwiper);
-
     if (window.innerWidth < 900) {
       blogSwiper.params.slidesPerView = 2;
-      blogSwiper.params.spaceBetween = 30;   
+      blogSwiper.params.spaceBetween = 30;
     } else if (window.innerWidth < 1200) {
       blogSwiper.params.slidesPerView = 3;
       blogSwiper.params.spaceBetween = 0;
@@ -34,8 +32,8 @@ console.log(blogSwiper);
       blogSwiper.params.spaceBetween = 0;
     }
     blogSwiper.update();
-  }
-  
+  };
+
   useEffect( () => {
     getPostData();
   }, []);
@@ -46,20 +44,20 @@ console.log(blogSwiper);
     window.addEventListener('resize', handleResize);
     return () => {
       window.removeEventListener('resize', handleResize);
-    }
-  }, [])
+    };
+  }, []);
 
   return (
-    <div id = "bloglist" >
-      <div class = "swiper-container blog-swiper">
-        <div class = "swiper-wrapper">
+    <div id="bloglist" className="grid-container">
+      <div className="swiper-container blog-swiper leader-3">
+        <div className="swiper-wrapper">
           {posts.map((post) => (
-            <BlogPost key = {post.slug} postData = {post} />
-          ))} 
+            <BlogPost key={post.slug} postData={post} />
+          ))}
         </div>
       </div>
     </div>
   );
 };
 
-export default blogList; 
+export default blogList;

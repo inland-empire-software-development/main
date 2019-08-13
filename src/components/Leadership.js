@@ -5,29 +5,22 @@ import '../../node_modules/swiper/dist/css/swiper.min.css';
 
 function Leadership() {
   useEffect(() => {
-    new Swiper('.swiper-container', {
+    new Swiper('.leadership-swiper', {
       slidesPerView: 'auto',
-      spaceBetween: 20,
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
+      spaceBetween: 75,
+      loop: true,
+      slidesPerView: 4,
       // here are the breakpoints you can alter
-      // how many sides are seen and and the margin.
+      // how many slides are seen and the margins.
       breakpoints: {
         1840: {
-          slidesPerView: 5,
-          spaceBetween: 0,
-        },
-        1024: {
           slidesPerView: 4,
-          spaceBetween: 0,
         },
-        768: {
+        1275: {
           slidesPerView: 3,
           spaceBetween: 0,
         },
-        640: {
+        768: {
           slidesPerView: 2,
           spaceBetween: 0,
         },
@@ -53,11 +46,11 @@ function Leadership() {
       },
       {
         userName: 'Felipe Fernandez',
-        title: 'Secratary',
+        title: 'Secretary',
         image: '../static/images/desktop/felipefernandez.jpg',
       },
       {
-        userName: 'Luis Javier Velazquez',
+        userName: 'Luis Velazquez',
         title: 'Lead React Developer',
         image: '../static/images/desktop/luisvelazquez.jpg',
       },
@@ -89,9 +82,19 @@ function Leadership() {
     ],
     speakers: [
       {
+        userName: 'Vast Lee',
+        title: 'What Employers Want',
+        image: '../static/images/desktop/vastlee.png',
+      },
+      {
+        userName: 'Tim Jenkins',
+        title: 'From Dev to Co-Founder',
+        image: '',
+      },
+      {
         userName: 'Spencer Trumbore',
         title: 'Node.js & Wolfram Alpha API',
-        image: '',
+        image: '../static/images/desktop/spencer.jpg',
       },
       {
         userName: 'Ixshel Escamilla',
@@ -147,7 +150,7 @@ function Leadership() {
           <div
             className='organizers scrolling column-21
                 tablet-column-12 phone-column-6
-                swiper-container leadership-swiper'>
+                 leadership-swiper'>
             <ul className='swiper-wrapper'>
               {organizers.map((organizer, index) => (
                 <li className='swiper-slide'
@@ -164,11 +167,11 @@ function Leadership() {
           </div>
         </div>
 
-        <div className='column-22 leader-2'>
+        <div className='column-22'>
           <h3 className='column-1 tablet-column-12 phone-column-6'>
                 PAST SPEAKERS</h3>
           <div className='speakers scrolling column-21 tablet-column-12
-                phone-column-6 swiper-container'>
+                phone-column-6 leadership-swiper'>
             <ul className='swiper-wrapper'>
               {speakers.map((speaker, index) => (
                 <li className='swiper-slide'
@@ -183,8 +186,6 @@ function Leadership() {
               )}
             </ul>
           </div>
-        </div>
-        <div className="column-22 leader-1">
           <p className="text-center">
             <small>You can drag images left and right to see more.</small>
           </p>

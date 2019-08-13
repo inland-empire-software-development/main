@@ -21,7 +21,7 @@ function Event(prop) {
             <p className="event-time">{startTime} - {endTime}</p>         
           </div>
           <div className="info column-8 phone-column-4">
-            <div className="event-name font-size-3">{name}</div>
+            <div className="event-name font-size-2">{name}</div>
             <div className="event-buttons column-8 phone-column-4">
               <button onClick={() => window.open(`${link}`)}
               className="details-button btn btn-fill">details</button>
