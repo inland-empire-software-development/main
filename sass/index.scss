@@ -1,43 +1,22 @@
-@import
-'vendors/calcite/calcite-web.scss';
+@import "vendors/calcite/calcite-web.scss";
 
-@import
-'base/_colors',
-'base/_typography';
-  
+@import "base/_colors", "base/_typography";
 
-@import 
-'components/_community';
+@import "components/_community";
 
-@import
-'pages/_index';
- 
-@import
-'components/_announcements',
-'components/_blogList',
-'components/_floatBar',
-'components/_footer',
-'components/_goals',
-'components/_hero',
-'components/_heroEvent',
-'components/_join',
-'components/_leadership',
-'components/_leadership-image',
-'components/_mission',
-'components/_navbar',
-'components/_navbarDesktop',
-'components/_navbarHamburgerIcon',
-'components/_navbarMobile',
-'components/_navbarMobileDropdownItems',
-'components/_navbarMobileMenu',
-'components/_slogan',
-'components/_socialBtnCircle',
-'components/_socialBtnCircleContainer',
-'components/_sponsors',
-'components/_sponsorship.scss',
-'components/_successStories',
-'components/_successStoriesImage',
-'components/_successStoriesMoreBtn',
-'components/_successStoriesUserTitle';
+@import "pages/_index";
 
-@import '_shame';
+@import "components/_announcements", "components/_blogList",
+  "components/_donationModal", "components/_floatBar", "components/_footer",
+  "components/_goals", "components/_hero", "components/_heroEvent",
+  "components/_join", "components/_leadership", "components/_leadership-image",
+  "components/_mission", "components/_navbar", "components/_navbarDesktop",
+  "components/_navbarHamburgerIcon", "components/_navbarMobile",
+  "components/_navbarMobileDropdownItems", "components/_navbarMobileMenu",
+  "components/_slogan", "components/_socialBtnCircle",
+  "components/_socialBtnCircleContainer", "components/_sponsors",
+  "components/_sponsorship.scss", "components/_successStories",
+  "components/_successStoriesImage", "components/_successStoriesMoreBtn",
+  "components/_successStoriesUserTitle";
+
+@import "_shame";

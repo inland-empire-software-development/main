@@ -1,15 +1,29 @@
+import React, { useState, useEffect } from "react";
+import DonationModal from "./DonationModal";
+
 function Sponsorship() {
+  const [modalOn, setModal] = useState(false);
+  // useEffect(() => {
+  //   window.addEventListener("click", () => {
+  //     setModal(false);
+  //   });
+  // });
   function handleClick(e) {
     e.preventDefault();
     console.log("One-time");
+    setModal(!modalOn);
   }
   function hanldeRecurring(e) {
     e.preventDefault();
     console.log("Recurring Sponsorship");
   }
+
+  if (modalOn) {
+  }
   return (
     <div id="sponsorship" className="grid-container">
       {/* left side */}
+      {modalOn ? <DonationModal /> : null}
       <div id="sponsorship-description" className="column-14">
         {/* sponsor-title */}
         <p id="sponsor-title">Interested in becoming a Sponsor?</p>
