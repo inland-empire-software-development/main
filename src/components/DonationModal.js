@@ -1,6 +1,7 @@
 function donationModal(props) {
   return (
     <div className="modal">
+      {/* there is a class name 'modal-content' already being used somewhere else in the project */}
       <div className="modal-con">
         <iframe
           id="iF"

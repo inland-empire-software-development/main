@@ -3,15 +3,17 @@ import DonationModal from "./DonationModal";
 
 function Sponsorship() {
   const [modalOn, setModal] = useState(false);
-  // useEffect(() => {
-  //   window.addEventListener("click", () => {
-  //     setModal(false);
-  //   });
-  // });
+
   function handleClick(e) {
     e.preventDefault();
-    console.log("One-time");
-    setModal(!modalOn);
+    console.log(modalOn);
+    setModal(true);
+    window.onclick = event => {
+      console.log(event);
+      if (event.target.className == "modal") {
+        setModal(false);
+      }
+    };
   }
   function hanldeRecurring(e) {
     e.preventDefault();
