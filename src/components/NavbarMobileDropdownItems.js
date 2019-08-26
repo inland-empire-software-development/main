@@ -38,7 +38,7 @@ function NavbarMobileDropdownItem(props) {
       setDropdownStyle({
         dropdownOpen: true,
         dropdownElem: {
-          height: "145px",
+          height: "auto",
         },
       });
     }
