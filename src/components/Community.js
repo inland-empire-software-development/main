@@ -98,7 +98,7 @@ function Community() {
   }, []);
 
   return (
-    <div className="grid-container community">
+    <div id="ourCommunity" className="grid-container community">
       <div className="column-24 " >
         <div className="swiper-container" >
           <div className="swiper-wrapper" >

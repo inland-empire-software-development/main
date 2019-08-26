@@ -28,7 +28,7 @@ function NavbarMobileMenu(props) {
               text: "GOALS & VALUES",
             },
             {
-              href: "#communitypic",
+              href: "#ourCommunity",
               text: "COMMUNITY",
             },
           ]}

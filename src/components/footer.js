@@ -59,13 +59,13 @@ function Footer() {
           <p>Navigate</p>
 
           <ul>
-            <li><a href="#">Join</a></li>
-            <li><a href="#">Speak</a></li>
-            <li><a href="#">Events</a></li>
-            <li><a href="#">Sponsors</a></li>
-            <li><a href="#">Organizers</a></li>
-            <li><a href="#">Contribute</a></li>
-            <li><a href="#">Community</a></li>
+            <li><a href="https://www.meetup.com/iesd-meetup/">Join</a></li>
+            {/* <li><a href="#">Speak</a></li> */}
+            <li><a href="https://www.meetup.com/iesd-meetup/events/">Events</a></li>
+            <li><a href="#sponsors">Sponsors</a></li>
+            <li><a href="#leadership">Organizers</a></li>
+            <li><a href="https://github.com/inland-empire-software-development/main">Contribute</a></li>
+            <li><a href="#ourCommunity">Community</a></li>
           </ul>
         </div>
 

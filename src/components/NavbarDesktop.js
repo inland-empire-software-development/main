@@ -11,7 +11,7 @@ function NavbarDesktop() {
           <div className="dropdown-content">
             <a href="#mission" className="">MISSION</a>
             <a href="#goals" className="">GOALS & VALUES</a>
-            <a href="#community" className="">COMMUNITY</a>
+            <a href="#ourCommunity" className="">COMMUNITY</a>
           </div>
         </div>
 
