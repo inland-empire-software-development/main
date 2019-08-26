@@ -28,7 +28,7 @@ function NavbarMobileMenu(props) {
               text: "GOALS & VALUES",
             },
             {
-              href: "#community",
+              href: "#communitypic",
               text: "COMMUNITY",
             },
           ]}
@@ -45,11 +45,11 @@ function NavbarMobileMenu(props) {
           mainItem={"LEADERSHIP"}
           subItemList={[
             {
-              href: "#organizers",
+              href: "#leadership",
               text: "ORGANIZERS",
             },
             {
-              href: "#past-speakers",
+              href: "#leadership",
               text: "PAST SPEAKERS",
             },
             {
@@ -64,22 +64,22 @@ function NavbarMobileMenu(props) {
           mainItem={"SPONSORS"}
           subItemList={[
             {
-              href: "#our-sponsors",
+              href: "#sponsors",
               text: "OUR SPONSORS",
             },
-            {
-              href: "#sponsor-packet",
-              text: "SPONSOR PACKET",
-            },
-            {
-              href: "#apply-to-speak",
-              text: "APPLY TO SPEAK",
-            },
+            // {
+            //   href: "#sponsor-packet",
+            //   text: "SPONSOR PACKET",
+            // },
+            // {
+            //   href: "#apply-to-speak",
+            //   text: "APPLY TO SPEAK",
+            // },
           ]}
         />
 
         <a
-          href="#"
+          href="#bloglist"
           className="navbar-mobile-item navbar-mobile-button">
           BLOG
         </a>
