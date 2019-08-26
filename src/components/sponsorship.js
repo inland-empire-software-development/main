@@ -10,7 +10,7 @@ function Sponsorship() {
   return (
     <div id="sponsorship" className="grid-container">
       {/* left side */}
-      <div id="sponsorship-description" className="column-14">
+      <div id="sponsorship-description" className="column-24">
         {/* sponsor-title */}
         <p id="sponsor-title">Interested in becoming a Sponsor?</p>
         <p>
@@ -19,7 +19,7 @@ function Sponsorship() {
           using the buttons on your right.
         </p>
       </div>
-      {/* Buttons below */}
+      {/* Buttons below
       <div className="column-10 phone-column-6 tablet-column-12">
         <button onClick={handleClick} id="one-time">
           One-time Sponsor
@@ -27,7 +27,7 @@ function Sponsorship() {
         <button onClick={hanldeRecurring} id="recurring" className="trailer-1">
           Recurring Sponsorship
         </button>
-      </div>
+      </div> */}
     </div>
   );
 }
