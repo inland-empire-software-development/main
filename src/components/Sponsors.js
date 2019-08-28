@@ -1,8 +1,12 @@
 function Sponsors() {
-
   const sponsorList = [
-    '../../static/images/desktop/UCRlogo.png',
-    '../../static/images/desktop/ExCITElogo.jpg',
+    '../../static/images/sponsors/ucr-logo.png',
+    '../../static/images/sponsors/excite-logo.jpg',
+    '../../static/images/sponsors/jetbrains-logo.png',
+    '../../static/images/sponsors/google-logo.png',
+    '../../static/images/sponsors/microsoft-logo.png',
+    '../../static/images/sponsors/atlassian-logo.png',
+    '../../static/images/sponsors/slack-logo.png',
   ];
   // initial render
   return (
@@ -13,8 +17,9 @@ function Sponsors() {
          possible by the following sponsors</p>
         <div className="sponsor-gallery">
           {sponsorList.map((sponsor, index) => (
-            <div className="column-6" key={index}>
-              <img src={sponsor}/>
+            <div className="logos"
+                key={index}>
+            <img src={sponsor}/>
             </div>
           ))}
         </div>

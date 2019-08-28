@@ -65,9 +65,6 @@ function SuccessStories() {
 
       {/* right section - buttons*/}
       <div className="success-btn-container">
-        <SuccessStoriesMoreBtn
-          linkToStory={linkToStory}
-        />
         <SocialBtnCircleContainer
           userStory={currentStory}
         />

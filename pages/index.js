@@ -2,7 +2,7 @@
 // eslint-disable-next-line no-unused-vars
 import React, {useState, useEffect} from 'react';
 import Announcements from '../src/components/Announcement';
-import BlogList from '../src/components/blogList';
+import BlogList from '../src/components/BlogList';
 import Community from '../src/components/Community';
 import FloatingBar from '../src/components/FloatingBar';
 import Footer from '../src/components/Footer';

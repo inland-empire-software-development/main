@@ -33,7 +33,7 @@ function Footer() {
 
           {/* copyright */}
           <p className="footer-copyright leader-1">
-            Â© 2019 Inland Empire Software<br/>
+            © 2019 Inland Empire Software<br/>
             Development, Inc. IESD.<br/>
             All rights reserved.
           </p>

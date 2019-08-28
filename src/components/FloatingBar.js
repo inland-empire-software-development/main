@@ -13,19 +13,19 @@ function FloatingBar() {
       </div>
 
       <div className="right-floating-bar">
-        <img className="social-twitter-link"
+        <a href="http://twitter.iesd.com" target="_blank"><img className="social-twitter-link"
           src="../../static/logos/twitter.svg"
-          title="Follow us on Twitter!" />
-        <img className="social-facebook-link"
+          title="Follow us on Twitter!" /></a>
+        <a href="http://facebook.iesd.com" target="_blank"><img className="social-facebook-link"
           src="../../static/logos/facebook.svg"
-          title="Follow us on Facebook!" />
+          title="Follow us on Facebook!"/></a>
         <hr className="floating-bar-inner-line"/>
-        <img className="social-meetup-link"
+        <a href="http://meetup.iesd.com" target="_blank"><img className="social-meetup-link"
           src="../../static/logos/meetup.svg"
-          title="Join us on Meetup!" />
-        <img className="social-slack-link"
+          title="Join us on Meetup!" /></a>
+        <a href="http://slack.iesd.com" target="_blank"><img className="social-slack-link"
           src="../../static/logos/slack.svg"
-          title="Join us on Slack!" />
+          title="Join us on Slack!" /></a>
       </div>
     </div>
   );

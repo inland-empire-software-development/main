@@ -34,11 +34,13 @@ function NavbarMobileMenu(props) {
           ]}
         />
 
-        <a
+        {/*
+               <a
           href="#"
           className="navbar-mobile-item navbar-mobile-button">
           EVENTS
         </a>
+        */}
 
         {/* LEADERSHIP, organizers, past speakers, success stories */}
         <NavbarMobileDropdownItems
@@ -85,7 +87,7 @@ function NavbarMobileMenu(props) {
         </a>
 
         <a
-          href="#join"
+          href="https://meetup.iesd.com"
           className="navbar-mobile-item navbar-mobile-button">
           JOIN
         </a>

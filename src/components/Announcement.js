@@ -2,7 +2,7 @@ function Announcements() {
   return (
     <div id="announcements" className="grid-container">
       <p>
-        <a href="https://github.com/inland-empire-software-development/main" target="_blank">Our site is currently under development by our members.</a>
+              Announcement: Make sure to sign-up for <a href="https://iesd.com/hackday" target="_blank">#Hackday</a>!
       </p>
     </div>
   );

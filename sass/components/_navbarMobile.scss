@@ -1,14 +1,14 @@
-.navbar-mobile{
-	-webkit-tap-highlight-color: transparent;
+.navbar-mobile {
+    -webkit-tap-highlight-color: transparent;
 
-	.navbar-mobile-logo{
-		position: absolute;
-		top: 30px;
-		left: 15px;
-		width: 125px;
+    .navbar-mobile-logo {
+        position: absolute;
+        top: 50px;
+        left: 15px;
+        width: 125px;
 
-		@media screen and (max-width: $small){
-			width: 100px; 
-		}
-	}
+        @media screen and (max-width: $small) {
+            width: 100px;
+        }
+    }
 }

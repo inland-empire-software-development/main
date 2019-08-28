@@ -1,16 +1,17 @@
 #announcements {
     height: 25px;
-    background-color: $yellow;
+    background-color: $black;
     text-align: center;
     font-family: 'Book';
     font-size: 14px;
+    color: $white;
     line-height: 24px;
 
     a {
-        color: $white;
+        color: $red;
 
         &:hover {
-            color: $navy;
+            color: $white;
         }
     }
 }

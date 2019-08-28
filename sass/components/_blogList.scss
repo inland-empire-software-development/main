@@ -70,14 +70,16 @@
     margin-top: 5px;
   }
 
-  .full-article-button {
+.full-article-button {
     text-align: center;
     color: $white;
-    width: 100%; 
+    width: 100%;
     bottom: 0 !important;
     display: block;
+    height: 35px;
+    line-height: 35px;
     position: absolute;
-  }
+}
 
   .blog-preview a:hover {
     text-decoration: none;
@@ -130,8 +132,10 @@
     }
 
     .full-article-button {
-      width: 140px;
-      margin-left: 15px;
+        width: 140px;
+        margin-left: 15px;
+        height: 35px;
+        line-height: 35px;
     }
 
   }
