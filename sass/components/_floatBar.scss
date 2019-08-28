@@ -1,0 +1,157 @@
+.floating-bar-main {
+    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: fixed;
+    height: 0;
+    max-width: 1400px;
+    width: 96%;
+    top: 30vh;
+    left: 2%;
+    z-index: 1;
+
+    .left-floating-bar {
+        transition: all .5s ease-in-out;
+        height: 100px;
+        position: relative;
+        top: 45px;
+
+        .left-floating-bar svg {
+            margin: 10px auto;
+        }
+
+        .fa-phone {
+            margin-bottom: 20px;
+        }
+
+        .fa-phone,
+        .fa-envelope {
+            font-size: 20px;
+            color: #3FB3E1 ;
+            display: block; 
+            border-width: 0px;
+            opacity: 0.85;
+
+            &:hover {
+                opacity: 1;
+                cursor: pointer;
+                filter: contrast(3.5);
+            }
+        }
+
+        .fa-comment-dots {
+            font-size: 25px;
+            color: #FFFFFF;
+            display: block;
+            -moz-transform: translateX(10px) translateY(-50px);
+            -o-transform: translateX(10px) translateY(-50px);
+            -webkit-transform: translateX(10px) translateY(-50px);
+            transform: translateX(10px) translateY(-50px);
+            border-width: 0px;
+        }
+
+        .floating-bar-contact {
+            font-family: "Book";
+            font-size: 16px;
+            color: #FFFFFF;
+            display: block;
+            -moz-transform: rotate(-90deg) translateX(20px);
+            /* FF3.5+ */
+            -o-transform: rotate(-90deg) translateX(20px);
+            /* Opera 10.5 */
+            -webkit-transform: rotate(-90deg) translateX(20px);
+            /* Safari 3.1+, Chrome */
+            transform: rotate(-90deg) translateX(20px);
+        }
+    }
+
+    .right-floating-bar {
+
+        img {
+            transition: all .25s ease-in-out;
+            opacity: 0.8;
+            margin: 20px auto;
+            display: block;
+
+            &:hover {
+                opacity: 1;
+                cursor: pointer;
+                filter: contrast(1.5);
+            }
+        }
+
+        .share-inner-div {
+            font-family: "Book";
+            font-size: 14px;
+            color: #FFFFFF;
+            display: block;
+            -moz-transform: rotate(-90deg) translateX(90px);
+            /* FF3.5+ */
+            -o-transform: rotate(-90deg) translateX(90px);
+            /* Opera 10.5 */
+            -webkit-transform: rotate(-90deg) translateX(90px);
+            /* Safari 3.1+, Chrome */
+            transform: rotate(-90deg) translateX(90px);
+        }
+
+
+        .social-slack-link {
+            position: relative;
+            width: 25px;
+        }
+
+        .social-twitter-link {
+            position: relative;
+            width: 25px;
+        }
+
+        .social-facebook-link {
+            position: relative;
+            height: 25px;
+        }
+
+        .social-meetup-link {
+            position: relative;
+            width: 25px;
+        }
+
+        .join-inner-div {
+            font-family: "Book";
+            font-size: 14px;
+            color: #FFFFFF;
+            display: block;
+            -moz-transform: rotate(-90deg) translateX(90px);
+            /* FF3.5+ */
+            -o-transform: rotate(-90deg) translateX(90px);
+            /* Opera 10.5 */
+            -webkit-transform: rotate(-90deg) translateX(90px);
+            /* Safari 3.1+, Chrome */
+            transform: rotate(-90deg) translateX(90px);
+        }
+
+        .floating-bar-inner-line {
+            background-color: #EC2242;
+            border: none;
+            height: 1px;
+            margin: 25px auto;
+        }
+    }
+}
+
+@media (max-width:860px) {
+    .floating-bar-main {
+        display: none;
+    }
+}
+
+
+@media (min-width: 1484px) {
+    .floating-bar-main {
+        left: calc(50% - 700px);
+    }
+}
