@@ -17,7 +17,7 @@ function Footer() {
             </p>
           </div>
 
-          {/* footer logo */}
+          {/* footer logo. */}
           <div>
             <img
               className="footer-logo"
@@ -33,7 +33,7 @@ function Footer() {
 
           {/* copyright */}
           <p className="footer-copyright leader-1">
-            © 2019 Inland Empire Software<br/>
+            ï¿½ 2019 Inland Empire Software<br/>
             Development, Inc. IESD.<br/>
             All rights reserved.
           </p>
