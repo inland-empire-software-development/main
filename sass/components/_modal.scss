@@ -1,7 +1,7 @@
 .modal {
   display: grid;
   position: fixed;
-  z-index: 10;
+  z-index: 1000;
   left: 0;
   top: 0;
   height: 100vh;
@@ -17,7 +17,6 @@
   .modal-con {
     padding: 30px;
     background-color: #f4f4f4;
-    /* box-shadow: 0 0 10px 1px #888; */
 
     #iF {
       width: 100%;

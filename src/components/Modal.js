@@ -2,7 +2,7 @@ function modal(props) {
   return (
     <div className="modal">
       {/* there is a class name 'modal-content' already being used somewhere else in the project */}
-      <div className="modal-con">This working modal</div>
+      <div className="modal-con">{props.content}</div>
     </div>
   );
 }

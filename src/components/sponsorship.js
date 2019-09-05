@@ -2,18 +2,15 @@ import React, { useState, useEffect } from "react";
 import Modal from "./Modal";
 
 function Sponsorship() {
-  // const [modalOn, setModal] = useState(false);
-  let modal = null;
+  const [modal, setModal] = useState(null);
 
   function handleModal(content) {
-    // setModal(true);
-    // window.onclick = event => {
-    //   if (event.target.className == "modal") {
-    //     setModal(false);
-    //   }
-    // };
-    console.log(modal);
-    modal = <div>Hey</div>;
+    setModal(<Modal content={content} />);
+    window.onclick = event => {
+      if (event.target.className == "modal") {
+        setModal(null);
+      }
+    };
   }
   function hanldeRecurring(e) {
     e.preventDefault();
@@ -22,11 +19,9 @@ function Sponsorship() {
   return (
     <div id="sponsorship" className="grid-container">
       {/* left side */}
-      {/* {modalOn ? <Modal /> : null} */}
 
+      {modal}
       <div id="sponsorship-description" className="column-14">
-        {/* sponsor-title */}
-        {modal}
         <p id="sponsor-title">Interested in becoming a Sponsor?</p>
         <p>
           To get started, (link goes here) to see the sponsorship packages we
@@ -38,7 +33,14 @@ function Sponsorship() {
       <div className="column-10 phone-column-6 tablet-column-12">
         <button
           onClick={() => {
-            handleModal("hell");
+            handleModal(
+              <iframe
+                id="iF"
+                frameBorder="0"
+                scrolling="no"
+                src="http://give.donatekindly.org/ie544/makedonation/donation/c711001e-0442-4c13-adeb-feb07e121807"
+              />
+            );
           }}
           id="one-time"
         >
