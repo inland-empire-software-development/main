@@ -186,11 +186,11 @@ function Leadership() {
               )}
             </ul>
           </div>
-          <p className="text-center">
-            <small>You can drag images left and right to see more.</small>
-          </p>
         </div>
       </div>
+      <p className="text-center">
+        You can drag images left and right to see more.
+      </p>
     </div>
   );
 }
