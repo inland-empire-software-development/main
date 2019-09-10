@@ -11,6 +11,33 @@ $red: #EC2242;
 $blue: #3FB3E1;
 $green: #02AE72;
 
+// branding colors
+.bg-navy {
+    background-color: $navy
+}
+
+;
+.bg-yellow {
+    background-color: $yellow
+}
+
+;
+.bg-red {
+    background-color: $red
+}
+
+;
+.bg-blue {
+    background-color: $blue
+}
+
+;
+.bg-green {
+    background-color: $green
+}
+
+;
+
 .yellow-red {
     background: -moz-linear-gradient(left, #f1af21 0%, #ec2242 76%);
     /* FF3.6-15 */
@@ -31,4 +58,12 @@ $green: #02AE72;
     /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#3fb3e1', endColorstr='#02ae72', GradientType=1);
     /* IE6-9 */
+}
+
+// selection color
+::selection {
+    background: $yellow; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+    background: $yellow; /* Gecko Browsers */
 }

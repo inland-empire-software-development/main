@@ -21,18 +21,18 @@ const blogPost = (props) => {
           {props.postData.title.rendered}
         </div>
         <div className = "blog-preview-author">
-          {props.postData._embedded.author[0].name} /
-          <span className = "blog-preview-date">
-            {new Intl.DateTimeFormat('en-US',
-                {year: 'numeric', month: 'long', day: 'numeric'})
-                .format(new Date(props.postData.date))}</span>
+          {props.postData._embedded.author[0].name}
         </div>
+        <div className = "blog-preview-date">
+          {new Intl.DateTimeFormat('en-US',
+              {year: 'numeric', month: 'long', day: 'numeric'})
+              .format(new Date(props.postData.date))}</div>
         <div className = "blog-preview-excerpt">
           {sanitizeHtml(props.postData.excerpt.rendered, {allowedTags: []})}
         </div>
       </div>
       <a href = {props.postData.link}>
-        <div className="full-article-button yellow-red">
+        <div className="full-article-button bg-red">
           read this article
         </div>
       </a>
