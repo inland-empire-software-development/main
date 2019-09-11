@@ -64,7 +64,9 @@ function HeroEvent() {
 
         <button
           onClick={() => window.open(`${eventLink}`)}
-          className="reserve-button">reserve a spot</button>
+          className="reserve-button hvr-ripple-out">
+          reserve a spot
+        </button>
 
       </div>
 
