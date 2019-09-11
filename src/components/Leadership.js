@@ -6,7 +6,6 @@ import '../../node_modules/swiper/dist/css/swiper.min.css';
 function Leadership() {
   useEffect(() => {
     new Swiper('.leadership-swiper', {
-      slidesPerView: 'auto',
       spaceBetween: 75,
       loop: true,
       slidesPerView: 4,
