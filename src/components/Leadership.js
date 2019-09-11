@@ -56,7 +56,7 @@ function Leadership() {
       {
         userName: 'Jen Latchman',
         title: 'Digital Marketing',
-        image: '../static/images/desktop/jenlatchman.png',
+        image: '../static/images/desktop/jenlatchman.jpg',
       },
       {
         userName: 'Jonathan Nguyen',
@@ -83,7 +83,7 @@ function Leadership() {
       {
         userName: 'Vast Lee',
         title: 'What Employers Want',
-        image: '../static/images/desktop/vastlee.png',
+        image: '../static/images/desktop/vastlee.jpg',
       },
       {
         userName: 'Tim Jenkins',

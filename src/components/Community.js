@@ -20,10 +20,6 @@ const commPic = [
     alt: 'community pic',
   },
   {
-    key: 5, image: '../../static/images/community/img_5.jpg',
-    alt: 'community pic',
-  },
-  {
     key: 6, image: '../../static/images/community/img_6.jpg',
     alt: 'community pic',
   },
@@ -37,10 +33,6 @@ const commPic = [
   },
   {
     key: 9, image: '../../static/images/community/img_9.jpg',
-    alt: 'community pic',
-  },
-  {
-    key: 10, image: '../../static/images/community/img_10.jpg',
     alt: 'community pic',
   },
   {
