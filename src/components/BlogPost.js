@@ -31,10 +31,9 @@ const blogPost = (props) => {
           {sanitizeHtml(props.postData.excerpt.rendered, {allowedTags: []})}
         </div>
       </div>
-      <a href = {props.postData.link}>
-        <div className="full-article-button bg-red">
+      <a className="full-article-button bg-red hvr-ripple-out"
+        href = {props.postData.link}>
           read this article
-        </div>
       </a>
     </div>
   );
