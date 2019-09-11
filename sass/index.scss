@@ -3,15 +3,16 @@
 
 @import
 'base/_colors',
-'base/_typography';
-  
+'base/_typography',
+'base/_animation';
 
-@import 
+
+@import
 'components/_community';
 
 @import
 'pages/_index';
- 
+
 @import
 'components/_announcements',
 'components/_blogList',

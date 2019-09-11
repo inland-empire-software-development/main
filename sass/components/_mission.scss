@@ -36,7 +36,7 @@
 
 		@media screen and (max-width: 991px){
 			.mission-desc {
-				font-size: 16px 
+				font-size: 16px
 			}
 		}
 
@@ -44,31 +44,31 @@
 			padding-top: 50px;
 			padding-bottom: 50px;
 		}
-  
+
 	}
 
 	#mission-right{
-		position: relative; 
+		position: relative;
 
 		.mission-image{
 			position: absolute;
 			top: 0;
 			left: 0;
 			width: 100%;
-			background: 
+			background:
 				url("../static/images/desktop/ie-cutout-image-background.jpg"),
 				linear-gradient(to left, rgba(236, 34, 66, 0.5), rgba(63, 179, 225, 0.5));
 			background-blend-mode: multiply;
 		    background-attachment: fixed;
 			background-size: 100%;
 			background-repeat: no-repeat;
-			background-position: 50% 90%;	
+			background-position: 50% 90%;
 
 			@media screen and (max-width: 1250px){
 				background-size: cover;
 			}
 		}
-		
+
 		.mission-cutout{
 			position: absolute;
 			top: 0;
@@ -83,11 +83,19 @@
 		@media screen and (max-width: 859px) {
 			height: 80vw;
 		}
- 
+
 	}
 
 	@media screen and (max-width: 859px){
 		max-height: none;
 		height: auto;
+	}
+
+	@media screen and (min-width: 1501px){
+		#mission-right {
+			.mission-image {
+				left: 2px;
+			}
+		}
 	}
 }
