@@ -37,6 +37,10 @@
 				font-family: "Book";
 				padding-left: 5px;
 				font-size: calc(.5em + .5vw);
+
+				@media screen and (min-width: 1440px){
+					font-size: 16px;
+				}
 			}
 
 			a:hover{
