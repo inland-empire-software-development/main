@@ -32,6 +32,34 @@ $green: #02AE72;
   background-color: $green;
 }
 
+.black {
+  color: $black;
+}
+
+.white {
+  color: $white;
+}
+
+.navy {
+  color: $navy;
+}
+
+.yellow {
+  color: $yellow;
+}
+
+.red {
+  color: $red;
+}
+
+.blue {
+  color: $blue;
+}
+
+.green {
+  color: $green;
+}
+
 .yellow-red {
   background: -moz-linear-gradient(left, #f1af21 0%, #ec2242 76%);
   /* FF3.6-15 */
@@ -65,15 +93,15 @@ $green: #02AE72;
 
 // borders
 .card-bar-blue {
-    border-top: 3px solid $blue;
+  border-top: 3px solid $blue;
 }
 
 .card-bar-red {
-    border-top: 3px solid $red;
+  border-top: 3px solid $red;
 }
 
 .card-bar-green {
-    border-top: 3px solid $green;
+  border-top: 3px solid $green;
 }
 
 .card-bar-yellow {

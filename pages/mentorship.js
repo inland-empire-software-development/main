@@ -4,11 +4,6 @@ import Announcements from "../src/components/Announcement";
 import PageTitle from "../src/components/PageTitle";
 import Card from "../src/components/Card";
 
-import mentorshipParallax from
-  "../static/images/mentorship/mentorship-amber-parallax.jpg";
-import mentorshipImage from
-  "../static/images/mentorship/peer-to-peer-mentorship.jpg";
-
 import '../node_modules/@fortawesome/fontawesome-free/js/all';
 import '../sass/index.scss';
 
@@ -24,40 +19,59 @@ function App() {
       <div className="grid-container content leader-3">
         <div className="column-20 pre-2 padding-leader-2 padding-trailer-2">
           <div className="column-10">
+            <h1 className="heading">What is a Mentorship</h1>
             <p>
-              Our mentorship program focuses on the education and empowerment of
-              community members interested in technology and entrepreneurship.
-              The goal of the program is to identify and solve the obstacles
-              keeping mentees from achieving their professional goals.
-              As a result, the program is customized to each participant
-              and their goals.
+              Our peer-to-peer mentorship program focuses on the skill
+              development and empowerment of community members. The program
+              provides successful applicants access to a mentor whose skills
+              align with their desired future role and a mentored project to
+              help them gain experience. Our goal is to provide members a faster and
+              clearer path to skill competency.
+
+              {/* Applicants must*/}
+              {/* be interested in entrepreneurship and technology. The goal of the*/}
+              {/* program is to provide community members a faster and more personal*/}
+              {/* way to build their skills. As a result, the program is customized*/}
+              {/* to each participant, their goals and their mentor.*/}
             </p>
           </div>
           <div className="column-10">
-            <img className="mentorship-intro-image" src={mentorshipImage} />
+            <img className="mentorship-intro-image right"
+              src="../static/images/mentorship/peer-to-peer-mentorship.jpg"
+            />
           </div>
         </div>
       </div>
 
       <div className="grid-container mentorship-parallax-amber"
-        style={{backgroundImage: `url(${mentorshipParallax})`}}>
+        style={{backgroundImage:
+            `url("../static/images/mentorship/mentorship-amber-parallax.jpg")`,
+        }}>
         <div className="parallax-overlay-black" />
+        <h1 className="pre-2 white">
+          “A mentor is someone who allows you to see the hope inside yourself.”
+          — Oprah Winfrey
+        </h1>
       </div>
 
       <div className="grid-container content leader-3">
         <div className="column-20 pre-2 padding-leader-2 padding-trailer-2">
+
           <div className="column-10">
-            <img className="mentorship-intro-image" src={mentorshipImage} />
+            <img className="mentorship-intro-image left"
+              src="../static/images/mentorship/mentorship-parker.jpg" />
           </div>
+
+
           <div className="column-10">
-            <h2>How it Works</h2>
+            <h1 className="heading">Benefits of a Mentorship</h1>
             <p>
-              Our mentorship program focuses on the education and empowerment of
-              community members interested in technology and entrepreneurship.
-              The goal of the program is to identify and solve the obstacles
-              keeping mentees from achieving their professional goals.
-              As a result, the program is customized to each participant
-              and their goals.
+              The advantages of the mentorship program extend to all involved in
+              the program, including our organization. As a mentee, you develop
+              skill competency faster, learn to manage professional
+              relationships, expand your network contacts, improve your
+              communication skills, gain confidence in your skills and gain
+              development experience.
             </p>
           </div>
 

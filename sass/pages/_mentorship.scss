@@ -6,7 +6,6 @@
   }
 
   .mentorship-intro-image {
-    margin: 0 auto;
     display: block;
     width: 100%;
     max-width: 500px;
@@ -23,5 +22,16 @@
     height: 350px;
     background-attachment: fixed;
     background-position: center;
+    position: relative;
+    display: block;
+
+    h1 {
+      position: absolute;
+      width: 300px;
+      text-align: left;
+      top: 45%;
+      bottom: 50%;
+      font-size: 18px;
+    }
   }
 }
