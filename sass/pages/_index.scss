@@ -4,7 +4,13 @@ html {
     body {
         overflow-x: hidden;
     }
-}	
+}
+
+a {
+  &:hover {
+    color: $white;
+  }
+}
 
 p {
   z-index: 1;

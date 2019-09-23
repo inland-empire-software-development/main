@@ -3,7 +3,6 @@
  * @return {Footer}
  */
 function Footer() {
-  // initial render
   return (
     <footer className="grid-container">
       {/* top section */}
@@ -12,8 +11,8 @@ function Footer() {
 
           <div className="phone-show">
             <p className="footer-purpose leader-2 phone-trailer-2">
-              We help developers grow, network and contribute to a
-              greater purpose.
+              We help developers grow, network and contribute to their
+              community.
             </p>
           </div>
 
@@ -43,8 +42,8 @@ function Footer() {
         {/* purpose */}
         <div className="column-14 pre-2 phone-hide">
           <p className="footer-purpose leader-2">
-            We help developers grow, network and contribute to a
-            greater purpose.
+            We help developers grow, network and contribute to their
+            community
           </p>
         </div>
 

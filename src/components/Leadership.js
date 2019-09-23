@@ -6,7 +6,6 @@ import '../../node_modules/swiper/dist/css/swiper.min.css';
 function Leadership() {
   useEffect(() => {
     new Swiper('.leadership-swiper', {
-      slidesPerView: 'auto',
       spaceBetween: 75,
       loop: true,
       slidesPerView: 4,
@@ -57,7 +56,7 @@ function Leadership() {
       {
         userName: 'Jen Latchman',
         title: 'Digital Marketing',
-        image: '../static/images/desktop/jenlatchman.png',
+        image: '../static/images/desktop/jenlatchman.jpg',
       },
       {
         userName: 'Jonathan Nguyen',
@@ -84,7 +83,7 @@ function Leadership() {
       {
         userName: 'Vast Lee',
         title: 'What Employers Want',
-        image: '../static/images/desktop/vastlee.png',
+        image: '../static/images/desktop/vastlee.jpg',
       },
       {
         userName: 'Tim Jenkins',
@@ -186,11 +185,11 @@ function Leadership() {
               )}
             </ul>
           </div>
-          <p className="text-center">
-            <small>You can drag images left and right to see more.</small>
-          </p>
         </div>
       </div>
+      <p className="text-center">
+        You can drag images left and right to see more.
+      </p>
     </div>
   );
 }
