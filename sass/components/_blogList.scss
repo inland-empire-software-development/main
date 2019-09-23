@@ -9,7 +9,7 @@
     padding-bottom: 55px;
 
     .swiper-slide {
-      height: 380px;
+      height: 410px;
       display: block;
       text-align: left;
       font-size: 14px;
@@ -115,12 +115,12 @@
 
     .blog-preview-content {
       max-width: 310px;
-      padding: 10px 15px 15px;
+      padding: 10px 5px 15px 5px;
       box-sizing: border-box;
     }
 
     .blog-preview-title {
-      font-size: 20px;
+      font-size: 16px;
     }
 
     .blog-preview-author {
@@ -133,9 +133,18 @@
 
     .full-article-button {
         width: 140px;
-        margin-left: 15px;
+        margin-left: 5px;
         height: 35px;
         line-height: 35px;
+        bottom: 10px !important;
     }
 
+  }
+  @media screen and (max-width: 600px){
+    #bloglist{
+      .swiper-slide {
+        height: 360px;
+        margin: 0 1.5%  50px 1.5%  !important;
+      }
+    }
   }
