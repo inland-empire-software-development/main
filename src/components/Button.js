@@ -7,6 +7,7 @@ function Button(props) {
   const {
     link,
     label,
+    classes = "",
     border = "border-red",
     borderSize = "1",
     type = "button",
@@ -22,7 +23,8 @@ function Button(props) {
     <a href={link}
       target="_blank"
       className={`${type} ${color} ${text} button-${widths[width]} 
-      font-size-${size} ${border} border-size-${borderSize} hvr-ripple-out`}>
+      font-size-${size} ${border} border-size-${borderSize} hvr-ripple-out 
+      ${classes}`}>
       {label}
     </a>
   );

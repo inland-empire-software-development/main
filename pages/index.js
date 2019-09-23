@@ -27,7 +27,7 @@ function App() {
   return (
     <div className="grid-container home">
       <Announcements />
-      <Hero navbar={true} event={false} />
+      <Hero navbar={true} event={true} />
       <Slogan />
       <Mission />
       <Goals />
