@@ -1,6 +1,6 @@
 .mentorship {
-  p {
-    font-size: calc(16px + 0.5vw);
+  p.body-content {
+    font-size: calc(16px + 0.4vw);
     font-family: 'Book', sans-serif;
     line-height: 36px;
   }
@@ -15,10 +15,18 @@
     background-color: rgba(0, 0, 0, 0.6);
     width: 100%;
     height: 100%;
+    position: absolute;
     background-position: 100% 50%;
   }
 
-  .mentorship-parallax-amber {
+  .mentorship-parallax-robin {
+    background-size: 100% 150%;
+    background-repeat: no-repeat;
+  }
+
+  .mentorship-parallax-background,
+  .mentorship-parallax-amber,
+  .mentorship-parallax-robin {
     height: 350px;
     background-attachment: fixed;
     background-position: center;
@@ -33,5 +41,18 @@
       bottom: 50%;
       font-size: 18px;
     }
+  }
+
+  .mentorship-parallax-background,
+  .mentorship-parallax-robin {
+    height: 250px;
+  }
+
+  .mentorship-parallax-background a.button {
+    top: 100px;
+  }
+
+  small {
+    font-size: 12px;
   }
 }

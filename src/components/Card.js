@@ -4,20 +4,31 @@
  * @constructor
  */
 function Card(props) {
-  const {color, title, description, content, link, linkLabel} = props;
+  const {color, title, description, content, link, linkLabel, subTitle} = props;
   return (
     <div className={"card card-bar-" + color + " block"}>
       <div className="card-content text-center">
         <h4>{title}</h4>
-        <p className="font-size--3 text-darker-gray trailer-0">
-          <b>{description}</b>
+        <p className="trailer-0">
+          <b>{subTitle}</b>
         </p>
 
-        <hr />
-        <p className="trailer-0">{content}</p>
-        <a href={link} className="btn btn-clear btn-fill leader-1">
-          {linkLabel}
-        </a>
+        <div className="trailer-1 card-content-body">
+          <b>{description}</b>
+        </div>
+
+        {(content || link) && <hr /> }
+
+        {content &&
+          <p className="trailer-0">{content}</p>
+        }
+
+        {link && linkLabel &&
+          <a href={link} className="btn btn-clear btn-fill leader-1">
+            {linkLabel}
+          </a>
+        }
+
       </div>
     </div>
   );

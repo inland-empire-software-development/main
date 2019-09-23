@@ -32,6 +32,14 @@ $green: #02AE72;
   background-color: $green;
 }
 
+.bg-black {
+  background-color: $black;
+}
+
+.bg-white {
+  background-color: $white;
+}
+
 .black {
   color: $black;
 }
@@ -106,4 +114,47 @@ $green: #02AE72;
 
 .card-bar-yellow {
   border-top: 3px solid $yellow;
+}
+
+.border-blue,
+.border-green,
+.border-red,
+.border-yellow {
+  border-style: solid;
+}
+
+.border-red {
+  border-color: $red;
+}
+
+.border-blue {
+  border-color: $blue;
+}
+
+.border-green {
+  border-color: $green;
+}
+
+.border-yellow {
+  border-color: $yellow;
+}
+
+.border-size-1 {
+  border-width: 1px;
+}
+
+.border-size-2 {
+  border-width: 2px;
+}
+.border-size-3 {
+  border-width: 3px;
+}
+.border-size-4 {
+  border-width: 4px;
+}
+.border-size-5 {
+  border-width: 5px;
+}
+.border-size-6 {
+  border-width: 6px;
 }
