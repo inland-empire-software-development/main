@@ -17,7 +17,7 @@ function App() {
       <Announcements/>
       <PageTitle title="Mentorship"/>
 
-      <div className="grid-container content leader-3">
+      <div className="grid-container content leader-3 phone-leader-0 tablet-leader-1">
         <div className="column-20 pre-2 padding-leader-2 padding-trailer-2">
           <div className="column-10">
             <h1 className="heading">What is a Mentorship</h1>
@@ -67,7 +67,7 @@ function App() {
           <div className="column-10">
             <figure>
               <img className="mentorship-intro-image left"
-                   src="../static/images/mentorship/mentorship-parker.jpg"
+                src="../static/images/mentorship/mentorship-parker.jpg"
               />
               <figcaption className="left">
                 Joaquin Martinez, Eden Ragsdale & Parker Bjur
@@ -185,6 +185,31 @@ function App() {
 
         <div className="column-20 pre-2">
           <div className="column-10">
+            <figure>
+              <img src="../static/images/mentorship/mentorship-luis.jpg" />
+              <figcaption>Luis Velazquez & Gray Cash</figcaption>
+            </figure>
+
+            <p className="padding-leader-2">
+              <Button link="#" label="Mentorship Application" width={3}/>
+            </p>
+
+          </div>
+          <div className="column-10">
+            <h2>
+              A Succesful Applicant
+            </h2>
+            <p>
+              A successful applicant is a community member that applies,
+              meets all
+              the minimum requirements and is sent an e-mail of acceptance.
+              Applicants normally know within 2-3 weeks if they have been
+              accepted or not. As this is a community driven program with
+              working
+              professionals in the industry, we unfortunately cannot guarantee
+              everyone a mentor.
+            </p>
+
             <section className="panel">
               <strong>Applicant requirements:</strong>
               <ul>
@@ -208,25 +233,6 @@ function App() {
                   the organization. (progress, issues, concerns, etc.)</li>
               </ul>
             </section>
-          </div>
-          <div className="column-10">
-            <h2>
-              A Succesful Applicant
-            </h2>
-            <p>
-              A successful applicant is a community member that applies,
-              meets all
-              the minimum requirements and is sent an e-mail of acceptance.
-              Applicants normally know within 2-3 weeks if they have been
-              accepted or not. As this is a community driven program with
-              working
-              professionals in the industry, we unfortunately cannot guarantee
-              everyone a mentor.
-            </p>
-
-            <p className="padding-leader-2">
-              <Button link="#" label="Apply for Mentorship" width={3}/>
-            </p>
           </div>
 
 

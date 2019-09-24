@@ -1,4 +1,13 @@
 .mentorship {
+  img {
+    @media screen and (max-width: $medium) {
+      margin: 0 auto;
+      display: block;
+      position: relative;
+      float: none;
+    }
+  }
+
   p.body-content {
     font-size: calc(16px + 0.4vw);
     font-family: 'Book', sans-serif;
