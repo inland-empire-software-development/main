@@ -64,4 +64,9 @@
   small {
     font-size: 12px;
   }
+  .mentor-card{
+    @media screen and (max-width: $small) {
+      padding-right: 1.5rem;
+    }
+  }
 }

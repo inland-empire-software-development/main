@@ -16,7 +16,6 @@ function App() {
     <div className="grid-container mentorship">
       <Announcements/>
       <PageTitle title="Mentorship"/>
-
       <div className="grid-container content leader-3 phone-leader-0 tablet-leader-1">
         <div className="column-20 pre-2 padding-leader-2 padding-trailer-2">
           <div className="column-10">
@@ -52,17 +51,17 @@ function App() {
       <div className="grid-container mentorship-parallax-amber"
         style={{
           backgroundImage:
-             `url("../static/images/mentorship/mentorship-amber-parallax.jpg")`,
+            `url("../static/images/mentorship/mentorship-amber-parallax.jpg")`,
         }}>
         <div className="parallax-overlay-black"/>
-        <h1 className="pre-2 white">
+        <h1 className="pre-2 padding-left-1 white">
           “A mentor is someone who allows you to see the hope inside yourself.”
           — Oprah Winfrey
         </h1>
       </div>
 
       <div className="grid-container content leader-3">
-        <div className="column-20 pre-2 padding-leader-2 padding-trailer-2">
+        <div className="column-20 pre-2 padding-leader-2 phone-padding-trailer-0 padding-trailer-2">
 
           <div className="column-10">
             <figure>
@@ -94,15 +93,15 @@ function App() {
       {/* Content */}
       <div className="grid-container content">
         {/* peer to peer mentorship cards*/}
-        <div className="column-20 pre-2 padding-leader-2 padding-trailer-2">
+        <div className="column-20 pre-2 phone-padding-leader-0 padding-leader-2 padding-trailer-2">
           <div className="column-5">
             <h2 className="text-darker-gray leader-3 font-size-5">
               A community mentorship program
             </h2>
           </div>
 
-          <div className="column-14 pre-1">
-            <div className="block-group block-group-2-up trailer-2 leader-2">
+          <div className="column-14 ment-card pre-1">
+            <div className="block-group phone-block-group-1-up block-group-2-up trailer-2 leader-2">
 
               <Card color="yellow"
                 title="Traditional"
@@ -242,7 +241,7 @@ function App() {
       <div className="grid-container mentorship-parallax-robin"
         style={{
           backgroundImage:
-               `url("../static/images/mentorship/mentorship-members-v1.jpg")`,
+            `url("../static/images/mentorship/mentorship-members-v1.jpg")`,
         }}>
         <div className="parallax-overlay-black"/>
       </div>

@@ -6,7 +6,7 @@
 function Card(props) {
   const {color, title, description, content, link, linkLabel, subTitle} = props;
   return (
-    <div className={"card card-bar-" + color + " block"}>
+    <div className={"card card-bar-" + color + " block" + " phone-leader-1"}>
       <div className="card-content text-center">
         <h4>{title}</h4>
         <p className="trailer-0">

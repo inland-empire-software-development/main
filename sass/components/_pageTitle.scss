@@ -2,7 +2,10 @@ header#pageTitle {
   height: 275px;
 
   @media screen and (max-width: $small) {
-      height: 190px;
+    height: 190px;
+    background-size: 700px 190px;
+    background-position: left;
+    background-repeat: no-repeat;
   }
 
   h1 {
