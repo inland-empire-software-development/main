@@ -1,0 +1,28 @@
+header#pageTitle {
+  height: 275px;
+
+  @media screen and (max-width: $small) {
+      height: 190px;
+  }
+
+  h1 {
+    font-family: "Block", sans-serif;
+    color: #fff;
+    position: relative;
+    bottom: -187px;
+    font-size: 75px;
+    margin: 0 auto;
+    left: -10px;
+
+    @media screen and (max-width: $medium) {
+      font-size: 60px;
+      bottom: -205px;
+      left: 0;
+    }
+
+    @media screen and (max-width: $small) {
+      font-size: 40px;
+      bottom: -144px;
+    }
+  }
+}

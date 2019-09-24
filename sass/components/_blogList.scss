@@ -65,9 +65,21 @@
 
   .blog-preview-excerpt {
     line-height: 1.3em;
-    height: 70px;
+    height: 125px;
     overflow: hidden;
-    margin-top: 5px;
+    margin-top: 2px;
+  }
+
+  .blog-preview-link {
+    color: $dark-gray;
+    font-family: "Black", sans-serif;
+    margin-left: 5px;
+    transition: all 0.25s ease-in;
+
+    &:hover {
+      color: $black;
+      text-decoration: underline;
+    }
   }
 
 .full-article-button {
@@ -80,11 +92,6 @@
     line-height: 35px;
     position: absolute;
 }
-
-  .blog-preview a:hover {
-    text-decoration: none;
-  }
-
   @media screen and (min-width: $medium) {
     .blog-preview {
       padding: 0 10px;
@@ -115,7 +122,7 @@
 
     .blog-preview-content {
       max-width: 310px;
-      padding: 10px 5px 15px 5px;
+      padding: 10px 5px 5px 5px;
       box-sizing: border-box;
     }
 

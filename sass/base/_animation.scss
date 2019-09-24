@@ -28,7 +28,6 @@
 .hvr-ripple-out:before {
   content: '';
   position: absolute;
-  border: $red solid 6px;
   top: 0;
   right: 0;
   bottom: 0;
@@ -36,6 +35,20 @@
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
 }
+
+.hvr-ripple-out.border-red:before {
+  border: $red solid 6px;
+}
+.hvr-ripple-out.border-blue:before {
+  border: $blue solid 6px;
+}
+.hvr-ripple-out.border-yellow:before {
+  border: $yellow solid 6px;
+}
+.hvr-ripple-out.border-blue:before {
+  border: $blue solid 6px;
+}
+
 .hvr-ripple-out:hover:before, .hvr-ripple-out:focus:before, .hvr-ripple-out:active:before {
   -webkit-animation-name: hvr-ripple-out;
   animation-name: hvr-ripple-out;
