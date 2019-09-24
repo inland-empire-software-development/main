@@ -1,4 +1,5 @@
 import React from 'react';
+import Button from "./Button";
 import sanitizeHtml from 'sanitize-html';
 
 const blogPost = (props) => {
@@ -16,6 +17,7 @@ const blogPost = (props) => {
           {category[0].toUpperCase() + category.slice(1)}
         </div>
       </div>
+
       <div className = "blog-preview-content">
         <div className = "blog-preview-title">
           {props.postData.title.rendered}
@@ -31,10 +33,8 @@ const blogPost = (props) => {
           {sanitizeHtml(props.postData.excerpt.rendered, {allowedTags: []})}
         </div>
       </div>
-      <a className="full-article-button bg-red hvr-ripple-out"
-        href = {props.postData.link}>
-          read this article
-      </a>
+
+      <a className="blog-preview-link" href={props.postData.link}>read this article</a>
     </div>
   );
 };

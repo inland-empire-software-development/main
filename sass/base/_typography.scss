@@ -31,3 +31,8 @@ $custom-fonts-path : '/static/fonts';
     font-family: "Block";
     src: url($custom-fonts-path + "/Big-John.otf");
 }
+
+.heading {
+    font-family: 'Black', sans-serif;
+    font-size: calc(18px + 0.5vw);
+}

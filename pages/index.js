@@ -25,9 +25,9 @@ import {withRouter} from 'next/router';
 function App() {
   // initial render
   return (
-    <div className="grid-container">
+    <div className="grid-container home">
       <Announcements />
-      <Hero />
+      <Hero navbar={true} event={true} />
       <Slogan />
       <Mission />
       <Goals />

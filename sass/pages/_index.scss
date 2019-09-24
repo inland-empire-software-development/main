@@ -1,3 +1,4 @@
+// These apply to all pages
 html {
     scroll-behavior: smooth;
 
@@ -14,4 +15,9 @@ a {
 
 p {
   z-index: 1;
+}
+
+.content {
+  min-height: 400px;
+  background-color: $white;
 }
