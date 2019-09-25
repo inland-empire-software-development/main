@@ -17,13 +17,13 @@ function App() {
       <Announcements/>
       <PageTitle title="Mentorship"/>
       <div className="grid-container content leader-3 phone-leader-0 tablet-leader-1">
-        <div className="column-20 pre-2 padding-leader-2 padding-trailer-2">
+        <div className="column-20 phone-padding-trailer-2 pre-2 padding-leader-2 padding-trailer-2">
           <div className="column-10">
             <h1 className="heading">What is a Mentorship</h1>
-            <p className="body-content">
+            <p className="body-content phone-trailer-half">
               Our mentorship program focuses on the skill
               development and the empowerment of community members. It
-              provides successful applicants<span className="red">*</span>
+              provides successful applicants<span className="red">* </span>
               access to a mentor whose skills
               align with their desired future role and a mentored project to
               help them gain experience. Our goal is to provide members a faster
@@ -61,7 +61,7 @@ function App() {
       </div>
 
       <div className="grid-container content leader-3">
-        <div className="column-20 pre-2 padding-leader-2 phone-padding-trailer-0 padding-trailer-2">
+        <div className="column-20 pre-2 phone-padding-leader-0 padding-leader-2 phone-padding-trailer-0 padding-trailer-2">
 
           <div className="column-10">
             <figure>
@@ -75,7 +75,7 @@ function App() {
           </div>
 
 
-          <div className="column-10">
+          <div className="column-10 phone-leader-2">
             <h1 className="heading">Benefits of a Mentorship</h1>
             <p className="body-content">
               The advantages of the mentorship program extend to all involved in
@@ -95,13 +95,13 @@ function App() {
         {/* peer to peer mentorship cards*/}
         <div className="column-20 pre-2 phone-padding-leader-0 padding-leader-2 padding-trailer-2">
           <div className="column-5">
-            <h2 className="text-darker-gray leader-3 font-size-5">
+            <h2 className="text-darker-gray phone-leader-1 phone-trailer-0 leader-3 font-size-5">
               A community mentorship program
             </h2>
           </div>
 
-          <div className="column-14 ment-card pre-1">
-            <div className="block-group phone-block-group-1-up block-group-2-up trailer-2 leader-2">
+          <div className="column-14 mentor-card pre-1">
+            <div className="block-group phone-block-group-1-up block-group-2-up trailer-2 phone-leader-half leader-2">
 
               <Card color="yellow"
                 title="Traditional"
@@ -163,12 +163,12 @@ function App() {
         }}>
 
         <div className="parallax-overlay-black"/>
-        <Button link="" label="Request Information" width="0"/>
+        <Button link="" label=" Request Information" classes="padding-left-half" width="0"/>
       </div>
 
 
-      <div className="grid-container padding-leader-2 padding-trailer-2">
-        <div className="column-20 pre-2 padding-leader-3 padding-trailer-3">
+      <div className="grid-container phone-padding-leader-0 padding-leader-2 padding-trailer-2">
+        <div className="column-20 pre-2 phone-padding-trailer-2 padding-leader-3 padding-trailer-3">
           <h1>How the Mentorship Program Works</h1>
 
           <p>
@@ -209,7 +209,7 @@ function App() {
               everyone a mentor.
             </p>
 
-            <section className="panel">
+            <section className="panel phone-leader-2 mentor-panel">
               <strong>Applicant requirements:</strong>
               <ul>
                 <li>
@@ -247,7 +247,7 @@ function App() {
       </div>
 
       <div className="grid-container">
-        <div className="column-20 pre-2 padding-leader-3 padding-trailer-3">
+        <div className="column-20 pre-2 phone-padding-leader-2 padding-leader-3 padding-trailer-3">
           <div className="column-10">
             <h2>
               Mentoring
@@ -262,7 +262,7 @@ function App() {
               your community.
             </p>
 
-            <section className="panel">
+            <section className="panel phone-leader-2 phone-trailer-2">
               <strong>Mentor Requirements:</strong>
               <ul>
                 <li>Be accessible via Slack during the mentorship.</li>
@@ -277,7 +277,7 @@ function App() {
 
           </div>
 
-          <div className="column-10 text-right">
+          <div className="column-10 mentor-pic text-right">
             <figure>
               <img src="../static/images/mentorship/mentorship-ziah.jpg" />
               <figcaption>Ziah Miller & Jake Marshall</figcaption>

@@ -69,4 +69,15 @@
       padding-right: 1.5rem;
     }
   }
+  .mentor-panel{
+    @media screen and (max-width: $small) {
+      margin-left: -.8rem;
+    }
+  }
+
+  .mentor-pic{
+    @media screen and (max-width: $small) {
+      margin-left: -.4em;
+    }
+  }
 }
