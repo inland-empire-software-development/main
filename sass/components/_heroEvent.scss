@@ -2,13 +2,11 @@
 	position: relative;
 	height: 185px;
 	width: 450px;
-	z-index: 99;
-	top: 180px;
-	margin: 0 auto;
 	display: block;
+	margin: 8% auto 0 auto;
 
 	p {
-		margin: 0px;
+		margin: 0;
 		color: $white;
 	}
 
@@ -210,7 +208,7 @@
 			height: 39px;
 			width: 100%;
 			margin-top: 5px;
-			font-family: 'Book';
+			font-family: 'Book', sans-serif;
 			font-size: 26px;
 			color: $white;
 			border: none;
