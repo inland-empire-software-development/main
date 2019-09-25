@@ -2,7 +2,7 @@
 	max-height: 446px;
 	height: 29.7vw;
 
-	@media screen and (max-width: $medium){
+	@media screen and (max-width: 860px){
 		height: 100%;
 		max-height: none;
 	}
@@ -60,7 +60,7 @@
 
 		@media screen and (max-width: 991px){
 			.goals-desc {
-				font-size: 16px 
+				font-size: 16px
 			}
 		}
 

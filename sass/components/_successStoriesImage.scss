@@ -13,7 +13,7 @@
 		left: 0;
 		height: inherit;
 
-		@media screen and (max-width: $medium){
+		@media screen and (max-width: 860px){
 			max-height: none;
 			width: 100%;
 			height: auto;
@@ -29,7 +29,7 @@
 		width: 100%;
 		background: linear-gradient(to right, rgba(241, 175, 33, 0.2), rgba(236, 34, 66, 0.2) 50%);
 
-		@media screen and (max-width: $medium){
+		@media screen and (max-width: 860px){
 			height: 100%;
 		}
 	}

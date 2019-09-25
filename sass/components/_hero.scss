@@ -1,15 +1,8 @@
 #hero {
-    background: url("../static/images/desktop/hero-gradient.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    min-height: 628px;
-    
-    @media screen and (max-width: $small) {
-        background: url("../static/images/mobile/hero-gradient.jpg");
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        min-height: 400px;
-    }
+  max-height: 100vh;
+  display: block;
+  overflow: hidden;
+  height: auto;
 }
+
+

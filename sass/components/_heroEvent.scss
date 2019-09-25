@@ -20,7 +20,7 @@
 		margin-right: auto;
 	}
 
-	@media screen and (max-width: $medium) {
+	@media screen and (max-width: 860px) {
 		left: 0;
 		right: 0;
 		top: 150px;
@@ -28,7 +28,7 @@
 		margin-right: auto;
 	}
 
-	@media screen and (max-width: $small) {
+	@media screen and (max-width: 480px) {
 		width: 320px;
 	}
 
@@ -55,7 +55,7 @@
 				text-align: center;
 				line-height: 62px;
 
-				@media screen and (max-width: $small){
+				@media screen and (max-width: 480px){
 					margin-bottom: 0;
 					height: 87px;
 					display: flex;
@@ -77,7 +77,7 @@
 				text-align: center;
 			}
 
-			@media screen and (max-width: $medium) {
+			@media screen and (max-width: 860px) {
 				height: 75%;
 				align-items: flex-end;
 
@@ -87,7 +87,7 @@
 				}
 			}
 
-			@media screen and (max-width: $small) {
+			@media screen and (max-width: 480px) {
 				.hero-event-day {
 					font-size: 70px;
 				}
@@ -120,7 +120,7 @@
 			justify-content: space-between;
 			text-align: right;
 
-			@media screen and (max-width: $small) {
+			@media screen and (max-width: 480px) {
 				padding-left: 10px;
 			}
 
@@ -134,7 +134,7 @@
 				}
 			}
 
-			@media screen and (max-width: $medium) {
+			@media screen and (max-width: 860px) {
 				.event-name {
 					font-size: 20px;
 
@@ -144,7 +144,7 @@
 				}
 			}
 
-			@media screen and (max-width: $small) {
+			@media screen and (max-width: 480px) {
 				.event-name {
 					margin-top: 5px;
 					font-size: 18px;
@@ -169,7 +169,7 @@
 					font-size: 13px;
 				}
 
-				@media screen and (max-width: $medium) {
+				@media screen and (max-width: 860px) {
 					p:first-child {
 						font-size: 12px;
 						line-height: 14px;
@@ -180,7 +180,7 @@
 					}
 				}
 
-				@media screen and (max-width: $small) {
+				@media screen and (max-width: 480px) {
 					p:first-child {
 						font-size: 10px;
 						line-height: 12px;

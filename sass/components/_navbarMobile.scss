@@ -7,7 +7,7 @@
         left: 15px;
         width: 125px;
 
-        @media screen and (max-width: $small) {
+        @media screen and (max-width: 480px) {
             width: 100px;
         }
     }
