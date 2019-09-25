@@ -1,8 +1,13 @@
 #hero {
-  max-height: 100vh;
-  display: block;
-  overflow: hidden;
   height: auto;
+  min-height: 80vh;
+  padding-bottom: 25px;
+  position: relative;
+  overflow: hidden;
+
+  .uk-overlay-primary {
+    background-color: rgba(0,0,0,0.9);
+  }
 }
 
 

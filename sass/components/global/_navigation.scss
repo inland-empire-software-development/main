@@ -27,6 +27,7 @@
     line-height: 10px;
 
     a {
+      color: $white !important;
       font-weight: 100;
       font-size: 16px;
       text-transform: uppercase;
@@ -42,6 +43,12 @@
       width: 13px;
       left: 5px;
       position: relative;
+    }
+  }
+
+  li {
+    a {
+      color: $white;
     }
   }
 
@@ -77,3 +84,16 @@
   }
 }
 
+.uk-navbar-container {
+  .uk-navbar-dropdown-nav {
+    padding-top: 25px;
+
+    a {
+      transition: color 0.25s ease-in-out;
+
+      &:hover {
+        color: $blue !important;
+      }
+    }
+  }
+}
