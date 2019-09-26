@@ -3,18 +3,22 @@
 
 @import
 'base/_colors',
-'base/_typography';
-  
+'base/_typography',
+'base/_animation';
 
-@import 
+
+@import
 'components/_community';
 
 @import
-'pages/_index';
- 
+'pages/_index',
+'pages/_mentorship';
+
 @import
 'components/_announcements',
 'components/_blogList',
+'components/_button',
+'components/_card',
 'components/_floatBar',
 'components/_footer',
 'components/_goals',
@@ -30,6 +34,7 @@
 'components/_navbarMobile',
 'components/_navbarMobileDropdownItems',
 'components/_navbarMobileMenu',
+'components/_pageTitle',
 'components/_slogan',
 'components/_socialBtnCircle',
 'components/_socialBtnCircleContainer',

@@ -3,7 +3,6 @@
  * @return {Footer}
  */
 function Footer() {
-  // initial render
   return (
     <footer className="grid-container">
       {/* top section */}
@@ -12,8 +11,8 @@ function Footer() {
 
           <div className="phone-show">
             <p className="footer-purpose leader-2 phone-trailer-2">
-              We help developers grow, network and contribute to a
-              greater purpose.
+              We help developers grow, network and contribute to their
+              community.
             </p>
           </div>
 
@@ -33,7 +32,7 @@ function Footer() {
 
           {/* copyright */}
           <p className="footer-copyright leader-1">
-            Â© 2019 Inland Empire Software<br/>
+            © 2019 Inland Empire Software<br/>
             Development, Inc. IESD.<br/>
             All rights reserved.
           </p>
@@ -43,8 +42,8 @@ function Footer() {
         {/* purpose */}
         <div className="column-14 pre-2 phone-hide">
           <p className="footer-purpose leader-2">
-            We help developers grow, network and contribute to a
-            greater purpose.
+            We help developers grow, network and contribute to their
+            community
           </p>
         </div>
 
@@ -59,13 +58,13 @@ function Footer() {
           <p>Navigate</p>
 
           <ul>
-            <li><a href="#">Join</a></li>
-            <li><a href="#">Speak</a></li>
-            <li><a href="#">Events</a></li>
-            <li><a href="#">Sponsors</a></li>
-            <li><a href="#">Organizers</a></li>
-            <li><a href="#">Contribute</a></li>
-            <li><a href="#">Community</a></li>
+            <li><a href="https://www.meetup.com/iesd-meetup/">Join</a></li>
+            {/* <li><a href="#">Speak</a></li> */}
+            <li><a href="https://www.meetup.com/iesd-meetup/events/">Events</a></li>
+            <li><a href="#sponsors">Sponsors</a></li>
+            <li><a href="#leadership">Organizers</a></li>
+            <li><a href="https://github.com/inland-empire-software-development/main">Contribute</a></li>
+            <li><a href="#ourCommunity">Community</a></li>
           </ul>
         </div>
 
