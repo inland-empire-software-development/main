@@ -12,8 +12,10 @@
 'pages/_index';
 
 @import
-'components/_hero.scss',
-'components/_heroEvent.scss';
+'components/_hero.scss';
+
+@import
+'components/_singleEvent.scss';
 
 @import
 'components/global/_button',

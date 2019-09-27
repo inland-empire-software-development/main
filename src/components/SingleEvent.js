@@ -3,7 +3,7 @@ import {fetchEvents, controller} from '../utils/meetupApiUtil';
 import {calcStartTime, calcEndTime} from '../utils/convertTimeUtil';
 import {splitMonth, splitDay} from '../utils/splitDateUtil';
 
-function HeroEvent() {
+function SingleEvent() {
   const [eventName, setEventName] = useState('');
   const [eventMonth, setEventMonth] = useState('');
   const [eventDay, setEventDay] = useState('');
@@ -11,19 +11,28 @@ function HeroEvent() {
   const [eventEndTime, setEventEndTime] = useState('');
   const [eventLink, setEventLink] = useState('');
 
+  // Removes any odd formatting in event Name.
+  const getEventName = (eventName) => {
+    return eventName.replace("-", "");
+  };
+
   useEffect(() => {
     fetchEvents().then((result) => {
-      setEventName(result[0].name);
-      setEventStartTime(calcStartTime(result[0].local_time));
+      const {name, duration, link} = result[0];
+      const localTime = result[0].local_time;
+      const localDate = result[0].local_date;
+
+      setEventName(getEventName(name));
+      setEventStartTime(calcStartTime(localTime));
       setEventEndTime(
-          calcEndTime(result[0].local_time, result[0].duration
+          calcEndTime(localTime, duration
           ));
-      setEventMonth(splitMonth(result[0].local_date));
-      setEventDay(splitDay(result[0].local_date));
-      setEventLink(result[0].link);
+      setEventMonth(splitMonth(localDate));
+      setEventDay(splitDay(localDate));
+      setEventLink(link);
     }).then(()=> controller.abort())
         .catch((err) => console.log(err));
-  }, []);
+  });
 
   return (
     <div className="hero-event-container">
@@ -48,13 +57,6 @@ function HeroEvent() {
             {eventName}
           </p>
 
-          <div className="hero-event-location">
-
-            <p>Address:</p>
-            <p>3499 Tenth St. Riverside, CA 92501</p>
-
-          </div>
-
         </div>
 
       </div>
@@ -75,4 +77,4 @@ function HeroEvent() {
 }
 
 // TODO: clean the formatting of JSX elements
-export default HeroEvent;
+export default SingleEvent;
