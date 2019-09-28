@@ -7,6 +7,8 @@ import '../sass/index.scss';
 
 import {withRouter} from 'next/router';
 import Hero from "../src/components/layout/Hero";
+import Slogan from "../src/components/layout/Slogan";
+import Mission from "../src/components/layout/Mission";
 
 // import Fetch from 'isomorphic-unfetch';
 function App() {
@@ -14,6 +16,8 @@ function App() {
   return (
     <div className="home">
       <Hero />
+      <Slogan />
+      <Mission />
     </div>
   );
 }
