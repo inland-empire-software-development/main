@@ -1,0 +1,62 @@
+#goals {
+  height: auto;
+
+  [class*='uk-column-'] {
+    column-gap: 0;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  @media screen and (max-width: 860px) {
+    height: 100%;
+    max-height: none;
+  }
+}
+
+#goals {
+  p {
+    margin-bottom: 0;
+  }
+
+  #goals-left {
+
+    .goals-image {
+      height: auto;
+      width: 100%;
+    }
+
+    @media screen and (max-width: 960px) {
+      display: none;
+    }
+  }
+
+  #goals-right {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 45px;
+
+    @media screen and (max-width: 1200px){
+      padding-top: 25px;
+    }
+
+    .goals-desc {
+      font-size: 22px;
+      font-family: 'Book';
+      line-height: 42px;
+      text-align: right;
+
+      @media screen and (max-width: 1146px){
+        font-size: 20px;
+        line-height: 34px;
+      }
+
+      @media screen and (max-width: 991px){
+        font-size: 16px;
+        line-height: 28px;
+      }
+    }
+  }
+}

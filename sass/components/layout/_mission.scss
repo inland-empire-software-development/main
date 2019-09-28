@@ -1,6 +1,10 @@
 #mission {
   height: 525px;
 
+  [class*='uk-column-'] {
+    column-gap: 0;
+  }
+
   @media screen and (max-width: 1196px) {
     height: 450px;
   }
@@ -21,6 +25,7 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
+    padding-right: 15px;
 
     .mission-title {
       font-size: calc(20px + 1.5vw);
@@ -29,14 +34,14 @@
     }
 
     .mission-desc {
-      font-size: 22px;
+      font-size: 20px;
       font-family: 'Book', sans-serif;
       line-height: 42px;
 
 
       @media screen and (max-width: 1196px) {
-        font-size: 18px;
-        line-height: 32px;
+        font-size: 16px;
+        line-height: 30px;
       }
 
       @media screen and (max-width: 991px) {

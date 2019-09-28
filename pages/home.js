@@ -9,6 +9,7 @@ import {withRouter} from 'next/router';
 import Hero from "../src/components/layout/Hero";
 import Slogan from "../src/components/layout/Slogan";
 import Mission from "../src/components/layout/Mission";
+import Goals from "../src/components/layout/Goals";
 
 // import Fetch from 'isomorphic-unfetch';
 function App() {
@@ -18,6 +19,8 @@ function App() {
       <Hero />
       <Slogan />
       <Mission />
+      <Goals />
+      <Goals />
     </div>
   );
 }
