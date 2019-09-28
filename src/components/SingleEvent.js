@@ -3,6 +3,8 @@ import {fetchEvents, controller} from '../utils/meetupApiUtil';
 import {calcStartTime, calcEndTime} from '../utils/convertTimeUtil';
 import {splitMonth, splitDay} from '../utils/splitDateUtil';
 
+import Button from "./global/Button";
+
 function SingleEvent() {
   const [eventName, setEventName] = useState('');
   const [eventMonth, setEventMonth] = useState('');
@@ -64,11 +66,7 @@ function SingleEvent() {
       {/* reserve a spot buton */}
       <div className="reserve-wrapper">
 
-        <button
-          onClick={() => window.open(`${eventLink}`)}
-          className="reserve-button hvr-ripple-out">
-          reserve a spot
-        </button>
+        <Button link={eventLink} label="reserve a spot" width={3}/>
 
       </div>
 
@@ -76,5 +74,4 @@ function SingleEvent() {
   );
 }
 
-// TODO: clean the formatting of JSX elements
 export default SingleEvent;
