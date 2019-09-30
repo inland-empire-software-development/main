@@ -1,7 +1,3 @@
-/* eslint-disable no-unused-vars */
-// eslint-disable-next-line no-unused-vars
-import React, {useState, useEffect} from 'react';
-
 import '../node_modules/@fortawesome/fontawesome-free/js/all';
 import '../sass/index.scss';
 
@@ -11,8 +7,9 @@ import Slogan from "../src/components/layout/Slogan";
 import Mission from "../src/components/layout/Mission";
 import Goals from "../src/components/layout/Goals";
 import Community from "../src/components/layout/Community";
+import CallToAction from "../src/components/global/CallToAction";
+import Button from "../src/components/global/Button";
 
-// import Fetch from 'isomorphic-unfetch';
 function App() {
   // initial render
   return (
@@ -28,6 +25,16 @@ function App() {
       <Goals />
 
       <Community />
+
+
+      <CallToAction
+        background="../../static/images/join-section-background.jpg"
+        button={<Button
+          label="Join the Community"
+          width={0}
+          link="https://www.meetup.com/iesd-meetup/"
+        />}
+      />
     </div>
   );
 }

@@ -48,7 +48,8 @@ const commPic = [
 function Community() {
   return (
     <div className="container-full" style={{
-      backgroundImage: "url(\"../../../static/images/desktop/inland-empire-software-development-background-light.jpg\")",
+      backgroundImage:
+        "url(\"../../../static/images/desktop/inland-empire-software-development-background-light.jpg\")",
     }}>
       <div id="community" className="uk-container">
         <div uk-slider="true">
