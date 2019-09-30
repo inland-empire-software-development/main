@@ -5,12 +5,20 @@
     column-gap: 0;
   }
 
+  [class*='uk-column-'] {
+    @media screen and (max-width: 1024px) {
+      column-count: 1;
+    }
+  }
+
   @media screen and (max-width: 1196px) {
     height: 450px;
   }
 
   @media screen and (max-width: 1024px) {
-    height: 380px;
+    height: auto;
+    padding-top: 25px;
+    padding-bottom: 25px;
   }
 
   div {
@@ -53,10 +61,6 @@
 
   #mission-right {
     position: relative;
-
-    @media screen and (max-width: 961px) {
-      display: none;
-    }
 
     .mission-image {
       position: absolute;

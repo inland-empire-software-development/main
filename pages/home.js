@@ -10,6 +10,7 @@ import Hero from "../src/components/layout/Hero";
 import Slogan from "../src/components/layout/Slogan";
 import Mission from "../src/components/layout/Mission";
 import Goals from "../src/components/layout/Goals";
+import Community from "../src/components/layout/Community";
 
 // import Fetch from 'isomorphic-unfetch';
 function App() {
@@ -19,8 +20,14 @@ function App() {
       <Hero />
       <Slogan />
       <Mission />
+
+      <div className="container-full uk-hidden@m">
+        <img src="../static/images/hack-day-spencer-tyrice-rebecca.jpg" />
+      </div>
+
       <Goals />
-      <Goals />
+
+      <Community />
     </div>
   );
 }

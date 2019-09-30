@@ -7,12 +7,7 @@ function Mission() {
     <div id="mission" className="uk-container">
       <div className="uk-column-1-2@m">
         {/* left section */}
-        <div id="mission-left"
-          className="
-            pre-2 column-9 post-1
-            tablet-column-12 tablet-pre-0
-            phone-column-6 phone-pre-0">
-
+        <div id="mission-left">
           {/* mission title */}
           <p className="heading">
             Our Mission
@@ -34,7 +29,7 @@ function Mission() {
         </div>
 
         {/* right section */}
-        <div id="mission-right" className="column-12 tablet-column-24">
+        <div id="mission-right">
 
           {/* mission image */}
           <div className="mission-image"/>
@@ -49,10 +44,9 @@ function Mission() {
 
         </div>
       </div>
-
     </div>
 
   );
-};
+}
 
 export default Mission;

@@ -8,7 +8,7 @@ function Goals() {
 
       <div className="uk-column-1-2@m">
         {/* left side*/}
-        <div id="goals-left" className="column-12">
+        <div id="goals-left">
           <img
             className="goals-image"
             src="../../static/images/desktop/goals-section-gradient.jpg"
@@ -16,8 +16,7 @@ function Goals() {
         </div>
 
         {/* right side*/}
-        <div id="goals-right" className="column-10 post-2
-        tablet-column-12 phone-post-0">
+        <div id="goals-right">
 
           {/* goals heading*/}
           <p className="heading uk-text-right">
