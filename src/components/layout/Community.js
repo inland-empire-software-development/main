@@ -56,11 +56,15 @@ function Community() {
       uk-child-width-1-4@m uk-grid">
             {commPic.map(({key, image, alt}) =>
               (<li key={key}>
-                <img src={image} alt={alt}/>
+                <img src={image}
+                  alt={alt}
+                  uk-img="target: !.uk-slideshow-items" />
               </li>
               ))}
-
           </ul>
+          <p className="uk-text-center">
+            You can drag images left and right to see more.
+          </p>
         </div>
       </div>
     </div>
