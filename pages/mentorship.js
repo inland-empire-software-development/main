@@ -17,8 +17,8 @@ function App() {
       <Announcements/>
       <PageTitle title="Mentorship"/>
       <div className="grid-container content leader-3 phone-leader-0 tablet-leader-1">
-        <div className="column-24 phone-h phone-padding-trailer-2 pre-2 padding-leader-2 padding-trailer-2">
-          <div className="phone-column-24 column-10">
+        <div className="column-24  phone-padding-trailer-2 pre-2 padding-leader-2 padding-trailer-2">
+          <div className="phone-column-24 phone-h column-10">
             <h1 className="heading">What is a Mentorship</h1>
             <p className="body-content phone-trailer-half">
               Our mentorship program focuses on the skill
@@ -34,7 +34,7 @@ function App() {
                 accepted in to the mentorship program.</small>
             </p>
           </div>
-          <div className="phone-column-24 column-10">
+          <div className="phone-column-24 phone-h column-10">
             <figure>
               <img className="mentorship-intro-image right"
                 src="../static/images/mentorship/peer-to-peer-mentorship.jpg"
