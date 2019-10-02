@@ -34,104 +34,104 @@ function Leadership() {
   const {organizers, speakers} = {
     organizers: [
       {
-        userName: 'Lloan Alas',
+        name: 'Lloan Alas',
         title: 'Executive Director',
         image: '../static/images/desktop/lloanalas.jpg',
       },
       {
-        userName: 'Tony Nguyen',
+        name: 'Tony Nguyen',
         title: 'Chief Financial Officer',
         image: '../static/images/desktop/tonynguyen.jpg',
       },
       {
-        userName: 'Felipe Fernandez',
+        name: 'Felipe Fernandez',
         title: 'Secretary',
         image: '../static/images/desktop/felipefernandez.jpg',
       },
       {
-        userName: 'Luis Velazquez',
+        name: 'Luis Velazquez',
         title: 'Lead React Developer',
         image: '../static/images/desktop/luisvelazquez.jpg',
       },
       {
-        userName: 'Jen Latchman',
+        name: 'Jen Latchman',
         title: 'Digital Marketing',
         image: '../static/images/desktop/jenlatchman.jpg',
       },
       {
-        userName: 'Jonathan Nguyen',
+        name: 'Jonathan Nguyen',
         title: 'Application Developer',
         image: '../static/images/desktop/jonathannguyen.jpg',
       },
       {
-        userName: 'Kelly Lam',
+        name: 'Kelly Lam',
         title: 'Internal Relations Director',
         image: '../static/images/desktop/kellylam.jpg',
       },
       {
-        userName: 'Amy Ambard',
+        name: 'Amy Ambard',
         title: 'Front End Developer',
         image: '../static/images/desktop/amyambard.jpg',
       },
       {
-        userName: 'Amber Macbain',
+        name: 'Amber Macbain',
         title: 'Front End Developer',
         image: '../static/images/desktop/ambermacbain.jpg',
       },
     ],
     speakers: [
       {
-        userName: 'Vast Lee',
+        name: 'Vast Lee',
         title: 'What Employers Want',
         image: '../static/images/desktop/vastlee.jpg',
       },
       {
-        userName: 'Tim Jenkins',
+        name: 'Tim Jenkins',
         title: 'From Dev to Co-Founder',
         image: '',
       },
       {
-        userName: 'Spencer Trumbore',
+        name: 'Spencer Trumbore',
         title: 'Node.js & Wolfram Alpha API',
         image: '../static/images/desktop/spencer.jpg',
       },
       {
-        userName: 'Ixshel Escamilla',
+        name: 'Ixshel Escamilla',
         title: 'Introduction to Angular',
         image: '',
       },
       {
-        userName: 'Rey Santiago',
+        name: 'Rey Santiago',
         title: 'Designers and Developers',
         image: '',
       },
       {
-        userName: 'Felipe Fernandez',
+        name: 'Felipe Fernandez',
         title: 'Arrow Functions',
         image: '../static/images/desktop/felipefernandez.jpg',
       },
       {
-        userName: 'Csaba Balough',
+        name: 'Csaba Balough',
         title: 'Javascript Closures',
         image: '',
       },
       {
-        userName: 'Nicholas Twohig',
+        name: 'Nicholas Twohig',
         title: 'Project Management & Agile',
         image: '',
       },
       {
-        userName: 'Anisha Joshipura',
+        name: 'Anisha Joshipura',
         title: 'Flexbox',
         image: '',
       },
       {
-        userName: 'Tony Nguyen',
+        name: 'Tony Nguyen',
         title: 'Exploring Jest',
         image: '../static/images/desktop/tonynguyen.jpg',
       },
       {
-        userName: 'Lloan Alas',
+        name: 'Lloan Alas',
         title: 'Eloquent Javascript Series',
         image: '../static/images/desktop/lloanalas.jpg',
       },
@@ -155,7 +155,7 @@ function Leadership() {
                 <li className='swiper-slide'
                   key={index}>
                   <LeadershipImage
-                    userName={organizer.userName}
+                    name={organizer.name}
                     title={organizer.title}
                     image={organizer.image}
                     overlay={organizer.overlay}
@@ -176,7 +176,7 @@ function Leadership() {
                 <li className='swiper-slide'
                   key={index}>
                   <LeadershipImage
-                    userName={speaker.userName}
+                    name={speaker.name}
                     title={speaker.title}
                     image={speaker.image}
                     overlay={speaker.overlay}

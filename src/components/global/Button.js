@@ -13,7 +13,6 @@ function Button(props) {
     type = "button",
     color = "bg-red",
     text = "white",
-    size = "0",
     width = 0,
   } = props;
 
@@ -23,7 +22,7 @@ function Button(props) {
     <a href={link}
       target="_blank"
       className={`${type} ${color} ${text} button-${widths[width]} 
-      font-size-${size} ${border} border-size-${borderSize} hvr-ripple-out 
+      ${border} border-size-${borderSize} hvr-ripple-out 
       ${classes}`}>
       {label}
     </a>

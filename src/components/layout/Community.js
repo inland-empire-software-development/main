@@ -47,7 +47,7 @@ const commPic = [
 
 function Community() {
   return (
-    <div className="container-full" style={{
+    <div id="community-container" className="container-full" style={{
       backgroundImage:
         "url(\"../../../static/images/desktop/inland-empire-software-development-background-light.jpg\")",
     }}>
