@@ -18,7 +18,7 @@ function App() {
       <PageTitle title="Mentorship"/>
       <div className="grid-container content leader-3 phone-leader-0 tablet-leader-1">
         <div className="column-24  phone-padding-trailer-2 pre-2 padding-leader-2 padding-trailer-2">
-          <div className="phone-column-24 phone-h column-10">
+          <div className="phone-column-24 tablet-column-12 phone-h column-10">
             <h1 className="heading">What is a Mentorship</h1>
             <p className="body-content phone-trailer-half">
               Our mentorship program focuses on the skill
@@ -34,12 +34,12 @@ function App() {
                 accepted in to the mentorship program.</small>
             </p>
           </div>
-          <div className="phone-column-6 phone-h phone-v column-10">
+          <div className="phone-column-6 tablet-column-12 figcaption-h phone-h phone-v column-10">
             <figure>
-              <img className="mentorship-intro-image right"
+              <img className="mentorship-intro-image figcaption-h right"
                 src="../static/images/mentorship/peer-to-peer-mentorship.jpg"
               />
-              <figcaption className="right">
+              <figcaption className="right figcaption-h">
                 Tony Nguyen & Johnathan Nguyen
               </figcaption>
             </figure>
@@ -168,7 +168,7 @@ function App() {
 
 
       <div className="grid-container phone-padding-leader-0 padding-leader-2 padding-trailer-2">
-        <div className="column-20 pre-2 phone-padding-trailer-2 padding-leader-3 padding-trailer-3">
+        <div className="column-20  pre-2 phone-padding-trailer-2 padding-leader-3 padding-trailer-3">
           <h1>How the Mentorship Program Works</h1>
 
           <p>
@@ -238,7 +238,7 @@ function App() {
         </div>
       </div>
 
-      <div className="grid-container mentorship-parallax-robin"
+      <div className="grid-container tablet-hide mentorship-parallax-robin"
         style={{
           backgroundImage:
             `url("../static/images/mentorship/mentorship-members-v1.jpg")`,
@@ -247,7 +247,7 @@ function App() {
       </div>
 
       <div className="grid-container">
-        <div className="column-20 pre-2 phone-padding-leader-2 padding-leader-3 padding-trailer-3">
+        <div className="column-20 pre-2 tablet-padding-leader-0 phone-padding-leader-2 padding-leader-3 padding-trailer-3">
           <div className="column-10 tablet-column-12">
             <h2>
               Mentoring

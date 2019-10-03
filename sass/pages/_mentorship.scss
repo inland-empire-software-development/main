@@ -88,9 +88,9 @@
     
   }
   .figcaption-h{
-    @media screen and (max-width: 750px) and (max-height: 450px)  {
+    @media screen and (max-width: 850px)   {
       text-align: center;   
-      float: none;     
+      float: none !important;     
     }
     
   }
@@ -102,9 +102,10 @@
     }
   }
   .requestbtn{
-    @media screen and (max-width: 750px) and (max-height: 450px)  {
-      padding-left: 0px !important;      
-    }
+    @media screen and (max-width: 750px){
+      // padding-left: 0px !important;  
+      width: 55% !important;
+        }
     
   }
 
