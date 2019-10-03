@@ -34,7 +34,7 @@ function App() {
                 accepted in to the mentorship program.</small>
             </p>
           </div>
-          <div className="phone-column-24 phone-h column-10">
+          <div className="phone-column-6 phone-h phone-v column-10">
             <figure>
               <img className="mentorship-intro-image right"
                 src="../static/images/mentorship/peer-to-peer-mentorship.jpg"
@@ -61,21 +61,21 @@ function App() {
       </div>
 
       <div className="grid-container content leader-3">
-        <div className="column-20 pre-2 phone-padding-leader-0 padding-leader-2 phone-padding-trailer-0 padding-trailer-2">
+        <div className="column-20 pre-2 phone-padding-leader-0 padding-leader-2 tablet-padding-trailer-0 phone-padding-trailer-0 padding-trailer-2">
 
-          <div className="column-10">
+          <div className="column-10 tablet-column-12">
             <figure>
               <img className="mentorship-intro-image left"
                 src="../static/images/mentorship/mentorship-parker.jpg"
               />
-              <figcaption className="left">
+              <figcaption className="left figcaption-h">
                 Joaquin Martinez, Eden Ragsdale & Parker Bjur
               </figcaption>
             </figure>
           </div>
 
 
-          <div className="column-10 phone-leader-2">
+          <div className="column-10 tablet-column-12 phone-leader-2">
             <h1 className="heading">Benefits of a Mentorship</h1>
             <p className="body-content">
               The advantages of the mentorship program extend to all involved in
@@ -94,8 +94,8 @@ function App() {
       <div className="grid-container content">
         {/* peer to peer mentorship cards*/}
         <div className="column-20 pre-2 phone-padding-leader-0 padding-leader-2 padding-trailer-2">
-          <div className="column-5">
-            <h2 className="text-darker-gray phone-leader-1 phone-trailer-0 leader-3 font-size-5">
+          <div className="column-5 tablet-column-12">
+            <h2 className="text-darker-gray phone-leader-1 tablet-leader-0 phone-trailer-0 leader-3 font-size-5">
               A community mentorship program
             </h2>
           </div>
@@ -163,7 +163,7 @@ function App() {
         }}>
 
         <div className="parallax-overlay-black"/>
-        <Button link="" label=" Request Information" classes="padding-left-half" width="0"/>
+        <Button link="" label=" Request Information" classes="padding-left-half requestbtn" width="0"/>
       </div>
 
 
@@ -183,7 +183,7 @@ function App() {
         </div>
 
         <div className="column-20 pre-2">
-          <div className="column-10">
+          <div className="column-10 tablet-column-12 figcaption-h">
             <figure>
               <img src="../static/images/mentorship/mentorship-luis.jpg" />
               <figcaption>Luis Velazquez & Gray Cash</figcaption>
@@ -194,7 +194,7 @@ function App() {
             </p>
 
           </div>
-          <div className="column-10">
+          <div className="column-10 tablet-column-12">
             <h2>
               A Succesful Applicant
             </h2>
@@ -248,7 +248,7 @@ function App() {
 
       <div className="grid-container">
         <div className="column-20 pre-2 phone-padding-leader-2 padding-leader-3 padding-trailer-3">
-          <div className="column-10">
+          <div className="column-10 tablet-column-12">
             <h2>
               Mentoring
             </h2>
@@ -277,7 +277,7 @@ function App() {
 
           </div>
 
-          <div className="column-10 mentor-pic text-right">
+          <div className="column-10 tablet-column-12 mentor-pic text-right figcaption-h">
             <figure>
               <img src="../static/images/mentorship/mentorship-ziah.jpg" />
               <figcaption>Ziah Miller & Jake Marshall</figcaption>
