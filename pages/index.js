@@ -7,11 +7,12 @@ import Community from '../src/components/Community';
 import FloatingBar from '../src/components/FloatingBar';
 import Footer from '../src/components/Footer';
 import Goals from '../src/components/Goals';
+import Events from '../src/components/Events/Events';
+import Slogan from '../src/components/Slogan';
 import Hero from '../src/components/Hero';
 import Join from '../src/components/Join';
 import Leadership from '../src/components/Leadership';
 import Mission from '../src/components/Mission';
-import Slogan from '../src/components/Slogan';
 import Sponsors from '../src/components/Sponsors';
 import SponsorShip from '../src/components/Sponsorship';
 import SuccessStories from '../src/components/SuccessStories';
@@ -31,6 +32,7 @@ function App() {
       <Slogan />
       <Mission />
       <Goals />
+      <Events />
       <Community />
       <Join />
       <Leadership />
