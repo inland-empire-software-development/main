@@ -11,6 +11,10 @@ import CallToAction from "../src/components/global/CallToAction";
 import Button from "../src/components/global/Button";
 import MemberList from "../src/components/MemberList";
 
+import Staff from "../src/data/Staff";
+import Operations from "../src/components/layout/Operations";
+import Speakers from "../src/components/layout/Speakers";
+
 function App() {
   const operations = [
     {
@@ -142,8 +146,8 @@ function App() {
         />}
       />
 
-      <MemberList members={operations} label="Operations"/>
-      <MemberList members={speakers} label="Speakers" warning={true}/>
+      <Operations />
+      <Speakers/>
     </div>
   );
 }

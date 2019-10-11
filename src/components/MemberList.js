@@ -15,7 +15,7 @@ function MemberList(props) {
         <p className="memberlist-header heading">{label}</p>
         <div uk-slider="true">
           <ul
-            className="uk-slider-items uk-child-width-1-2@s
+            className="uk-slider-items uk-child-width-1-2 uk-child-width-1-3@s
             uk-child-width-1-5@m uk-grid">
             {members.map(({
               image,
@@ -52,7 +52,7 @@ function MemberList(props) {
 
 MemberList.propTypes = {
   members: PropTypes.array.isRequired,
-  warning: PropTypes.string,
+  warning: PropTypes.bool,
   label: PropTypes.string.isRequired,
 };
 
