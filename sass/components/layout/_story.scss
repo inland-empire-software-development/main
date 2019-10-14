@@ -1,0 +1,11 @@
+#story {
+  .story-image {
+    float: left;
+  }
+
+  .story-content {
+    padding: 10px 25px;
+    display: flex;
+    background-color: $white;
+  }
+}
