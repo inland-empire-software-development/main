@@ -14,6 +14,7 @@ import MemberList from "../src/components/MemberList";
 import Staff from "../src/data/Staff";
 import Operations from "../src/components/layout/Operations";
 import Speakers from "../src/components/layout/Speakers";
+import Story from "../src/components/layout/Story";
 
 function App() {
   const operations = [
@@ -148,6 +149,8 @@ function App() {
 
       <Operations />
       <Speakers/>
+
+      <Story />
     </div>
   );
 }
