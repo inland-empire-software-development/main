@@ -46,9 +46,7 @@ export default function Story() {
                    alt="Felipe"
                    src={story.details.image.sourceUrl}
               />
-              <p className="story-content">
-                {story.details.content}
-              </p>
+              GI
             </div>
           </div>);
       }}
