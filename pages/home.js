@@ -2,6 +2,7 @@ import '../node_modules/@fortawesome/fontawesome-free/js/all';
 import '../sass/index.scss';
 
 import {withRouter} from 'next/router';
+
 import Hero from "../src/components/layout/Hero";
 import Slogan from "../src/components/layout/Slogan";
 import Mission from "../src/components/layout/Mission";
@@ -9,13 +10,11 @@ import Goals from "../src/components/layout/Goals";
 import Community from "../src/components/layout/Community";
 import CallToAction from "../src/components/global/CallToAction";
 import Button from "../src/components/global/Button";
-import MemberList from "../src/components/MemberList";
-
-import Staff from "../src/data/Staff";
 import Operations from "../src/components/layout/Operations";
 import Speakers from "../src/components/layout/Speakers";
 import Story from "../src/components/layout/Story";
 import Sponsors from '../src/components/layout/Sponsors';
+import Footer from "../src/components/global/Footer";
 
 function App() {
   // initial render
@@ -49,6 +48,8 @@ function App() {
       <Story />
 
       <Sponsors />
+
+      <Footer />
     </div>
   );
 }

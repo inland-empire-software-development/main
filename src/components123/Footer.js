@@ -32,7 +32,7 @@ function Footer() {
 
           {/* copyright */}
           <p className="footer-copyright leader-1">
-            © 2019 Inland Empire Software<br/>
+            ï¿½ 2019 Inland Empire Software<br/>
             Development, Inc. IESD.<br/>
             All rights reserved.
           </p>
@@ -62,9 +62,9 @@ function Footer() {
             {/* <li><a href="#">Speak</a></li> */}
             <li><a href="https://www.meetup.com/iesd-meetup/events/">Events</a></li>
             <li><a href="#sponsors">Sponsors</a></li>
-            <li><a href="#leadership">Organizers</a></li>
+            <li><a href="#operations">Organizers</a></li>
             <li><a href="https://github.com/inland-empire-software-development/main">Contribute</a></li>
-            <li><a href="#ourCommunity">Community</a></li>
+            <li><a href="#community">Community</a></li>
           </ul>
         </div>
 

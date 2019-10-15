@@ -29,16 +29,21 @@ export default function Speakers() {
         if (error) return <aside>Error loading speakers!</aside>;
         if (loading) return <div>Loading</div>;
 
-        return (<MemberList
-          label="Speakers"
-          members={data.speakers.nodes.sort((a, b) =>
-            a.order.position - b.order.position).map((member) => {
-            return {
-              name: member.details.name,
-              title: member.details.title,
-              image: member.details.image.sourceUrl,
-            };
-          })}/>);
+        return (
+          <div id="speakers">
+            <MemberList
+              label="Speakers"
+              warning={true}
+              members={data.speakers.nodes.sort((a, b) =>
+                a.order.position - b.order.position).map((member) => {
+                return {
+                  name: member.details.name,
+                  title: member.details.title,
+                  image: member.details.image.sourceUrl,
+                };
+              })}/>
+          </div>
+        );
       }}
     </Query>
   );

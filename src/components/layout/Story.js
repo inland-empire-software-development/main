@@ -38,7 +38,7 @@ export default function Story() {
         const story = data.stories.nodes[Math.floor(Math.random() * stories )];
         const social =
           ["twitter", "instagram", "linkedin", "github", "facebook"];
-        console.log(story);
+
         return (
           <div id="story-container"
             className="container-full bg-black" >
@@ -50,8 +50,8 @@ export default function Story() {
               <div className="story-content">
                 <p className="heading">Success Story</p>
                 <img className="story-image-mobile"
-                     alt="Felipe"
-                     src={story.details.image.sourceUrl}
+                  alt="Felipe"
+                  src={story.details.image.sourceUrl}
                 />
                 <p className="story-header">
                   <span className="name">{story.details.name}</span>

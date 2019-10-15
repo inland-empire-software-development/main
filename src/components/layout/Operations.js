@@ -29,16 +29,20 @@ export default function Operations() {
         if (error) return <aside>Error loading staff!</aside>;
         if (loading) return <div>Loading</div>;
 
-        return (<MemberList
-          label="Operations"
-          members={data.staff.nodes.sort((a, b) =>
-            a.order.position - b.order.position).map((member) => {
-            return {
-              name: member.details.name,
-              title: member.details.title,
-              image: member.details.image.sourceUrl,
-            };
-          })}/>);
+        return (
+          <div id="operations">
+            <MemberList
+              label="Operations"
+              members={data.staff.nodes.sort((a, b) =>
+                a.order.position - b.order.position).map((member) => {
+                return {
+                  name: member.details.name,
+                  title: member.details.title,
+                  image: member.details.image.sourceUrl,
+                };
+              })}/>
+          </div>
+        );
       }}
     </Query>
   );
