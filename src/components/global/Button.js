@@ -8,6 +8,7 @@ function Button(props) {
     link,
     label,
     classes = "",
+    toggle = false,
     border = "border-red",
     borderSize = "1",
     type = "button",
@@ -21,9 +22,11 @@ function Button(props) {
   return (
     <a href={link}
       target="_blank"
-      className={`${type} ${color} ${text} button-${widths[width]} 
-      ${border} border-size-${borderSize} hvr-ripple-out 
-      ${classes}`}>
+      className={`${type} ${color} ${text} button-${widths[width]}
+      ${border} border-size-${borderSize} hvr-ripple-out
+      ${classes}`}
+      uk-toggle={toggle}
+    >
       {label}
     </a>
   );
