@@ -1,0 +1,54 @@
+import {Query} from "react-apollo";
+import gql from "graphql-tag";
+import Button from '../global/Button';
+
+export const sponsorsQuery = gql`
+query Sponsor {
+  sponsors {
+    nodes {
+      details {
+        company
+        link
+        image {
+          sourceUrl
+        }
+      }
+    }
+  }
+}
+`;
+
+export default function Sponsors() {
+  return (
+    <Query query={sponsorsQuery} >
+      {({loading, error, data}) => {
+        if (error) return <aside>Error loading sponsors!</aside>;
+        if (loading) return <div>Loading</div>;
+
+        const sponsors = data.sponsors.nodes;
+        return (
+          <div className="container-full sponsor-background">
+            <div id="sponsors" className="uk-container ">
+              <p className="heading">Our Sponsors</p>
+              <p>
+                Our work is made possible by the following sponsors
+              </p>
+              <div
+                className="uk-grid-small uk-child-width-1-4@s uk-flex-center"
+                uk-grid="true">
+                {sponsors.map((sponsor) => sponsor.details.image &&
+                  <div>
+                    <a href={sponsor.details.link}>
+                      <img src={sponsor.details.image.sourceUrl}
+                        title={sponsor.details.company} />
+                    </a>
+                  </div>
+                )}
+              </div>
+            </div>
+          </div>
+        );
+      }}
+    </Query>
+  );
+}

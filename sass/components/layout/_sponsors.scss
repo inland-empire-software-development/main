@@ -1,0 +1,14 @@
+.sponsor-background {
+  background: url("/./static/images/desktop/inland-empire-software-development-background-light.jpg");
+  background-size: cover;
+  background-position: center;
+}
+#sponsors {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  img {
+    max-height: 110px;
+    margin: 20px auto;
+  }
+}

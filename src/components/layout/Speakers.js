@@ -26,7 +26,7 @@ export default function Speakers() {
   return (
     <Query query={staffQuery} >
       {({loading, error, data}) => {
-        if (error) return <aside>Error loading posts!</aside>;
+        if (error) return <aside>Error loading speakers!</aside>;
         if (loading) return <div>Loading</div>;
 
         return (<MemberList

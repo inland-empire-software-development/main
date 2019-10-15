@@ -8,7 +8,7 @@ function Button(props) {
     link,
     label,
     classes = "",
-    toggle = false,
+    toggle = "false",
     border = "border-red",
     borderSize = "1",
     type = "button",
