@@ -36,19 +36,12 @@
   }
 
   .event-name {
-    font-size: 30px;
-    line-height: 48px;
-
-    @media screen and (max-width: 450px){
-      line-height: 44px;
-      margin-top: 25px;
-      font-size: 30px;
-    }
+    font-size: 26px;
+    line-height: 38px;
 
     @media screen and (max-width: 680px){
-      line-height: 30px;
-      margin-top: 0;
-      font-size: 22px;
+      line-height: 24px;
+      font-size: 20px;
     }
   }
 
