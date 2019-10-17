@@ -59,8 +59,8 @@ export default function Story() {
                   <span className="title">{story.details.title}</span>
                 </p>
                 <p className="story-social">
-                  {social.map((outlet) => story.details[outlet] &&
-                    <a href={story.details[outlet]}>
+                  {social.map((outlet, index) => story.details[outlet] &&
+                    <a key={index} href={story.details[outlet]}>
                       <span uk-icon={`icon: ${outlet}; ratio: 1`}/>
                     </a>
                   )}

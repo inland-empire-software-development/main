@@ -36,8 +36,8 @@ export default function Sponsors() {
               <div
                 className="uk-grid-small uk-child-width-1-4@s uk-flex-center"
                 uk-grid="true">
-                {sponsors.map((sponsor) => sponsor.details.image &&
-                  <div>
+                {sponsors.map((sponsor, index) => sponsor.details.image &&
+                  <div key={index}>
                     <a href={sponsor.details.link}>
                       <img src={sponsor.details.image.sourceUrl}
                         title={sponsor.details.company} />

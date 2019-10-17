@@ -17,7 +17,7 @@ import Sponsors from '../src/components/layout/Sponsors';
 import Footer from "../src/components/global/Footer";
 import Blog from "../src/components/layout/Blog";
 
-function App() {
+function Home() {
   // initial render
   return (
     <div className="home">
@@ -56,4 +56,4 @@ function App() {
   );
 }
 
-export default withRouter(App);
+export default withRouter(Home);
