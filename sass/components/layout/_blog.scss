@@ -1,0 +1,44 @@
+.post-modal {
+  height: 98vh;
+  width: 100vw;
+  overflow-y: scroll;
+}
+
+#blog {
+  .uk-card,
+  .uk-card-title {
+    color: $dark-gray;
+  }
+
+  .uk-card {
+    p {
+      margin: 0;
+    }
+
+    img {
+      display: block;
+      margin: 0 auto;
+    }
+
+    .card-author {
+      font-family: "Light", sans-serif;
+      margin-top: 5px;
+      font-size: 14px;
+    }
+
+    .uk-card-body {
+      padding: 0 20px 10px 20px;
+      margin: 0
+    }
+
+    .uk-card-title {
+      font-family: "Medium", sans-serif;
+      margin-bottom: 0;
+    }
+
+    .card-excerpt {
+      font-family: "Book", sans-serif;
+      padding: 10px 0;
+    }
+  }
+}

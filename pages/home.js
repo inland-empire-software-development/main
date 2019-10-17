@@ -15,6 +15,7 @@ import Speakers from "../src/components/layout/Speakers";
 import Story from "../src/components/layout/Story";
 import Sponsors from '../src/components/layout/Sponsors';
 import Footer from "../src/components/global/Footer";
+import Blog from "../src/components/layout/Blog";
 
 function App() {
   // initial render
@@ -49,6 +50,7 @@ function App() {
 
       <Sponsors />
 
+      <Blog />
       <Footer />
     </div>
   );
