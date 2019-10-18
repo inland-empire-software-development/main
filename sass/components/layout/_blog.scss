@@ -2,6 +2,10 @@
   padding-top: 60px;
   padding-bottom: 60px;
 
+  .uk-slider-container {
+    overflow: unset !important;
+  }
+
   .uk-card,
   .uk-card-title {
     color: $dark-gray;

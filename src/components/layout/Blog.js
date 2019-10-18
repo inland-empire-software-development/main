@@ -1,6 +1,7 @@
 import {Query} from "react-apollo";
 import gql from "graphql-tag";
 import moment from 'moment';
+import Link from 'next/link';
 
 import Button from "../global/Button";
 
@@ -10,6 +11,7 @@ query Post {
     nodes {
       title
       id
+      postId
       content
       date
       excerpt 
@@ -59,7 +61,17 @@ function getDate(post) {
   return moment(post.date).format("M/D/Y");
 }
 
+function getLink(post, host) {
+  return "/post?id=" + post.postId;
+}
+
 export default function Blog() {
+  let host;
+
+  if (typeof window !== 'undefined') {
+    host = location.host;
+  }
+
   return (
     <Query query={postQuery} >
       {({loading, error, data}) => {
@@ -105,7 +117,9 @@ export default function Blog() {
                                 {getExcerpt(post, 210)}
                               </p>
 
+
                               <Button
+                                link={getLink(post, host)}
                                 classes="uk-align-left card-button"
                                 toggle={`target: #article-modal-${index}`}
                                 label="read article"

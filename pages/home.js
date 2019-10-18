@@ -19,6 +19,7 @@ import Blog from "../src/components/layout/Blog";
 
 function Home() {
   // initial render
+
   return (
     <div className="home">
       <Hero />

@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 /**
  * Button component
  * @param {any} props
@@ -20,15 +22,16 @@ function Button(props) {
   const widths = ["small", "third", "half", "full"];
 
   return (
-    <a href={link}
-      target="_blank"
-      className={`${type} ${color} ${text} button-${widths[width]}
+    <Link href={link}>
+      <a target="_blank"
+        className={`${type} ${color} ${text} button-${widths[width]}
       ${border} border-size-${borderSize} hvr-ripple-out
       ${classes}`}
-      uk-toggle={toggle}
-    >
-      {label}
-    </a>
+        uk-toggle={toggle}
+      >
+        {label}
+      </a>
+    </Link>
   );
 }
 
