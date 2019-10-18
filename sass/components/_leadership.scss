@@ -7,13 +7,13 @@
         text-align: left;
     }
 
-    @media screen and (max-width: $medium) {
+    @media screen and (max-width: 860px) {
         margin-top: 40px;
     }
 
     .organizers,
     .speakers {
-        @media screen and (max-width: $medium) {
+        @media screen and (max-width: 860px) {
             padding-left: 0;
         }
     }
@@ -39,11 +39,11 @@
         margin-top: 0;
         padding-inline-start: 0;
 
-        @media screen and (max-width: $medium) {
+        @media screen and (max-width: 860px) {
             padding-left: 0;
         }
 
-        @media screen and (max-width: $small) {
+        @media screen and (max-width: 480px) {
             margin: 0;
             padding: 0;
             max-height: 190px;
@@ -57,7 +57,7 @@
         li:last-child {
             padding-right: 2rem;
 
-            @media screen and (max-width: $large) {
+            @media screen and (max-width: 1440px) {
                 margin-right: 25px;
             }
 
@@ -65,11 +65,11 @@
                 margin-right: 10px;
             }
 
-            @media screen and (max-width: $medium) {
+            @media screen and (max-width: 860px) {
                 margin-right: 60px;
             }
 
-            @media screen and (max-width: $small) {
+            @media screen and (max-width: 480px) {
                 padding-right: 0;
                 margin-right: 25px;
             }
@@ -84,7 +84,7 @@
         -webkit-overflow-scrolling: touch;
 
 
-        @media screen and (max-width: $medium) {
+        @media screen and (max-width: 860px) {
             max-height: 15.5rem;
         }
 

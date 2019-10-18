@@ -1,0 +1,63 @@
+#blog {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  .uk-slider-container {
+    overflow: unset !important;
+  }
+
+  .uk-card,
+  .uk-card-title {
+    color: $dark-gray;
+  }
+
+  .uk-card-media-top {
+    margin-bottom: 10px;
+    overflow: hidden !important;
+  }
+
+  .card-button {
+    margin-top: 10px;
+    margin-bottom: 15px;
+    position: absolute;
+    bottom: 0;
+  }
+
+  .uk-card {
+    min-height: 470px;
+
+    p {
+      margin: 0;
+    }
+
+    img {
+      display: block;
+      margin: 0 auto;
+    }
+
+    .card-author {
+      font-family: "Light", sans-serif;
+      margin-top: 5px;
+      font-size: 16px;
+    }
+
+    .card-date {
+      font-size: 12px;
+    }
+
+    .uk-card-body {
+      padding: 0;
+      margin: 0
+    }
+
+    .uk-card-title {
+      font-family: "Medium", sans-serif;
+      margin-bottom: 0;
+    }
+
+    .card-excerpt {
+      font-family: "Book", sans-serif;
+      padding: 10px 0;
+    }
+  }
+}

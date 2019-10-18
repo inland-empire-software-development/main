@@ -1,0 +1,84 @@
+#story {
+  margin-top: 60px;
+  color: $white;
+
+  .story-image-mobile {
+    display: none;
+
+    @media screen and (max-width: 720px){
+      height: 120px;
+      border-radius: 50%;
+      float: left;
+      margin: 10px 15px 10px 0;
+      display: block;
+    }
+  }
+  .story-image {
+    float: left;
+
+    @media screen and (max-width: 860px) {
+      height: 370px;
+    }
+
+    @media screen and (max-width: 720px) {
+       display: none;
+    }
+  }
+
+  .story-content {
+    padding: 30px;
+    display: flow-root;
+    font-size: 20px;
+    line-height: 34px;
+    margin-top: 0;
+
+    @media screen and (max-width: 991px) {
+      font-size: 16px;
+      line-height: 28px;
+    }
+
+    @media screen and (max-width: 860px) {
+      font-size: 14px;
+      line-height: 22px;
+    }
+
+    @media screen and (max-width: 720px) {
+      padding: 30px 0;
+    }
+
+    .button {
+      float: left;
+
+      @media screen and (max-width: 720px) {
+        width: 100%;
+      }
+    }
+
+    .story-header {
+      margin: 0;
+
+      .name {
+        font-family: "Heavy", sans-serif;
+      }
+
+      .title {
+        font-family: "Book", sans-serif;
+        font-size: 14px;
+      }
+    }
+
+    .story-social {
+      margin: 0;
+
+      a {
+        margin-right: 10px;
+        color: $white;
+        transition: color 0.25s ease-in;
+
+        &:hover {
+          color: $red;
+        }
+      }
+    }
+  }
+}

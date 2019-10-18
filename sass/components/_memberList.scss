@@ -1,0 +1,30 @@
+.memberList-container {
+  padding-top: 50px;
+
+  .uk-card-media-top {
+    overflow: hidden;
+
+    @media screen and (min-width: 960px){
+      height: 200px;
+    }
+  }
+
+  .uk-card-body {
+    padding: 10px 0;
+  }
+
+  .uk-card-default {
+    box-shadow: none;
+
+    .uk-card-title {
+      font-family: 'book', sans-serif;
+      font-size: 18px;
+      margin: 0;
+    }
+
+    .uk-card-small {
+      margin: 0;
+      font-size: 14px;
+    }
+  }
+}

@@ -1,0 +1,28 @@
+#hero {
+  background-image: url("../static/images/hero/hero-image.jpg");
+  height: auto;
+  min-height: 500px;
+  position: relative;
+  overflow: hidden;
+
+  @media screen and (max-width: 680px) {
+    min-height: 420px;
+  }
+
+  .uk-overlay-primary {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+}
+
+#post {
+  #hero {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+  }
+
+  .uk-overlay-primary {
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+}
+
