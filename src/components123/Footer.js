@@ -16,7 +16,7 @@ function Footer() {
             </p>
           </div>
 
-          {/* footer logo */}
+          {/* footer logo. */}
           <div>
             <img
               className="footer-logo"
