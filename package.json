@@ -30,7 +30,6 @@
     "react-dom": "^16.8.6",
     "react-html-parser": "^2.0.2",
     "sanitize-html": "^1.20.1",
-    "swiper": "^4.5.0",
     "uikit": "^3.2.0"
   },
   "scripts": {

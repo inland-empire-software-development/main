@@ -23,7 +23,7 @@ function Footer() {
         </div>
 
         {/* bottom section */}
-        <div className="footer-navigate uk-column-1-3@m">
+        <div className="footer-navigate uk-column-1-3@m uk-column-1-2@s">
 
           {/* navigate */}
           <div className="footer-column">
