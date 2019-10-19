@@ -1,0 +1,55 @@
+.post-container {
+  .post-content {
+    min-height: 300px;
+    position: relative;
+    top: -150px;
+    background-color: $white;
+
+    h1 {
+      text-align: center;
+      padding-top: 25px;
+      font-size: 40px;
+      font-family: 'Light', sans-serif;
+      width: 50%;
+      margin: 0 auto;
+    }
+
+    .post-author {
+      margin-top: 15px;
+      text-align: center;
+
+
+      p, span {
+        display: inline-block;
+      }
+
+      p {
+        width: 20%;
+        background-color: #d4d4d4;
+        text-align: left;
+        padding: 10px 25px;
+        color: red;
+      }
+
+      .seperator {
+        width: 1px;
+        height: 70px;
+        top: 30px;
+        background-color: $light-gray;
+        position: relative;
+        display: inline-block;
+        text-align: center;
+      }
+
+      img {
+        border-radius: 50%;
+        width: 50px;
+        margin-right: 15px;
+      }
+    }
+
+    .post-copy {
+      padding: 60px;
+    }
+  }
+}
