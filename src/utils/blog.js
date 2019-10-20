@@ -1,5 +1,6 @@
 import moment from 'moment';
 
+// TODO: Add checks to all functions.
 // helper functions
 export const getTitle = function(post, length) {
   return post.title > length ?
@@ -27,4 +28,8 @@ export const getDate = function(post) {
 
 export const getLink = function(post, host) {
   return '/post?id=' + post.postId;
+};
+
+export const getHeroImage = function(post) {
+  return post.details.heroImage.sourceUrl;
 };

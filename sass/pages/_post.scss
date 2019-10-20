@@ -1,4 +1,9 @@
 .post-container {
+
+  .uk-breadcrumb {
+    padding: 25px 60px 0 60px;
+  }
+
   .post-content {
     min-height: 300px;
     position: relative;
@@ -7,35 +12,45 @@
 
     h1 {
       text-align: center;
-      padding-top: 25px;
+      padding-top: 60px;
       font-size: 40px;
       font-family: 'Light', sans-serif;
       width: 50%;
       margin: 0 auto;
     }
 
+    .article-author {
+      &:hover {
+        color: $blue;
+      }
+    }
+
     .post-author {
       margin-top: 15px;
       text-align: center;
 
+      .post-author-info,
+      .post-info {
+        margin: 0;
+        vertical-align: middle;
+      }
 
       p, span {
         display: inline-block;
       }
 
       p {
-        width: 20%;
-        background-color: #d4d4d4;
+        width: 15%;
         text-align: left;
         padding: 10px 25px;
-        color: red;
+        color: $light-gray;
       }
 
       .seperator {
         width: 1px;
         height: 70px;
         top: 30px;
-        background-color: $light-gray;
+        background-color: rgba(0,0,0,0.1);
         position: relative;
         display: inline-block;
         text-align: center;

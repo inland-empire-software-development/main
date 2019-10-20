@@ -45,47 +45,51 @@ export default function Story() {
               <ul
                 className="uk-slider-items uk-child-width-1-1@l">
                 {stories.map((story, index) => {
+                  const image = story.details.image.sourceUrl;
+                  const {details} = story;
+                  const {name, title, content} = details;
+
                   return (
                     <li key={index}>
                       <div id="story" className="uk-container">
                         <img className="story-image"
-                          src={story.details.image.sourceUrl}
+                          src={image}
                         />
                         <div className="story-content">
                           <p className="heading">Success Story</p>
                           <img className="story-image-mobile"
-                            src={story.details.image.sourceUrl}
+                            src={image}
                           />
                           <p className="story-header">
-                            <span className="name">{story.details.name}</span>
+                            <span className="name">{name}</span>
                             <span className="red"> - </span>
-                            <span className="title">{story.details.title}</span>
+                            <span className="title">{title}</span>
                           </p>
                           <p className="story-social">
-                            {social.map((outlet, index) => story.details[outlet] &&
-                          <a key={index} href={story.details[outlet]}>
+                            {social.map((outlet, index) => details[outlet] &&
+                          <a key={index} href={details[outlet]}>
                             <span uk-icon={`icon: ${outlet}; ratio: 1`}/>
                           </a>
                             )}
                           </p>
                           <p className="story-text">
-                            {story.details.content.substring(0, 200) + "…"}
+                            {content.substring(0, 200) + "…"}
                           </p>
 
                           <Button
                             classes="uk-align-left"
-                            toggle="target: #story-modal"
+                            toggle={`target: #story-modal-${index}`}
                             label="Read Story"
                             width={2}/>
                         </div>
                       </div>
 
-                      <div id="story-modal" uk-modal="true">
+                      <div id={`story-modal-${index}`} uk-modal="true">
                         <div className="uk-modal-dialog uk-modal-body">
-                          <h2 className="uk-modal-title">{story.details.name}</h2>
-                          <p><strong>{story.details.title}</strong></p>
+                          <h2 className="uk-modal-title">{name}</h2>
+                          <p><strong>{title}</strong></p>
                           <p>
-                            {story.details.content}
+                            {content}
                           </p>
                           <span className="uk-modal-close"
                             uk-icon={`icon: close; ratio: 2`}/>
