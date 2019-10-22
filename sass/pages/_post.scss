@@ -2,6 +2,10 @@
 
   .uk-breadcrumb {
     padding: 25px 60px 0 60px;
+
+    @media screen and (max-width: 640px){
+      display: none;
+    }
   }
 
   .post-content {
@@ -17,6 +21,15 @@
       font-family: 'Light', sans-serif;
       width: 50%;
       margin: 0 auto;
+
+      @media screen and (max-width: 640px){
+        width: 80%;
+        font-size: 32px;
+      }
+
+      @media screen and (max-width: 450px){
+        font-size: 20px;
+      }
     }
 
     .article-author {
@@ -44,6 +57,11 @@
         text-align: left;
         padding: 10px 25px;
         color: $light-gray;
+
+        @media screen and (max-width: 640px){
+          width: 80%;
+          text-align: center;
+        }
       }
 
       .seperator {
@@ -54,17 +72,25 @@
         position: relative;
         display: inline-block;
         text-align: center;
+
+        @media screen and (max-width: 640px){
+          display: none;
+        }
       }
 
       img {
         border-radius: 50%;
         width: 50px;
-        margin-right: 15px;
+        margin-right: 20px;
       }
     }
 
     .post-copy {
       padding: 60px;
+
+      @media screen and (max-width: 640px){
+        padding: 15px;
+      }
     }
   }
 }

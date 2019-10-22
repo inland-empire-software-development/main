@@ -79,7 +79,7 @@ function Post(props) {
         const path = [
           {label: "home", link: "/"},
           {label: "blog", disabled: true},
-          {label: post.slug.toLowerCase(), disabled: true},
+          {label: post.title.toLowerCase(), disabled: true},
         ];
 
         console.log(post);
@@ -104,11 +104,7 @@ function Post(props) {
                   <span className="seperator"/>
                   <p className="post-author-info">
                     <img src={post.details.author.avatar.url}/>
-                    <Link href="#">
-                      <a className="article-author">
-                        {getAuthor(post.details.author)}
-                      </a>
-                    </Link>
+                    {getAuthor(post.details.author)}
                   </p>
                 </section>
                 <section className="post-copy">
