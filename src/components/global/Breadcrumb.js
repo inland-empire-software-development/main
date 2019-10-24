@@ -1,13 +1,21 @@
+/**
+ * This takes in an array path, considers each item a step.
+ * @param {any} props
+ * @return {*}
+ * @constructor
+ */
 function Breadcrumb(props) {
   const {path} = props;
   return (
     <ul className="uk-breadcrumb">
-      {path.map((step) => {
+      {path.map((step, index) => {
         return (
-          <li className={step.disabled ? "uk-disabled" : ""}>
-            <a href={step.link ? step.link : "#"}>
-              {step.label}
-            </a>
+          <li key={index} className={step.disabled ? "uk-disabled" : ""}>
+            <Link href={step.link ? step.link : "#"}>
+              <a>
+                {step.label}
+              </a>
+            </Link>
           </li>
         );
       })}

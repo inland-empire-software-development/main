@@ -1,8 +1,13 @@
+import {withRouter} from "next/router";
+import Link from "next/link";
+
 /**
  * Footer component
+ * @param {any} props
  * @return {Footer}
  */
-function Footer() {
+function Footer(props) {
+  console.log(props);
   return (
     <footer className="container-full bg-black">
       <div className="uk-container">
@@ -30,14 +35,47 @@ function Footer() {
             <p className="heading">Navigate</p>
 
             <ul>
-              <li><a href="https://www.meetup.com/iesd-meetup/">Join</a></li>
-              {/* <li><a href="#">Speak</a></li> */}
-              <li><a className="uk-link-text" href="https://www.meetup.com/iesd-meetup/events/">Events</a></li>
-              <li><a className="uk-link-text" href="#sponsors">Sponsors</a></li>
-              <li><a className="uk-link-text" href="#operations">Operations</a></li>
-              <li><a className="uk-link-text" href="#speakers">Speakers</a></li>
-              <li><a className="uk-link-text" href="https://github.com/inland-empire-software-development/">Contribute</a></li>
-              <li><a className="uk-link-text" href="#community">Community</a></li>
+              <li>
+                <Link href="https://www.meetup.com/iesd-meetup/">
+                  <a className="uk-link-text">Join</a>
+                </Link>
+              </li>
+
+              <li>
+                <Link href="https://www.meetup.com/iesd-meetup/events/">
+                  <a className="uk-link-text">Events</a>
+                </Link>
+              </li>
+
+              <li>
+                <Link href="/#sponsors">
+                  <a className="uk-link-text">Sponsors</a>
+                </Link>
+              </li>
+
+              <li>
+                <Link href="/#operations">
+                  <a className="uk-link-text">Operations</a>
+                </Link>
+              </li>
+
+              <li>
+                <Link href="/#speakers">
+                  <a className="uk-link-text">Speakers</a>
+                </Link>
+              </li>
+
+              <li>
+                <Link href="https://github.com/inland-empire-software-development/">
+                  <a className="uk-link-text">Contribute</a>
+                </Link>
+              </li>
+
+              <li>
+                <Link href="/#community">
+                  <a className="uk-link-text">Community</a>
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -47,19 +85,35 @@ function Footer() {
               <p className="heading">Connect</p>
 
               <p>
-                <a className="uk-link-text" href="mailto:community@iesd.com">Send Email</a>
+                <Link href="mailto:community@iesd.com">
+                  <a className="uk-link-text">Send Email</a>
+                </Link>
               </p>
 
               <p>
-                <a className="uk-link-text" href="tel:18004370267">+1 800 437 0267</a>
+                <Link href="tel:18004370267">
+                  <a className="uk-link-text">+1 800 437 0267</a>
+                </Link>
               </p>
             </div>
 
             <div>
               <ul className="footer-legal">
-                <li><a className="uk-link-text" href="#">Terms and Conditions</a></li>
-                <li><a className="uk-link-text" href="#">Code of Conduct</a></li>
-                <li><a className="uk-link-text" href="#">Privacy Policy</a></li>
+                <li>
+                  <Link href="#">
+                    <a className="uk-link-text">Terms and Conditions</a>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="#">
+                    <a className="uk-link-text">Terms and Conditions</a>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="#">
+                    <a className="uk-link-text">Privacy Policy</a>
+                  </Link>
+                </li>
               </ul>
             </div>
           </div>
@@ -95,4 +149,4 @@ function Footer() {
   );
 }
 
-export default Footer;
+export default withRouter(Footer);

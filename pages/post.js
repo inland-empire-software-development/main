@@ -8,21 +8,15 @@ import {Query} from "react-apollo";
 import gql from "graphql-tag";
 import moment from "moment";
 
-import Link from "next/link";
+import Breadcrumb from "../src/components/global/Breadcrumb";
 import Hero from "../src/components/layout/Hero";
 import Footer from "../src/components/global/Footer";
-
 
 import {
   getAuthor,
   getHeroImage,
-  getCardImage,
-  getDate,
-  getExcerpt,
-  getLink,
   getTitle,
 } from "../src/utils/blog";
-import Breadcrumb from "../src/components/global/Breadcrumb";
 
 const postQuery = gql`
     query ($postId: Int!) {
@@ -82,7 +76,6 @@ function Post(props) {
           {label: post.title.toLowerCase(), disabled: true},
         ];
 
-        console.log(post);
         return (
           <div id="post" className="post">
             <Hero
@@ -95,18 +88,22 @@ function Post(props) {
               <article className="post-content">
                 <Breadcrumb path={path}/>
 
-                <h1>{post.title}</h1>
+                <h1>{getTitle(post, 180)}</h1>
+
                 <section className="post-author">
                   <p className="post-info">
                     {categories[0].node.name}<br/>
                     {moment(post.date).format("MMMM Do, Y")}
                   </p>
+
                   <span className="seperator"/>
+
                   <p className="post-author-info">
                     <img src={post.details.author.avatar.url}/>
                     {getAuthor(post.details.author)}
                   </p>
                 </section>
+
                 <section className="post-copy">
                   {reactHtmlParser(content)}
                 </section>
