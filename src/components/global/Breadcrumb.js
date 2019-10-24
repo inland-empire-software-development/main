@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 /**
  * This takes in an array path, considers each item a step.
  * @param {any} props
