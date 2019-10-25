@@ -26,7 +26,7 @@ export const getDate = function(post) {
   return moment(post.date).format('M/D/Y');
 };
 
-export const getLink = function(post, host) {
+export const getLink = function(post) {
   return '/post?id=' + post.postId;
 };
 

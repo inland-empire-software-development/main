@@ -7,7 +7,6 @@ import Link from "next/link";
  * @return {Footer}
  */
 function Footer(props) {
-  console.log(props);
   return (
     <footer className="container-full bg-black">
       <div className="uk-container">

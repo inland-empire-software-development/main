@@ -45,12 +45,6 @@ query Post {
 `;
 
 export default function Blog() {
-  let host;
-
-  if (typeof window !== 'undefined') {
-    host = location.host;
-  }
-
   return (
     <Query query={postQuery} >
       {({loading, error, data}) => {
@@ -58,7 +52,6 @@ export default function Blog() {
         if (loading) return <div>Loading</div>;
 
         const posts = data.posts.nodes;
-        console.log(posts);
         return (
           <div id="blog" className="container-full">
             <div className="uk-container">
@@ -99,7 +92,7 @@ export default function Blog() {
 
 
                               <Button
-                                link={getLink(post, host)}
+                                link={getLink(post)}
                                 classes="uk-align-left card-button"
                                 toggle={`target: #article-modal-${index}`}
                                 label="read article"
