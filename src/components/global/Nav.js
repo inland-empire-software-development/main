@@ -25,9 +25,13 @@ function Nav() {
         <div className="uk-navbar-left">
           <ul className="uk-navbar-nav">
             <li className="uk-active">
-              <img id="nav-logo"
-                src="../../static/logos/iesd-initials-white.svg"
-              />
+              <Link href="/">
+                <a>
+                  <img id="nav-logo"
+                    src="../../static/logos/iesd-initials-white.svg"
+                  />
+                </a>
+              </Link>
             </li>
           </ul>
         </div>
