@@ -7,8 +7,9 @@ import Link from 'next/link';
  */
 function Button(props) {
   const {
-    link,
+    link = "#",
     label,
+    target = "_self",
     classes = "",
     toggle = "false",
     border = "border-red",
@@ -19,15 +20,20 @@ function Button(props) {
     width = 0,
   } = props;
 
+  const opts = {target};
+
+  if (toggle) {
+    opts["uk-toggle"] = toggle;
+  }
+
   const widths = ["small", "third", "half", "full"];
 
   return (
     <Link href={link}>
-      <a target="_blank"
-        className={`${type} ${color} ${text} button-${widths[width]}
+      <a className={`${type} ${color} ${text} button-${widths[width]}
       ${border} border-size-${borderSize} hvr-ripple-out
       ${classes}`}
-        uk-toggle={toggle}
+      {...opts}
       >
         {label}
       </a>

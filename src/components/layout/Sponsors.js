@@ -1,6 +1,5 @@
 import {Query} from "react-apollo";
 import gql from "graphql-tag";
-import Button from '../global/Button';
 
 export const sponsorsQuery = gql`
 query Sponsor {
@@ -33,9 +32,8 @@ export default function Sponsors() {
               <p>
                 Our work is made possible by the following sponsors
               </p>
-              <div
-                className="uk-grid-small uk-child-width-1-4@s uk-flex-center"
-                uk-grid="true">
+              <div className="uk-grid-small uk-child-width-1-3@s
+                uk-child-width-1-4@m uk-flex-center uk-grid" uk-grid="true">
                 {sponsors.map((sponsor, index) => sponsor.details.image &&
                   <div key={index}>
                     <a href={sponsor.details.link}>

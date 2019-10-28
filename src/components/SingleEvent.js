@@ -6,12 +6,12 @@ import {splitMonth, splitDay} from '../utils/splitDateUtil';
 import Button from "./global/Button";
 
 function SingleEvent() {
-  const [eventName, setEventName] = useState('');
-  const [eventMonth, setEventMonth] = useState('');
+  const [eventName, setEventName] = useState('--');
+  const [eventMonth, setEventMonth] = useState('--');
   const [eventDay, setEventDay] = useState('');
-  const [eventStartTime, setEventStartTime] = useState('');
-  const [eventEndTime, setEventEndTime] = useState('');
-  const [eventLink, setEventLink] = useState('');
+  const [eventStartTime, setEventStartTime] = useState('--');
+  const [eventEndTime, setEventEndTime] = useState('--');
+  const [eventLink, setEventLink] = useState('#');
 
   // Removes any odd formatting in event Name.
   const getEventName = (eventName) => {
@@ -32,11 +32,11 @@ function SingleEvent() {
       setEventMonth(splitMonth(localDate));
       setEventDay(splitDay(localDate));
       setEventLink(link);
-    }).then(()=> controller.abort())
-        .catch((err) => console.log(err));
+    }).catch((err) => console.log(err));
   });
 
   return (
+    eventName &&
     <div className="hero-event-container">
 
       {/* event details container */}
@@ -63,7 +63,7 @@ function SingleEvent() {
 
       </div>
 
-      {/* reserve a spot buton */}
+      {/* reserve a spot button */}
       <div className="reserve-wrapper">
 
         <Button link={eventLink} label="reserve a spot" width={3}/>

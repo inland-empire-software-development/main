@@ -23,12 +23,14 @@
         "sourceType": "module"
     },
     "plugins": [
-        "react"
+        "react",
+        "react-hooks"
+
     ],
     "rules": {
         "react/jsx-filename-extension": [1, {
             "extensions" : [".js", ".jsx"]
-        }], 
+        }],
         "quotes": 0,
         "one-var": 0,
         "strict": 2,
@@ -39,6 +41,8 @@
         "no-console": 0,
         "linebreak-style": 0,
         "require-jsdoc": 0,
-        "react/jsx-uses-vars": 2
+        "react/jsx-uses-vars": 2,
+        "react-hooks/rules-of-hooks": "error",
+        "react-hooks/exhaustive-deps": "warn"
     }
 }

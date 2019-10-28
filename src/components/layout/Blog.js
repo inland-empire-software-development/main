@@ -1,7 +1,13 @@
 import {Query} from "react-apollo";
 import gql from "graphql-tag";
-import moment from 'moment';
-import Link from 'next/link';
+
+import {
+  getAuthor,
+  getCardImage,
+  getDate,
+  getExcerpt,
+  getLink,
+  getTitle} from '../../utils/blog';
 
 import Button from "../global/Button";
 
@@ -38,40 +44,7 @@ query Post {
 }
 `;
 
-// helper functions
-function getTitle(post, length) {
-  return post.title > length ?
-    post.title.substring(0, length) + "…" :
-    post.title;
-}
-
-function getExcerpt(post, length) {
-  const excerpt = post.excerpt
-      .replace("<p>", "")
-      .replace("</p>", "");
-
-  return excerpt.length > length ? excerpt.substring(0, length) + "…" : excerpt;
-}
-
-function getAuthor(author) {
-  return author.firstName + " " + author.lastName;
-}
-
-function getDate(post) {
-  return moment(post.date).format("M/D/Y");
-}
-
-function getLink(post, host) {
-  return "/post?id=" + post.postId;
-}
-
 export default function Blog() {
-  let host;
-
-  if (typeof window !== 'undefined') {
-    host = location.host;
-  }
-
   return (
     <Query query={postQuery} >
       {({loading, error, data}) => {
@@ -79,7 +52,6 @@ export default function Blog() {
         if (loading) return <div>Loading</div>;
 
         const posts = data.posts.nodes;
-        console.log(posts);
         return (
           <div id="blog" className="container-full">
             <div className="uk-container">
@@ -88,14 +60,15 @@ export default function Blog() {
                 <div className="uk-position-relative uk-visible-toggle uk-light"
                   tabIndex="-1">
 
-                  <ul className="uk-slider-items uk-child-width-1-3@l uk-child-width-1-2@s uk-grid">
+                  <ul className="uk-slider-items uk-child-width-1-3@l
+                  uk-child-width-1-2@s uk-grid">
                     {posts.map((post, index) => {
                       return (
                         <li key={post.id}>
                           <div className="uk-card">
 
                             <div className="uk-card-media-top">
-                              <img src={post.details.cardImage.sourceUrl} />
+                              <img src={getCardImage(post)} />
                             </div>
 
                             <div className="uk-card-body">
@@ -119,7 +92,7 @@ export default function Blog() {
 
 
                               <Button
-                                link={getLink(post, host)}
+                                link={getLink(post)}
                                 classes="uk-align-left card-button"
                                 toggle={`target: #article-modal-${index}`}
                                 label="read article"
