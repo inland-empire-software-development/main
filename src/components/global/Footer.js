@@ -104,17 +104,17 @@ function Footer(props) {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/page?name=slack&set=legal">
+                  <Link href="/page?name=conduct_slack&set=legal">
                     <a className="uk-link-text">Slack Guidelines</a>
                   </Link>
                 </li>
                 <li>
-                  <Link href="/page?name=terms&set=legal">
+                  <Link href="/page?name=toc&set=legal">
                     <a className="uk-link-text">Terms and Conditions</a>
                   </Link>
                 </li>
                 <li>
-                  <Link href="/page?name=privacy&set=legal">
+                  <Link href="/page?name=privacy_policy&set=legal">
                     <a className="uk-link-text">Privacy Policy</a>
                   </Link>
                 </li>
