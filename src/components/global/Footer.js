@@ -100,7 +100,7 @@ function Footer(props) {
               <ul className="footer-legal">
                 <li>
                   <Link href="#">
-                    <a className="uk-link-text">Terms and Conditions</a>
+                    <a className="uk-link-text">Slack Code of Conduct</a>
                   </Link>
                 </li>
                 <li>
