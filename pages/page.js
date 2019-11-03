@@ -14,17 +14,22 @@ function Post(props) {
   const {name, set} = router.query;
   const [content, setContent] = useState();
 
+  /**
+   * Pull data using axios from the GitHub API
+   * Get data by set and name for pages.
+   * TODO: Switch to GraphQL once support is added to plugin for Options
+   */
   useEffect( () => {
     (async ()=>{
       const result = await axios(
           `https://api.iesd.com/wp-json/iesd/api/settings?set=${set}&name=${name}`
       );
 
-      setContent(result.data);
-      console.log(result);
+      setContent(result.data[0]);
     })();
   }, [name, set]);
 
+  console.log(content);
   // initial render
   return (
     <div id="page" className="page">
@@ -35,9 +40,9 @@ function Post(props) {
       />
 
       <div className="uk-container post-container bg-white">
-        <h1>Title</h1>
+        <h1>{content && content.label}</h1>
         <section className="page-content">
-          {content && reactHtmlParser(content[name])}
+          {content && reactHtmlParser(content.value)}
         </section>
       </div>
 
