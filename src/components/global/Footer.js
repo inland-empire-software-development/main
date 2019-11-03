@@ -99,17 +99,22 @@ function Footer(props) {
             <div>
               <ul className="footer-legal">
                 <li>
-                  <Link href="#">
-                    <a className="uk-link-text">Slack Code of Conduct</a>
+                  <Link href="/page?name=conduct&set=legal">
+                    <a className="uk-link-text">Code of Conduct</a>
                   </Link>
                 </li>
                 <li>
-                  <Link href="#">
+                  <Link href="/page?name=slack&set=legal">
+                    <a className="uk-link-text">Slack Guidelines</a>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/page?name=terms&set=legal">
                     <a className="uk-link-text">Terms and Conditions</a>
                   </Link>
                 </li>
                 <li>
-                  <Link href="#">
+                  <Link href="/page?name=privacy&set=legal">
                     <a className="uk-link-text">Privacy Policy</a>
                   </Link>
                 </li>
