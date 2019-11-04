@@ -1,8 +1,28 @@
+import axios from "axios";
+
 /**
  * Mission component
  * @return {Mission}
  */
 function Mission() {
+  const [details, setDetails] = useState();
+
+  /**
+   * Pull data using axios from the IESD API
+   * Get data by set and name for pages.
+   * TODO: Switch to GraphQL once support is added to plugin for Options
+   */
+  useEffect( () => {
+    (async ()=>{
+      const result = await axios(
+          `https://api.iesd.com/wp-json/iesd/api/settings?set=organization&name=mission`
+      );
+      setDetails(result.data[0]);
+    })();
+  }, []);
+
+  console.log(details);
+
   return (
     <div id="mission" className="uk-container">
       <div className="uk-column-1-2@m">
