@@ -1,0 +1,9 @@
+.uk-modal-close {
+  cursor: pointer;
+  float: right;
+  transition: color 0.25s ease-in-out;
+
+  &:hover {
+    color: $red;
+  }
+}

@@ -1,14 +1,14 @@
 #leadership-image {
   display: inliine-block;
-  
 
-  
+
+
   .profile-photo {
     height: 14rem;
     width: 14rem;
     overflow: hidden;
 
-    @media screen and (max-width: $large) {
+    @media screen and (max-width: 1440px) {
       height: 12rem;
       width: 12rem;
     }
@@ -18,7 +18,7 @@
       width: 11rem;
     }
 
-    @media screen and (max-width: $small) {
+    @media screen and (max-width: 480px) {
       height: 8rem;
       width: 8rem;
     }
@@ -48,12 +48,12 @@
     opacity: 0.7;
     width: 15rem;
 
-    @media screen and (max-width: $medium) {
+    @media screen and (max-width: 860px) {
       width: 12rem;
       opacity: 0.8;
     }
 
-    @media screen and (max-width: $small) {
+    @media screen and (max-width: 480px) {
       max-height: 4rem;
       bottom: 1.5rem;
     }
@@ -68,7 +68,7 @@
       margin: 0;
       padding: .5rem;
 
-      @media screen and (max-width: $small) {
+      @media screen and (max-width: 480px) {
         padding-top: .3rem;
       }
 

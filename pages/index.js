@@ -1,47 +1,63 @@
-/* eslint-disable no-unused-vars */
-// eslint-disable-next-line no-unused-vars
-import React, {useState, useEffect} from 'react';
-import Announcements from '../src/components/Announcement';
-import BlogList from '../src/components/BlogList';
-import Community from '../src/components/Community';
-import FloatingBar from '../src/components/FloatingBar';
-import Footer from '../src/components/Footer';
-import Goals from '../src/components/Goals';
-import Hero from '../src/components/Hero';
-import Join from '../src/components/Join';
-import Leadership from '../src/components/Leadership';
-import Mission from '../src/components/Mission';
-import Slogan from '../src/components/Slogan';
-import Sponsors from '../src/components/Sponsors';
-import SponsorShip from '../src/components/Sponsorship';
-import SuccessStories from '../src/components/SuccessStories';
-
 import '../node_modules/@fortawesome/fontawesome-free/js/all';
 import '../sass/index.scss';
 
 import {withRouter} from 'next/router';
 
-// import Fetch from 'isomorphic-unfetch';
-function App() {
+import Hero from "../src/components/layout/Hero";
+import Slogan from "../src/components/layout/Slogan";
+import Mission from "../src/components/layout/Mission";
+import Goals from "../src/components/layout/Goals";
+import Community from "../src/components/layout/Community";
+import CallToAction from "../src/components/global/CallToAction";
+import Button from "../src/components/global/Button";
+import Operations from "../src/components/layout/Operations";
+import Speakers from "../src/components/layout/Speakers";
+import Story from "../src/components/layout/Story";
+import Sponsors from '../src/components/layout/Sponsors';
+import Footer from "../src/components/global/Footer";
+import Blog from "../src/components/layout/Blog";
+import Announcement from '../src/components/global/Announcement';
+
+function Home() {
   // initial render
+
   return (
-    <div className="grid-container home">
-      <Announcements />
-      <Hero navbar={true} event={true} />
+    <div className="home">
+      <Announcement />
+
+      <Hero />
       <Slogan />
       <Mission />
+
+      <div className="container-full uk-hidden@m">
+        <img src="../static/images/hack-day-spencer-tyrice-rebecca.jpg" />
+      </div>
+
       <Goals />
+
       <Community />
-      <Join />
-      <Leadership />
-      <SuccessStories />
+
+
+      <CallToAction
+        background="../../static/images/join-section-background.jpg"
+        button={<Button
+          label="Join the Community"
+          width={0}
+          link="https://www.meetup.com/iesd-meetup/"
+        />}
+      />
+
+      <Operations />
+      <Speakers/>
+
+      <Story />
+
       <Sponsors />
-      <SponsorShip/>
-      <BlogList />
+
+      <Blog />
       <Footer />
-      <FloatingBar />
     </div>
   );
 }
 
-export default withRouter(App);
+export default withRouter(Home);

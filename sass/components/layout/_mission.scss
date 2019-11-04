@@ -1,0 +1,94 @@
+#mission {
+  height: 525px;
+
+  [class*='uk-column-'] {
+    column-gap: 0;
+  }
+
+  [class*='uk-column-'] {
+    @media screen and (max-width: 1024px) {
+      column-count: 1;
+    }
+  }
+
+  @media screen and (max-width: 1196px) {
+    height: 450px;
+  }
+
+  @media screen and (max-width: 1024px) {
+    height: auto;
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+
+  div {
+    height: 100%;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  #mission-left {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-right: 15px;
+
+    .mission-title {
+      font-size: calc(20px + 1.5vw);
+      font-family: 'Block', sans-serif;
+      margin-bottom: 10px;
+    }
+
+    .mission-desc {
+      font-size: 20px;
+      font-family: 'Book', sans-serif;
+      line-height: 42px;
+
+
+      @media screen and (max-width: 1196px) {
+        font-size: 16px;
+        line-height: 30px;
+      }
+
+      @media screen and (max-width: 991px) {
+        font-size: 16px;
+        line-height: 28px;
+      }
+    }
+  }
+
+  #mission-right {
+    position: relative;
+
+    .mission-image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: url("../static/images/desktop/ie-cutout-image-background.jpg"),
+      linear-gradient(to left, rgba(236, 34, 66, 0.5), rgba(63, 179, 225, 0.5));
+      background-blend-mode: multiply;
+      background-attachment: fixed;
+      background-size: 100%;
+      background-repeat: no-repeat;
+      background-position: 50% 90%;
+
+      @media screen and (max-width: 1250px) {
+        background-size: cover;
+      }
+    }
+
+    .mission-cutout {
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+
+    img {
+      height: inherit;
+      width: 100%;
+    }
+  }
+}

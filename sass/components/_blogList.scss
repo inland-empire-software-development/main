@@ -18,6 +18,14 @@
         max-width: 310px;
         margin-top: 0 !important;
       }
+
+      @media screen and (min-width: 300px) and (max-width: 485px) {
+        height: 310px;
+      }
+
+      @media screen and (min-width: 486px) and (max-width: 600px) {
+        height: 340px;
+      }
     }
   }
 
@@ -92,7 +100,7 @@
     line-height: 35px;
     position: absolute;
 }
-  @media screen and (min-width: $medium) {
+  @media screen and (min-width: 860px) {
     .blog-preview {
       padding: 0 10px;
       box-sizing: border-box;

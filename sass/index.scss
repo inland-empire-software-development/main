@@ -1,48 +1,39 @@
 @import
-'vendors/calcite/calcite-web.scss';
+'vendors/uikit/scss/variables-theme.scss',
+'vendors/uikit/scss/mixins-theme.scss',
+'vendors/uikit/scss/uikit-theme.scss';
 
 @import
 'base/_colors',
 'base/_typography',
 'base/_animation';
 
-
-@import
-'components/_community';
-
 @import
 'pages/_index',
-'pages/_mentorship';
+'pages/_page',
+'pages/_post';
 
 @import
-'components/_announcements',
-'components/_blogList',
-'components/_button',
-'components/_card',
-'components/_floatBar',
-'components/_footer',
-'components/_goals',
-'components/_hero',
-'components/_heroEvent',
-'components/_join',
-'components/_leadership',
-'components/_leadership-image',
-'components/_mission',
-'components/_navbar',
-'components/_navbarDesktop',
-'components/_navbarHamburgerIcon',
-'components/_navbarMobile',
-'components/_navbarMobileDropdownItems',
-'components/_navbarMobileMenu',
-'components/_pageTitle',
-'components/_slogan',
-'components/_socialBtnCircle',
-'components/_socialBtnCircleContainer',
-'components/_sponsors',
-'components/_sponsorship.scss',
-'components/_successStories',
-'components/_successStoriesImage',
-'components/_successStoriesMoreBtn',
-'components/_successStoriesUserTitle';
+'components/_memberList',
+'components/_singleEvent.scss';
 
+@import
+'components/layout/_community.scss',
+'components/layout/_blog.scss',
+'components/layout/_mission.scss',
+'components/layout/_goals.scss',
+'components/layout/_slogan.scss',
+'components/layout/_sponsors.scss',
+'components/layout/_story.scss',
+'components/layout/_hero.scss';
+
+@import
+'components/global/_button',
+'components/global/_callToAction',
+'components/global/_footer',
+'components/global/_modal',
+'components/global/_announcement',
+'components/global/_navigation';
+
+@import 'components/global/_global.scss';
 @import '_shame';

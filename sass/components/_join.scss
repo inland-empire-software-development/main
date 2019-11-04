@@ -7,7 +7,7 @@
 	align-items: center;
 	justify-content: center;
 
-	@media screen and (max-width: $medium){
+	@media screen and (max-width: 860px){
 		background: url('/./static/images/mobile/join-gradient.jpg');
 		background-size: cover;
 		background-repeat: no-repeat;

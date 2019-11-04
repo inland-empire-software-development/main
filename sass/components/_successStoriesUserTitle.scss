@@ -9,7 +9,7 @@
 		align-items: center;
 		height: 81%;
 
-		@media screen and (max-width: $medium){
+		@media screen and (max-width: 860px){
 			width: 100%;
 			height: 30px;
 			margin-top: 10px;
@@ -27,7 +27,7 @@
 			margin-right: 10px;
 		}
 
-		@media screen and (max-width: $medium){
+		@media screen and (max-width: 860px){
 			font-size: calc(.75em + 1vw);
 			span{
 				margin-left: 5px;
@@ -41,7 +41,7 @@
 			}
 		}
 
-		@media screen and (max-width: $small){
+		@media screen and (max-width: 480px){
 			font-size: calc(.55em + 1vw);
 			span{
 				margin: 0;
@@ -56,7 +56,7 @@
 		display: flex;
 		align-items: center;
 
-		@media screen and (max-width: $medium){
+		@media screen and (max-width: 860px){
 			font-size: calc(.5em + 1.5vw);
 			width: 100%;
 		}
@@ -66,12 +66,12 @@
 		@media screen and (max-width: 600px){
 			font-size: calc(.45em + 1vw);
 		}
-		@media screen and (max-width: $small){
+		@media screen and (max-width: 480px){
 			font-size: calc(.4em + 1.5vw);
 		}
 	}
 
-	@media screen and (max-width: $medium){
+	@media screen and (max-width: 860px){
 		flex-direction: column;
 		line-height: 25px;
 		justify-content: center;
@@ -81,7 +81,7 @@
 		height: 0%;
 		min-height: 140px;
 	}
-	@media screen and (max-width: $small){
+	@media screen and (max-width: 480px){
 		line-height: 18px;
 	}
 }

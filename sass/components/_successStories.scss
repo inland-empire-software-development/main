@@ -6,7 +6,7 @@
 		"image excerpt"
 		"image button";
 	grid-template-columns: 3fr 7fr;
-	grid-template-rows: 1fr 50px 1fr 1fr; 
+	grid-template-rows: 1fr 50px 1fr 1fr;
 	background: $black;
 	color: $white;
 	max-height: 468px;
@@ -24,14 +24,14 @@
 		font-family: 'Block';
 		font-size: calc(1.6em + 1.5vw);
 
-		@media screen and (max-width: $medium){
+		@media screen and (max-width: 860px){
 			align-self: start;
 			margin-top: -15px;
 		}
 		@media screen and (max-width: 700px){
 			font-size: calc(1em + 1.5vw);
 		}
-		@media screen and (max-width: $small){
+		@media screen and (max-width: 480px){
 			font-size: calc(.5em + 1.5vw);
 			margin-top: -5px;
 		}
@@ -42,7 +42,7 @@
 		font-family: "Book";
 		font-size: calc(.5em + .5vw);
 		width: 75%;
-		@media screen and (max-width: $medium){
+		@media screen and (max-width: 860px){
 			font-size: calc(1em + .5vw);
 			word-wrap: break-word;
 			height: 84%;
@@ -61,13 +61,13 @@
 		justify-content: space-between;
 		width: 75%;
 
-		@media screen and (max-width: $medium){
+		@media screen and (max-width: 860px){
 			width: 95%;
 			height: 100%;
 			flex-direction: row-reverse;
 			align-items: flex-end;
 		}
-		@media screen and (max-width: $small){
+		@media screen and (max-width: 480px){
 			width: 100%;
 		}
 	}
@@ -80,7 +80,7 @@
 	}
 
 
-	@media screen and (max-width: $medium) {
+	@media screen and (max-width: 860px) {
 		padding: 25px;
 		height: 60.25vw;
 		grid-template-areas:
@@ -89,7 +89,7 @@
 			"job-title excerpt"
 			"button button";
 		grid-template-columns: 3fr 7fr;
-		grid-template-rows: auto auto 1fr .5fr; 
+		grid-template-rows: auto auto 1fr .5fr;
 
 		.success-btn-container,
 		.success-title-container{
@@ -100,7 +100,7 @@
 	@media screen and (max-width: 600px){
 		height: 70.25vw;
 	}
-	@media screen and (max-width: $small){
+	@media screen and (max-width: 480px){
 		grid-template-columns: 3.5fr 6.5fr;
 		grid-template-rows: 20px auto 1fr 1fr;
 		height: 80vw;

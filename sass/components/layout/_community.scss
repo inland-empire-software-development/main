@@ -1,0 +1,15 @@
+#community-container {
+  background-attachment: fixed;
+}
+
+#community {
+  background-size: cover;
+  background-position: center;
+  min-height: 280px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  .uk-slider {
+    margin-top: 40px;
+  }
+}

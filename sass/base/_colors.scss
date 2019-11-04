@@ -41,11 +41,11 @@ $green: #02AE72;
 }
 
 .black {
-  color: $black;
+  color: $black !important;
 }
 
 .white {
-  color: $white;
+  color: $white !important;
 }
 
 .navy {
@@ -88,6 +88,17 @@ $green: #02AE72;
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#3fb3e1', endColorstr='#02ae72', GradientType=1);
   /* IE6-9 */
+}
+
+// Backgrounds
+.black-white {
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,000000+30,ffffff+30,ffffff+30,ffffff+100 */
+  background: #000000; /* Old browsers */
+  background: -moz-linear-gradient(left,  #000000 0%, #000000 40%, #ffffff 40%, #ffffff 40%, #ffffff 100%); /* FF4.6-15 */
+  background: -webkit-linear-gradient(left,  #000000 0%,#000000 40%,#ffffff 40%,#ffffff 40%,#ffffff 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right,  #000000 0%,#000000 40%,#ffffff 40%,#ffffff 40%,#ffffff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#ffffff',GradientType=1 ); /* IE6-9 */
+
 }
 
 // selection color

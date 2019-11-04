@@ -1,7 +1,7 @@
 header#pageTitle {
   height: 275px;
 
-  @media screen and (max-width: $small) {
+  @media screen and (max-width: 480px) {
       height: 190px;
   }
 
@@ -14,13 +14,13 @@ header#pageTitle {
     margin: 0 auto;
     left: -10px;
 
-    @media screen and (max-width: $medium) {
+    @media screen and (max-width: 860px) {
       font-size: 60px;
       bottom: -205px;
       left: 0;
     }
 
-    @media screen and (max-width: $small) {
+    @media screen and (max-width: 480px) {
       font-size: 40px;
       bottom: -144px;
     }
