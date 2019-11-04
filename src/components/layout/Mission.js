@@ -1,12 +1,13 @@
 import axios from "axios";
 import {useEffect, useState} from 'react';
 import reactHtmlParser from 'react-html-parser';
+
 /**
  * Mission component
  * @return {Mission}
  */
 function Mission() {
-  const [details, setDetails] = useState();
+  const [mission, setMission] = useState();
 
   /**
    * Pull data using axios from the IESD API
@@ -18,11 +19,9 @@ function Mission() {
       const result = await axios(
           `https://api.iesd.com/wp-json/iesd/api/settings?set=organization&name=mission`
       );
-      setDetails(result.data[0]);
+      setMission(result.data[0]);
     })();
   }, []);
-
-  console.log(details);
 
   return (
     <div id="mission" className="uk-container">
@@ -36,7 +35,7 @@ function Mission() {
 
           {/* mission description */}
           <main className="mission-desc">
-            {details && reactHtmlParser(details.value)}
+            {mission && reactHtmlParser(mission.value)}
           </main>
 
         </div>
