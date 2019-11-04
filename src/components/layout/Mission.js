@@ -1,5 +1,6 @@
 import axios from "axios";
-
+import {useEffect, useState} from 'react';
+import reactHtmlParser from 'react-html-parser';
 /**
  * Mission component
  * @return {Mission}
@@ -34,17 +35,9 @@ function Mission() {
           </p>
 
           {/* mission description */}
-          <p className="mission-desc">
-            Our mission at IESD is two-fold. First, we want to help
-            increase the tech footprint of the Inland Empire by aiding
-            businesses and/or startups in employing local Inland Empire
-            developers. Second, by helping developers learn, network and
-            find employment locally, we decrease brain drain and increase
-            the tech presence in the Inland Empire. By supporting local
-            startups and keeping tech jobs filled by local talent, we also
-            help open up more business opportunities in other sectors of the
-            workforce.
-          </p>
+          <main className="mission-desc">
+            {details && reactHtmlParser(details.value)}
+          </main>
 
         </div>
 
