@@ -1,5 +1,7 @@
 import {withRouter} from "next/router";
 import Link from "next/link";
+import {useEffect, useState} from 'react';
+import axios from 'axios';
 
 /**
  * Footer component
@@ -7,6 +9,22 @@ import Link from "next/link";
  * @return {Footer}
  */
 function Footer(props) {
+  const [details, setDetails] = useState();
+
+  /**
+   * Pull data using axios from the IESD API
+   * Get data by set and name for pages.
+   * TODO: Switch to GraphQL once support is added to plugin for Options
+   */
+  useEffect( () => {
+    (async ()=>{
+      const result = await axios(
+          `https://api.iesd.com/wp-json/iesd/api/settings?set=organization`
+      );
+      setDetails(result.data[0]);
+    })();
+  }, []);
+
   return (
     <footer className="container-full bg-black">
       <div className="uk-container">
@@ -84,14 +102,16 @@ function Footer(props) {
               <p className="heading">Connect</p>
 
               <p>
-                <Link href="mailto:community@iesd.com">
+                <Link href={details ? "mailto:" + details.email.value : ""}>
                   <a className="uk-link-text">Send Email</a>
                 </Link>
               </p>
 
               <p>
                 <Link href="tel:18004370267">
-                  <a className="uk-link-text">+1 800 437 0267</a>
+                  <a className="uk-link-text">
+                    +{details ? details.phone.value : ""}
+                  </a>
                 </Link>
               </p>
             </div>
@@ -104,12 +124,7 @@ function Footer(props) {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/page?name=conduct_slack&set=legal">
-                    <a className="uk-link-text">Slack Guidelines</a>
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/page?name=toc&set=legal">
+                  <Link href="/page?name=tos&set=legal">
                     <a className="uk-link-text">Terms and Conditions</a>
                   </Link>
                 </li>
@@ -126,15 +141,14 @@ function Footer(props) {
           <div className="footer-column">
             <p className="heading">Visit Us</p>
             <p className="white">
-              3499 Tenth St. <br/>
-              Riverside, CA 92501
+              {details ? details.address.value : ""}
             </p>
 
             <div className="mapouter">
               <div className="gmap_canvas">
                 <iframe
                   id="gmap_canvas"
-                  src="https://maps.google.com/maps?q=3499%20Tenth%20St%20Riverside%2C%20CA&t=&z=17&ie=UTF8&iwloc=&output=embed"
+                  src={details ? details.map.value : ""}
                 />
               </div>
             </div>

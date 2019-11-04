@@ -26,7 +26,7 @@ function Nav() {
           <ul className="uk-navbar-nav">
             <li className="uk-active">
               <Link href="/">
-                <a>
+                <a className="uk-logo">
                   <img id="nav-logo"
                     src="../../static/logos/iesd-initials-white.svg"
                   />

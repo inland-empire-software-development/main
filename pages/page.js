@@ -8,6 +8,7 @@ import {withRouter} from "next/router";
 import Hero from "../src/components/layout/Hero";
 import Footer from "../src/components/global/Footer";
 import axios from 'axios';
+import Announcement from '../src/components/global/Announcement';
 
 function Post(props) {
   const {router} = props;
@@ -15,7 +16,7 @@ function Post(props) {
   const [content, setContent] = useState();
 
   /**
-   * Pull data using axios from the GitHub API
+   * Pull data using axios from the IESD API
    * Get data by set and name for pages.
    * TODO: Switch to GraphQL once support is added to plugin for Options
    */
@@ -29,10 +30,10 @@ function Post(props) {
     })();
   }, [name, set]);
 
-  console.log(content);
   // initial render
   return (
     <div id="page" className="page">
+      <Announcement />
       <Hero
         event={false}
         video={false}
