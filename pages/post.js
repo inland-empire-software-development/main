@@ -17,6 +17,7 @@ import {
   getHeroImage,
   getTitle,
 } from "../src/utils/blog";
+import Announcement from '../src/components/global/Announcement';
 
 const postQuery = gql`
     query ($postId: Int!) {
@@ -78,6 +79,7 @@ function Post(props) {
 
         return (
           <div id="post" className="post">
+            <Announcement />
             <Hero
               event={false}
               video={false}

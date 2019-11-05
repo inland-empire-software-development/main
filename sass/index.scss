@@ -10,6 +10,7 @@
 
 @import
 'pages/_index',
+'pages/_page',
 'pages/_post';
 
 @import
@@ -31,6 +32,7 @@
 'components/global/_callToAction',
 'components/global/_footer',
 'components/global/_modal',
+'components/global/_announcement',
 'components/global/_navigation';
 
 @import 'components/global/_global.scss';

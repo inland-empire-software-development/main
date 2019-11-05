@@ -16,12 +16,15 @@ import Story from "../src/components/layout/Story";
 import Sponsors from '../src/components/layout/Sponsors';
 import Footer from "../src/components/global/Footer";
 import Blog from "../src/components/layout/Blog";
+import Announcement from '../src/components/global/Announcement';
 
 function Home() {
   // initial render
 
   return (
     <div className="home">
+      <Announcement />
+
       <Hero />
       <Slogan />
       <Mission />
