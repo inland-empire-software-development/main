@@ -1,8 +1,28 @@
+import axios from "axios";
+import {useEffect, useState} from 'react';
+import reactHtmlParser from 'react-html-parser';
+
 /**
  * Mission component
  * @return {Mission}
  */
 function Mission() {
+  const [mission, setMission] = useState();
+
+  /**
+   * Pull data using axios from the IESD API
+   * Get data by set and name for pages.
+   * TODO: Switch to GraphQL once support is added to plugin for Options
+   */
+  useEffect( () => {
+    (async ()=>{
+      const result = await axios(
+          `https://api.iesd.com/wp-json/iesd/api/settings?set=organization&name=mission`
+      );
+      setMission(result.data[0]);
+    })();
+  }, []);
+
   return (
     <div id="mission" className="uk-container">
       <div className="uk-column-1-2@m">
@@ -14,17 +34,9 @@ function Mission() {
           </p>
 
           {/* mission description */}
-          <p className="mission-desc">
-            Our mission at IESD is two-fold. First, we want to help
-            increase the tech footprint of the Inland Empire by aiding
-            businesses and/or startups in employing local Inland Empire
-            developers. Second, by helping developers learn, network and
-            find employment locally, we decrease brain drain and increase
-            the tech presence in the Inland Empire. By supporting local
-            startups and keeping tech jobs filled by local talent, we also
-            help open up more business opportunities in other sectors of the
-            workforce.
-          </p>
+          <main className="mission-desc">
+            {mission && reactHtmlParser(mission.value)}
+          </main>
 
         </div>
 

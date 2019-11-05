@@ -1,8 +1,28 @@
+import axios from "axios";
+import {useEffect, useState} from "react";
+import reactHtmlParser from "react-html-parser";
+
 /**
  * Goals component
  * @return {Goals}
  */
 function Goals() {
+  const [goal, setGoal] = useState();
+
+  /**
+   * Pull data using axios from the IESD API
+   * Get data by set and name for pages.
+   * TODO: Switch to GraphQL once support is added to plugin for Options
+   */
+  useEffect(() => {
+    (async () => {
+      const result = await axios(
+          `https://api.iesd.com/wp-json/iesd/api/settings?set=organization&name=goal`,
+      );
+      setGoal(result.data[0]);
+    })();
+  }, []);
+
   return (
     <div id="goals" className="uk-container">
 
@@ -25,13 +45,9 @@ function Goals() {
 
           {/* goals description*/}
 
-          <p className="goals-desc">
-            <strong>IESD</strong> is a 501(c)3 non-profit
-          organization, dedicated to increasing awareness of technology and
-          open source software in the Inland Empire. Our goal is to do this by
-          bringing community members together to network, learn, gain
-          experience and share knowledge.
-          </p>
+          <main className="goals-desc">
+            {goal && reactHtmlParser(goal.value)}
+          </main>
 
         </div>
 
