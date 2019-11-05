@@ -2,20 +2,24 @@ import Link from "next/link";
 
 function Nav() {
   const navigation = [
-    {label: "About", icon: true, children: [
-      {label: "Mission", url: "/#mission"},
-      {label: "Goals", url: "/#goals"},
-      {label: "Community", url: "/#community"},
-    ]},
-    {label: "Events", url: "https://www.meetup.com/iesd-meetup/events/"},
-    {label: "Organization", icon: true, children: [
-      {label: "Operations", url: "/#operations"},
-      {label: "Speakers", url: "/#speakers"},
-      {label: "Volunteers", url: "/#volunteers"},
-    ]},
+    {
+      label: "About", icon: true, children: [
+        {label: "Mission", url: "/#mission"},
+        {label: "Goals", url: "/#goals"},
+        {label: "Community", url: "/#community"},
+      ],
+    },
+    {label: "Events", url: "https://www.meetup.com/iesd-meetup/events/", target: "_blank"},
+    {
+      label: "Organization", icon: true, children: [
+        {label: "Operations", url: "/#operations"},
+        {label: "Speakers", url: "/#speakers"},
+        {label: "Volunteers", url: "/#volunteers"},
+      ],
+    },
     {label: "Sponsors", url: "/#sponsors"},
     {label: "Blog", url: "/#blog"},
-    {label: "Join", url: "https://www.meetup.com/iesd-meetup/"},
+    {label: "Join", url: "https://www.meetup.com/iesd-meetup/", target: "_blank"},
   ].map((item) => createListObject(item));
 
   return (
@@ -90,8 +94,14 @@ function Nav() {
  * @param {array} children
  * @return {{c: *, u: *, i: *, l: *}}
  */
-function createListObject({label, url = "#", icon = false, children = false}) {
-  return {label, url, icon, children};
+function createListObject({
+  label,
+  url,
+  icon = false,
+  children = false,
+  target,
+}) {
+  return {label, url, icon, children, target};
 }
 
 function createListItem(obj, mobile = false) {
@@ -103,9 +113,9 @@ function createListItem(obj, mobile = false) {
 
   return (
     <li key={obj.label.toLowerCase()}
-      className={obj.children && mobile? "uk-parent uk-visible-toggle" : ""}>
+      className={obj.children && mobile ? "uk-parent uk-visible-toggle" : ""}>
       <Link href={obj.url}>
-        <a {...opts}>{obj.label}</a>
+        <a {...opts} target={obj.target}>{obj.label}</a>
       </Link>
       {obj.children && mobile && getMobileSubList(obj)}
       {obj.children && !mobile && getSubList(obj)}
