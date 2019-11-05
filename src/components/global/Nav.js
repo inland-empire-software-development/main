@@ -92,11 +92,12 @@ function Nav() {
  * @param {string} url
  * @param {boolean} icon
  * @param {array} children
+ * @param {string} target
  * @return {{c: *, u: *, i: *, l: *}}
  */
 function createListObject({
   label,
-  url,
+  url = "#",
   icon = false,
   children = false,
   target,
@@ -111,11 +112,15 @@ function createListItem(obj, mobile = false) {
     opts["uk-icon"] = "plus";
   }
 
+  if (obj.target !== undefined) {
+    opts["target"] = obj.target;
+  }
+
   return (
     <li key={obj.label.toLowerCase()}
       className={obj.children && mobile ? "uk-parent uk-visible-toggle" : ""}>
       <Link href={obj.url}>
-        <a {...opts} target={obj.target}>{obj.label}</a>
+        <a {...opts} >{obj.label}</a>
       </Link>
       {obj.children && mobile && getMobileSubList(obj)}
       {obj.children && !mobile && getSubList(obj)}
