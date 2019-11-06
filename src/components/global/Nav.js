@@ -16,7 +16,7 @@ function Nav() {
       url: "https://www.meetup.com/iesd-meetup/events/",
       target: "_blank",
       external: true,
-      brand: "../../static/logos/meetup-brands.svg",
+      brand: <i class="fab fa-meetup"></i>,
     },
     {
       label: "Organization",
@@ -34,7 +34,7 @@ function Nav() {
       url: "https://www.meetup.com/iesd-meetup/",
       target: "_blank",
       external: true,
-      brand: "../../static/logos/meetup-brands.svg",
+      brand: <i class="fab fa-meetup"></i>,
     },
   ].map((item) => createListObject(item));
 
@@ -131,9 +131,7 @@ function createListItem(obj, mobile = false) {
     >
       <Link href={obj.url}>
         <a {...opts}>
-          {obj.external ? (
-            <i class="fab fa-meetup"></i>
-          ) : null}
+          {obj.external ? obj.brand : null}
           {`${obj.label}`}{" "}
         </a>
       </Link>
