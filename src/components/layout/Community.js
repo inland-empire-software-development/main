@@ -63,6 +63,7 @@ function Community() {
               </li>
               ))}
           </ul>
+          <ul class="uk-slider-nav uk-dotnav uk-flex-center uk-margin"></ul>
           <p className="uk-text-center">
             You can drag images left and right to see more.
           </p>

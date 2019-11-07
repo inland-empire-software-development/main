@@ -40,6 +40,7 @@ function MemberList(props) {
               </li>
               ))}
           </ul>
+          <ul class="uk-slider-nav uk-dotnav uk-flex-center uk-margin"></ul>
           {warning && <p className="uk-text-center">
             You can drag images left and right to see more.
           </p>
