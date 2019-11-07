@@ -41,7 +41,7 @@ export default function Story() {
         return (
           <div id="story-container"
             className="container-full bg-black" >
-            <div uk-slider="true">
+            <div uk-slider="true" class="uk-light">
               <ul
                 className="uk-slider-items uk-child-width-1-1@l">
                 {stories.map((story, index) => {
