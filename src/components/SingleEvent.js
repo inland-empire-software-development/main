@@ -1,5 +1,5 @@
 import {useState, useEffect} from 'react';
-import {fetchEvents, controller} from '../utils/meetupApiUtil';
+import {fetchEvents} from '../utils/meetupApiUtil';
 import {calcStartTime, calcEndTime} from '../utils/convertTimeUtil';
 import {splitMonth, splitDay} from '../utils/splitDateUtil';
 
