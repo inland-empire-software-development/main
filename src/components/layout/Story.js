@@ -40,7 +40,7 @@ export default function Story() {
 
         return (
           <div id="story-container"
-            className="container-full bg-black" >
+            className="container-full bg-black uk-margin-medium-top" >
             <div id="story-slider" uk-slider="true">
               <ul
                 className="uk-slider-items uk-child-width-1-1@l">
