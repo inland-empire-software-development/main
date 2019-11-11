@@ -1,6 +1,6 @@
 #story {
   color: $white;
-
+  
   .story-image-mobile {
     display: none;
 
@@ -81,3 +81,9 @@
     }
   }
 }
+#story-slider {
+  .storydotnav {
+    background-color: white;
+    margin-top: .5px;
+    padding: 15px;
+  }
