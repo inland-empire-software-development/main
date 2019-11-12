@@ -3,15 +3,25 @@ import Link from "next/link";
 function Nav() {
   const navigation = [
     {
-      label: "About", icon: true, children: [
+      label: "About",
+      icon: true,
+      children: [
         {label: "Mission", url: "/#mission"},
         {label: "Goals", url: "/#goals"},
         {label: "Community", url: "/#community"},
       ],
     },
-    {label: "Events", url: "https://www.meetup.com/iesd-meetup/events/", target: "_blank"},
     {
-      label: "Organization", icon: true, children: [
+      label: `Events`,
+      url: "https://www.meetup.com/iesd-meetup/events/",
+      target: "_blank",
+      external: true,
+      brand: <i class="fab fa-meetup"></i>,
+    },
+    {
+      label: "Organization",
+      icon: true,
+      children: [
         {label: "Operations", url: "/#operations"},
         {label: "Speakers", url: "/#speakers"},
         {label: "Volunteers", url: "/#volunteers"},
@@ -19,69 +29,65 @@ function Nav() {
     },
     {label: "Sponsors", url: "/#sponsors"},
     {label: "Blog", url: "/#blog"},
-    {label: "Join", url: "https://www.meetup.com/iesd-meetup/", target: "_blank"},
+    {
+      label: "Join",
+      url: "https://www.meetup.com/iesd-meetup/",
+      target: "_blank",
+      external: true,
+      brand: <i class="fab fa-meetup"></i>,
+    },
   ].map((item) => createListObject(item));
 
   return (
     <section>
-      <nav className="uk-navbar-container uk-navbar-transparent"
-        uk-navbar="">
-        <div className="uk-navbar-left">
-          <ul className="uk-navbar-nav">
-            <li className="uk-active">
-              <Link href="/">
-                <a className="uk-logo">
-                  <img id="nav-logo"
-                    src="../../static/logos/iesd-initials-white.svg"
+      <nav className='uk-navbar-container uk-navbar-transparent' uk-navbar=''>
+        <div className='uk-navbar-left'>
+          <ul className='uk-navbar-nav'>
+            <li className='uk-active'>
+              <Link href='/'>
+                <a className='uk-logo'>
+                  <img
+                    id='nav-logo'
+                    src='../../static/logos/iesd-initials-white.svg'
                   />
                 </a>
               </Link>
             </li>
           </ul>
         </div>
-        <div className="uk-navbar-right">
-
-          <ul className="uk-navbar-nav uk-visible@s">
-            {
-              navigation.map((link) =>
-                createListItem(link)
-              )
-            }
+        <div className='uk-navbar-right'>
+          <ul className='uk-navbar-nav uk-visible@s'>
+            {navigation.map((link) => createListItem(link))}
           </ul>
 
-          <a id="nav-toggle" className="uk-navbar-toggle uk-hidden@s"
-            href="#"
-            uk-toggle="target: #offcanvas-nav">
-            <span uk-navbar-toggle-icon="true"></span>
+          <a
+            id='nav-toggle'
+            className='uk-navbar-toggle uk-hidden@s'
+            href='#'
+            uk-toggle='target: #offcanvas-nav'
+          >
+            <span uk-navbar-toggle-icon='true'></span>
 
-            <span className="uk-margin-small-left nav-text">Menu</span>
+            <span className='uk-margin-small-left nav-text'>Menu</span>
           </a>
-
         </div>
       </nav>
 
-      <div id="offcanvas-nav" uk-offcanvas="mode: push; flip: true">
-        <div className="uk-offcanvas-bar">
-
-          <div className="nav-logo">
-            <img id="canvas-logo"
-              src="../../static/logos/iesd-initials-white.svg"
+      <div id='offcanvas-nav' uk-offcanvas='mode: push; flip: true'>
+        <div className='uk-offcanvas-bar'>
+          <div className='nav-logo'>
+            <img
+              id='canvas-logo'
+              src='../../static/logos/iesd-initials-white.svg'
             />
           </div>
 
-          <ul className="uk-nav uk-nav-default">
-            {
-              navigation.map((link) =>
-                createListItem(link, true)
-              )
-            }
+          <ul className='uk-nav uk-nav-default'>
+            {navigation.map((link) => createListItem(link, true))}
           </ul>
-
         </div>
       </div>
-
     </section>
-
   );
 }
 
@@ -101,8 +107,10 @@ function createListObject({
   icon = false,
   children = false,
   target,
+  external = false,
+  brand = null,
 }) {
-  return {label, url, icon, children, target};
+  return {label, url, icon, children, target, external, brand};
 }
 
 function createListItem(obj, mobile = false) {
@@ -117,10 +125,15 @@ function createListItem(obj, mobile = false) {
   }
 
   return (
-    <li key={obj.label.toLowerCase()}
-      className={obj.children && mobile ? "uk-parent uk-visible-toggle" : ""}>
+    <li
+      key={obj.label.toLowerCase()}
+      className={obj.children && mobile ? "uk-parent uk-visible-toggle" : ""}
+    >
       <Link href={obj.url}>
-        <a {...opts} >{obj.label}</a>
+        <a {...opts}>
+          {obj.external ? obj.brand : null}
+          {`${obj.label}`}{" "}
+        </a>
       </Link>
       {obj.children && mobile && getMobileSubList(obj)}
       {obj.children && !mobile && getSubList(obj)}
@@ -130,8 +143,8 @@ function createListItem(obj, mobile = false) {
 
 function getSubList(obj) {
   return (
-    <div className="uk-navbar-dropdown">
-      <ul className="uk-nav uk-navbar-dropdown-nav">
+    <div className='uk-navbar-dropdown'>
+      <ul className='uk-nav uk-navbar-dropdown-nav'>
         {obj.children.map((child) => createListItem(child))}
       </ul>
     </div>
@@ -140,7 +153,7 @@ function getSubList(obj) {
 
 function getMobileSubList(obj) {
   return (
-    <ul className="uk-nav-sub uk-invisible-hover uk-hidden-touch">
+    <ul className='uk-nav-sub uk-invisible-hover uk-hidden-touch'>
       {obj.children.map((child) => createListItem(child))}
     </ul>
   );

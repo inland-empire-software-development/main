@@ -1,12 +1,19 @@
 .uk-offcanvas-bar {
   background: rgba(0, 0, 0, 0.95);
 
+  .fa-meetup {
+    font-size: 25px;
+    margin-right: 5px;
+    color: #f63f60;
+  }
+
   .uk-visible-toggle .uk-invisible-hover,
   .uk-visible-toggle .uk-hidden-touch {
     transition: all 2s ease-in-out;
   }
 
-  .uk-visible-toggle:not(:hover):not(:focus) .uk-invisible-hover:not(:focus-within) {
+  .uk-visible-toggle:not(:hover):not(:focus)
+    .uk-invisible-hover:not(:focus-within) {
     transition: all 2s ease-in;
     display: none;
   }
@@ -53,7 +60,7 @@
   }
 
   .uk-logo {
-    padding:0;
+    padding: 0;
   }
 
   #nav-logo {
@@ -99,5 +106,11 @@
         color: $blue !important;
       }
     }
+  }
+
+  .fa-meetup {
+    font-size: 25px;
+    margin-right: 5px;
+    color: #f63f60;
   }
 }
