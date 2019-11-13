@@ -140,7 +140,7 @@ function getSubList(obj) {
 
 function getMobileSubList(obj) {
   return (
-    <ul className="uk-nav-sub uk-invisible-hover uk-hidden-touch">
+    <ul className="uk-nav-sub uk-invisible-hover">
       {obj.children.map((child) => createListItem(child))}
     </ul>
   );
