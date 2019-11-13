@@ -52,8 +52,6 @@ function Nav() {
           <a id="nav-toggle" className="uk-navbar-toggle uk-hidden@s"
             href="#"
             uk-toggle="target: #offcanvas-nav">
-            <span uk-navbar-toggle-icon="true"></span>
-
             <span className="uk-margin-small-left nav-text">Menu</span>
           </a>
 
@@ -62,6 +60,7 @@ function Nav() {
 
       <div id="offcanvas-nav" uk-offcanvas="mode: push; flip: true">
         <div className="uk-offcanvas-bar">
+          <button class="uk-offcanvas-close" type="button" uk-close>X</button>
 
           <div className="nav-logo">
             <img id="canvas-logo"
