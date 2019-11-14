@@ -19,7 +19,6 @@
 
   #canvas-logo {
     width: 75px;
-    margin: 0 auto;
     display: block;
     padding: 25px 0;
   }
@@ -107,4 +106,8 @@
       }
     }
   }
+}
+
+#nav-toggle {
+  padding-right: 0;
 }

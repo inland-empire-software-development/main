@@ -52,7 +52,7 @@ function Nav() {
           <a id="nav-toggle" className="uk-navbar-toggle uk-hidden@s"
             href="#"
             uk-toggle="target: #offcanvas-nav">
-            <span className="uk-margin-small-left nav-text">Menu</span>
+            <span uk-navbar-toggle-icon="true"></span>
           </a>
 
         </div>
@@ -60,8 +60,6 @@ function Nav() {
 
       <div id="offcanvas-nav" uk-offcanvas="mode: push; flip: true">
         <div className="uk-offcanvas-bar">
-          <button class="uk-offcanvas-close" type="button" uk-close>X</button>
-
           <div className="nav-logo">
             <img id="canvas-logo"
               src="../../static/logos/iesd-initials-white.svg"
@@ -115,11 +113,16 @@ function createListItem(obj, mobile = false) {
     opts["target"] = obj.target;
   }
 
+  if (!obj.children) {
+    opts["uk-toggle"] = "target: #offcanvas-nav";
+  }
+
   return (
     <li key={obj.label.toLowerCase()}
-      className={obj.children && mobile ? "uk-parent uk-visible-toggle" : ""}>
+      className={obj.children && mobile ?
+        "uk-parent uk-visible-toggle" : "close-canvas"}>
       <Link href={obj.url}>
-        <a {...opts} >{obj.label}</a>
+        <a {...opts}>{obj.label}</a>
       </Link>
       {obj.children && mobile && getMobileSubList(obj)}
       {obj.children && !mobile && getSubList(obj)}
