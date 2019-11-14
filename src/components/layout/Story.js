@@ -40,8 +40,8 @@ export default function Story() {
 
         return (
           <div id="story-container"
-            className="container-full bg-black" >
-            <div uk-slider="true">
+            className="container-full bg-black uk-margin-medium-top" >
+            <div id="story-slider" uk-slider="true">
               <ul
                 className="uk-slider-items uk-child-width-1-1@l">
                 {stories.map((story, index) => {
@@ -98,6 +98,9 @@ export default function Story() {
                     </li>
                   );
                 })}
+              </ul>
+              <ul
+                class="uk-slider-nav uk-dotnav storydotnav uk-flex-center ">
               </ul>
             </div>
           </div>);
