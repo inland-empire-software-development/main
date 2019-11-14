@@ -6,6 +6,12 @@
     transition: all 2s ease-in-out;
   }
 
+  button.uk-offcanvas-close {
+    color: $white;
+    background: transparent;
+    border: none;
+  }
+
   .uk-visible-toggle:not(:hover):not(:focus) .uk-invisible-hover:not(:focus-within) {
     transition: all 2s ease-in;
     display: none;
@@ -13,7 +19,6 @@
 
   #canvas-logo {
     width: 75px;
-    margin: 0 auto;
     display: block;
     padding: 25px 0;
   }
@@ -101,4 +106,8 @@
       }
     }
   }
+}
+
+#nav-toggle {
+  padding-right: 0;
 }
