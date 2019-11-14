@@ -63,7 +63,7 @@ function Community() {
               </li>
               ))}
           </ul>
-          <ul class="uk-slider-nav uk-dotnav uk-flex-center uk-margin"></ul>
+          <ul className="uk-slider-nav uk-dotnav uk-flex-center uk-margin"></ul>
         </div>
       </div>
     </div>

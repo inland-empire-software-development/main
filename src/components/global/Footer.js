@@ -19,7 +19,7 @@ function Footer(props) {
   useEffect( () => {
     (async ()=>{
       const result = await axios(
-          `https://api.iesd.com/wp-json/iesd/api/settings?set=organization`
+          `https://api.iesd.com/wp-json/iesd/api/settings?set=organization`,
       );
       setDetails(result.data[0]);
     })();

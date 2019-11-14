@@ -17,7 +17,7 @@ function Mission() {
   useEffect( () => {
     (async ()=>{
       const result = await axios(
-          `https://api.iesd.com/wp-json/iesd/api/settings?set=organization&name=mission`
+          `https://api.iesd.com/wp-json/iesd/api/settings?set=organization&name=mission`,
       );
       setMission(result.data[0]);
     })();

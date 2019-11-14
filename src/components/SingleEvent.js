@@ -27,7 +27,7 @@ function SingleEvent() {
       setEventName(getEventName(name));
       setEventStartTime(calcStartTime(localTime));
       setEventEndTime(
-          calcEndTime(localTime, duration
+          calcEndTime(localTime, duration,
           ));
       setEventMonth(splitMonth(localDate));
       setEventDay(splitDay(localDate));

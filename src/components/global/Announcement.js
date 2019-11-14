@@ -13,7 +13,7 @@ function Announcement() {
   useEffect( () => {
     (async ()=>{
       const result = await axios(
-          `https://api.iesd.com/wp-json/iesd/api/settings?set=organization&name=announcement`
+          `https://api.iesd.com/wp-json/iesd/api/settings?set=organization&name=announcement`,
       );
       setMessage(result.data[0]);
     })();
