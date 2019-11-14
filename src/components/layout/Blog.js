@@ -106,19 +106,19 @@ export default function Blog() {
                   </ul>
 
                   <a className="uk-position-center-left
-            uk-position-small uk-hidden-hover"
+            uk-position-small"
                   href="#" uk-slidenav-previous="true" uk-slider-item="previous"
                   />
 
                   <a
-                    className="uk-position-center-right uk-position-small
-              uk-hidden-hover"
+                    className="uk-position-center-right uk-position-small"
                     href="#" uk-slidenav-next="true" uk-slider-item="next"/>
 
                 </div>
 
                 <ul
-                  className="uk-slider-nav uk-dotnav uk-flex-center uk-margin"/>
+                  className="uk-slider-nav uk-dotnav uk-flex-center
+                  uk-margin uk-visible@s"/>
 
               </div>
             </div>
