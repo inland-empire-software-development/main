@@ -100,7 +100,7 @@ export default function Story() {
                 })}
               </ul>
               <ul
-                class="uk-slider-nav uk-dotnav storydotnav uk-flex-center ">
+                className="uk-slider-nav uk-dotnav storydotnav uk-flex-center ">
               </ul>
             </div>
           </div>);
