@@ -34,7 +34,7 @@ function Footer(props) {
           <div>
             <img
               className="footer-logo"
-              src="../../static/logos/iesd-initials-white.svg"
+              src="/static/logos/iesd-initials-white.svg"
             />
           </div>
 

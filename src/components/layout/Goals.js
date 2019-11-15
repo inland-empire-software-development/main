@@ -31,7 +31,7 @@ function Goals() {
         <div id="goals-left">
           <img
             className="goals-image"
-            src="../../static/images/desktop/goals-section-gradient.jpg"
+            src="/static/images/desktop/goals-section-gradient.jpg"
           />
         </div>
 

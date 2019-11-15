@@ -49,7 +49,7 @@ function Mission() {
           {/* mission image cutout */}
           <div className="mission-cutout">
             <img
-              src="../../static/images/desktop/ie-white-cutout.png"
+              src="/static/images/desktop/ie-white-cutout.png"
               alt="IE cutout overlay"
             />
           </div>

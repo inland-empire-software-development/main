@@ -28,7 +28,7 @@ function MemberList(props) {
                     <img uk-image="true" src={
                       image ?
                         image :
-                        "../../static/images/desktop/placeholder.jpg"
+                        "/static/images/desktop/placeholder.jpg"
                     } alt={name} />
                   </div>
 

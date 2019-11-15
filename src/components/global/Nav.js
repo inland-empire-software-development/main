@@ -32,7 +32,7 @@ function Nav() {
               <Link href="/">
                 <a className="uk-logo">
                   <img id="nav-logo"
-                    src="../../static/logos/iesd-initials-white.svg"
+                    src="/static/logos/iesd-initials-white.svg"
                   />
                 </a>
               </Link>
@@ -62,7 +62,7 @@ function Nav() {
         <div className="uk-offcanvas-bar">
           <div className="nav-logo">
             <img id="canvas-logo"
-              src="../../static/logos/iesd-initials-white.svg"
+              src="/static/logos/iesd-initials-white.svg"
             />
           </div>
 

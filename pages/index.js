@@ -1,4 +1,3 @@
-import '../node_modules/@fortawesome/fontawesome-free/js/all';
 import '../sass/index.scss';
 
 import {withRouter} from 'next/router';
