@@ -1,5 +1,3 @@
-import Link from 'next/link';
-
 /**
  * Button component
  * @param {any} props
@@ -29,15 +27,15 @@ function Button(props) {
   const widths = ["small", "third", "half", "full"];
 
   return (
-    <Link href={link}>
-      <a className={`${type} ${color} ${text} button-${widths[width]}
+    // TODO: make it so internal links use Link component
+    <a className={`${type} ${color} ${text} button-${widths[width]}
       ${border} border-size-${borderSize} hvr-ripple-out
       ${classes}`}
-      {...opts}
-      >
-        {label}
-      </a>
-    </Link>
+    {...opts}
+    href={link}
+    >
+      {label}
+    </a>
   );
 }
 
