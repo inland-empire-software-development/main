@@ -32,9 +32,10 @@
     "uikit": "^3.2.3"
   },
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev - 5101",
     "build": "next build",
-    "start": "next start",
+    "stg": "next start -p 5102",
+    "prod": "next start -p 5103",
     "lint": "./node_modules/.bin/eslint ./**/*.{js,jsx} --quiet || true",
     "test": "jest || true"
   },
