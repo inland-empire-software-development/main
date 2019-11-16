@@ -53,15 +53,14 @@ function Footer(props) {
 
             <ul>
               <li>
-                <Link href="https://www.meetup.com/iesd-meetup/">
-                  <a className="uk-link-text">Join</a>
-                </Link>
+                <a className="uk-link-text"
+                  href="https://www.meetup.com/iesd-meetup/">
+                  Join
+                </a>
               </li>
 
               <li>
-                <Link href="https://www.meetup.com/iesd-meetup/events/">
-                  <a className="uk-link-text">Events</a>
-                </Link>
+                <a className="uk-link-text" href="https://www.meetup.com/iesd-meetup/events/">Events</a>
               </li>
 
               <li>
@@ -83,9 +82,7 @@ function Footer(props) {
               </li>
 
               <li>
-                <Link href="https://github.com/inland-empire-software-development/">
-                  <a className="uk-link-text">Contribute</a>
-                </Link>
+                <a className="uk-link-text" href="https://github.com/inland-empire-software-development/">Contribute</a>
               </li>
 
               <li>
@@ -102,17 +99,16 @@ function Footer(props) {
               <p className="heading">Connect</p>
 
               <p>
-                <Link href={details ? "mailto:" + details.email.value : ""}>
-                  <a className="uk-link-text">Send Email</a>
-                </Link>
+                <a className="uk-link-text"
+                  href={details ? "mailto:" + details.email.value : ""}>
+                  Send Email
+                </a>
               </p>
 
               <p>
-                <Link href="tel:18004370267">
-                  <a className="uk-link-text">
+                <a className="uk-link-text" href="tel:18004370267">
                     +{details ? details.phone.value : ""}
-                  </a>
-                </Link>
+                </a>
               </p>
             </div>
 
@@ -145,12 +141,7 @@ function Footer(props) {
             </p>
 
             <div className="mapouter">
-              <div className="gmap_canvas">
-                <iframe
-                  id="gmap_canvas"
-                  src={details ? details.map.value : ""}
-                />
-              </div>
+              <div className="gmap_canvas"/>
             </div>
           </div>
         </div>

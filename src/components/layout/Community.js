@@ -49,7 +49,7 @@ function Community() {
   return (
     <div id="community-container" className="container-full" style={{
       backgroundImage:
-        "url(\"..//static/images/desktop/iesd-bg-light.jpg\")",
+        "url(\"/static/images/desktop/iesd-bg-light.jpg\")",
     }}>
       <div id="community" className="uk-container">
         <div uk-slider="true">

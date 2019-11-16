@@ -130,7 +130,7 @@ const createListItem = (obj, mobile = false) => {
 const identifyLink = (url) => url.indexOf("iesd.com");
 
 const renderLink = (obj, opts) =>
-   identifyLink(obj.url) ?
+   identifyLink(obj.url) !== -1 ?
     <Link href={obj.url}>
       <a {...opts}>{obj.label}</a>
     </Link> :
