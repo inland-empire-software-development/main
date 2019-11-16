@@ -6,36 +6,37 @@
   "author": "inland-empire-software-development",
   "license": "GPL-3.0-only",
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.8.1",
     "@zeit/next-css": "^1.0.1",
     "@zeit/next-sass": "^1.0.1",
-    "abortcontroller-polyfill": "^1.3.0",
+    "abortcontroller-polyfill": "^1.4.0",
     "apollo-boost": "^0.4.4",
     "axios": "^0.19.0",
     "compass": "^0.1.1",
-    "dotenv": "^8.0.0",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "graphql": "^14.5.8",
     "isomorphic-unfetch": "^3.0.0",
     "lodash.debounce": "^4.0.8",
     "moment": "^2.24.0",
-    "next": "^8.1.0",
-    "next-images": "^1.1.1",
-    "next-seo": "^1.11.2",
+    "next": "^9.1.3",
+    "next-images": "^1.2.0",
+    "next-seo": "^3.0.0",
     "node-fetch": "^2.6.0",
-    "node-sass": "^4.12.0",
+    "node-sass": "^4.13.0",
     "prop-types": "^15.7.2",
-    "react": "^16.8.6",
-    "react-apollo": "^3.1.2",
-    "react-dom": "^16.8.6",
+    "react": "^16.11.0",
+    "react-apollo": "^3.1.3",
+    "react-dom": "^16.11.0",
     "react-html-parser": "^2.0.2",
     "sanitize-html": "^1.20.1",
-    "uikit": "^3.2.0"
+    "uikit": "^3.2.3"
   },
   "scripts": {
-    "dev": "node server.js",
+    "dev": "next dev",
+    "development": "next start -p 5101",
     "build": "next build",
-    "start": "NODE_ENV=production node server.js",
+    "staging": "next start -p 5102",
+    "production": "next start -p 5103",
     "lint": "./node_modules/.bin/eslint ./**/*.{js,jsx} --quiet || true",
     "test": "jest || true"
   },
@@ -46,11 +47,11 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "eslint": "^5.16.0",
-    "eslint-config-google": "^0.13.0",
-    "eslint-plugin-react": "^7.13.0",
+    "eslint": "^6.6.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-react": "^7.16.0",
     "eslint-plugin-react-hooks": "^2.2.0",
-    "jest": "^24.8.0",
-    "webpack": "^4.34.0"
+    "jest": "^24.9.0",
+    "webpack": "^4.41.2"
   }
 }

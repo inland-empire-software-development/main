@@ -69,7 +69,7 @@ export default function Story() {
                             {social.map((outlet, index) => details[outlet] &&
                           <a key={index} href={details[outlet]}>
                             <span uk-icon={`icon: ${outlet}; ratio: 1`}/>
-                          </a>
+                          </a>,
                             )}
                           </p>
                           <p className="story-text">
@@ -100,7 +100,7 @@ export default function Story() {
                 })}
               </ul>
               <ul
-                class="uk-slider-nav uk-dotnav storydotnav uk-flex-center ">
+                className="uk-slider-nav uk-dotnav storydotnav uk-flex-center ">
               </ul>
             </div>
           </div>);

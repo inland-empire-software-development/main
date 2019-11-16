@@ -13,7 +13,7 @@ function Hero(props) {
       {video &&
       <video className="uk-visible@m" autoPlay muted loop id="iesd-video">
         <source
-          src="../../static/video/main/hero-main.mp4"
+          src="/static/video/main/hero-main.mp4"
           type="video/mp4"
         />
       </video>
