@@ -1,5 +1,5 @@
 #join {
-	background: url('/./static/images/desktop/member-join-gradient.jpg');
+	background: url('/static/images/desktop/member-join-gradient.jpg');
 	height: 250px;
 	background-size: cover;
 	background-position: center;
@@ -8,7 +8,7 @@
 	justify-content: center;
 
 	@media screen and (max-width: 860px){
-		background: url('/./static/images/mobile/join-gradient.jpg');
+		background: url('/static/images/mobile/join-gradient.jpg');
 		background-size: cover;
 		background-repeat: no-repeat;
 		background-position: center;
