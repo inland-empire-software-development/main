@@ -141,7 +141,12 @@ function Footer(props) {
             </p>
 
             <div className="mapouter">
-              <div className="gmap_canvas"/>
+              <div className="gmap_canvas">
+                <iframe
+                  id="gmap_canvas"
+                  src={details ? details.map.value : ""}
+                />
+              </div>
             </div>
           </div>
         </div>
