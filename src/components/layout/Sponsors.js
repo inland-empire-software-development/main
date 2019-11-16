@@ -40,7 +40,7 @@ export default function Sponsors() {
                       <img src={sponsor.details.image.sourceUrl}
                         title={sponsor.details.company} />
                     </a>
-                  </div>
+                  </div>,
                 )}
               </div>
             </div>

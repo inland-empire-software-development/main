@@ -1,46 +1,46 @@
 const commPic = [
   {
-    key: 11, image: "../../static/images/community/img_7.jpg",
+    key: 11, image: "/static/images/community/img_7.jpg",
     alt: "community pic",
   },
   {
-    key: 12, image: "../../static/images/community/img_12.jpg",
+    key: 12, image: "/static/images/community/img_12.jpg",
     alt: "community pic",
   },
   {
-    key: 13, image: "../../static/images/community/img_13.jpg",
+    key: 13, image: "/static/images/community/img_13.jpg",
     alt: "community pic",
   },
   {
-    key: 4, image: "../../static/images/community/img_4.jpg",
+    key: 4, image: "/static/images/community/img_4.jpg",
     alt: "community pic",
   },
   {
-    key: 6, image: "../../static/images/community/img_6.jpg",
+    key: 6, image: "/static/images/community/img_6.jpg",
     alt: "community pic",
   },
   {
-    key: 7, image: "../../static/images/community/img_11.jpg",
+    key: 7, image: "/static/images/community/img_11.jpg",
     alt: "community pic",
   },
   {
-    key: 8, image: "../../static/images/community/img_8.jpg",
+    key: 8, image: "/static/images/community/img_8.jpg",
     alt: "community pic",
   },
   {
-    key: 9, image: "../../static/images/community/img_9.jpg",
+    key: 9, image: "/static/images/community/img_9.jpg",
     alt: "community pic",
   },
   {
-    key: 2, image: "../../static/images/community/img_2.jpg",
+    key: 2, image: "/static/images/community/img_2.jpg",
     alt: "community pic",
   },
   {
-    key: 3, image: "../../static/images/community/img_3.jpg",
+    key: 3, image: "/static/images/community/img_3.jpg",
     alt: "community pic",
   },
   {
-    key: 1, image: "../../static/images/community/img_1.jpg",
+    key: 1, image: "/static/images/community/img_1.jpg",
     alt: "community pic",
   },
 ];
@@ -49,7 +49,7 @@ function Community() {
   return (
     <div id="community-container" className="container-full" style={{
       backgroundImage:
-        "url(\"../../../static/images/desktop/iesd-bg-light.jpg\")",
+        "url(\"/static/images/desktop/iesd-bg-light.jpg\")",
     }}>
       <div id="community" className="uk-container">
         <div uk-slider="true">
@@ -63,7 +63,7 @@ function Community() {
               </li>
               ))}
           </ul>
-          <ul class="uk-slider-nav uk-dotnav uk-flex-center uk-margin"></ul>
+          <ul className="uk-slider-nav uk-dotnav uk-flex-center uk-margin"></ul>
         </div>
       </div>
     </div>

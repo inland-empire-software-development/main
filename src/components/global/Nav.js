@@ -32,7 +32,7 @@ function Nav() {
               <Link href="/">
                 <a className="uk-logo">
                   <img id="nav-logo"
-                    src="../../static/logos/iesd-initials-white.svg"
+                    src="/static/logos/iesd-initials-white.svg"
                   />
                 </a>
               </Link>
@@ -44,7 +44,7 @@ function Nav() {
           <ul className="uk-navbar-nav uk-visible@s">
             {
               navigation.map((link) =>
-                createListItem(link)
+                createListItem(link),
               )
             }
           </ul>
@@ -62,14 +62,14 @@ function Nav() {
         <div className="uk-offcanvas-bar">
           <div className="nav-logo">
             <img id="canvas-logo"
-              src="../../static/logos/iesd-initials-white.svg"
+              src="/static/logos/iesd-initials-white.svg"
             />
           </div>
 
           <ul className="uk-nav uk-nav-default">
             {
               navigation.map((link) =>
-                createListItem(link, true)
+                createListItem(link, true),
               )
             }
           </ul>
@@ -78,7 +78,6 @@ function Nav() {
       </div>
 
     </section>
-
   );
 }
 
@@ -92,17 +91,15 @@ function Nav() {
  * @param {string} target
  * @return {{c: *, u: *, i: *, l: *}}
  */
-function createListObject({
+const createListObject = ({
   label,
   url = "#",
   icon = false,
   children = false,
   target,
-}) {
-  return {label, url, icon, children, target};
-}
+}) => ({label, url, icon, children, target});
 
-function createListItem(obj, mobile = false) {
+const createListItem = (obj, mobile = false) => {
   const opts = {};
 
   if (obj.icon) {
@@ -121,31 +118,36 @@ function createListItem(obj, mobile = false) {
     <li key={obj.label.toLowerCase()}
       className={obj.children && mobile ?
         "uk-parent uk-visible-toggle" : "close-canvas"}>
-      <Link href={obj.url}>
-        <a {...opts}>{obj.label}</a>
-      </Link>
+
+      {renderLink(obj, opts)}
+
       {obj.children && mobile && getMobileSubList(obj)}
       {obj.children && !mobile && getSubList(obj)}
     </li>
   );
-}
+};
 
-function getSubList(obj) {
-  return (
-    <div className="uk-navbar-dropdown">
-      <ul className="uk-nav uk-navbar-dropdown-nav">
-        {obj.children.map((child) => createListItem(child))}
-      </ul>
-    </div>
-  );
-}
+const identifyLink = (url) => url.indexOf("iesd.com");
 
-function getMobileSubList(obj) {
-  return (
-    <ul className="uk-nav-sub uk-invisible-hover">
+const renderLink = (obj, opts) =>
+   identifyLink(obj.url) !== -1 ?
+    <Link href={obj.url}>
+      <a {...opts}>{obj.label}</a>
+    </Link> :
+    <a {...opts} href={obj.url}>
+      {obj.label}
+    </a>;
+
+const getSubList = (obj) =>
+  <div className="uk-navbar-dropdown">
+    <ul className="uk-nav uk-navbar-dropdown-nav">
       {obj.children.map((child) => createListItem(child))}
     </ul>
-  );
-}
+  </div>;
+
+const getMobileSubList = (obj) =>
+  <ul className="uk-nav-sub uk-invisible-hover">
+    {obj.children.map((child) => createListItem(child))}
+  </ul>;
 
 export default Nav;

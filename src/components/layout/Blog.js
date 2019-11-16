@@ -101,7 +101,7 @@ export default function Blog() {
                           </div>
                         </li>
                       );
-                    }
+                    },
                     )}
                   </ul>
 

@@ -1,4 +1,3 @@
-import "../node_modules/@fortawesome/fontawesome-free/js/all";
 import "../sass/index.scss";
 import {useState, useEffect} from 'react';
 
@@ -23,7 +22,7 @@ function Post(props) {
   useEffect( () => {
     (async ()=>{
       const result = await axios(
-          `https://api.iesd.com/wp-json/iesd/api/settings?set=${set}&name=${name}`
+          `https://api.iesd.com/wp-json/iesd/api/settings?set=${set}&name=${name}`,
       );
 
       setContent(result.data[0]);
@@ -37,7 +36,7 @@ function Post(props) {
       <Hero
         event={false}
         video={false}
-        background="../../static/images/headers/page-header.jpg"
+        background="/static/images/headers/page-header.jpg"
       />
 
       <div className="uk-container post-container bg-white">

@@ -1,5 +1,5 @@
 footer {
-    background: url('../static/images/desktop/footer-background-repeatable.jpg');
+    background: url('/static/images/desktop/footer-background-repeatable.jpg');
     background-size: cover;
     background-position: center;
     padding-bottom: 150px;
@@ -26,7 +26,7 @@ footer {
 
         a {
             color: $white;
-            
+
             &:hover {
                 color: $blue;
             }

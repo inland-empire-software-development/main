@@ -17,7 +17,7 @@ function Mission() {
   useEffect( () => {
     (async ()=>{
       const result = await axios(
-          `https://api.iesd.com/wp-json/iesd/api/settings?set=organization&name=mission`
+          `https://api.iesd.com/wp-json/iesd/api/settings?set=organization&name=mission`,
       );
       setMission(result.data[0]);
     })();
@@ -49,7 +49,7 @@ function Mission() {
           {/* mission image cutout */}
           <div className="mission-cutout">
             <img
-              src="../../static/images/desktop/ie-white-cutout.png"
+              src="/static/images/desktop/ie-white-cutout.png"
               alt="IE cutout overlay"
             />
           </div>
