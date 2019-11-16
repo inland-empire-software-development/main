@@ -110,7 +110,7 @@ const createListItem = (obj, mobile = false) => {
     opts["target"] = obj.target;
   }
 
-  if (!obj.children) {
+  if (!obj.children && mobile) {
     opts["uk-toggle"] = "target: #offcanvas-nav";
   }
 
