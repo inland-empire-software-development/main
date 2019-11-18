@@ -1,6 +1,7 @@
 import {Query} from "react-apollo";
 import gql from "graphql-tag";
 import Button from '../global/Button';
+import Loader from '../global/Loader';
 
 export const storiesQuery = gql`
  query Stories {
@@ -32,7 +33,7 @@ export default function Story() {
     <Query query={storiesQuery} >
       {({loading, error, data}) => {
         if (error) return <aside>Error loading stories!</aside>;
-        if (loading) return <div>Loading</div>;
+        if (loading) return <Loader />;
 
         const stories = data.stories.nodes;
         const social =

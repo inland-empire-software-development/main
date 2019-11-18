@@ -1,5 +1,6 @@
 import {Query} from "react-apollo";
 import gql from "graphql-tag";
+import Loader from '../global/Loader';
 
 import MemberList from "../MemberList";
 
@@ -27,7 +28,7 @@ export default function Speakers() {
     <Query query={staffQuery} >
       {({loading, error, data}) => {
         if (error) return <aside>Error loading speakers!</aside>;
-        if (loading) return <div>Loading</div>;
+        if (loading) return <Loader />;
 
         return (
           <div id="speakers">

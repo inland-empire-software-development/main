@@ -1,8 +1,15 @@
 /* eslint-disable no-unused-vars */
 import Document, {Html, Head, Main, NextScript} from 'next/document';
 import React from 'react';
+import Loader from '../src/components/global/Loader';
 
 class main extends Document {
+  test() {
+    document.addEventListener('DOMContentLoaded', () => {
+      console.log('shit');
+    });
+  }
+
   render() {
     return (
       <Html>
@@ -33,7 +40,7 @@ class main extends Document {
             href="/static/icons/safari-pinned-tab.svg"
             color="#5bbad5"
           />
-          <link rel="shortcut icon" href="/static/favicon.ico" />
+          <link rel="shortcut icon" href="/favicon.ico" />
           <meta name="msapplication-TileColor" content="#ffffff" />
           <meta
             name="msapplication-config"
@@ -49,11 +56,13 @@ class main extends Document {
         </Head>
 
         <body className="iesd">
+          <Loader fullpage={true} />
           <Main />
           <NextScript />
 
           <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.2.0/js/uikit.min.js"></script>
           <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.2.0/js/uikit-icons.min.js"></script>
+
         </body>
 
       </Html>
