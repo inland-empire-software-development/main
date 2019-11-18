@@ -23,7 +23,6 @@ function Home() {
   return (
     <div className="home">
       <Announcement />
-
       <Hero />
       <Slogan />
       <Mission />
@@ -33,9 +32,7 @@ function Home() {
       </div>
 
       <Goals />
-
       <Community />
-
 
       <CallToAction
         background="../../static/images/join-section-background.jpg"

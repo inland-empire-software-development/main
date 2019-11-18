@@ -33,7 +33,7 @@ class main extends Document {
             href="/static/icons/safari-pinned-tab.svg"
             color="#5bbad5"
           />
-          <link rel="shortcut icon" href="/static/favicon.ico" />
+          <link rel="shortcut icon" href="/favicon.ico" />
           <meta name="msapplication-TileColor" content="#ffffff" />
           <meta
             name="msapplication-config"
@@ -54,6 +54,7 @@ class main extends Document {
 
           <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.2.0/js/uikit.min.js"></script>
           <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.2.0/js/uikit-icons.min.js"></script>
+
         </body>
 
       </Html>
