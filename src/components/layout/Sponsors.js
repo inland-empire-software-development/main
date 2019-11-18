@@ -1,5 +1,6 @@
 import {Query} from "react-apollo";
 import gql from "graphql-tag";
+import Loader from '../global/Loader';
 
 export const sponsorsQuery = gql`
 query Sponsor {
@@ -22,7 +23,7 @@ export default function Sponsors() {
     <Query query={sponsorsQuery} >
       {({loading, error, data}) => {
         if (error) return <aside>Error loading sponsors!</aside>;
-        if (loading) return <div>Loading</div>;
+        if (loading) return <Loader />;
 
         const sponsors = data.sponsors.nodes;
         return (

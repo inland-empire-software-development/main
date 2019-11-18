@@ -10,6 +10,7 @@ import moment from "moment";
 import Breadcrumb from "../src/components/global/Breadcrumb";
 import Hero from "../src/components/layout/Hero";
 import Footer from "../src/components/global/Footer";
+import Loader from "../src/components/global/Loader";
 
 import {
   getAuthor,
@@ -65,7 +66,7 @@ function Post(props) {
     <Query query={postQuery} variables={{postId: query.id}}>
       {({loading, error, data}) => {
         if (error) return <aside>Error loading posts!</aside>;
-        if (loading) return <div>Loading</div>;
+        if (loading) return <Loader />;
 
         const post = data.postBy;
         const categories = post.categories.edges;
