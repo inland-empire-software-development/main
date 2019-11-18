@@ -1,5 +1,6 @@
 import {Query} from "react-apollo";
 import gql from "graphql-tag";
+import Loader from '../global/Loader';
 
 import {
   getAuthor,
@@ -49,7 +50,7 @@ export default function Blog() {
     <Query query={postQuery} >
       {({loading, error, data}) => {
         if (error) return <aside>Error loading posts!</aside>;
-        if (loading) return <div>Loading</div>;
+        if (loading) return <Loader />;
 
         const posts = data.posts.nodes;
         return (

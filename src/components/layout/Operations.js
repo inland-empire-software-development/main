@@ -2,6 +2,7 @@ import {Query} from "react-apollo";
 import gql from "graphql-tag";
 
 import MemberList from "../MemberList";
+import Loader from '../global/Loader';
 
 export const staffQuery = gql`
     query Staff{
@@ -27,7 +28,7 @@ export default function Operations() {
     <Query query={staffQuery} >
       {({loading, error, data}) => {
         if (error) return <aside>Error loading staff!</aside>;
-        if (loading) return <div>Loading</div>;
+        if (loading) return <Loader />;
 
         return (
           <div id="operations">
