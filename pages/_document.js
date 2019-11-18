@@ -1,15 +1,8 @@
 /* eslint-disable no-unused-vars */
 import Document, {Html, Head, Main, NextScript} from 'next/document';
 import React from 'react';
-import Loader from '../src/components/global/Loader';
 
 class main extends Document {
-  test() {
-    document.addEventListener('DOMContentLoaded', () => {
-      console.log('shit');
-    });
-  }
-
   render() {
     return (
       <Html>
@@ -56,7 +49,6 @@ class main extends Document {
         </Head>
 
         <body className="iesd">
-          <Loader fullpage={true} />
           <Main />
           <NextScript />
 
