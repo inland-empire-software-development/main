@@ -14,7 +14,8 @@ function Nav() {
       label: "Organization", icon: true, children: [
         {label: "Operations", url: "/#operations"},
         {label: "Speakers", url: "/#speakers"},
-        {label: "Volunteers", url: "/#volunteers"},
+        /* {label: "Volunteers", url: "/#volunteers"},
+        volunteer component still not Started */
       ],
     },
     {label: "Sponsors", url: "/#sponsors"},
