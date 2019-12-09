@@ -1,6 +1,6 @@
 import {Query} from "react-apollo";
 import gql from "graphql-tag";
-import MemberList from "../MemberList";
+// import MemberList from "../MemberList"; not in use
 import Loader from '../global/Loader';
 
 export const communityQuery = gql `
@@ -45,36 +45,38 @@ export default function community() {
               "url(\"/static/images/desktop/iesd-bg-light.jpg\")",
             }}>
 
-            <div className="container-full memberList-container">
-              <div className="uk-container">
-                <p className="memberlist-header heading">{ }</p>
-                <div uk-slider="true">
-                  <ul className="uk-slider-items uk-child-width-1-2 uk-child-width-1-3@s
-            uk-child-width-1-5@m uk-grid">
-                    {community.map((moment, index) => {
-                      const {
-                        dateOfEvent,
-                        description,
-                        imageCard,
-                        imageModal} = moment.details;
+            <div id="community" className="uk-container">
+              <p className="memberlist-header heading">{ }</p>
+              <div uk-slider="true">
+                <ul className="uk-slider-items uk-child-width-1-2@s
+                  uk-child-width-1-4@m uk-grid"
+                >
+                  {community.map((moment, index) => {
+                    const {
+                      dateOfEvent,
+                      description,
+                      imageCard,
+                      // imageModal modal in progress
+                    } = moment.details;
 
-                      return (<li key={index}>
-                        <div className="uk-card uk-card-default">
-                          <div className="uk-card-media-top">
-                            <img uk-image="true" src={
-                                  imageCard ?
-                                    imageCard.sourceUrl :
-                                    "/static/images/desktop/placeholder.jpg"
-                            } alt={dateOfEvent} title={description} />
-                          </div>
+                    return (<li key={index}>
+                      <div className="uk-card uk-card-default">
+                        <div className="uk-card-media-top">
+                          <img uk-image="true" src={
+                                imageCard ?
+                                  imageCard.sourceUrl :
+                                  "/static/images/desktop/placeholder.jpg"
+                          } alt={dateOfEvent} title={description} />
                         </div>
-                      </li>
-                      );
-                    },
-                    )}
-                  </ul>
-                  <ul className="uk-slider-nav uk-dotnav uk-flex-center uk-margin"/>
-                </div>
+                      </div>
+                    </li>
+                    );
+                  },
+                  )}
+                </ul>
+                <ul className="uk-slider-nav uk-dotnav
+                  uk-flex-center uk-margin"
+                />
               </div>
             </div>
           </div>
