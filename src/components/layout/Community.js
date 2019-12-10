@@ -36,7 +36,6 @@ export default function community() {
         const community = data.community.nodes.sort((a, b) =>
           a.order.position - b.order.position);
 
-        console.log(community);
         return (
           <div
             id="community-container"
@@ -46,10 +45,10 @@ export default function community() {
             }}>
 
             <div id="community" className="uk-container">
-              <p className="memberlist-header heading">{ }</p>
-              <div uk-slider="true">
+              <p className="memberlist-header heading">Community</p>
+              <div uk-slider="true" className="uk-slider uk-slider-container">
                 <ul className="uk-slider-items uk-child-width-1-2@s
-                  uk-child-width-1-4@m uk-grid"
+                  uk-child-width-1-4@m uk-child-width-1-5@l uk-grid"
                 >
                   {community.map((moment, index) => {
                     const {
@@ -66,7 +65,9 @@ export default function community() {
                                 imageCard ?
                                   imageCard.sourceUrl :
                                   "/static/images/desktop/placeholder.jpg"
-                          } alt={dateOfEvent} title={description} />
+                          } alt={dateOfEvent} title={description}
+                          className="uk-width-1-1"
+                          />
                         </div>
                       </div>
                     </li>
