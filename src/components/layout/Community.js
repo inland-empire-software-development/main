@@ -1,75 +1,88 @@
-const commPic = [
-  {
-    key: 11, image: "/static/images/community/img_7.jpg",
-    alt: "community pic",
-  },
-  {
-    key: 12, image: "/static/images/community/img_12.jpg",
-    alt: "community pic",
-  },
-  {
-    key: 13, image: "/static/images/community/img_13.jpg",
-    alt: "community pic",
-  },
-  {
-    key: 4, image: "/static/images/community/img_4.jpg",
-    alt: "community pic",
-  },
-  {
-    key: 6, image: "/static/images/community/img_6.jpg",
-    alt: "community pic",
-  },
-  {
-    key: 7, image: "/static/images/community/img_11.jpg",
-    alt: "community pic",
-  },
-  {
-    key: 8, image: "/static/images/community/img_8.jpg",
-    alt: "community pic",
-  },
-  {
-    key: 9, image: "/static/images/community/img_9.jpg",
-    alt: "community pic",
-  },
-  {
-    key: 2, image: "/static/images/community/img_2.jpg",
-    alt: "community pic",
-  },
-  {
-    key: 3, image: "/static/images/community/img_3.jpg",
-    alt: "community pic",
-  },
-  {
-    key: 1, image: "/static/images/community/img_1.jpg",
-    alt: "community pic",
-  },
-];
+import {Query} from "react-apollo";
+import gql from "graphql-tag";
+// import MemberList from "../MemberList"; not in use
+import Loader from '../global/Loader';
 
-function Community() {
+export const communityQuery = gql `
+  query Community {
+    community {
+      nodes {
+        details {
+          dateOfEvent
+          description
+          imageCard {
+            sourceUrl
+          }
+          imageModal {
+            sourceUrl
+          }
+        }
+        order {
+          position
+        }
+      }
+    }
+  }
+  
+`;
+
+export default function community() {
   return (
-    <div id="community-container" className="container-full" style={{
-      backgroundImage:
-        "url(\"/static/images/desktop/iesd-bg-light.jpg\")",
-    }}>
-      <div id="community" className="uk-container">
-        <div uk-slider="true">
-          <ul className="uk-slider-items uk-child-width-1-2@s
-      uk-child-width-1-4@m uk-grid">
-            {commPic.map(({key, image, alt}) =>
-              (<li key={key}>
-                <img src={image}
-                  alt={alt}
-                  uk-img="target: !.uk-slideshow-items" />
-              </li>
-              ))}
-          </ul>
-          <ul className="uk-slider-nav uk-dotnav uk-flex-center uk-margin"></ul>
-        </div>
-      </div>
-    </div>
+    <Query query={communityQuery} >
+      {({loading, error, data}) => {
+        if (error) return <aside>Error loading community!</aside>;
+        if (loading) return <Loader />;
+
+        const community = data.community.nodes.sort((a, b) =>
+          a.order.position - b.order.position);
+
+        return (
+          <div
+            id="community-container"
+            className="container-full"
+            style={{backgroundImage:
+              "url(\"/static/images/desktop/iesd-bg-light.jpg\")",
+            }}>
+
+            <div id="community" className="uk-container">
+              <p className="memberlist-header heading">Community</p>
+              <div uk-slider="true" className="uk-slider uk-slider-container">
+                <ul className="uk-slider-items uk-child-width-1-2@s
+                  uk-child-width-1-4@m uk-child-width-1-5@l uk-grid"
+                >
+                  {community.map((moment, index) => {
+                    const {
+                      dateOfEvent,
+                      description,
+                      imageCard,
+                      // imageModal modal in progress
+                    } = moment.details;
+
+                    return (<li key={index}>
+                      <div className="uk-card uk-card-default">
+                        <div className="uk-card-media-top">
+                          <img uk-image="true" src={
+                                imageCard ?
+                                  imageCard.sourceUrl :
+                                  "/static/images/desktop/placeholder.jpg"
+                          } alt={dateOfEvent} title={description}
+                          className="uk-width-1-1"
+                          />
+                        </div>
+                      </div>
+                    </li>
+                    );
+                  },
+                  )}
+                </ul>
+                <ul className="uk-slider-nav uk-dotnav
+                  uk-flex-center uk-margin"
+                />
+              </div>
+            </div>
+          </div>
+        );
+      }}
+    </Query>
   );
-};
-
-export default Community;
-
-
+}
