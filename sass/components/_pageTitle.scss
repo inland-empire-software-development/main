@@ -9,20 +9,20 @@ header#pageTitle {
     font-family: "Block", sans-serif;
     color: #fff;
     position: relative;
-    bottom: -187px;
+    bottom: -195px;
     font-size: 75px;
     margin: 0 auto;
     left: -10px;
 
     @media screen and (max-width: 860px) {
       font-size: 60px;
-      bottom: -205px;
+      bottom: -210px;
       left: 0;
     }
 
     @media screen and (max-width: 480px) {
       font-size: 40px;
-      bottom: -144px;
+      bottom: -147px;
     }
   }
 }
