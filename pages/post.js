@@ -1,5 +1,3 @@
-import "../sass/index.scss";
-
 import reactHtmlParser from "react-html-parser";
 import {withRouter} from "next/router";
 

@@ -1,4 +1,3 @@
-import "../sass/index.scss";
 import {useState, useEffect} from 'react';
 
 import reactHtmlParser from "react-html-parser";

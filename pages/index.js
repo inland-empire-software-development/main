@@ -1,5 +1,3 @@
-import '../sass/index.scss';
-
 import {withRouter} from 'next/router';
 
 import Hero from "../src/components/layout/Hero";
