@@ -97,6 +97,13 @@ function Footer(props) {
                   <a className="uk-link-text">Mentorship</a>
                 </Link>
               </li>
+
+              <li>
+                <Link href="/volunteer">
+                  <a className="uk-link-text">Volunteer</a>
+                </Link>
+              </li>
+
             </ul>
           </div>
 
