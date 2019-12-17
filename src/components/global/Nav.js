@@ -11,7 +11,8 @@ function Nav() {
     },
     {label: "Events", url: "https://www.meetup.com/iesd-meetup/events/", target: "_blank"},
     {
-      label: "Organization", icon: true, children: [
+      label: "Information", icon: true, children: [
+        {label: "Mentorship", url: "/mentorship"},
         {label: "Operations", url: "/#operations"},
         {label: "Speakers", url: "/#speakers"},
         /* {label: "Volunteers", url: "/#volunteers"},

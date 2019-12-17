@@ -1,10 +1,9 @@
-import "../sass/index.scss";
 import {useState, useEffect} from 'react';
 
 import reactHtmlParser from "react-html-parser";
 import {withRouter} from "next/router";
 
-import Hero from "../src/components/layout/Hero";
+import Hero from "../src/components/Hero";
 import Footer from "../src/components/global/Footer";
 import axios from 'axios';
 import Announcement from '../src/components/global/Announcement';

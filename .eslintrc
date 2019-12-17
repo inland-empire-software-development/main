@@ -39,6 +39,7 @@
         "no-mixed-spaces-and-tabs": 2,
         "no-unused-vars": 2,
         "no-console": 0,
+        "max-len": 0,
         "linebreak-style": 0,
         "require-jsdoc": 0,
         "react/jsx-uses-vars": 2,

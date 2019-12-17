@@ -29,5 +29,13 @@
     text-decoration: none;
     filter: saturate(150%);
   }
+
+  @media screen and (max-width: 860px) {
+    width: 50% !important;
+  }
+
+  @media screen and (max-width: 450px){
+    width: 90% !important;
+  } 
 }
 

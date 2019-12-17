@@ -1,7 +1,7 @@
 import {Query} from "react-apollo";
 import gql from "graphql-tag";
 // import MemberList from "../MemberList"; not in use
-import Loader from '../global/Loader';
+import Loader from './global/Loader';
 
 export const communityQuery = gql `
   query Community {
@@ -22,11 +22,10 @@ export const communityQuery = gql `
         }
       }
     }
-  }
-  
+  }  
 `;
 
-export default function community() {
+export default function Community() {
   return (
     <Query query={communityQuery} >
       {({loading, error, data}) => {

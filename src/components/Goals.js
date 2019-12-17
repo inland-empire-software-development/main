@@ -45,7 +45,7 @@ function Goals() {
 
           {/* goals description*/}
 
-          <main className="goals-desc">
+          <main className="goals-desc uk-text-right body-content">
             {goal && reactHtmlParser(goal.value)}
           </main>
 

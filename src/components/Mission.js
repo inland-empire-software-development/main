@@ -34,7 +34,7 @@ function Mission() {
           </p>
 
           {/* mission description */}
-          <main className="mission-desc">
+          <main className="mission-desc body-content">
             {mission && reactHtmlParser(mission.value)}
           </main>
 

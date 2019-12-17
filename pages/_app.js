@@ -1,4 +1,5 @@
 import App from 'next/app';
+import '../sass/index.scss';
 import withApolloClient from '../lib/with-apollo-client';
 import {ApolloProvider} from 'react-apollo';
 
