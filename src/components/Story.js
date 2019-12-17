@@ -5,7 +5,7 @@ import Loader from './global/Loader';
 
 export const storiesQuery = gql`
  query Stories {
-  stories {
+  stories (first: 100) {
     nodes {
       details {
         content

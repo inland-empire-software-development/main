@@ -5,7 +5,7 @@ import Loader from './global/Loader';
 
 export const jobsQuery = gql `
  query Jobs {
-  jobs {
+  jobs (first: 100) {
     nodes {
       details {
         department
@@ -66,7 +66,9 @@ export default function Jobs() {
                             <p className="uk-margin-remove">{job.department} Department</p>
 
                             <section className="mentorship-details uk-margin-small-top">
+                              {job.skills &&
                               <p className="uk-margin-remove"><strong>Skills:</strong> {job.skills}</p>
+                              }
                               <p className="uk-margin-remove">
                                 <strong>Reports To:</strong> {job.supervisor}
                               </p>
