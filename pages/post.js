@@ -1,5 +1,3 @@
-import "../sass/index.scss";
-
 import reactHtmlParser from "react-html-parser";
 import {withRouter} from "next/router";
 
@@ -8,7 +6,7 @@ import gql from "graphql-tag";
 import moment from "moment";
 
 import Breadcrumb from "../src/components/global/Breadcrumb";
-import Hero from "../src/components/layout/Hero";
+import Hero from "../src/components/Hero";
 import Footer from "../src/components/global/Footer";
 import Loader from "../src/components/global/Loader";
 

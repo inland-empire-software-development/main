@@ -4,6 +4,7 @@
 'vendors/uikit/scss/uikit-theme.scss';
 
 @import
+'base/_global',
 'base/_colors',
 'base/_typography',
 'base/_animation';
@@ -11,10 +12,13 @@
 @import
 'pages/_index',
 'pages/_page',
+'pages/_mentorship',
 'pages/_post';
 
 @import
 'components/_memberList',
+'components/_pageTitle',
+'components/_mentorship',
 'components/_singleEvent.scss';
 
 @import

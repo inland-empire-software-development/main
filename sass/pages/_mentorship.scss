@@ -41,6 +41,7 @@
     background-position: center;
     position: relative;
     display: block;
+    background-size: cover;
 
     h1 {
       position: absolute;
@@ -59,6 +60,10 @@
 
   .mentorship-parallax-background a.button {
     top: 100px;
+  }
+
+  .uk-card {
+    min-height: 300px;
   }
 
   small {

@@ -1,7 +1,7 @@
 import {Query} from "react-apollo";
 import gql from "graphql-tag";
-import Button from '../global/Button';
-import Loader from '../global/Loader';
+import Button from './global/Button';
+import Loader from './global/Loader';
 
 export const storiesQuery = gql`
  query Stories {

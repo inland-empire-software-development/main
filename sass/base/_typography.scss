@@ -36,3 +36,19 @@ $custom-fonts-path : '/static/fonts';
     font-family: 'Black', sans-serif;
     font-size: calc(18px + 0.5vw);
 }
+
+.body-content {
+    font-size: 20px;
+    white-space: pre-wrap;
+    font-family: 'Book', sans-serif;
+    line-height: 42px;
+
+    @media screen and (max-width: 1146px) {
+        line-height: 34px;
+    }
+
+    @media screen and (max-width: 991px) {
+        font-size: 16px;
+        line-height: 28px;
+    }
+}

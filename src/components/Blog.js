@@ -1,6 +1,6 @@
 import {Query} from "react-apollo";
 import gql from "graphql-tag";
-import Loader from '../global/Loader';
+import Loader from './global/Loader';
 
 import {
   getAuthor,
@@ -8,9 +8,9 @@ import {
   getDate,
   getExcerpt,
   getLink,
-  getTitle} from '../../utils/blog';
+  getTitle} from '../utils/blog';
 
-import Button from "../global/Button";
+import Button from "./global/Button";
 
 export const postQuery = gql`
 query Post {

@@ -41,23 +41,6 @@
       font-family: 'Block', sans-serif;
       margin-bottom: 10px;
     }
-
-    .mission-desc {
-      font-size: 20px;
-      font-family: 'Book', sans-serif;
-      line-height: 42px;
-
-
-      @media screen and (max-width: 1146px) {
-        font-size: 20px;
-        line-height: 34px;
-      }
-
-      @media screen and (max-width: 991px) {
-        font-size: 16px;
-        line-height: 28px;
-      }
-    }
   }
 
   #mission-right {
