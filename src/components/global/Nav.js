@@ -13,6 +13,7 @@ function Nav() {
     {
       label: "Information", icon: true, children: [
         {label: "Mentorship", url: "/mentorship"},
+        {label: "Volunteer", url: "/volunteer"},
         {label: "Operations", url: "/#operations"},
         {label: "Speakers", url: "/#speakers"},
         /* {label: "Volunteers", url: "/#volunteers"},
