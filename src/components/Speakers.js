@@ -1,8 +1,8 @@
 import {Query} from "react-apollo";
 import gql from "graphql-tag";
-import Loader from '../global/Loader';
+import Loader from './global/Loader';
 
-import MemberList from "../MemberList";
+import MemberList from "./MemberList";
 
 export const staffQuery = gql`
     query Speakers {

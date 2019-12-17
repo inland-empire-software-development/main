@@ -41,6 +41,7 @@
     background-position: center;
     position: relative;
     display: block;
+    background-size: cover;
 
     h1 {
       position: absolute;
@@ -61,7 +62,25 @@
     top: 100px;
   }
 
+  .uk-card {
+    min-height: 300px;
+    border: 1px solid rgba(0,0,0,0.05);
+    box-shadow: none;
+  }
+
   small {
     font-size: 12px;
+  }
+
+  figure {
+      @media screen and (max-width: 960px){
+        text-align: center;
+
+        img {
+          margin: 0 auto;
+          display: block;
+        }
+
+    }
   }
 }

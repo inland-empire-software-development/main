@@ -1,6 +1,6 @@
 import {Query} from "react-apollo";
 import gql from "graphql-tag";
-import Loader from '../global/Loader';
+import Loader from './global/Loader';
 
 export const sponsorsQuery = gql`
 query Sponsor {
