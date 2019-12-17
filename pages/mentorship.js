@@ -91,7 +91,7 @@ function Mentorship() {
         }}>
 
         <div className="parallax-overlay-black"/>
-        <Button link="" label="Request Information" width="0"/>
+        <Button link="/forms/mentorship" label="Apply for Mentorship" width="0"/>
       </div>
 
       {/* Content */}
@@ -202,7 +202,7 @@ function Mentorship() {
         </div>
         <div>
           <p className="uk-margin-large-top">
-            <Button link="#" label="Mentorship Application" width={3}/>
+            <Button link="/forms/mentorship" label="Mentorship Application" width={3}/>
           </p>
         </div>
       </div>
@@ -245,7 +245,7 @@ function Mentorship() {
         </div>
 
         <div className="uk-margin-large-top">
-          <Button link="#" label="Become a Mentor" width={3}/>
+          <Button link="/forms/mentor" label="Become a Mentor" width={3}/>
         </div>
       </div>
 

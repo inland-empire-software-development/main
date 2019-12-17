@@ -51,12 +51,9 @@ export default function Mentorships() {
                           {project.projectName}
                         </p>
 
-                        <section className="uk-margin-medium-top">
+                        <section className="uk-margin-small-top">
                           <p className="uk-margin-remove">
                             <a className="light-bg" uk-toggle={`target: #mentorship-${index}`} href="#">See description</a>
-                          </p>
-                          <p className="uk-margin-remove">
-                            <a className="light-bg" href="#">Apply for Mentorship</a>
                           </p>
                           <p className="uk-margin-remove">
                             <a className="light-bg" href={project.projectLink}>View Project Repository</a>
