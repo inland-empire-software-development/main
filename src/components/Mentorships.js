@@ -5,7 +5,7 @@ import Loader from './global/Loader';
 
 export const mentorshipQuery = gql `
  query Mentorships {
-  mentorships {
+  mentorships (first: 100) {
     nodes {
       details {
         title

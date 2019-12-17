@@ -6,7 +6,7 @@ import MemberList from "./MemberList";
 
 export const staffQuery = gql`
     query Speakers {
-        speakers {
+        speakers (first: 100) {
             nodes {
                 details {
                     title
