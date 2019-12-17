@@ -10,6 +10,7 @@ import axios from 'axios';
  */
 function Footer(props) {
   const [details, setDetails] = useState();
+  const date = new Date();
 
   /**
    * Pull data using axios from the IESD API
@@ -90,6 +91,12 @@ function Footer(props) {
                   <a className="uk-link-text">Community</a>
                 </Link>
               </li>
+
+              <li>
+                <Link href="/mentorship">
+                  <a className="uk-link-text">Mentorship</a>
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -154,7 +161,7 @@ function Footer(props) {
 
         {/* copyright */}
         <p className="footer-copyright">
-            © 2019 Inland Empire Software Development, Inc.<br/>
+            © {date.getFullYear()} Inland Empire Software Development, Inc.<br/>
             All rights reserved.
         </p>
 
