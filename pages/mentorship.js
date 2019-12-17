@@ -4,6 +4,7 @@ import Button from "../src/components/global/Button";
 import {withRouter} from "next/router";
 import Nav from '../src/components/global/Nav';
 import PageTitle from '../src/components/PageTitle';
+import Mentorships from "../src/components/Mentorships";
 
 function Mentorship() {
   // initial render
@@ -25,7 +26,7 @@ function Mentorship() {
           <p className="body-content">
             Our mentorship program focuses on the skill
             development and the empowerment of community members. It
-            provides successful applicants<span className="red">*</span>
+            provides successful applicants<span className="red">* </span>
             access to a mentor whose skills
             align with their desired future role and a mentored project to
             help them gain experience. Our goal is to provide members a faster
@@ -104,7 +105,7 @@ function Mentorship() {
         </p>
         <p className="body-content">The <strong>traditional</strong> program matches a successful applicant with an industry professional who will mentor them for 6-12 weeks. The length of the mentorship depends on the availability of the mentor. Along with a mentor, the mentee is assigned to an open source project that they will be contributing to. This will allow the mentee to gain experience in the field, give back to their community and utilize what they are learning.</p>
 
-        <p className="body-content">The <strong>peer-to-peer</strong> program matches applicants with a peer, or group of peers, to work on a real world project that will be overseen by a mentor. The project you work on can be one that the group comes up with or an existing open source project that aligns with the skills
+        <p className="body-content">The <strong>peer-to-peer</strong> program matches applicants with a peer, or group of peers, to work on a real world project that will be overseen by a mentor. The project you work on can be one that the group comes up with or an existing open source project that aligns with the skills members are trying to sharpen. This approach focuses on sharpening skills and nurturing the entrepreneurial side of our members.
         </p>
 
         <div
@@ -200,11 +201,13 @@ function Mentorship() {
           </div>
         </div>
         <div>
-          <p className="uk-margin-medium-small uk-margin-medium-small">
+          <p className="uk-margin-large-top">
             <Button link="#" label="Mentorship Application" width={3}/>
           </p>
         </div>
       </div>
+
+      <Mentorships/>
 
       <div className="uk-container uk-margin-large-top uk-margin-large-bottom">
         <div className="uk-column-1-2@m">

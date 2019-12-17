@@ -1,5 +1,5 @@
-import Nav from "../global/Nav";
-import HeroEvent from "../SingleEvent";
+import Nav from "./global/Nav";
+import HeroEvent from "./SingleEvent";
 
 function Hero(props) {
   const {video = true, background = false, event = true} = props;

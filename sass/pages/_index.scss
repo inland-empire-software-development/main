@@ -10,6 +10,10 @@ html {
 a {
   &:hover {
     color: $white;
+
+    &.light-bg {
+      color: $black;
+    }
   }
 }
 
