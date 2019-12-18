@@ -4,7 +4,7 @@ import Loader from './global/Loader';
 
 export const sponsorsQuery = gql`
 query Sponsor {
-  sponsors {
+  sponsors (first: 100) {
     nodes {
       details {
         company

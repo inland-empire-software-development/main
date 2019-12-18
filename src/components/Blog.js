@@ -14,7 +14,7 @@ import Button from "./global/Button";
 
 export const postQuery = gql`
 query Post {
-  posts {
+  posts (first: 100) {
     nodes {
       title
       id

@@ -5,7 +5,7 @@ import Loader from './global/Loader';
 
 export const communityQuery = gql `
   query Community {
-    community {
+    community (first: 100) {
       nodes {
         details {
           dateOfEvent
