@@ -3,9 +3,9 @@ import gql from "graphql-tag";
 // import MemberList from "../MemberList"; not in use
 import Loader from './global/Loader';
 
-export const communityQuery = gql `
+export const mentorshipQuery = gql `
  query Mentorships {
-  mentorships {
+  mentorships (first: 100) {
     nodes {
       details {
         title
@@ -25,7 +25,7 @@ export const communityQuery = gql `
 
 export default function Mentorships() {
   return (
-    <Query query={communityQuery} >
+    <Query query={mentorshipQuery} >
       {({loading, error, data}) => {
         if (error) return <aside>Error loading community!</aside>;
         if (loading) return <Loader />;
