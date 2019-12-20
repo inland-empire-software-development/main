@@ -31,7 +31,7 @@ export default function Operations() {
         if (loading) return <Loader />;
 
         return (
-          <div id="operations">
+          <div id="operations" className="uk-margin-medium-bottom">
             <MemberList
               label="Operations"
               members={data.staff.nodes.sort((a, b) =>
