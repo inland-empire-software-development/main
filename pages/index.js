@@ -1,3 +1,5 @@
+import '../sass/index.scss';
+
 import {withRouter} from 'next/router';
 
 import Hero from "../src/components/Hero";
@@ -22,14 +24,9 @@ function Home() {
     <div className="home">
       <Announcement />
       <Hero />
-      <Slogan />
-      <Mission />
+      <Blog />
+      <Story />
 
-      <div className="container-full uk-hidden@m">
-        <img src="../static/images/hack-day-spencer-tyrice-rebecca.jpg" />
-      </div>
-
-      <Goals />
       <Community />
 
       <CallToAction
@@ -44,11 +41,26 @@ function Home() {
       <Operations />
       <Speakers/>
 
-      <Story />
+      <Slogan/>
+      <Mission />
 
+      <div className="container-full uk-hidden@m">
+        <img src="../static/images/hack-day-spencer-tyrice-rebecca.jpg" />
+      </div>
+
+      <Goals />
       <Sponsors />
 
-      <Blog />
+      <div className="container-full callToAction"
+           style={{backgroundImage: 'url("../../static/images/join-section-background.jpg")'}}>
+        <div className="uk-overlay-primary uk-position-cover"></div>
+        <div className="uk-container uk-padding-large goals-desc">
+          <p className="heading white">Our Goals</p>
+          <p className="body-content white">
+            IESD is a 501(c)3 non-profit organization, dedicated to increasing awareness of technology and open source software in the Inland Empire. Our goal is to do this by bringing community members together to network, learn, gain experience and share knowledge.
+          </p>
+        </div>
+      </div>
       <Footer />
     </div>
   );
