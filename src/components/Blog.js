@@ -14,7 +14,7 @@ import Button from "./global/Button";
 
 export const postQuery = gql`
 query Post {
-  posts (first: 100) {
+  posts {
     nodes {
       title
       id
@@ -22,13 +22,17 @@ query Post {
       content
       date
       excerpt 
+      categories {
+        nodes {
+          name
+        }
+      }
       details { 
         author {
           id
           name
           firstName
           lastName
-          userId
           avatar {
             url
           }
@@ -53,62 +57,56 @@ export default function Blog() {
         if (loading) return <Loader />;
 
         const posts = data.posts.nodes;
+
         return (
           <div id="blog" className="container-full">
             <div className="uk-container">
+              <p className="heading">In the News</p>
               <div uk-slider="true">
 
-                <div className="uk-position-relative uk-visible-toggle uk-light"
-                  tabIndex="-1">
+                <div className="uk-position-relative uk-visible-toggle uk-margin-large-bottom"
+                     tabIndex="-1">
 
                   <ul className="uk-slider-items uk-child-width-1-3@l
-                  uk-child-width-1-2@s uk-grid">
+                  uk-child-width-1-2@s uk-grid uk-grid-match" uk-grid="true">
+
                     {posts.map((post, index) => {
-                      return (
-                        <li key={post.id}>
-                          <div className="uk-card">
+                        const categories = post.categories.nodes;
+                        return (
 
-                            <div className="uk-card-media-top">
-                              <img src={getCardImage(post)} />
+                          <li key={post.id}>
+                            <div>
+                              <div className="uk-card uk-card-default">
+                                {
+                                  categories.length !== 0 &&
+                                  <span className="uk-label uk-label-white">{categories[0].name}</span>
+                                }
+                                <div className="uk-card-media-top">
+                                  <img src={getCardImage(post)} alt="" />
+                                </div>
+                                <div className="uk-card-body">
+                                  <h3 className="uk-card-title"> {getTitle(post, 40)}</h3>
+                                  <p className="uk-article-meta black">By {getAuthor(post.details.author)} on {getDate(post)}</p>
+                                  <p className="uk-margin-small-top card-content">{getExcerpt(post, 160)}</p>
+
+                                  <Button
+                                    link={getLink(post)}
+                                    classes="uk-margin-small-top uk-align-left"
+                                    label="read article"
+                                    width={2}/>
+                                </div>
+                              </div>
                             </div>
 
-                            <div className="uk-card-body">
-
-                              <h3 className="uk-card-title">
-                                {getTitle(post, 40)}
-                              </h3>
-
-                              <p className="card-author" title="Article author">
-                                By {getAuthor(post.details.author)}
-                              </p>
-
-                              <time className="card-date"
-                                title="Article publish date">
-                                {getDate(post)}
-                              </time>
-
-                              <p className="card-excerpt">
-                                {getExcerpt(post, 210)}
-                              </p>
-
-
-                              <Button
-                                link={getLink(post)}
-                                classes="uk-align-left card-button"
-                                toggle={`target: #article-modal-${index}`}
-                                label="read article"
-                                width={1}/>
-                            </div>
-                          </div>
-                        </li>
-                      );
-                    },
+                          </li>
+                        );
+                      },
                     )}
                   </ul>
 
                   <a className="uk-position-center-left
             uk-position-small"
-                  href="#" uk-slidenav-previous="true" uk-slider-item="previous"
+                     href="#" uk-slidenav-previous="true" uk-slider-item="previous"
                   />
 
                   <a

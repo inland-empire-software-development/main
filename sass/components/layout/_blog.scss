@@ -24,7 +24,7 @@
   }
 
   .uk-card {
-    min-height: 470px;
+    box-shadow: none;
 
     p {
       margin: 0;
@@ -35,29 +35,46 @@
       margin: 0 auto;
     }
 
-    .card-author {
-      font-family: "Light", sans-serif;
-      margin-top: 5px;
-      font-size: 16px;
-    }
-
-    .card-date {
-      font-size: 12px;
-    }
-
     .uk-card-body {
       padding: 0;
       margin: 0
     }
 
     .uk-card-title {
-      font-family: "Medium", sans-serif;
       margin-bottom: 0;
+      min-height: 70px;
     }
 
-    .card-excerpt {
-      font-family: "Book", sans-serif;
-      padding: 10px 0;
+    .card-content {
+      min-height: 100px
     }
   }
+
+  [class*='uk-position-center-left'], [class*='uk-position-center-right'] {
+    top: 110%;
+  }
+  .uk-slidenav {
+    transition: all 0.25s ease;
+    color: $dark-gray;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    margin-left: 0;
+    margin-right: 0;
+    opacity: 0.2;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  .uk-label-white {
+    background-color: white;
+    color: black;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 5px 0;
+    text-align: right;
+  }
+
 }

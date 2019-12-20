@@ -1,3 +1,5 @@
+import '../sass/index.scss';
+
 import {withRouter} from 'next/router';
 
 import Hero from "../src/components/Hero";
@@ -14,6 +16,7 @@ import Sponsors from '../src/components/Sponsors';
 import Footer from "../src/components/global/Footer";
 import Blog from "../src/components/Blog";
 import Announcement from '../src/components/global/Announcement';
+import About from '../src/components/About';
 
 function Home() {
   // initial render
@@ -22,14 +25,9 @@ function Home() {
     <div className="home">
       <Announcement />
       <Hero />
-      <Slogan />
-      <Mission />
+      <Blog />
+      <Story />
 
-      <div className="container-full uk-hidden@m">
-        <img src="../static/images/hack-day-spencer-tyrice-rebecca.jpg" />
-      </div>
-
-      <Goals />
       <Community />
 
       <CallToAction
@@ -42,13 +40,18 @@ function Home() {
       />
 
       <Operations />
+      <Slogan/>
       <Speakers/>
 
-      <Story />
+      <About />
+      <Mission />
 
+      <div className="container-full uk-hidden@m">
+        <img src="../static/images/hack-day-spencer-tyrice-rebecca.jpg" />
+      </div>
+      <Goals />
       <Sponsors />
 
-      <Blog />
       <Footer />
     </div>
   );

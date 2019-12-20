@@ -16,41 +16,19 @@ function Goals() {
    */
   useEffect(() => {
     (async () => {
-      const result = await axios(
-          `https://api.iesd.com/wp-json/iesd/api/settings?set=organization&name=goal`,
-      );
+      const result = await axios( `https://api.iesd.com/wp-json/iesd/api/settings?set=organization&name=goal`);
       setGoal(result.data[0]);
     })();
   }, []);
 
   return (
-    <div id="goals" className="uk-container">
-
-      <div className="uk-column-1-2@m">
-        {/* left side*/}
-        <div id="goals-left">
-          <img
-            className="goals-image"
-            src="/static/images/desktop/goals-section-gradient.jpg"
-          />
-        </div>
-
-        {/* right side*/}
-        <div id="goals-right">
-
-          {/* goals heading*/}
-          <p className="heading uk-text-right">
-            Our Goals
-          </p>
-
-          {/* goals description*/}
-
-          <main className="goals-desc uk-text-right body-content">
-            {goal && reactHtmlParser(goal.value)}
-          </main>
-
-        </div>
-
+    <div id="goals" className="container-full callToAction" style={{backgroundImage: 'url("/static/images/desktop/goals-bg.jpg")'}}>
+      <div className="uk-overlay-primary uk-position-cover"></div>
+      <div className="uk-container goals-desc">
+        <p className="heading white uk-margin-large-top">Our Goal</p>
+        <p className="body-content uk-margin-large-bottom white uk-margin-small-top">
+          {goal && reactHtmlParser(goal.value)}
+        </p>
       </div>
     </div>
   );
