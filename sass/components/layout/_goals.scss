@@ -1,6 +1,11 @@
 #goals {
   height: auto;
 
+  .goals-desc {
+    position: relative;
+    z-index: 1;
+    color: $white;
+  }
 
   [class*='uk-column-'] {
     column-gap: 0;

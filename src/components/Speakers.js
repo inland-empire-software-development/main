@@ -31,7 +31,7 @@ export default function Speakers() {
         if (loading) return <Loader />;
 
         return (
-          <div id="speakers">
+          <div id="speakers" className="uk-margin-medium-bottom">
             <MemberList
               label="Speakers"
               warning={true}
