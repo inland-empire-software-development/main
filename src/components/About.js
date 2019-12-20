@@ -23,12 +23,12 @@ function About() {
 
   return (
     <div id="about" className="bg-black">
-      <div className="uk-container uk-padding-large">
+      <div className="uk-container">
         {/* left section */}
-        <p className="heading white uk-position-relative uk-position-z-index uk-margin-remove-bottom">
+        <p className="heading white uk-position-relative uk-position-z-index uk-margin-remove-bottom uk-margin-large-top">
           About Us
         </p>
-        <p className="body-content white uk-position-relative uk-position-z-index uk-margin-small-top">
+        <p className="body-content white uk-position-relative uk-position-z-index uk-margin-small-top uk-margin-large-bottom">
           {about && reactHtmlParser(about.value)}
         </p>
 

@@ -46,9 +46,7 @@ export default function Community() {
             <div id="community" className="uk-container">
               <p className="memberlist-header heading">Community</p>
               <div uk-slider="true" className="uk-slider uk-slider-container">
-                <ul className="uk-slider-items uk-child-width-1-2@s
-                  uk-child-width-1-4@m uk-child-width-1-5@l uk-grid"
-                >
+                <ul className="uk-slider-items uk-child-width-1-2@s uk-child-width-1-4@m uk-child-width-1-5@l uk-grid">
                   {community.map((moment, index) => {
                     const {
                       dateOfEvent,

@@ -24,9 +24,9 @@ function Goals() {
   return (
     <div id="goals" className="container-full callToAction" style={{backgroundImage: 'url("/static/images/desktop/goals-bg.jpg")'}}>
       <div className="uk-overlay-primary uk-position-cover"></div>
-      <div className="uk-container uk-padding-large goals-desc">
-        <p className="heading white">Our Goal</p>
-        <p className="body-content white uk-margin-small-top">
+      <div className="uk-container goals-desc">
+        <p className="heading white uk-margin-large-top">Our Goal</p>
+        <p className="body-content uk-margin-large-bottom white uk-margin-small-top">
           {goal && reactHtmlParser(goal.value)}
         </p>
       </div>
