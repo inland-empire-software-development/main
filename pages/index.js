@@ -16,6 +16,7 @@ import Sponsors from '../src/components/Sponsors';
 import Footer from "../src/components/global/Footer";
 import Blog from "../src/components/Blog";
 import Announcement from '../src/components/global/Announcement';
+import About from '../src/components/About';
 
 function Home() {
   // initial render
@@ -39,28 +40,18 @@ function Home() {
       />
 
       <Operations />
+      <Slogan/>
       <Speakers/>
 
-      <Slogan/>
+      <About />
       <Mission />
 
       <div className="container-full uk-hidden@m">
         <img src="../static/images/hack-day-spencer-tyrice-rebecca.jpg" />
       </div>
-
       <Goals />
       <Sponsors />
 
-      <div className="container-full callToAction"
-           style={{backgroundImage: 'url("../../static/images/join-section-background.jpg")'}}>
-        <div className="uk-overlay-primary uk-position-cover"></div>
-        <div className="uk-container uk-padding-large goals-desc">
-          <p className="heading white">Our Goals</p>
-          <p className="body-content white">
-            IESD is a 501(c)3 non-profit organization, dedicated to increasing awareness of technology and open source software in the Inland Empire. Our goal is to do this by bringing community members together to network, learn, gain experience and share knowledge.
-          </p>
-        </div>
-      </div>
       <Footer />
     </div>
   );

@@ -16,20 +16,17 @@ function Goals() {
    */
   useEffect(() => {
     (async () => {
-      const result = await axios(
-        `https://api.iesd.com/wp-json/iesd/api/settings?set=organization&name=goal`,
-      );
+      const result = await axios( `https://api.iesd.com/wp-json/iesd/api/settings?set=organization&name=goal`);
       setGoal(result.data[0]);
     })();
   }, []);
 
   return (
-    <div id="goals" className="container-full callToAction"
-         style={{backgroundImage: 'url("/static/images/desktop/goals-section-gradient.jpg")'}}>
+    <div id="goals" className="container-full callToAction" style={{backgroundImage: 'url("/static/images/desktop/goals-bg.jpg")'}}>
       <div className="uk-overlay-primary uk-position-cover"></div>
       <div className="uk-container uk-padding-large goals-desc">
-        <p className="heading white">Our Goals</p>
-        <p className="body-content white">
+        <p className="heading white">Our Goal</p>
+        <p className="body-content white uk-margin-small-top">
           {goal && reactHtmlParser(goal.value)}
         </p>
       </div>
