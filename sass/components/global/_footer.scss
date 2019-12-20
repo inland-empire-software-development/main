@@ -2,7 +2,8 @@ footer {
   padding: 60px 0 !important;
 
   .footer-logo {
-    max-width: 200px;
+    max-width: 100px;
+    margin: 0 auto 15px auto;
   }
 
   .footer-slogan {
@@ -12,49 +13,13 @@ footer {
     line-height: 34px;
   }
 
-  .footer-navigate {
-    margin-top: 40px;
+  a {
+    color: $red !important;
+    padding: 0 5px;
+    transition: color 0.25s ease;
 
-    .footer-column {
-      min-height: 275px;
-
-      .heading {
-        font-family: 'block', sans-serif;
-        font-size: 18px;
-        color: white;
-      }
-
-      ul {
-        padding: 0;
-      }
-    }
-
-    li {
-      list-style-type: none;
-    }
-
-    a {
-      color: $white;
-      transition: color 0.25s ease;
-
-      &:hover {
-        color: $blue;
-      }
-    }
-  }
-
-  .footer-copyright {
-    margin: 60px auto;
-    text-align: center;
-  }
-
-  #gmap_canvas {
-    border: 0;
-    width: 100%;
-    min-height: 200px;
-
-    @media screen and (max-width: 960px) {
-      max-width: 250px;
+    &:hover {
+      color: $blue;
     }
   }
 

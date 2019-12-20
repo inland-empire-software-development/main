@@ -24,34 +24,39 @@ function Mission() {
   }, []);
 
   return (
-    <div id="mission" className="uk-container">
-      <div className="uk-column-1-2@m">
-        {/* left section */}
-        <div id="mission-left">
-          {/* mission title */}
-          <p className="heading">
-            Our Mission
-          </p>
+    <div id="mission">
+      <div className="uk-container">
+        <div className="uk-column-1-2">
+          {/* right section */}
+          <div id="mission-image">
 
-          {/* mission description */}
-          <main className="body-content">
-            {mission && reactHtmlParser(mission.value)}
-          </main>
+            {/* mission image */}
+            <div className="mission-image"/>
 
-        </div>
+            {/* mission image cutout */}
+            <div className="mission-cutout">
+              <img
+                src="/static/images/desktop/ie-white-cutout.png"
+                alt="IE cutout overlay"
+              />
+            </div>
 
-        {/* right section */}
-        <div id="mission-right">
+          </div>
 
-          {/* mission image */}
-          <div className="mission-image"/>
+          {/* left section */}
+          <div id="mission-right">
+            <div className="uk-margin-medium-top">
+              {/* mission title */}
+              <p className="heading">
+              Our Mission
+              </p>
 
-          {/* mission image cutout */}
-          <div className="mission-cutout">
-            <img
-              src="/static/images/desktop/ie-white-cutout.png"
-              alt="IE cutout overlay"
-            />
+              {/* mission description */}
+              <main className="body-content">
+                {mission && reactHtmlParser(mission.value)}
+              </main>
+            </div>
+
           </div>
 
         </div>
