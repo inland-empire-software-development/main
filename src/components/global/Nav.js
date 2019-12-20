@@ -3,7 +3,8 @@ import Link from "next/link";
 function Nav() {
   const navigation = [
     {
-      label: "About", icon: true, children: [
+      label: "Organization", icon: true, children: [
+        {label: "About Us", url: "/#about"},
         {label: "Mission", url: "/#mission"},
         {label: "Goals", url: "/#goals"},
         {label: "Community", url: "/#community"},
