@@ -52,19 +52,27 @@ export default function Community() {
                       dateOfEvent,
                       description,
                       imageCard,
-                      // imageModal modal in progress
+                      imageModal,
                     } = moment.details;
 
                     return (<li key={index}>
                       <div className="uk-card uk-card-default">
                         <div className="uk-card-media-top">
-                          <img uk-image="true" src={
-                                imageCard ?
-                                  imageCard.sourceUrl :
-                                  "/static/images/desktop/placeholder.jpg"
-                          } alt={dateOfEvent} title={description}
-                          className="uk-width-1-1"
-                          />
+                          <div uk-toggle={`target: #community-${index}`}>
+                            <img className="uk-blend-multiply uk-width-1-1" src={ imageCard ? imageCard.sourceUrl : "/static/images/desktop/placeholder.jpg" } alt={dateOfEvent} title={description}/>
+                            <div className="uk-position-center">
+                              <p className="uk-h4 uk-margin-remove" style={{color: 'rgba(255,255,255,0.8)'}}>
+                                <span uk-icon="icon: plus"/>
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div id={`community-${index}`} uk-modal="true">
+                          <div className="uk-modal-dialog uk-modal-body image-modal">
+                            <span className="uk-modal-close uk-icon">close</span>
+                            <img src={ imageModal ? imageModal.sourceUrl : "/static/images/desktop/placeholder.jpg" } />
+                          </div>
                         </div>
                       </div>
                     </li>

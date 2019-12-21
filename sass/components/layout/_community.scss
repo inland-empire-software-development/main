@@ -1,5 +1,17 @@
 #community-container {
   background-attachment: fixed;
+
+  .uk-card {
+    [uk-toggle] {
+      cursor: pointer;
+      transition: background-color 250ms ease-out;
+      background-color: $dark-gray;
+
+      &:hover {
+        background-color: $light-gray;
+      }
+    }
+  }
 }
 
 #community {
