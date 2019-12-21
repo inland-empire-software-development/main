@@ -53,14 +53,13 @@ export default function Story() {
                   return (
                     <li key={index}>
                       <div id="story" className="uk-container">
+                        <div className="story-background-overlay uk-overlay-primary uk-position-cover"/>
+                        <div className="story-background" style={{backgroundImage: `url(${image})`}}/>
                         <img className="story-image"
                           src={image}
                         />
-                        <div className="story-content">
+                        <div className="story-content uk-position-relative">
                           <p className="heading">Success Story</p>
-                          <img className="story-image-mobile"
-                            src={image}
-                          />
                           <p className="story-header">
                             <span className="name">{name}</span>
                             <span className="red"> - </span>
