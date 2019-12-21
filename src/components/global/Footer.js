@@ -57,6 +57,8 @@ function Footer(props) {
           </p>
         </p>
       </div>
+
+      <a href="#hero" uk-totop="true"/>
     </footer>
   );
 }
