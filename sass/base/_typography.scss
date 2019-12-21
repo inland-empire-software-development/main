@@ -37,6 +37,10 @@ $custom-fonts-path : '/static/fonts';
     font-size: calc(18px + 0.5vw);
 }
 
+a {
+    transition: all 200ms ease-in !important;
+}
+
 .body-content {
     font-size: 20px;
     white-space: pre-wrap;
