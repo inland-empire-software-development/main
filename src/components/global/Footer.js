@@ -26,10 +26,9 @@ function Footer(props) {
     })();
   }, []);
 
-  console.log(details);
   return (
     <footer className="container-full bg-black">
-      <div className="uk-container">
+      <div className="uk-container uk-margin-medium-top">
         {/* copyright */}
         <div>
           <img
@@ -51,11 +50,12 @@ function Footer(props) {
           </Link>|<Link href="/page?name=privacy_policy&set=legal">
             <a className="uk-link-text red">Privacy Policy</a>
           </Link>
-          <p className="uk-text-center">
+        </p>
+        <p className="uk-text-center uk-margin-remove">
             © {date.getFullYear()} Inland Empire Software Development, Inc.<br/>
             All rights reserved.<br/>
-          </p>
         </p>
+
       </div>
 
       <a href="#hero" uk-totop="true"/>
