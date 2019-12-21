@@ -39,6 +39,11 @@ footer {
       color: $white !important;
       background-color: $red;
     }
+
+    // This hides the totop scroller on smaller screens
+    @media screen and (max-height: 550px) {
+      display: none;
+    }
   }
 
 }

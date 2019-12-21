@@ -4,6 +4,14 @@
 
   .uk-slider-container {
     overflow: unset !important;
+
+    .uk-card {
+      .button {
+        @media screen and (max-width: 640px){
+          width: 100% !important;
+        }
+      }
+    }
   }
 
   .uk-card,
@@ -14,13 +22,6 @@
   .uk-card-media-top {
     margin-bottom: 10px;
     overflow: hidden !important;
-  }
-
-  .card-button {
-    margin-top: 10px;
-    margin-bottom: 15px;
-    position: absolute;
-    bottom: 0;
   }
 
   .uk-card {
