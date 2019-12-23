@@ -11,6 +11,7 @@ import {
   getTitle} from '../utils/blog';
 
 import Button from "./global/Button";
+import Link from 'next/link';
 
 export const postQuery = gql`
 query Post {
@@ -68,30 +69,26 @@ export default function Blog() {
                     {posts.map((post, index) => {
                       const categories = post.categories.nodes;
                       return (
-                        <li key={post.id}>
-                          <div>
-                            <div className="uk-card uk-card-default">
-                              {
-                                categories.length !== 0 &&
-                                <span className="uk-label uk-label-white">{categories[0].name}</span>
-                              }
-                              <div className="uk-card-media-top">
-                                <img src={getCardImage(post)} alt="" />
-                              </div>
-                              <div className="uk-card-body">
-                                <h3 className="uk-card-title"> {getTitle(post, 40)}</h3>
-                                <p className="uk-article-meta black">By {getAuthor(post.details.author)} on {getDate(post)}</p>
-                                <p className="uk-margin-small-top card-content">{getExcerpt(post, 160)}</p>
-
-                                <Button
-                                  link={getLink(post)}
-                                  classes="uk-margin-small-top uk-align-left"
-                                  label="read article"
-                                  width={2}/>
+                        <Link href={getLink(post)} key={post.id}>
+                          <li>
+                            <div>
+                              <div className="uk-card uk-card-default">
+                                {
+                                  categories.length !== 0 &&
+                                    <span className="uk-label uk-label-white">{categories[0].name}</span>
+                                }
+                                <div className="uk-card-media-top">
+                                  <img src={getCardImage(post)} alt="" />
+                                </div>
+                                <div className="uk-card-body">
+                                  <h3 className="uk-card-title"> {getTitle(post, 40)}</h3>
+                                  <p className="uk-article-meta black">By {getAuthor(post.details.author)} on {getDate(post)}</p>
+                                  <p className="uk-margin-small-top card-content">{getExcerpt(post, 160)}</p>
+                                </div>
                               </div>
                             </div>
-                          </div>
-                        </li>
+                          </li>
+                        </Link>
                       );
                     },
                     )}
