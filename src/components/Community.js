@@ -46,25 +46,27 @@ export default function Community() {
             <div id="community" className="uk-container">
               <p className="memberlist-header heading">Community</p>
               <div uk-slider="true" className="uk-slider uk-slider-container">
-                <ul className="uk-slider-items uk-child-width-1-2@s uk-child-width-1-4@m uk-child-width-1-5@l uk-grid">
+                <ul className="uk-slider-items uk-child-width-1-2@s uk-child-width-1-4@m uk-grid">
                   {community.map((moment, index) => {
                     const {
-                      dateOfEvent,
                       description,
                       imageCard,
-                      // imageModal modal in progress
+                      imageModal,
                     } = moment.details;
 
                     return (<li key={index}>
                       <div className="uk-card uk-card-default">
                         <div className="uk-card-media-top">
-                          <img uk-image="true" src={
-                                imageCard ?
-                                  imageCard.sourceUrl :
-                                  "/static/images/desktop/placeholder.jpg"
-                          } alt={dateOfEvent} title={description}
-                          className="uk-width-1-1"
-                          />
+                          <div uk-toggle={`target: #community-${index}`}>
+                            <img className="uk-width-1-1 community-event-image saturation" src={ imageCard ? imageCard.sourceUrl : "/static/images/desktop/placeholder.jpg" } alt={description}/>
+                          </div>
+                        </div>
+
+                        <div id={`community-${index}`} uk-modal="true">
+                          <div className="community-dialog-box uk-modal-dialog uk-modal-body image-modal">
+                            <span className="uk-modal-close uk-icon">close</span>
+                            <img src={ imageModal ? imageModal.sourceUrl : "/static/images/desktop/placeholder.jpg" } />
+                          </div>
                         </div>
                       </div>
                     </li>

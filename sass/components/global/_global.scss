@@ -22,3 +22,13 @@
   top: 0;
   display: block;
 }
+
+.uk-modal {
+  background-color: rgba(0,0,0,0.9);
+}
+
+.uk-modal-body {
+  &.image-modal {
+    padding: 0;
+  }
+}
