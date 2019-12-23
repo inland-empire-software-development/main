@@ -46,10 +46,9 @@ export default function Community() {
             <div id="community" className="uk-container">
               <p className="memberlist-header heading">Community</p>
               <div uk-slider="true" className="uk-slider uk-slider-container">
-                <ul className="uk-slider-items uk-child-width-1-2@s uk-child-width-1-4@m uk-child-width-1-5@l uk-grid">
+                <ul className="uk-slider-items uk-child-width-1-2@s uk-child-width-1-4@m uk-grid">
                   {community.map((moment, index) => {
                     const {
-                      dateOfEvent,
                       description,
                       imageCard,
                       imageModal,
@@ -59,11 +58,7 @@ export default function Community() {
                       <div className="uk-card uk-card-default">
                         <div className="uk-card-media-top">
                           <div uk-toggle={`target: #community-${index}`}>
-                            <img className="uk-blend-multiply uk-width-1-1" src={ imageCard ? imageCard.sourceUrl : "/static/images/desktop/placeholder.jpg" } alt={dateOfEvent} title={description}/>
-                            <div className="uk-position-center">
-                              <time className="uk-text-center white uk-display-block">{dateOfEvent}</time>
-                              <p className="uk-h4 uk-margin-remove uk-text-center uk-margin-medium-top white"><small>view more</small></p>
-                            </div>
+                            <img className="uk-width-1-1 community-event-image saturation" src={ imageCard ? imageCard.sourceUrl : "/static/images/desktop/placeholder.jpg" } alt={description}/>
                           </div>
                         </div>
 
