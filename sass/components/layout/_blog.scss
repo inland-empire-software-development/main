@@ -6,9 +6,12 @@
     overflow: unset !important;
 
     li {
-      cursor: pointer;
       filter: saturate(.75);
       transition: filter 200ms ease-in;
+
+      a:hover {
+        color: $black;
+      }
 
       &:hover {
         filter: saturate(1.25);
