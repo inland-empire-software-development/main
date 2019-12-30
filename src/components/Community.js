@@ -58,7 +58,7 @@ export default function Community() {
                       <div className="uk-card uk-card-default">
                         <div className="uk-card-media-top">
                           <div uk-toggle={`target: #community-${index}`}>
-                            <img className="uk-width-1-1 community-event-image saturation" src={ imageCard ? imageCard.sourceUrl : "/static/images/desktop/placeholder.jpg" } alt={description}/>
+                            <img className="uk-width-1-1" src={ imageCard ? imageCard.sourceUrl : "/static/images/desktop/placeholder.jpg" } alt={description}/>
                           </div>
                         </div>
 
