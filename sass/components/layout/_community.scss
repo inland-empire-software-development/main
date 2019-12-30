@@ -24,31 +24,6 @@
   .uk-slider {
     margin-top: 40px;
   }
-
-  .community-event-image {
-    filter: saturate(0.25);
-    transition: filter 250ms ease-in-out;
-    &:hover {
-      filter: saturate(1);
-    }
-  }
-  .community-event-details {
-    background-color: rgba(0,0,0,0.5);
-    width: 100%;
-    padding: 10px 0;
-  }
-
-  @-webkit-keyframes saturation {
-    0%  { -webkit-filter: saturate(0.25); }
-    40%  { -webkit-filter: saturate(1.25); }
-    65%  { -webkit-filter: saturate(0.75); }
-    100%  { -webkit-filter: saturate(1.00); }
-  }
-
-  .saturation:hover {
-    -webkit-animation: saturation 1.2s 1;
-  }
-
 }
 
 .community-dialog-box {
