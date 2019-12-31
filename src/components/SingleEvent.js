@@ -35,43 +35,52 @@ function SingleEvent() {
     }).catch((err) => console.log(err));
   });
 
-  return (
-    eventName &&
-    <div className="hero-event-container">
+  // if there's no events this will display Instead
+  if (eventDay === "" && eventMonth === "--" && eventName === "--") {
+    return (
+      <div className="uk-card uk-card-default uk-card-body uk-width-1-2@m hero-event-container">
+        <h3 className="uk-card-title red">Default</h3>
+        <p className="black">Lorem ipsum <a href="#">dolor</a> sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      </div>);
+  } else {
+    return (
+      eventName &&
+      <div className="hero-event-container">
 
-      {/* event details container */}
-      <div className="hero-event-info">
+        {/* event details container */}
+        <div className="hero-event-info">
 
-        {/* hero event info left side */}
-        <div className="hero-event-date">
+          {/* hero event info left side */}
+          <div className="hero-event-date">
 
-          <p className="hero-event-day">{eventDay}</p>
-          <p className="hero-event-month">{eventMonth}</p>
-          <p className="hero-event-time">{eventStartTime} - {eventEndTime}</p>
+            <p className="hero-event-day">{eventDay}</p>
+            <p className="hero-event-month">{eventMonth}</p>
+            <p className="hero-event-time">{eventStartTime} - {eventEndTime}</p>
+
+          </div>
+
+          {/* hero event info right side */}
+          <div className="hero-event-desc">
+
+            <p className={`event-name ${eventName.length < 30 ?
+              "event-name-short" : ""}`}>
+              {eventName}
+            </p>
+
+          </div>
 
         </div>
 
-        {/* hero event info right side */}
-        <div className="hero-event-desc">
+        {/* reserve a spot button */}
+        <div className="reserve-wrapper">
 
-          <p className={`event-name ${eventName.length < 30 ?
-            "event-name-short" : ""}`}>
-            {eventName}
-          </p>
+          <Button link={eventLink} label="reserve a spot" width={3}/>
 
         </div>
 
       </div>
-
-      {/* reserve a spot button */}
-      <div className="reserve-wrapper">
-
-        <Button link={eventLink} label="reserve a spot" width={3}/>
-
-      </div>
-
-    </div>
-  );
+    );
+  }
 }
 
 export default SingleEvent;
