@@ -6,12 +6,12 @@ import {splitMonth, splitDay} from '../utils/splitDateUtil';
 import Button from "./global/Button";
 
 function SingleEvent() {
-  const [eventName, setEventName] = useState('--');
-  const [eventMonth, setEventMonth] = useState('--');
+  const [eventName, setEventName] = useState(false);
+  const [eventMonth, setEventMonth] = useState(false);
   const [eventDay, setEventDay] = useState('');
   const [eventStartTime, setEventStartTime] = useState('--');
   const [eventEndTime, setEventEndTime] = useState('--');
-  const [eventLink, setEventLink] = useState('#');
+  const [eventLink, setEventLink] = useState(false);
 
   // Removes any odd formatting in event Name.
   const getEventName = (eventName) => {
@@ -19,7 +19,7 @@ function SingleEvent() {
   };
 
   useEffect(() => {
-    fetchEvents().then((result) => {
+    fetchEvents().then((fasle) => {
       const {name, duration, link} = result[0];
       const localTime = result[0].local_time;
       const localDate = result[0].local_date;
@@ -35,8 +35,21 @@ function SingleEvent() {
     }).catch((err) => console.log(err));
   });
 
-  return (
-    eventName &&
+  if (eventName === false ) {
+    return (
+      <div class="uk-height-large uk-background-cover uk-overflow-hidden uk-light uk-flex uk-flex-top"
+      >
+        <div class="uk-width-1-2@m uk-text-center uk-margin-auto uk-margin-auto-vertical">
+          <h1 uk-parallax="opacity: 1.0; y: -100,0; scale: 2,1; viewport: 0.5;">Headline</h1>
+          <p uk-parallax="opacity: 1,0; y: 100,0; scale: 0.5,1; viewport: 0.5;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+            ut labore et dolore magna aliqua.</p>
+        </div>
+      </div>
+    );
+  } else {
+    return (
+      eventName &&
     <div className="hero-event-container">
 
       {/* event details container */}
@@ -71,7 +84,8 @@ function SingleEvent() {
       </div>
 
     </div>
-  );
+    );
+  }
 }
 
 export default SingleEvent;
