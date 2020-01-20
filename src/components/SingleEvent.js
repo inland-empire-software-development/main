@@ -11,7 +11,7 @@ function SingleEvent() {
   const [eventDay, setEventDay] = useState('');
   const [eventStartTime, setEventStartTime] = useState('--');
   const [eventEndTime, setEventEndTime] = useState('--');
-  const [eventLink, setEventLink] = useState(false);
+  const [eventLink, setEventLink] = useState('-');
 
   // Removes any odd formatting in event Name.
   const getEventName = (eventName) => {
@@ -19,7 +19,8 @@ function SingleEvent() {
   };
 
   useEffect(() => {
-    fetchEvents().then((fasle) => {
+    // took out "result" from the .then((result) to imitate no event
+    fetchEvents().then(() => {
       const {name, duration, link} = result[0];
       const localTime = result[0].local_time;
       const localDate = result[0].local_date;
@@ -34,16 +35,17 @@ function SingleEvent() {
       setEventLink(link);
     }).catch((err) => console.log(err));
   });
-
+  // if no api is fetched display a different container
   if (eventName === false ) {
     return (
-      <div class="uk-height-large uk-background-cover uk-overflow-hidden uk-light uk-flex uk-flex-top"
-      >
-        <div class="uk-width-1-2@m uk-text-center uk-margin-auto uk-margin-auto-vertical">
-          <h1 uk-parallax="opacity: 1.0; y: -100,0; scale: 2,1; viewport: 0.5;">Headline</h1>
-          <p uk-parallax="opacity: 1,0; y: 100,0; scale: 0.5,1; viewport: 0.5;">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-            ut labore et dolore magna aliqua.</p>
+      <div className="hero-event-container-false">
+        <div className="uk-height-medium uk-background-cover uk-overflow-hidden uk-light uk-flex uk-flex-top"
+        >
+          <div className="uk-width-1-2@m uk-text-center uk-margin-auto uk-margin-auto-vertical">
+            <h1 uk-parallax="opacity: 1,0; y: 30,-100; scale: 2,1; viewport: .8;" className="hero-event-false">IESD</h1>
+            <p uk-parallax="opacity: 1,0; y: 40,150; scale: 2,1; viewport: .8;" className="hero-event-false-slogan">
+              Community and Developer Excellence.</p>
+          </div>
         </div>
       </div>
     );

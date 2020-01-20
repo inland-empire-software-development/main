@@ -157,3 +157,16 @@
 
 
 }
+
+.hero-event-container-false{
+  .hero-event-false {
+    font-family: 'block';
+  }
+  
+  .hero-event-false-slogan{
+    @media screen and (max-width: 680px) {
+      scale: .5;
+    }
+  }
+  
+}
