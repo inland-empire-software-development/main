@@ -10,7 +10,7 @@ import {
   getLink,
   getTitle} from '../utils/blog';
 
-import Button from "./global/Button";
+import Link from 'next/link';
 
 export const postQuery = gql`
 query Post {
@@ -73,7 +73,7 @@ export default function Blog() {
                             <div className="uk-card uk-card-default">
                               {
                                 categories.length !== 0 &&
-                                <span className="uk-label uk-label-white">{categories[0].name}</span>
+                                    <span className="uk-label uk-label-white">{categories[0].name}</span>
                               }
                               <div className="uk-card-media-top">
                                 <img src={getCardImage(post)} alt="" />
@@ -82,12 +82,11 @@ export default function Blog() {
                                 <h3 className="uk-card-title"> {getTitle(post, 40)}</h3>
                                 <p className="uk-article-meta black">By {getAuthor(post.details.author)} on {getDate(post)}</p>
                                 <p className="uk-margin-small-top card-content">{getExcerpt(post, 160)}</p>
-
-                                <Button
-                                  link={getLink(post)}
-                                  classes="uk-margin-small-top uk-align-left"
-                                  label="read article"
-                                  width={2}/>
+                                <p>
+                                  <Link href={getLink(post)}>
+                                    <a>read more</a>
+                                  </Link>
+                                </p>
                               </div>
                             </div>
                           </div>

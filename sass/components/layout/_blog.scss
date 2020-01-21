@@ -5,8 +5,26 @@
   .uk-slider-container {
     overflow: unset !important;
 
+    li {
+      filter: saturate(.75);
+      transition: filter 200ms ease-in;
+
+      a:hover {
+        color: $black;
+      }
+
+      &:hover {
+        filter: saturate(1.25);
+      }
+    }
+
     .uk-card {
       .button {
+        margin:0 auto;
+        display: block !important;
+        float: none;
+        text-align: center;
+
         @media screen and (max-width: 640px){
           width: 100% !important;
         }
@@ -56,17 +74,12 @@
   }
   .uk-slidenav {
     transition: all 0.25s ease;
-    color: $dark-gray;
+    color: $blue;
     width: 35px;
     height: 35px;
     text-align: center;
     margin-left: 0;
     margin-right: 0;
-    opacity: 0.2;
-
-    &:hover {
-      opacity: 1;
-    }
   }
 
   .uk-label-white {
