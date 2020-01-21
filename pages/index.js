@@ -23,13 +23,13 @@ function Home() {
 
   return (
     <div className="home">
-      <Announcement />
-      <Hero />
-      <Blog />
-      <Story />
-
-      <Community />
-
+      <Announcement/>
+      <Hero/>
+      <Blog/>
+      <Story/>
+      <Community/>
+      <Slogan/>
+      <Operations/>
       <CallToAction
         background="../../static/images/join-section-background.jpg"
         button={<Button
@@ -38,21 +38,15 @@ function Home() {
           link="https://www.meetup.com/iesd-meetup/"
         />}
       />
-
-      <Operations />
-      <Slogan/>
       <Speakers/>
-
-      <About />
-      <Mission />
-
+      <About/>
+      <Mission/>
       <div className="container-full uk-hidden@m">
-        <img src="../static/images/hack-day-spencer-tyrice-rebecca.jpg" />
+        <img src="../static/images/hack-day-spencer-tyrice-rebecca.jpg"/>
       </div>
-      <Goals />
-      <Sponsors />
-
-      <Footer />
+      <Goals/>
+      <Sponsors/>
+      <Footer/>
     </div>
   );
 }

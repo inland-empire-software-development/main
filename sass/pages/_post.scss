@@ -8,6 +8,10 @@
     }
   }
 
+  figure.aligncenter img {
+    margin:0 auto;
+    display: block;
+  }
   .post-content {
     min-height: 300px;
     position: relative;

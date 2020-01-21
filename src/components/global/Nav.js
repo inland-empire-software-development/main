@@ -10,34 +10,30 @@ function Nav() {
         {label: "Community", url: "/#community"},
       ],
     },
-    {label: "Events", url: "https://www.meetup.com/iesd-meetup/events/", target: "_blank"},
     {
       label: "Information", icon: true, children: [
-        {label: "Mentorship", url: "/mentorship"},
-        {label: "Volunteer", url: "/volunteer"},
+        {label: "Mentorships", url: "/mentorship"},
+        {label: "Events", url: "https://www.meetup.com/iesd-meetup/events/", target: "_blank"},
+        {label: "Volunteering", url: "/volunteer"},
         {label: "Operations", url: "/#operations"},
-        {label: "Speakers", url: "/#speakers"},
-        /* {label: "Volunteers", url: "/#volunteers"},
-        volunteer component still not Started. */
+        {label: "Past Speakers", url: "/#speakers"},
+        {label: "Sign up to Speak", url: "/forms/speak", target: "_blank"},
       ],
     },
     {label: "Sponsors", url: "/#sponsors"},
-    {label: "Blog", url: "/#blog"},
+    {label: "Newsroom", url: "/#blog"},
     {label: "Join", url: "https://www.meetup.com/iesd-meetup/", target: "_blank"},
   ].map((item) => createListObject(item));
 
   return (
     <section>
-      <nav className="uk-navbar-container uk-navbar-transparent"
-        uk-navbar="">
+      <nav className="uk-navbar-container uk-navbar-transparent" uk-navbar="">
         <div className="uk-navbar-left">
           <ul className="uk-navbar-nav">
             <li className="uk-active">
               <Link href="/">
                 <a className="uk-logo">
-                  <img id="nav-logo"
-                    src="/static/logos/iesd-initials-white.svg"
-                  />
+                  <img id="nav-logo" src="/static/logos/iesd-initials-white.svg" />
                 </a>
               </Link>
             </li>
@@ -53,10 +49,8 @@ function Nav() {
             }
           </ul>
 
-          <a id="nav-toggle" className="uk-navbar-toggle uk-hidden@s"
-            href="#"
-            uk-toggle="target: #offcanvas-nav">
-            <span uk-navbar-toggle-icon="true"></span>
+          <a id="nav-toggle" className="uk-navbar-toggle uk-hidden@s" href="#" uk-toggle="target: #offcanvas-nav">
+            <span uk-navbar-toggle-icon="true"/>
           </a>
 
         </div>
