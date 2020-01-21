@@ -42,9 +42,9 @@ function SingleEvent() {
         <div className="uk-height-medium uk-background-cover uk-overflow-hidden uk-light uk-flex uk-flex-top"
         >
           <div className="uk-width-1-2@m uk-text-center uk-margin-auto uk-margin-auto-vertical">
-            <h1 uk-parallax="opacity: 1,0; y: 30,-100; scale: 2,1; viewport: .8;" className="hero-event-false">IESD</h1>
-            <p uk-parallax="opacity: 1,0; y: 40,150; scale: 2,1; viewport: .8;" className="hero-event-false-slogan">
-              Community and Developer Excellence.</p>
+            <h1 uk-parallax="opacity: 1,0; y: 20,-1; scale: 2,1; viewport: 1.2;" className="hero-event-false">IESD</h1>
+            <p uk-parallax="opacity: 1,0; y: 50,185; scale: 2,.8; viewport: 1.2;" className="hero-event-false-slogan">
+              Community and <br></br> Developer Excellence.</p>
           </div>
         </div>
       </div>
