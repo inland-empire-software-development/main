@@ -84,6 +84,7 @@
         font-size: 22px;
         line-height: 22px;
         text-align: center;
+        transform: translateY(0px) scale(1);
 
         @media screen and (max-width: 680px) {
           font-size: 16px;
@@ -162,10 +163,12 @@
   .hero-event-false {
     font-family: 'block';
   }
-  
+  h6 {
+    color: #B3B4B5
+  }
   .hero-event-false-slogan{
     @media screen and (max-width: 680px) {
-      scale: .5;
+      scale: .7;
     }
   }
   

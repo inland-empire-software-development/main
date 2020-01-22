@@ -11,7 +11,7 @@ function SingleEvent() {
   const [eventDay, setEventDay] = useState('');
   const [eventStartTime, setEventStartTime] = useState('--');
   const [eventEndTime, setEventEndTime] = useState('--');
-  const [eventLink, setEventLink] = useState(null);
+  const [eventLink, setEventLink] = useState('#');
 
   // Removes any odd formatting in event Name.
   const getEventName = (eventName) => {
@@ -34,22 +34,9 @@ function SingleEvent() {
       setEventLink(link);
     }).catch((err) => console.log(err));
   });
-  {console.log(eventLink);}
+  {console.log(!eventName);}
   // if no api is fetched display a different container
-  if (eventLink === null && eventName === false ) {
-    return (
-      <div className="hero-event-container-false">
-        <div className="uk-height-medium uk-background-cover uk-overflow-hidden uk-light uk-flex uk-flex-top"
-        >
-          <div className="uk-width-1-2@m uk-text-center uk-margin-auto uk-margin-auto-vertical">
-            <h1 uk-parallax="opacity: 1,0; y: 20,-1; scale: 2,1; viewport: 1.2;" className="hero-event-false">IESD</h1>
-            <p uk-parallax="opacity: 1,0; y: 50,185; scale: 2,.8; viewport: 1.2;" className="hero-event-false-slogan">
-              Community and <br></br> Developer Excellence.</p>
-          </div>
-        </div>
-      </div>
-    );
-  } else {
+  if (eventName) {
     return (
       eventName &&
       <div className="hero-event-container">
@@ -85,6 +72,19 @@ function SingleEvent() {
 
         </div>
 
+      </div>
+    );
+  } else {
+    return (
+      <div className="hero-event-container-false">
+        <div className="uk-height-medium uk-background-cover uk-overflow-hidden uk-light uk-flex uk-flex-top"
+        >
+          <div className="uk-width-1-2@m uk-text-center uk-margin-auto uk-margin-auto-vertical">
+            <h1 uk-parallax="opacity: 1,0; y: 20,-1; scale: 2,1; viewport: 1.2;" className="hero-event-false">IESD</h1>
+            <h6 uk-parallax="opacity: 1,0; y: 50,185; scale: 2,.8; viewport: 1.2;" className="hero-event-false-slogan">
+              Community and <br></br> Developer Excellence.</h6>
+          </div>
+        </div>
       </div>
     );
   }
