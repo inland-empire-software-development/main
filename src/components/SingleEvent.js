@@ -6,7 +6,7 @@ import {splitMonth, splitDay} from '../utils/splitDateUtil';
 import Button from "./global/Button";
 
 function SingleEvent() {
-  const [eventName, setEventName] = useState('--');
+  const [eventName, setEventName] = useState(false);
   const [eventMonth, setEventMonth] = useState('--');
   const [eventDay, setEventDay] = useState('');
   const [eventStartTime, setEventStartTime] = useState('--');
@@ -34,15 +34,9 @@ function SingleEvent() {
       setEventLink(link);
     }).catch((err) => console.log(err));
   });
-
-  // if there's no events this will display Instead
-  if (eventDay === "" && eventMonth === "--" && eventName === "--") {
-    return (
-      <div className="uk-card uk-card-default uk-card-body uk-width-1-2@m hero-event-container">
-        <h3 className="uk-card-title red">Default</h3>
-        <p className="black">Lorem ipsum <a href="#">dolor</a> sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      </div>);
-  } else {
+  {console.log(!eventName);}
+  // if no api is fetched display a different container
+  if (eventName) {
     return (
       eventName &&
       <div className="hero-event-container">
@@ -78,6 +72,19 @@ function SingleEvent() {
 
         </div>
 
+      </div>
+    );
+  } else {
+    return (
+      <div className="hero-event-container-false">
+        <div className="uk-height-medium uk-background-cover uk-overflow-hidden uk-light uk-flex uk-flex-top"
+        >
+          <div className="uk-width-1-2@m uk-text-center uk-margin-auto uk-margin-auto-vertical">
+            <h1 uk-parallax="opacity: 1,0; y: 20,-1; scale: 2,1; viewport: 1.2;" className="hero-event-false">IESD</h1>
+            <h6 uk-parallax="opacity: 1,0; y: 50,185; scale: 2,.8; viewport: 1.2;" className="hero-event-false-slogan">
+              Community and <br></br> Developer Excellence.</h6>
+          </div>
+        </div>
       </div>
     );
   }
