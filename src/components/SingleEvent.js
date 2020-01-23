@@ -6,13 +6,9 @@ import {splitMonth, splitDay} from '../utils/splitDateUtil';
 import Button from "./global/Button";
 
 function SingleEvent() {
-  const [eventName, setEventName] = useState(false);
-  const [eventMonth, setEventMonth] = useState('--');
-  const [eventDay, setEventDay] = useState('');
-  const [eventStartTime, setEventStartTime] = useState('--');
-  const [eventEndTime, setEventEndTime] = useState('--');
-  const [eventLink, setEventLink] = useState('#');
+  const [eventDetails, setEventDetails] = useState(undefined);
 
+  console.log(eventDetails);
   // Removes any odd formatting in event Name.
   const getEventName = (eventName) => {
     return eventName.replace("-", "");
@@ -20,25 +16,29 @@ function SingleEvent() {
 
   useEffect(() => {
     fetchEvents().then((result) => {
-      const {name, duration, link} = result[0];
+      const {name, duration, link = false} = result[0];
       const localTime = result[0].local_time;
       const localDate = result[0].local_date;
 
-      setEventName(getEventName(name));
-      setEventStartTime(calcStartTime(localTime));
-      setEventEndTime(
-          calcEndTime(localTime, duration,
-          ));
-      setEventMonth(splitMonth(localDate));
-      setEventDay(splitDay(localDate));
-      setEventLink(link);
+      if (name) {
+        setEventDetails({
+          eventName: getEventName(name),
+          eventStartTime: calcStartTime(localTime),
+          eventEndTime: calcEndTime(localTime, duration),
+          eventMonth: splitMonth(localDate),
+          eventDay: splitDay(localDate),
+          link,
+        });
+      } else {
+        setEventDetails(false);
+      }
     }).catch((err) => console.log(err));
-  });
-  {console.log(!eventName);}
+  }, []);
+
   // if no api is fetched display a different container
-  if (eventName) {
+  if (eventDetails) {
+    const {eventDay, eventMonth, eventStartTime, eventEndTime, eventName, link} = eventDetails;
     return (
-      eventName &&
       <div className="hero-event-container">
 
         {/* event details container */}
@@ -68,13 +68,13 @@ function SingleEvent() {
         {/* reserve a spot button */}
         <div className="reserve-wrapper">
 
-          <Button link={eventLink} label="reserve a spot" width={3}/>
+          <Button link={link} label="reserve a spot" width={3}/>
 
         </div>
 
       </div>
     );
-  } else {
+  } else if (eventDetails === false) {
     return (
       <div className="hero-event-container-false">
         <div className="uk-height-medium uk-background-cover uk-overflow-hidden uk-light uk-flex uk-flex-top"
@@ -87,6 +87,8 @@ function SingleEvent() {
         </div>
       </div>
     );
+  } else {
+    return "";
   }
 }
 
