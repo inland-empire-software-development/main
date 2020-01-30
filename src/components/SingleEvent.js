@@ -6,21 +6,23 @@ import {splitMonth, splitDay} from '../utils/splitDateUtil';
 import Button from "./global/Button";
 
 function SingleEvent() {
-  const [eventDetails, setEventDetails] = useState(undefined);
-
-  console.log(eventDetails);
+  const [eventDetails, setEventDetails] = useState("");
+  console.log(eventDetails +" fire-1");
   // Removes any odd formatting in event Name.
   const getEventName = (eventName) => {
     return eventName.replace("-", "");
   };
 
+  const makefalse = () => {
+    setEventDetails(false);
+  };
   useEffect(() => {
     fetchEvents().then((result) => {
       const {name, duration, link = false} = result[0];
       const localTime = result[0].local_time;
       const localDate = result[0].local_date;
-
       if (name) {
+        console.log(eventDetails +" fire-2");
         setEventDetails({
           eventName: getEventName(name),
           eventStartTime: calcStartTime(localTime),
@@ -30,13 +32,14 @@ function SingleEvent() {
           link,
         });
       } else {
-        setEventDetails(false);
+        me = true;
       }
-    }).catch((err) => console.log(err));
+    }).catch((err) => makefalse());
   }, []);
 
   // if no api is fetched display a different container
   if (eventDetails) {
+    console.log(eventDetails +" fire-3");
     const {eventDay, eventMonth, eventStartTime, eventEndTime, eventName, link} = eventDetails;
     return (
       <div className="hero-event-container">
@@ -88,6 +91,7 @@ function SingleEvent() {
       </div>
     );
   } else {
+    console.log(eventDetails +" fire-4");
     return "";
   }
 }
