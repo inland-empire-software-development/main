@@ -13,7 +13,7 @@ function SingleEvent() {
     return eventName.replace("-", "");
   };
 
-  const makefalse = () => {
+  const falseEventDetails = () => {
     setEventDetails(false);
   };
   useEffect(() => {
@@ -34,7 +34,10 @@ function SingleEvent() {
       } else {
         me = true;
       }
-    }).catch((err) => makefalse());
+    }).catch((err) => {
+      console.log(err);
+      falseEventDetails();
+    });
   }, []);
 
   // if no api is fetched display a different container
