@@ -54,8 +54,8 @@ function SingleEvent() {
         {/* hero event info right side */}
         <div className="hero-event-desc">
 
-          <p className={`event-name ${eventName.length < 30 ?
-            "event-name-short" : ""}`}>
+          <p className={"event-name " + (eventName.length > 30 ?
+            "event-name-short" : "")}>
             {eventName}
           </p>
 
