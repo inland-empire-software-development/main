@@ -1,4 +1,4 @@
-import {Query} from "react-apollo";
+import { Query } from "react-apollo";
 import gql from "graphql-tag";
 import Loader from './global/Loader';
 
@@ -8,7 +8,8 @@ import {
   getDate,
   getExcerpt,
   getLink,
-  getTitle} from '../utils/blog';
+  getTitle
+} from '../utils/blog';
 
 import Link from 'next/link';
 
@@ -52,7 +53,7 @@ query Post {
 export default function Blog() {
   return (
     <Query query={postQuery} >
-      {({loading, error, data}) => {
+      {({ loading, error, data }) => {
         if (error) return <aside>Error loading posts!</aside>;
         if (loading) return <Loader />;
 
@@ -73,7 +74,7 @@ export default function Blog() {
                             <div className="uk-card uk-card-default">
                               {
                                 categories.length !== 0 &&
-                                    <span className="uk-label uk-label-white">{categories[0].name}</span>
+                                <span className="uk-label uk-label-white">{categories[0].name}</span>
                               }
                               <div className="uk-card-media-top">
                                 <img src={getCardImage(post)} alt="" />
@@ -95,10 +96,10 @@ export default function Blog() {
                     },
                     )}
                   </ul>
-                  <a className="uk-position-center-left uk-position-small" href="#" uk-slidenav-previous="true" uk-slider-item="previous"/>
-                  <a className="uk-position-center-right uk-position-small" href="#" uk-slidenav-next="true" uk-slider-item="next"/>
+                  <a className="uk-position-center-left uk-position-small" href="#" uk-slidenav-previous="true" uk-slider-item="previous" />
+                  <a className="uk-position-center-right uk-position-small" href="#" uk-slidenav-next="true" uk-slider-item="next" />
                 </div>
-                <ul className="uk-slider-nav uk-dotnav uk-flex-center uk-margin uk-visible@s"/>
+                <ul className="uk-slider-nav uk-dotnav uk-flex-center uk-margin" />
               </div>
             </div>
           </div>
