@@ -1,1 +1,10 @@
 //global styles only
+
+a[href*="//"]:not([href*="localhost:3000"]) {
+    &:hover {
+        &:after {
+            margin-left: 7px;
+            content    : url('/static/icons/external-link.svg');
+        }
+    }
+}
