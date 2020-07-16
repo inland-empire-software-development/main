@@ -1,5 +1,7 @@
 #mission {
-  height: 525px;
+  height: auto;
+  background-repeat: no-repeat;
+  background-size: cover;
 
   [class*='uk-column-'] {
     column-gap: 0;
@@ -11,12 +13,7 @@
     }
   }
 
-  @media screen and (max-width: 1196px) {
-    height: 450px;
-  }
-
   @media screen and (max-width: 1024px) {
-    height: auto;
     padding-top: 25px;
     padding-bottom: 25px;
   }
@@ -24,10 +21,19 @@
   div {
     height: 100%;
   }
-
+  .iesdHr{
+    border-top: none;
+    width: 45px;
+    height: 5px;
+    background-color: #EC2242;
+  }
   p {
     margin: 0;
     line-height: 40px;
+    color: white;
+  }
+  #missionText{
+    width: 600px;
   }
 
   #mission-right {

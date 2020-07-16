@@ -5,7 +5,7 @@ import {withRouter} from 'next/router';
 import Hero from "../src/components/Hero";
 import Slogan from "../src/components/Slogan";
 import Mission from "../src/components/Mission";
-import Goals from "../src/components/Goals";
+// import Goals from "../src/components/Goals";
 import Community from "../src/components/Community";
 import CallToAction from "../src/components/global/CallToAction";
 import Button from "../src/components/global/Button";
@@ -16,7 +16,7 @@ import Sponsors from '../src/components/Sponsors';
 import Footer from "../src/components/global/Footer";
 import Blog from "../src/components/Blog";
 import Announcement from '../src/components/global/Announcement';
-import About from '../src/components/About';
+// import About from '../src/components/About';
 
 function Home() {
   // initial render
@@ -39,12 +39,9 @@ function Home() {
         />}
       />
       <Speakers/>
-      <About/>
+      {/* <About/> took out, view issue 158 */}
       <Mission/>
-      <div className="container-full uk-hidden@m">
-        <img src="../static/images/hack-day-spencer-tyrice-rebecca.jpg"/>
-      </div>
-      <Goals/>
+      {/* <Goals/> took out, view issue 158 */}
       <Sponsors/>
       <Footer/>
     </div>

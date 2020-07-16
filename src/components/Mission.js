@@ -1,6 +1,6 @@
 import axios from "axios";
-import {useEffect, useState} from 'react';
-import reactHtmlParser from 'react-html-parser';
+import { useEffect, useState } from "react";
+import reactHtmlParser from "react-html-parser";
 
 /**
  * Mission component
@@ -14,55 +14,29 @@ function Mission() {
    * Get data by set and name for pages.
    * TODO: Switch to GraphQL once support is added to plugin for Options
    */
-  useEffect( () => {
-    (async ()=>{
+  useEffect(() => {
+    (async () => {
       const result = await axios(
-          `https://api.iesd.com/wp-json/iesd/api/settings?set=organization&name=mission`,
+         `https://api.iesd.com/wp-json/iesd/api/settings?set=organization&name=mission`
       );
       setMission(result.data[0]);
     })();
   }, []);
 
   return (
-    <div id="mission">
+    <div id="mission" className="bg-black" style={{backgroundImage: 'url("/static/images/desktop/missionbgbxl.jpg")'}}>
       <div className="uk-container">
-        <div className="uk-column-1-2">
-          {/* right section */}
-          <div id="mission-image">
-
-            {/* mission image */}
-            <div className="mission-image"/>
-
-            {/* mission image cutout */}
-            <div className="mission-cutout">
-              <img
-                src="/static/images/desktop/ie-white-cutout.png"
-                alt="IE cutout overlay"
-              />
-            </div>
-
-          </div>
-
-          {/* left section */}
-          <div id="mission-right">
-            <div className="uk-margin-medium-top">
-              {/* mission title */}
-              <p className="heading">
-              Our Mission
-              </p>
-
-              {/* mission description */}
-              <main className="body-content">
-                {mission && reactHtmlParser(mission.value)}
-              </main>
-            </div>
-
-          </div>
-
-        </div>
+        <p className="heading uk-position-relative uk-position-z-index uk-margin-remove-bottom uk-margin-large-top">
+          Our Mission
+        </p>
+        <hr className="iesdHr"></hr>
+        <p id="missionText" className="body-content uk-position-relative uk-position-z-index uk-margin-small-top uk-margin-large-bottom">
+          Building Communities around Technology
+          {/* need to update mission statement in wordpress will use static text for now */}
+          {/* {mission && reactHtmlParser(mission.value)} */}
+        </p>
       </div>
     </div>
-
   );
 }
 
