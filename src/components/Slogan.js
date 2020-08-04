@@ -5,8 +5,8 @@
 function Slogan() {
   return (
     <div id="slogan" className="container-full">
-      <p>COMMUNITY AND</p>
-      <p>DEVELOPER EXCELLENCE</p>
+      <p>Building Communities</p>
+      <p>around Technology</p>
     </div>
   );
 }
