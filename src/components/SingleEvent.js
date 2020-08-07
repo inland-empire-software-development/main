@@ -74,7 +74,7 @@ function SingleEvent() {
           <div className="uk-width-1-2@m uk-text-center uk-margin-auto uk-margin-auto-vertical">
             <h1 uk-parallax="opacity: 1,0; y: 20,-1; scale: 2,1; viewport: 1.2;" className="hero-event-false">IESD</h1>
             <h6 uk-parallax="opacity: 1,0; y: 50,185; scale: 2,.8; viewport: 1.2;" className="hero-event-false-slogan">
-              Building Communities<br></br> around Technologies</h6>
+              Building Communities<br></br> around Technology</h6>
           </div>
         </div>
       </div>
