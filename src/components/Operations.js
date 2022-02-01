@@ -6,7 +6,7 @@ import Loader from './global/Loader';
 
 export const staffQuery = gql`
     query Staff{
-        staff (first: 100) {
+        allStaff (first: 100) {
             nodes {
                 details {
                     title
