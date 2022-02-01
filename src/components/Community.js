@@ -5,7 +5,7 @@ import Loader from './global/Loader';
 
 export const communityQuery = gql `
   query Community {
-    community (first: 100) {
+    allCommunity (first: 100) {
       nodes {
         details {
           dateOfEvent
@@ -32,9 +32,8 @@ export default function Community() {
         if (error) return <aside>Error loading community!</aside>;
         if (loading) return <Loader />;
 
-        const community = data.community.nodes.sort((a, b) =>
-          a.order.position - b.order.position);
-
+        const community = data.allCommunity.nodes.sort((a, b) => a.order.position - b.order.position);
+ 
         return (
           <div
             id="community-container"

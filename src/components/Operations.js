@@ -34,7 +34,7 @@ export default function Operations() {
           <div id="operations" className="uk-margin-medium-bottom">
             <MemberList
               label="Operations"
-              members={data.staff.nodes.sort((a, b) =>
+              members={data.allStaff.nodes.sort((a, b) =>
                 a.order.position - b.order.position).map((member) => {
                 return {
                   name: member.details.name,
