@@ -10,7 +10,7 @@
     "@zeit/next-sass": "^1.0.1",
     "abortcontroller-polyfill": "^1.4.0",
     "apollo-boost": "^0.4.4",
-    "axios": "^0.19.0",
+    "axios": "^0.21.1",
     "compass": "^0.1.1",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
