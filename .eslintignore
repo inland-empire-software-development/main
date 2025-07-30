@@ -1,8 +1,0 @@
-sass/vendors
-.next
-assets
-docs
-node_modules
-
-lib/init-apollo.js
-lib/with-apollo-client.js
