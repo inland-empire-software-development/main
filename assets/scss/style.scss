@@ -1,46 +1,4 @@
 /*!
- * IESD Main Theme Styles
- * Built with UIKIT CSS Framework and custom SCSS
+ * IESD Main Theme Styles 
  */
-
-// Import UIKIT
-@import '~uikit/src/scss/variables-theme.scss';
-@import '~uikit/src/scss/mixins-theme.scss';
-
-// Custom Variables
-@import 'abstracts/variables';
-@import 'abstracts/mixins';
-@import 'abstracts/functions';
-
-// Import UIKIT components
-@import '~uikit/src/scss/uikit-theme.scss';
-
-// Base styles
-@import 'base/reset';
-@import 'base/typography';
-@import 'base/accessibility';
-
-// Layout
-@import 'layout/header';
-@import 'layout/footer';
-@import 'layout/sidebar';
-@import 'layout/main';
-
-// Components
-@import 'components/buttons';
-@import 'components/forms';
-@import 'components/navigation';
-@import 'components/cards';
-@import 'components/widgets';
-
-// Pages
-@import 'pages/home';
-@import 'pages/single';
-@import 'pages/archive';
-
-// Themes
-@import 'themes/default';
-
-// Utilities
-@import 'utilities/helpers';
-@import 'utilities/wordpress'; 
+ 

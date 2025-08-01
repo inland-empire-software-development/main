@@ -1,10 +1,6 @@
-import UIkit from 'uikit';
-import Icons from 'uikit/dist/js/uikit-icons';
-
-// Load UIKIT icons
-UIkit.use(Icons);
-
 // IESD Theme JavaScript
+// Note: UIKit is loaded from CDN in functions.php
+
 class IESDTheme {
     constructor() {
         this.init();
@@ -73,12 +69,14 @@ class IESDTheme {
         // Escape key support for modals and dropdowns
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape') {
-                // Close any open UIkit dropdowns or modals
-                const openDropdowns = document.querySelectorAll('.uk-dropdown.uk-open');
-                openDropdowns.forEach(dropdown => UIkit.dropdown(dropdown).hide());
-                
-                const openModals = document.querySelectorAll('.uk-modal.uk-open');
-                openModals.forEach(modal => UIkit.modal(modal).hide());
+                // Close any open UIkit dropdowns or modals (if UIKit is available)
+                if (typeof UIkit !== 'undefined') {
+                    const openDropdowns = document.querySelectorAll('.uk-dropdown.uk-open');
+                    openDropdowns.forEach(dropdown => UIkit.dropdown(dropdown).hide());
+                    
+                    const openModals = document.querySelectorAll('.uk-modal.uk-open');
+                    openModals.forEach(modal => UIkit.modal(modal).hide());
+                }
             }
         });
     }
@@ -218,10 +216,14 @@ class IESDTheme {
 
     // Initialize UIKit components
     initializeUIKit() {
-        // Auto-initialize UIKit components
-        UIkit.util.ready(() => {
-            console.log('UIKit initialized');
-        });
+        // Check if UIKit is loaded from CDN
+        if (typeof UIkit !== 'undefined') {
+            UIkit.util.ready(() => {
+                console.log('UIKit initialized from CDN');
+            });
+        } else {
+            console.warn('UIKit not loaded - check CDN connection');
+        }
     }
 
     // Utility functions

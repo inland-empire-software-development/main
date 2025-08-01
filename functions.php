@@ -65,21 +65,46 @@ add_action('after_setup_theme', __NAMESPACE__ . '\\theme_setup');
 /**
  * Enqueue Scripts and Styles
  */
-function enqueue_assets()
-{
-    // Main stylesheet
+function enqueue_assets() {
+    // UIKit CSS from CDN
+    wp_enqueue_style(
+        'uikit-css',
+        'https://cdn.jsdelivr.net/npm/uikit@3.20.0/dist/css/uikit.min.css',
+        array(),
+        '3.20.0'
+    );
+    
+    // UIKit JavaScript from CDN
+    wp_enqueue_script(
+        'uikit-js',
+        'https://cdn.jsdelivr.net/npm/uikit@3.20.0/dist/js/uikit.min.js',
+        array(),
+        '3.20.0',
+        true
+    );
+    
+    // UIKit Icons from CDN
+    wp_enqueue_script(
+        'uikit-icons',
+        'https://cdn.jsdelivr.net/npm/uikit@3.20.0/dist/js/uikit-icons.min.js',
+        array('uikit-js'),
+        '3.20.0',
+        true
+    );
+
+    // Your custom theme styles
     wp_enqueue_style(
         'iesd-main-style',
         IESD_THEME_URL . '/dist/style.css',
-        array(),
+        array('uikit-css'), // Load after UIKit
         IESD_THEME_VERSION
     );
 
-    // Main JavaScript
+    // Your custom theme JavaScript
     wp_enqueue_script(
         'iesd-main-script',
         IESD_THEME_URL . '/dist/main.js',
-        array(),
+        array('uikit-js', 'uikit-icons'), // Load after UIKit
         IESD_THEME_VERSION,
         true
     );
