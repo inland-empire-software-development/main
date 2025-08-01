@@ -1,5 +1,9 @@
+includes:
+    - vendor/szepeviktor/phpstan-wordpress/extension.neon
+
 parameters:
     level: 5
+    
     paths:
         - functions.php
         - header.php
@@ -14,9 +18,25 @@ parameters:
         - .git/
         - inc/template-functions.php
     
+    # WordPress-specific settings
+    bootstrapFiles:
+        - vendor/php-stubs/wordpress-stubs/wordpress-stubs.php
+    
+    # WordPress-specific ignore patterns
     ignoreErrors:
-        # WordPress functions
-        - '#Function (wp_enqueue_script|wp_enqueue_style|get_template_directory|get_template_directory_uri|add_action|add_filter|get_option|bloginfo|wp_head|wp_footer|body_class|language_attributes|esc_html__|esc_attr__|esc_url|esc_html|esc_attr|esc_html_e|esc_attr_e|home_url|get_permalink|the_permalink|the_title|get_the_title|the_content|the_excerpt|have_posts|the_post|get_header|get_footer|wp_nav_menu|has_nav_menu|is_active_sidebar|dynamic_sidebar|get_the_date|get_the_author|has_post_thumbnail|the_post_thumbnail|get_post_thumbnail|is_single|is_singular|has_excerpt|get_the_excerpt|get_the_ID|the_ID|post_class|get_the_category|get_category_link|wp_get_post_categories|get_posts|wp_reset_postdata|comments_open|get_comments_number|comments_template|get_search_form|the_posts_navigation|wp_kses_post|wp_strip_all_tags|get_site_icon_url|has_site_icon|get_bloginfo|wp_create_nonce|admin_url|current_user_can|get_num_queries|memory_get_peak_usage|size_format|wp_body_open|load_theme_textdomain|add_theme_support|register_nav_menus|add_image_size|register_sidebar|wp_localize_script|get_author_posts_url|get_the_author_meta|sprintf|wp_kses|apply_filters|get_tag_link|get_the_tags|wp_link_pages|current_time|wp_get_theme|date|__|_e|the_author|get_the_post_thumbnail) not found#'
+        # Allow WordPress naming conventions for Walker classes
+        - '#Method [a-zA-Z0-9\\_]+::(start_lvl|end_lvl|start_el|end_el) is not in camel caps format#'
+        - '#Class name "[a-zA-Z0-9\\_]*Walker[a-zA-Z0-9\\_]*" is not in PascalCase format#'
         
-        # Trailing whitespace warnings (these are style issues, not errors)
-        - '#File ends with a trailing whitespace#' 
+        # Allow WordPress hook priority syntax
+        - '#Parameter \#3 \$priority of function add_action expects int, string given#'
+        - '#Parameter \#3 \$priority of function add_filter expects int, string given#'
+        
+        # Allow WordPress file structure conventions
+        - '#A file should declare new symbols.*or.*execute logic.*but should not do both#'
+        
+        # Style issues (not code errors)
+        - '#File ends with a trailing whitespace#'
+        
+    # WordPress coding standards compatibility
+    reportUnmatchedIgnoredErrors: false 

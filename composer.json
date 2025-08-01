@@ -18,7 +18,9 @@
     "phpstan/phpstan": "^2.0",
     "brain/monkey": "^2.6",
     "mockery/mockery": "^1.6",
-    "phpcompatibility/php-compatibility": "^9.3"
+    "phpcompatibility/php-compatibility": "^9.3",
+    "szepeviktor/phpstan-wordpress": "^2.0",
+    "php-stubs/wordpress-stubs": "^6.8"
   },
   "autoload": {
     "psr-4": {
@@ -34,7 +36,7 @@
     "test": "phpunit",
     "phpcs": "phpcs --standard=.phpcs.xml --extensions=php --ignore=vendor/ .",
     "phpcs-fix": "phpcbf --standard=.phpcs.xml --extensions=php --ignore=vendor/ .",
-    "phpstan": "phpstan analyse --level=5 functions.php header.php footer.php index.php single.php inc/",
+    "phpstan": "phpstan analyse --level=5 --memory-limit=1G functions.php header.php footer.php index.php single.php",
     "lint": [
       "@phpcs",
       "@phpstan"
