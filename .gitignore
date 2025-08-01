@@ -1,28 +1,38 @@
-# Environment variables
-.env
-.env.local
-.env.development
-.env.staging
-.env.production
-.env.*.local
-
 # Dependencies
 node_modules/
-target/
-dist/
+vendor/
 
 # Build outputs
-/frontend/dist/
-/backend/target/
+dist/
 build/
 
+# Environment files
+.env
+.env.local
+.env.production
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
 # Logs
+logs
 *.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-pnpm-debug.log*
-lerna-debug.log*
 
 # Runtime data
 pids
@@ -34,203 +44,49 @@ pids
 coverage/
 *.lcov
 
-# nyc test coverage
-.nyc_output
+# PHPUnit
+tests/coverage/
+tests/results.xml
+.phpunit.cache/
+.phpunit.result.cache
 
-# Dependency directories
-jspm_packages/
+# Composer
+composer.phar
+composer.lock
 
-# Snowpack dependency directory (https://snowpack.dev/)
-web_modules/
+# WordPress
+wp-config.php
+wp-content/uploads/
+wp-content/cache/
+wp-content/backups/
+wp-content/upgrade/
+wp-content/backup-db/
 
-# TypeScript cache
-*.tsbuildinfo
-
-# Optional npm cache directory
-.npm
-
-# Optional eslint cache
-.eslintcache
-
-# Optional stylelint cache
-.stylelintcache
-
-# Microbundle cache
-.rpt2_cache/
-.rts2_cache_cjs/
-.rts2_cache_es/
-.rts2_cache_umd/
-
-# Optional REPL history
-.node_repl_history
-
-# Output of 'npm pack'
-*.tgz
-
-# Yarn Integrity file
-.yarn-integrity
-
-# parcel-bundler cache (https://parceljs.org/)
-.cache
-.parcel-cache
-
-# Next.js build output
-.next
-out
-
-# Nuxt.js build / generate output
-.nuxt
-
-# Gatsby files
-public
-
-# Vuepress build output
-.vuepress/dist
-
-# Serverless directories
-.serverless/
-
-# FuseBox cache
-.fusebox/
-
-# DynamoDB Local files
-.dynamodb/
-
-# TernJS port file
-.tern-port
-
-# Stores VSCode versions used for testing VSCode extensions
-.vscode-test
-
-# yarn v2
-.yarn/cache
-.yarn/unplugged
-.yarn/build-state.yml
-.yarn/install-state.gz
-.pnp.*
-
-# Rust
-Cargo.lock
-**/*.rs.bk
-*.pdb
-
-# macOS
-.DS_Store
-.AppleDouble
-.LSOverride
-Icon
-._*
-.DocumentRevisions-V100
-.fseventsd
-.Spotlight-V100
-.TemporaryItems
-.Trashes
-.VolumeIcon.icns
-.com.apple.timemachine.donotpresent
-.AppleDB
-.AppleDesktop
-Network Trash Folder
-Temporary Items
-.apdisk
-
-# Windows
-Thumbs.db
-Thumbs.db:encryptable
-ehthumbs.db
-ehthumbs_vista.db
-*.stackdump
-[Dd]esktop.ini
-$RECYCLE.BIN/
-*.cab
-*.msi
-*.msix
-*.msm
-*.msp
-*.lnk
-
-# Linux
-*~
-.fuse_hidden*
-.directory
-.Trash-*
-.nfs*
-
-# IDEs
-.vscode/
-.idea/
-*.swp
-*.swo
+# SCSS
+*.css.map
+.sass-cache/
 
 # Temporary files
 *.tmp
 *.temp
+*.bak
+*.backup
 
-# Database
-*.db
-*.sqlite
-*.sqlite3
+# Package managers
+.npm
+.yarn-integrity
+yarn.lock
+package-lock.json
 
-# SSL certificates
-*.pem
-*.key
-*.crt
-*.csr
-*.p12
+# Build tools
+.webpack/
+.cache/
 
 # Local development
-.local/
+local-config.php
+*.local
 
-# Documentation build
-/docs/_build/
-
-# Testing
-junit.xml
-
-# Production builds
-/public/build/
-
-# Debug files
-*.map
-
-# Docker
-.dockerignore
-
-# Rust specific
-/target/
-/Cargo.lock
-
-# SQLx
-.sqlx/
-
-# Frontend specific
-/frontend/node_modules/
-/frontend/dist/
-/frontend/.vite/
-
-# Backend specific
-/backend/target/
-
-# Docker volumes
-docker-data/
-
-# Deployment
-.terraform/
-*.tfstate
-*.tfstate.*
-
-# Editor backups
-*~
-.#*
-\#*#
-
-# OS generated files
-.Trashes
-ehthumbs.db
-
-# Project specific
-.env*
-!.env.example
-!env.example
-
-# Temporary files
-COMMIT_SUMMARY.md 
+# Security
+*.key
+*.pem
+*.crt 

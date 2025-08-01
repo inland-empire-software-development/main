@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<ruleset name="IESD Theme Coding Standards">
+    <description>Minimal coding standards for IESD Main Theme</description>
+
+    <!-- Use PSR-2 as base (stable) -->
+    <rule ref="PSR2"/>
+    
+    <!-- Add basic WordPress security and best practices -->
+    <rule ref="WordPress.Security"/>
+    <rule ref="WordPress.WP.I18n"/>
+    <rule ref="WordPress.WP.EnqueuedResources"/>
+    
+    <!-- Check all PHP files -->
+    <arg name="extensions" value="php"/>
+    
+    <!-- Show progress and use colors -->
+    <arg value="p"/>
+    <arg name="colors"/>
+
+    <!-- Include these directories -->
+    <file>.</file>
+
+    <!-- Exclude these directories -->
+    <exclude-pattern>*/node_modules/*</exclude-pattern>
+    <exclude-pattern>*/vendor/*</exclude-pattern>
+    <exclude-pattern>*/dist/*</exclude-pattern>
+    <exclude-pattern>*/.git/*</exclude-pattern>
+    
+    <!-- Allow short array syntax -->
+    <rule ref="Generic.Arrays.DisallowShortArraySyntax">
+        <exclude-pattern>*</exclude-pattern>
+    </rule>
+    
+    <!-- Configure text domain for i18n -->
+    <rule ref="WordPress.WP.I18n">
+        <properties>
+            <property name="text_domain" type="array" value="iesd-main"/>
+        </properties>
+    </rule>
+</ruleset> 

@@ -1,0 +1,18 @@
+/*
+Theme Name: IESD Main
+Description: Modern WordPress theme with Twig templating, SCSS compilation, hot reloading, and comprehensive development tools.
+Author: IESD Team
+Version: 1.0.0
+License: GPL v2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: iesd-main
+Domain Path: /languages
+Requires at least: 6.0
+Tested up to: 6.4
+Requires PHP: 8.0
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned.
+*/
+
+/* Theme styles are compiled from SCSS files in assets/scss/ */ 

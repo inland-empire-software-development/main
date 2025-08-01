@@ -1,0 +1,91 @@
+// Screen reader text mixin
+@mixin screen-reader-text {
+    border: 0;
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute !important;
+    width: 1px;
+    word-wrap: normal !important;
+}
+
+// Responsive breakpoints
+@mixin mobile {
+    @media (max-width: #{$breakpoint-sm - 1px}) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: #{$breakpoint-md}) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: #{$breakpoint-lg}) {
+        @content;
+    }
+}
+
+@mixin large-desktop {
+    @media (min-width: #{$breakpoint-xl}) {
+        @content;
+    }
+}
+
+// Focus styles
+@mixin focus-outline {
+    outline: 2px solid $accent-color;
+    outline-offset: 2px;
+}
+
+// Button reset
+@mixin button-reset {
+    appearance: none;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+// Clearfix
+@mixin clearfix {
+    &::after {
+        clear: both;
+        content: '';
+        display: table;
+    }
+}
+
+// Text truncation
+@mixin text-truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+// Visually hidden but accessible
+@mixin visually-hidden {
+    @include screen-reader-text;
+    
+    &:focus {
+        background-color: $white;
+        clip: auto !important;
+        clip-path: none;
+        color: $text-color;
+        display: block;
+        font-size: $font-size-small;
+        height: auto;
+        left: 5px;
+        line-height: normal;
+        padding: 15px 23px 14px;
+        text-decoration: none;
+        top: 5px;
+        width: auto;
+        z-index: $z-index-modal;
+    }
+} 

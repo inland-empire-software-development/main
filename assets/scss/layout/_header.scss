@@ -1,0 +1,14 @@
+// Header Styles
+.site-header {
+    background: $white;
+    border-bottom: 1px solid #e5e5e5;
+    
+    .uk-navbar {
+        min-height: $header-height;
+    }
+    
+    .uk-logo {
+        font-weight: 600;
+        font-size: $font-size-large;
+    }
+} 

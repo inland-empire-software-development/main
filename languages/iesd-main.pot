@@ -1,0 +1,120 @@
+# Copyright (C) 2023 IESD Team
+# This file is distributed under the same license as the IESD Main Theme package.
+msgid ""
+msgstr ""
+"Project-Id-Version: IESD Main Theme 1.0.0\n"
+"Report-Msgid-Bugs-To: https://github.com/iesd/iesd-main-theme/issues\n"
+"POT-Creation-Date: 2023-01-01 00:00:00+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2023-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: WordPress\n"
+
+#: functions.php:67
+msgid "Primary Menu"
+msgstr ""
+
+#: functions.php:68
+msgid "Footer Menu"
+msgstr ""
+
+#: functions.php:160
+msgid "Skip to content"
+msgstr ""
+
+#: functions.php:172
+msgid "Sidebar"
+msgstr ""
+
+#: functions.php:173
+msgid "Add widgets here."
+msgstr ""
+
+#: functions.php:180
+msgid "Footer"
+msgstr ""
+
+#: functions.php:181
+msgid "Footer widget area."
+msgstr ""
+
+#: inc/accessibility.php:123
+msgid "Your name (required)"
+msgstr ""
+
+#: inc/accessibility.php:126
+msgid "Your email address (required, will not be published)"
+msgstr ""
+
+#: inc/accessibility.php:145
+msgid "Search for:"
+msgstr ""
+
+#: inc/accessibility.php:150
+msgid "Submit search"
+msgstr ""
+
+#: inc/accessibility.php:160
+msgid "Skip to sidebar"
+msgstr ""
+
+#: inc/accessibility.php:163
+msgid "Skip to footer"
+msgstr ""
+
+#: inc/class-api-endpoints.php:136
+msgid "Thank you for your message. We will get back to you soon!"
+msgstr ""
+
+#: inc/class-api-endpoints.php:175
+msgid "New contact form submission from %s"
+msgstr ""
+
+#: inc/class-api-endpoints.php:177
+msgid "Name: %s\nEmail: %s\nMessage:\n%s"
+msgstr ""
+
+#: templates/index.twig:32
+msgid "by"
+msgstr ""
+
+#: templates/index.twig:40
+msgid "Read more about"
+msgstr ""
+
+#: templates/index.twig:42
+msgid "Read More"
+msgstr ""
+
+#: templates/index.twig:59
+msgid "Posts pagination"
+msgstr ""
+
+#: templates/index.twig:64
+msgid "No posts found"
+msgstr ""
+
+#: templates/index.twig:65
+msgid "Sorry, no posts were found. Try searching for something else."
+msgstr ""
+
+#: templates/partials/header.twig:3
+msgid "Main navigation"
+msgstr ""
+
+#: templates/partials/header.twig:6
+msgid "Go to homepage"
+msgstr ""
+
+#: templates/partials/header.twig:22
+msgid "submenu"
+msgstr ""
+
+#: templates/partials/header.twig:43
+msgid "Toggle mobile menu"
+msgstr "" 
