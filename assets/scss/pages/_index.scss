@@ -1,0 +1,27 @@
+// These apply to all pages
+html {
+    scroll-behavior: smooth;
+
+    body {
+        overflow-x: hidden;
+    }
+}
+
+a {
+  &:hover {
+    color: $white;
+
+    &.light-bg {
+      color: $black;
+    }
+  }
+}
+
+p {
+  z-index: 1;
+}
+
+.content {
+  min-height: 400px;
+  background-color: $white;
+}

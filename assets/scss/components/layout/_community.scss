@@ -1,0 +1,55 @@
+#community-container {
+  background-attachment: fixed;
+
+  .uk-card {
+    [uk-toggle] {
+      cursor: pointer;
+      transition: background-color 250ms ease-out;
+      background-color: $dark-gray;
+
+      &:hover {
+        background-color: $light-gray;
+      }
+    }
+  }
+}
+
+#community {
+  background-size: cover;
+  background-position: center;
+  min-height: 280px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  .uk-slider {
+    margin-top: 40px;
+  }
+}
+
+.community-dialog-box {
+  width: 100%;
+  height: auto;
+  background-color: transparent;
+
+  img {
+    position: relative;
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    max-width: 90vh;
+  }
+
+  .uk-modal-close {
+    position: absolute;
+    bottom: -60px;
+    color: $white;
+    width: 100%;
+    box-sizing: border-box;
+    text-transform: uppercase;
+    text-align: center;
+    height: 45px;
+    line-height: 40px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+  }
+}

@@ -1,0 +1,60 @@
+#sponsorship {
+    a {
+        color: $red;
+        font-family: "book";
+    }
+    #sponsorship-description {
+        background-color: $black;
+        font-family: "book";
+        font-size: 22px;
+        color: white;
+        text-align: left;
+        padding: 25px 9%;
+        min-height: 270px;
+        @media only screen and (max-width: 1107px) {
+            font-size: 18px;
+        }
+    }
+    #sponsor-title {
+        font-size: 26px;
+        font-family: "black";
+        color: white;
+        padding-top: 25px;
+
+    }
+    button {
+        border: none;
+        height: 60px;
+        width: 90%;
+        font-family: "Book";
+        color: white;
+        font-size: 20px;
+        display: block;
+        margin: 50px auto;
+        cursor: pointer;
+        &#one-time {
+            background: -webkit-linear-gradient(left, #f1af21 0%, #ec2242 76%);
+        }
+        &#recurring {
+            background: -webkit-linear-gradient(left, #3fb3e1 0%, #02ae72 76%);
+        }
+        &:hover {
+            filter: saturate(1.5);
+            transition: all 0.25s ease-in;
+        }
+    }
+    section {
+        display: flex;
+        flex-direction: column;
+        padding-left: 15px;
+    }
+    .btn {
+        display: inline-block;
+        margin: 5px;
+    }
+    @media only screen and (max-width: 900px) {
+        section {
+            display: flex;
+        }
+    }
+}

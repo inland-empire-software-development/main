@@ -1,0 +1,49 @@
+footer {
+  padding: 60px 0 !important;
+
+  .footer-logo {
+    max-width: 100px;
+    margin: 0 auto 15px auto;
+  }
+
+  .footer-slogan {
+    font-family: 'Block', sans-serif;
+    font-size: 24px;
+    color: #FFFFFF;
+    line-height: 34px;
+  }
+
+  a {
+    color: $red !important;
+    padding: 0 5px;
+    transition: color 0.25s ease;
+  }
+
+  [uk-totop="true"] {
+    color: $red !important;
+    transition: all 300ms ease-in-out;
+    border-radius: 50%;
+    border: 1px solid $red;
+    -webkit-font-smoothing: antialiased;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    position: fixed;
+    bottom: 25px;
+    right: 30px;
+    opacity: 0.4;
+
+    &:hover {
+      opacity: 1;
+      color: $white !important;
+      background-color: $red;
+    }
+
+    // This hides the totop scroller on smaller screens
+    @media screen and (max-height: 550px) {
+      display: none;
+    }
+  }
+
+}

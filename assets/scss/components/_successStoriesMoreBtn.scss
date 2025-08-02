@@ -1,0 +1,33 @@
+.success-read-more{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 25%;
+	height: calc(3vw - 0.5px);
+	color: $white;
+	font-size: calc(.5em + .5vw);
+	background: linear-gradient(to right, $yellow, $red);
+	text-decoration: none;
+	cursor: pointer;
+
+	&:hover,
+	&:active{
+		text-decoration: none;
+		color: $white;
+	}
+
+	@media screen and (max-width: 860px){
+		width: 65%;
+		height: 150%;
+		font-size: calc(1.5em + .5vw);
+	}
+	@media screen and (max-width: 600px){
+		height: 120%;
+		height: 50px;
+	}
+	@media screen and (max-width: 480px){
+		height: 50px;
+		font-size: calc(1em + .5vw);
+		width: 61.5%;
+	}
+}

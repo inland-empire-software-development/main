@@ -1,0 +1,31 @@
+#sponsors {
+    background-size: cover;
+    background-position: center;
+
+    h1 {
+        font-family: 'Block'
+    }
+
+    p {
+        font-size: calc(16px + 0.5vw);
+    }
+
+    .logos {
+        width: 25%;
+        display: inline-block;
+        margin: 0 auto 50px auto;
+
+        @media screen and (max-width: 768px) {
+            width: 50%;
+        }
+    }
+
+    img {
+        max-width: 80%;
+        max-height: 100px;
+        text-align: center;
+        display: block;
+        margin: 0 auto;
+        vertical-align: middle;
+    }
+}

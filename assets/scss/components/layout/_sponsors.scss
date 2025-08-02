@@ -1,0 +1,23 @@
+.sponsor-background {
+  background-size: cover;
+  background-position: center;
+}
+
+#sponsors {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  img {
+    max-height: 110px;
+    margin: 20px auto;
+    display: block;
+  }
+
+  .uk-grid-small div {
+
+    @media screen and (max-width: 640px) {
+      width: 50%;
+      margin: 0 auto;
+    }
+  }
+}

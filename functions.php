@@ -1,4 +1,5 @@
 <?php
+
 /**
  * IESD Main Theme Functions
  *
@@ -65,7 +66,8 @@ add_action('after_setup_theme', __NAMESPACE__ . '\\theme_setup');
 /**
  * Enqueue Scripts and Styles
  */
-function enqueue_assets() {
+function enqueue_assets()
+{
     // UIKit CSS from CDN
     wp_enqueue_style(
         'uikit-css',
@@ -73,7 +75,7 @@ function enqueue_assets() {
         array(),
         '3.20.0'
     );
-    
+
     // UIKit JavaScript from CDN
     wp_enqueue_script(
         'uikit-js',
@@ -82,7 +84,7 @@ function enqueue_assets() {
         '3.20.0',
         true
     );
-    
+
     // UIKit Icons from CDN
     wp_enqueue_script(
         'uikit-icons',
@@ -128,11 +130,11 @@ add_action('wp_enqueue_scripts', __NAMESPACE__ . '\\enqueue_assets');
 function add_script_attributes($tag, $handle, $src)
 {
     $async_scripts = array('iesd-main-script');
-    
+
     if (in_array($handle, $async_scripts)) {
         return str_replace(' src', ' defer src', $tag);
     }
-    
+
     return $tag;
 }
 add_filter('script_loader_tag', __NAMESPACE__ . '\\add_script_attributes', 10, 3);

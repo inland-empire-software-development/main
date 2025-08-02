@@ -1,0 +1,41 @@
+.button {
+  font-family: "Light", sans-serif;
+  display: flex !important;
+  margin: 0 auto;
+  padding: 10px 0;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  cursor: pointer;
+  box-sizing: border-box;
+
+  &.button-small {
+    width: 25%;
+  }
+
+  &.button-full {
+    width: 100%;
+  }
+
+  &.button-half {
+    width: 50%;
+  }
+
+  &.button-third {
+    width: 33.33%;
+  }
+
+  &:hover {
+    text-decoration: none;
+    filter: saturate(150%);
+  }
+
+  @media screen and (max-width: 860px) {
+    width: 50% !important;
+  }
+
+  @media screen and (max-width: 450px){
+    width: 90% !important;
+  } 
+}
+

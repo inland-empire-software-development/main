@@ -1,0 +1,16 @@
+.callToAction {
+  height: 200px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-attachment: fixed;
+
+  .button {
+    top: 40%;
+    bottom: auto;
+
+    @media screen and (max-width: 680px){
+      width: 90%;
+    }
+  }
+}

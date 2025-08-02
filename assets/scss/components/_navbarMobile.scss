@@ -1,0 +1,14 @@
+.navbar-mobile {
+    -webkit-tap-highlight-color: transparent;
+
+    .navbar-mobile-logo {
+        position: absolute;
+        top: 50px;
+        left: 15px;
+        width: 125px;
+
+        @media screen and (max-width: 480px) {
+            width: 100px;
+        }
+    }
+}

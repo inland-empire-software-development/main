@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Template Functions
  *
@@ -17,43 +18,42 @@ if (!defined('ABSPATH')) {
  */
 class Walker_Nav_Menu_Primary extends \Walker_Nav_Menu
 {
-    
-    function start_lvl(&$output, $depth = 0, $args = null)
+    public function start_lvl(&$output, $depth = 0, $args = null)
     {
         $indent = str_repeat("\t", $depth);
         $output .= "\n$indent<div class=\"uk-navbar-dropdown\" role=\"menu\">\n$indent\t<ul class=\"uk-nav uk-navbar-dropdown-nav\">\n";
     }
 
-    function end_lvl(&$output, $depth = 0, $args = null)
+    public function end_lvl(&$output, $depth = 0, $args = null)
     {
         $indent = str_repeat("\t", $depth);
         $output .= "$indent\t</ul>\n$indent</div>\n";
     }
 
-    function start_el(&$output, $item, $depth = 0, $args = null, $id = 0)
+    public function start_el(&$output, $item, $depth = 0, $args = null, $id = 0)
     {
         $indent = ($depth) ? str_repeat("\t", $depth) : '';
-        
+
         $classes = empty($item->classes) ? array() : (array) $item->classes;
         $classes[] = 'menu-item-' . $item->ID;
-        
+
         $has_children = in_array('menu-item-has-children', $classes);
         $is_current = in_array('current-menu-item', $classes) || in_array('current-menu-parent', $classes);
-        
+
         $li_class = $is_current ? 'uk-active' : '';
-        
+
         $output .= $indent . '<li' . ($li_class ? ' class="' . $li_class . '"' : '') . ' role="none">';
 
         $attributes = ! empty($item->attr_title) ? ' title="'  . esc_attr($item->attr_title) .'"' : '';
-        $attributes .= ! empty($item->target)     ? ' target="' . esc_attr($item->target) .'"' : '';
-        $attributes .= ! empty($item->xfn)        ? ' rel="'    . esc_attr($item->xfn) .'"' : '';
-        $attributes .= ! empty($item->url)        ? ' href="'   . esc_attr($item->url) .'"' : '';
+        $attributes .= ! empty($item->target) ? ' target="' . esc_attr($item->target) .'"' : '';
+        $attributes .= ! empty($item->xfn) ? ' rel="'    . esc_attr($item->xfn) .'"' : '';
+        $attributes .= ! empty($item->url) ? ' href="'   . esc_attr($item->url) .'"' : '';
         $attributes .= ' role="menuitem"';
-        
+
         if ($is_current) {
             $attributes .= ' aria-current="page"';
         }
-        
+
         if ($has_children) {
             $attributes .= ' class="uk-navbar-parent-icon"';
         }
@@ -67,7 +67,7 @@ class Walker_Nav_Menu_Primary extends \Walker_Nav_Menu
         $output .= apply_filters('walker_nav_menu_start_el', $item_output, $item, $depth, $args);
     }
 
-    function end_el(&$output, $item, $depth = 0, $args = null)
+    public function end_el(&$output, $item, $depth = 0, $args = null)
     {
         $output .= "</li>\n";
     }
@@ -78,36 +78,35 @@ class Walker_Nav_Menu_Primary extends \Walker_Nav_Menu
  */
 class Walker_Nav_Menu_Mobile extends \Walker_Nav_Menu
 {
-    
-    function start_lvl(&$output, $depth = 0, $args = null)
+    public function start_lvl(&$output, $depth = 0, $args = null)
     {
         $indent = str_repeat("\t", $depth);
         $output .= "\n$indent<ul class=\"uk-nav-sub\" role=\"menu\">\n";
     }
 
-    function end_lvl(&$output, $depth = 0, $args = null)
+    public function end_lvl(&$output, $depth = 0, $args = null)
     {
         $indent = str_repeat("\t", $depth);
         $output .= "$indent</ul>\n";
     }
 
-    function start_el(&$output, $item, $depth = 0, $args = null, $id = 0)
+    public function start_el(&$output, $item, $depth = 0, $args = null, $id = 0)
     {
         $indent = ($depth) ? str_repeat("\t", $depth) : '';
-        
+
         $classes = empty($item->classes) ? array() : (array) $item->classes;
         $is_current = in_array('current-menu-item', $classes) || in_array('current-menu-parent', $classes);
-        
+
         $li_class = $is_current ? 'uk-active' : '';
-        
+
         $output .= $indent . '<li' . ($li_class ? ' class="' . $li_class . '"' : '') . ' role="none">';
 
         $attributes = ! empty($item->attr_title) ? ' title="'  . esc_attr($item->attr_title) .'"' : '';
-        $attributes .= ! empty($item->target)     ? ' target="' . esc_attr($item->target) .'"' : '';
-        $attributes .= ! empty($item->xfn)        ? ' rel="'    . esc_attr($item->xfn) .'"' : '';
-        $attributes .= ! empty($item->url)        ? ' href="'   . esc_attr($item->url) .'"' : '';
+        $attributes .= ! empty($item->target) ? ' target="' . esc_attr($item->target) .'"' : '';
+        $attributes .= ! empty($item->xfn) ? ' rel="'    . esc_attr($item->xfn) .'"' : '';
+        $attributes .= ! empty($item->url) ? ' href="'   . esc_attr($item->url) .'"' : '';
         $attributes .= ' role="menuitem"';
-        
+
         if ($is_current) {
             $attributes .= ' aria-current="page"';
         }
@@ -121,7 +120,7 @@ class Walker_Nav_Menu_Mobile extends \Walker_Nav_Menu
         $output .= apply_filters('walker_nav_menu_start_el', $item_output, $item, $depth, $args);
     }
 
-    function end_el(&$output, $item, $depth = 0, $args = null)
+    public function end_el(&$output, $item, $depth = 0, $args = null)
     {
         $output .= "</li>\n";
     }
@@ -132,24 +131,23 @@ class Walker_Nav_Menu_Mobile extends \Walker_Nav_Menu
  */
 class Walker_Nav_Menu_Footer extends \Walker_Nav_Menu
 {
-    
-    function start_el(&$output, $item, $depth = 0, $args = null, $id = 0)
+    public function start_el(&$output, $item, $depth = 0, $args = null, $id = 0)
     {
         $indent = ($depth) ? str_repeat("\t", $depth) : '';
-        
+
         $classes = empty($item->classes) ? array() : (array) $item->classes;
         $is_current = in_array('current-menu-item', $classes) || in_array('current-menu-parent', $classes);
-        
+
         $li_class = $is_current ? 'uk-active' : '';
-        
+
         $output .= $indent . '<li' . ($li_class ? ' class="' . $li_class . '"' : '') . ' role="none">';
 
         $attributes = ! empty($item->attr_title) ? ' title="'  . esc_attr($item->attr_title) .'"' : '';
-        $attributes .= ! empty($item->target)     ? ' target="' . esc_attr($item->target) .'"' : '';
-        $attributes .= ! empty($item->xfn)        ? ' rel="'    . esc_attr($item->xfn) .'"' : '';
-        $attributes .= ! empty($item->url)        ? ' href="'   . esc_attr($item->url) .'"' : '';
+        $attributes .= ! empty($item->target) ? ' target="' . esc_attr($item->target) .'"' : '';
+        $attributes .= ! empty($item->xfn) ? ' rel="'    . esc_attr($item->xfn) .'"' : '';
+        $attributes .= ! empty($item->url) ? ' href="'   . esc_attr($item->url) .'"' : '';
         $attributes .= ' role="menuitem"';
-        
+
         if ($is_current) {
             $attributes .= ' aria-current="page"';
         }
@@ -163,7 +161,7 @@ class Walker_Nav_Menu_Footer extends \Walker_Nav_Menu
         $output .= apply_filters('walker_nav_menu_start_el', $item_output, $item, $depth, $args);
     }
 
-    function end_el(&$output, $item, $depth = 0, $args = null)
+    public function end_el(&$output, $item, $depth = 0, $args = null)
     {
         $output .= "</li>\n";
     }

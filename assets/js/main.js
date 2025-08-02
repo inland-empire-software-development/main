@@ -220,9 +220,68 @@ class IESDTheme {
         if (typeof UIkit !== 'undefined') {
             UIkit.util.ready(() => {
                 console.log('UIKit initialized from CDN');
+                
+                // Fix UIkit icons by adding data-svg attributes
+                this.fixUIkitIcons();
+                
+                // Watch for dynamically added UIkit icons
+                this.watchForNewIcons();
             });
         } else {
             console.warn('UIKit not loaded - check CDN connection');
+        }
+    }
+
+    // Fix UIkit-generated icons by adding data-svg attributes
+    fixUIkitIcons() {
+        // Find all elements with uk-icon attribute
+        document.querySelectorAll('[uk-icon]').forEach(element => {
+            const iconName = element.getAttribute('uk-icon');
+            const svg = element.querySelector('svg');
+            
+            if (svg && iconName && !svg.getAttribute('data-svg')) {
+                svg.setAttribute('data-svg', iconName);
+                console.log(`Added data-svg="${iconName}" to UIkit icon`);
+            }
+        });
+    }
+
+    // Watch for dynamically added UIkit icons (in case they're added later)
+    watchForNewIcons() {
+        if ('MutationObserver' in window) {
+            const observer = new MutationObserver((mutations) => {
+                mutations.forEach((mutation) => {
+                    mutation.addedNodes.forEach((node) => {
+                        if (node.nodeType === 1) { // Element node
+                            // Check if the added node has uk-icon attribute
+                            if (node.hasAttribute && node.hasAttribute('uk-icon')) {
+                                const iconName = node.getAttribute('uk-icon');
+                                const svg = node.querySelector('svg');
+                                
+                                if (svg && iconName && !svg.getAttribute('data-svg')) {
+                                    svg.setAttribute('data-svg', iconName);
+                                }
+                            }
+                            
+                            // Check child elements for uk-icon attributes
+                            const iconElements = node.querySelectorAll ? node.querySelectorAll('[uk-icon]') : [];
+                            iconElements.forEach(element => {
+                                const iconName = element.getAttribute('uk-icon');
+                                const svg = element.querySelector('svg');
+                                
+                                if (svg && iconName && !svg.getAttribute('data-svg')) {
+                                    svg.setAttribute('data-svg', iconName);
+                                }
+                            });
+                        }
+                    });
+                });
+            });
+
+            observer.observe(document.body, {
+                childList: true,
+                subtree: true
+            });
         }
     }
 

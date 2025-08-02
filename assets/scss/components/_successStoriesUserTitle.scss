@@ -1,0 +1,87 @@
+.success-title-container{
+	grid-area: job-title;
+	font-family: 'Block';
+	display: flex;
+	height: 100%;
+
+	.success-name-container{
+		display: flex;
+		align-items: center;
+		height: 81%;
+
+		@media screen and (max-width: 860px){
+			width: 100%;
+			height: 30px;
+			margin-top: 10px;
+		}
+	}
+
+
+	.success-name{
+		font-family:"Heavy";
+		font-size: calc(1.25em + 1vw);
+
+		span{
+			color: red;
+			margin-left: 10px;
+			margin-right: 10px;
+		}
+
+		@media screen and (max-width: 860px){
+			font-size: calc(.75em + 1vw);
+			span{
+				margin-left: 5px;
+			}
+		}
+
+		@media screen and (max-width: 600px){
+			font-size: calc(.58em + 1vw);
+			span{
+				margin-left: 3px;
+			}
+		}
+
+		@media screen and (max-width: 480px){
+			font-size: calc(.55em + 1vw);
+			span{
+				margin: 0;
+				margin-left: 5px;
+			}
+		}
+	}
+
+	.success-job-title{
+		font-family: "Book";
+		font-size: calc(.5em + 1vw);
+		display: flex;
+		align-items: center;
+
+		@media screen and (max-width: 860px){
+			font-size: calc(.5em + 1.5vw);
+			width: 100%;
+		}
+		@media screen and (max-width: 710px){
+			font-size: calc(.75em + .5vw);
+		}
+		@media screen and (max-width: 600px){
+			font-size: calc(.45em + 1vw);
+		}
+		@media screen and (max-width: 480px){
+			font-size: calc(.4em + 1.5vw);
+		}
+	}
+
+	@media screen and (max-width: 860px){
+		flex-direction: column;
+		line-height: 25px;
+		justify-content: center;
+		height: auto;
+	}
+	@media screen and (max-width: 595px) and (min-width: 535px){
+		height: 0%;
+		min-height: 140px;
+	}
+	@media screen and (max-width: 480px){
+		line-height: 18px;
+	}
+}

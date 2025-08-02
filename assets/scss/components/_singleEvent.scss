@@ -1,0 +1,174 @@
+.hero-event-container {
+  position: relative;
+  height: 215px;
+  width: 450px;
+  display: block;
+  margin: 90px auto 0 auto;
+
+  @media screen and (max-width: 680px){
+    margin: 30px auto 0 auto;
+  }
+
+  p {
+    margin: 0;
+    color: $white;
+  }
+
+  .hero-event-date {
+
+  }
+
+  .hero-event-info {
+    font-weight: 100;
+  }
+
+  .hero-event-day {
+    font-weight: 700;
+  }
+
+  .hero-event-time {
+    margin-top: 10px;
+
+    @media screen and (max-width: 680px){
+      margin-top: 5px;
+      font-size: 20px;
+    }
+  }
+
+  .event-name {
+    font-size: 26px;
+    line-height: 38px;
+
+    @media screen and (max-width: 680px){
+      line-height: 24px;
+      font-size: 20px;
+    }
+  }
+
+  .hero-event-info {
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.65);
+
+    @media screen and (max-width: 680px) {
+      flex-direction: column;
+    }
+
+    .hero-event-date {
+      height: 130px;
+      width: 30%;
+
+      @media screen and (max-width: 680px) {
+        width: 100%;
+        height: 110px;
+      }
+
+      .hero-event-day {
+        margin-bottom: 25px;
+        font-size: 100px;
+        text-align: center;
+        line-height: 62px;
+
+        @media screen and (max-width: 680px) {
+          font-size: 60px;
+          margin-bottom: 15px;
+          line-height: 55px;
+        }
+
+      }
+
+      .hero-event-month {
+        font-size: 22px;
+        line-height: 22px;
+        text-align: center;
+
+        @media screen and (max-width: 680px) {
+          font-size: 16px;
+          line-height: 5px;
+        }
+      }
+
+      .hero-event-time {
+        font-size: 14px;
+        text-align: center;
+      }
+
+
+    }
+
+    .hero-event-desc {
+      display: flex;
+      flex-direction: column;
+      height: 140px;
+      width: 65%;
+      padding-left: 20px;
+      justify-content: space-between;
+      text-align: right;
+
+      @media screen and (max-width: 680px){
+        width: 100%;
+        text-align: center;
+        padding-left: 0;
+        height: 70px;
+      }
+
+      .hero-event-location {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        margin-top: 10px;
+
+        p:first-child {
+          font-size: 14px;
+          line-height: 18px;
+          margin-right: 5px;
+        }
+
+        p:last-child {
+          font-size: 13px;
+        }
+
+
+      }
+    }
+  }
+
+  .reserve-wrapper {
+    .reserve-button {
+      height: 39px;
+      width: 100%;
+      margin-top: 5px;
+      font-size: 26px;
+      color: $white;
+      border: none;
+      cursor: pointer;
+      outline: 0;
+      background-color: $red;
+    }
+  }
+
+  @media screen and (max-width: 680px) {
+    width: 100%;
+    max-width: 280px;
+  }
+
+
+}
+
+.hero-event-container-false{
+  .hero-event-false {
+    font-family: 'block';
+  }
+  h6 {
+    color: #B3B4B5
+  }
+  .hero-event-false-slogan{
+    @media screen and (max-width: 680px) {
+      scale: .7;
+    }
+  }
+  
+}

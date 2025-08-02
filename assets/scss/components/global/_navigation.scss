@@ -1,0 +1,113 @@
+.uk-offcanvas-bar {
+  background: rgba(0, 0, 0, 0.95);
+
+  .uk-visible-toggle .uk-invisible-hover,
+  .uk-visible-toggle .uk-hidden-touch {
+    transition: all 2s ease-in-out;
+  }
+
+  button.uk-offcanvas-close {
+    color: $white;
+    background: transparent;
+    border: none;
+  }
+
+  .uk-visible-toggle:not(:hover):not(:focus) .uk-invisible-hover:not(:focus-within) {
+    transition: all 2s ease-in;
+    display: none;
+  }
+
+  #canvas-logo {
+    width: 75px;
+    display: block;
+    padding: 25px 0;
+  }
+}
+
+.uk-nav {
+  margin-top: 25px;
+
+  li {
+    min-height: 40px;
+    line-height: 10px;
+
+    a {
+      color: $white !important;
+      font-weight: 100;
+      font-size: 16px;
+      text-transform: uppercase;
+      padding-top: 10px;
+    }
+  }
+}
+
+.uk-navbar {
+  .uk-icon {
+    [data-svg="plus"] {
+      fill: $red;
+      width: 13px;
+      left: 5px;
+      position: relative;
+    }
+  }
+
+  li {
+    a {
+      color: $white;
+    }
+  }
+
+  .uk-logo {
+    padding:0;
+  }
+
+  #nav-logo {
+    width: 50px;
+  }
+
+  .uk-icon {
+    fill: $white;
+  }
+
+  .nav-text {
+    color: $white;
+  }
+}
+
+.uk-navbar-dropdown {
+  margin-top: 0;
+  padding: 0 25px 25px 25px;
+  background-color: rgba(0, 0, 0, 0.9);
+
+  .uk-nav {
+    margin-top: 0;
+  }
+}
+
+.uk-parent {
+  svg {
+    fill: $red;
+    width: 15px;
+    position: relative;
+    top: -2px;
+    margin-left: 6px;
+  }
+}
+
+.uk-navbar-container {
+  .uk-navbar-dropdown-nav {
+    padding-top: 25px;
+
+    a {
+      transition: color 0.25s ease-in-out;
+
+      &:hover {
+        color: $blue !important;
+      }
+    }
+  }
+}
+
+#nav-toggle {
+  padding-right: 0;
+}

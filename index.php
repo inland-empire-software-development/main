@@ -7,6 +7,7 @@
 
 get_header(); ?>
  
-
-<?php get_footer();
- 
+<?php get_template_part('template-parts/header/announcements'); ?>
+<?php get_template_part('template-parts/header/hero'); ?>
+<?php
+get_footer();

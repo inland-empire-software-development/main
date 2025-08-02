@@ -1,0 +1,67 @@
+.navbar-container{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 1;
+
+	nav{
+		display: flex;
+		height: 100px;
+		max-width: 1152px;
+		width: 80%;
+		justify-content: space-between;
+		align-items: center;
+
+		.dropdown{
+			position: relative;
+
+			&:hover .dropdown-content{
+				display: flex;
+			}
+		}
+
+		.dropdown-content{
+			display: none;
+			position: absolute;
+			flex-direction: column;
+			top: 100%;
+			left: 50%;
+			width: 150px;
+			background: $black;
+
+			a{
+				display: flex;
+				align-items: center;
+				height: 50px;
+				font-family: "Book";
+				padding-left: 5px;
+				font-size: calc(.5em + .5vw);
+
+				@media screen and (min-width: 1440px){
+					font-size: 16px;
+				}
+			}
+
+			a:hover{
+				color: $white;
+				background: $red;
+			}
+		}
+
+		.nav-main{
+			position: relative;
+		}
+
+		a {
+			color: $white;
+			font-family: "Medium";
+			font-size: calc(.5em + .75vw);
+			text-decoration: none;
+		}
+
+		img {
+			width: 20%;
+		}
+	}
+}

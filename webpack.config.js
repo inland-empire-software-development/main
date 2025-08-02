@@ -1,6 +1,5 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 
 module.exports = (env, argv) => {
     const isProduction = argv.mode === 'production';
@@ -57,29 +56,8 @@ module.exports = (env, argv) => {
         plugins: [
             new MiniCssExtractPlugin({
                 filename: '[name].css'
-            }),
-            ...(isProduction ? [] : [
-                new BrowserSyncPlugin({
-                    host: 'localhost',
-                    port: 3000,
-                    proxy: 'http://localhost:8080', // Adjust to your local WordPress URL
-                    files: [
-                        'templates/**/*.twig',
-                        '**/*.php',
-                        'dist/**/*.css',
-                        'dist/**/*.js'
-                    ],
-                    reloadDelay: 0
-                })
-            ])
+            })
         ],
-        devServer: {
-            static: {
-                directory: path.join(__dirname, 'dist'),
-            },
-            hot: true,
-            port: 3001
-        },
         devtool: isProduction ? false : 'source-map'
     };
 }; 

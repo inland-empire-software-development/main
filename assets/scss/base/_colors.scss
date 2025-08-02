@@ -1,0 +1,171 @@
+// neutral colors
+$black: #000000;
+$dark-gray: #222222;
+$light-gray: #595959;
+$white: #FFFFFF;
+
+// branding colors
+$navy: #17192D;
+$yellow: #F1AF21;
+$red: #EC2242;
+$blue: #3FB3E1;
+$green: #02AE72;
+
+// branding colors
+.bg-navy {
+  background-color: $navy;
+}
+
+.bg-yellow {
+  background-color: $yellow;
+}
+
+.bg-red {
+  background-color: $red;
+}
+
+.bg-blue {
+  background-color: $blue;
+}
+
+.bg-green {
+  background-color: $green;
+}
+
+.bg-black {
+  background-color: $black;
+}
+
+.bg-white {
+  background-color: $white;
+}
+
+.black {
+  color: $black !important;
+}
+
+.white {
+  color: $white !important;
+}
+
+.navy {
+  color: $navy;
+}
+
+.yellow {
+  color: $yellow;
+}
+
+.red {
+  color: $red;
+}
+
+.blue {
+  color: $blue;
+}
+
+.green {
+  color: $green;
+}
+
+.yellow-red {
+  background: -moz-linear-gradient(left, #f1af21 0%, #ec2242 76%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, #f1af21 0%, #ec2242 76%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, #f1af21 0%, #ec2242 76%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f1af21', endColorstr='#ec2242', GradientType=1);
+  /* IE6-9 */
+}
+
+.blue-green {
+  background: -moz-linear-gradient(left, #3fb3e1 0%, #02ae72 76%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, #3fb3e1 0%, #02ae72 76%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, #3fb3e1 0%, #02ae72 76%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#3fb3e1', endColorstr='#02ae72', GradientType=1);
+  /* IE6-9 */
+}
+
+// Backgrounds
+.black-white {
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,000000+30,ffffff+30,ffffff+30,ffffff+100 */
+  background: #000000; /* Old browsers */
+  background: -moz-linear-gradient(left,  #000000 0%, #000000 40%, #ffffff 40%, #ffffff 40%, #ffffff 100%); /* FF4.6-15 */
+  background: -webkit-linear-gradient(left,  #000000 0%,#000000 40%,#ffffff 40%,#ffffff 40%,#ffffff 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right,  #000000 0%,#000000 40%,#ffffff 40%,#ffffff 40%,#ffffff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#ffffff',GradientType=1 ); /* IE6-9 */
+
+}
+
+// selection color
+::selection {
+  background: $yellow; /* WebKit/Blink Browsers */
+}
+
+::-moz-selection {
+  background: $yellow; /* Gecko Browsers */
+}
+
+// borders
+.card-bar-blue {
+  border-top: 3px solid $blue;
+}
+
+.card-bar-red {
+  border-top: 3px solid $red;
+}
+
+.card-bar-green {
+  border-top: 3px solid $green;
+}
+
+.card-bar-yellow {
+  border-top: 3px solid $yellow;
+}
+
+.border-blue,
+.border-green,
+.border-red,
+.border-yellow {
+  border-style: solid;
+}
+
+.border-red {
+  border-color: $red;
+}
+
+.border-blue {
+  border-color: $blue;
+}
+
+.border-green {
+  border-color: $green;
+}
+
+.border-yellow {
+  border-color: $yellow;
+}
+
+.border-size-1 {
+  border-width: 1px;
+}
+
+.border-size-2 {
+  border-width: 2px;
+}
+.border-size-3 {
+  border-width: 3px;
+}
+.border-size-4 {
+  border-width: 4px;
+}
+.border-size-5 {
+  border-width: 5px;
+}
+.border-size-6 {
+  border-width: 6px;
+}

@@ -1,0 +1,112 @@
+#success-stories{
+	display: grid;
+	grid-template-areas:
+		"image header"
+		"image job-title"
+		"image excerpt"
+		"image button";
+	grid-template-columns: 3fr 7fr;
+	grid-template-rows: 1fr 50px 1fr 1fr;
+	background: $black;
+	color: $white;
+	max-height: 468px;
+	height: 31.25vw;
+
+	//reset margin for all p tags inside.
+	p{
+		margin: 0;
+	}
+
+	.success-header{
+		grid-area: header;
+		align-self: center;
+		margin-top: 10px;
+		font-family: 'Block';
+		font-size: calc(1.6em + 1.5vw);
+
+		@media screen and (max-width: 860px){
+			align-self: start;
+			margin-top: -15px;
+		}
+		@media screen and (max-width: 700px){
+			font-size: calc(1em + 1.5vw);
+		}
+		@media screen and (max-width: 480px){
+			font-size: calc(.5em + 1.5vw);
+			margin-top: -5px;
+		}
+	}
+
+	.success-excerpt{
+		grid-area: excerpt;
+		font-family: "Book";
+		font-size: calc(.5em + .5vw);
+		width: 75%;
+		@media screen and (max-width: 860px){
+			font-size: calc(1em + .5vw);
+			word-wrap: break-word;
+			height: 84%;
+			width: 90%;
+		}
+		@media screen and (max-width: 700px){
+			font-size: calc(0.5em + 1.25vw);
+		}
+	}
+
+	.success-btn-container{
+		display: flex;
+		grid-area: button;
+		align-self: center;
+		font-family: "Book";
+		justify-content: space-between;
+		width: 75%;
+
+		@media screen and (max-width: 860px){
+			width: 95%;
+			height: 100%;
+			flex-direction: row-reverse;
+			align-items: flex-end;
+		}
+		@media screen and (max-width: 480px){
+			width: 100%;
+		}
+	}
+
+	.success-header,
+	.success-title-container,
+	.success-excerpt,
+	.success-btn-container{
+		margin-left: 5%;
+	}
+
+
+	@media screen and (max-width: 860px) {
+		padding: 25px;
+		height: 60.25vw;
+		grid-template-areas:
+			"image header"
+			"image excerpt"
+			"job-title excerpt"
+			"button button";
+		grid-template-columns: 3fr 7fr;
+		grid-template-rows: auto auto 1fr .5fr;
+
+		.success-btn-container,
+		.success-title-container{
+			margin: 0;
+		}
+	}
+
+	@media screen and (max-width: 600px){
+		height: 70.25vw;
+	}
+	@media screen and (max-width: 480px){
+		grid-template-columns: 3.5fr 6.5fr;
+		grid-template-rows: 20px auto 1fr 1fr;
+		height: 80vw;
+	}
+	@media screen and (max-width: 400px){
+		grid-template-rows: 20px auto 1fr 0.5fr;
+		height: 95vw;
+	}
+}

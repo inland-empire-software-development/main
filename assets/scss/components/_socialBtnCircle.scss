@@ -1,0 +1,45 @@
+.social-btn-circle{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 25px;
+	width: 100px;
+	height: 50px;
+	background: url('/assets/images/desktop/success-social-network.svg');
+	background-size: cover;
+
+	a{
+		width: 50px;
+		height: 50px;
+		border-radius: 50%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		color: $white;
+
+		&:hover{
+			color: black;
+			background: white;
+		}
+	}
+
+	.fa-facebook-f{
+		margin-right: 2px;
+	}
+
+	@media screen and (max-width: 1200px){
+		width: 76px;
+		height: 38px;
+		font-size: 15px;
+	}
+	@media screen and (max-width: 700px){
+		width: 50px;
+		height: 25px;
+		font-size: 10px;
+	}
+	@media screen and (max-width: 480px){
+		width: 38px;
+		height: 19px;
+		font-size: 8px;
+	}
+}

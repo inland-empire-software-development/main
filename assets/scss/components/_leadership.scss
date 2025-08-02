@@ -1,0 +1,95 @@
+#leadership {
+    max-width: 80vw;
+    margin-top: 3em;
+    overflow-x: hidden;
+
+    .name-title p {
+        text-align: left;
+    }
+
+    @media screen and (max-width: 860px) {
+        margin-top: 40px;
+    }
+
+    .organizers,
+    .speakers {
+        @media screen and (max-width: 860px) {
+            padding-left: 0;
+        }
+    }
+
+    .swiper-container {
+    }
+
+    h3 {
+        writing-mode: vertical-rl;
+        text-orientation: sideways;
+        font-family: "Block";
+        font-size: 1.4em;
+        display: inline-flex;
+
+        @media screen and (max-width: 859.98px) {
+            writing-mode: horizontal-tb;
+            padding-left: 0;
+        }
+    }
+
+    ul {
+        list-style: none;
+        margin-top: 0;
+        padding-inline-start: 0;
+
+        @media screen and (max-width: 860px) {
+            padding-left: 0;
+        }
+
+        @media screen and (max-width: 480px) {
+            margin: 0;
+            padding: 0;
+            max-height: 190px;
+        }
+
+        li {
+            display: inline-block;
+            margin-top: 0;
+        }
+
+        li:last-child {
+            padding-right: 2rem;
+
+            @media screen and (max-width: 1440px) {
+                margin-right: 25px;
+            }
+
+            @media screen and (max-width: 1025px) {
+                margin-right: 10px;
+            }
+
+            @media screen and (max-width: 860px) {
+                margin-right: 60px;
+            }
+
+            @media screen and (max-width: 480px) {
+                padding-right: 0;
+                margin-right: 25px;
+            }
+        }
+    }
+
+    .scrolling {
+        overflow-x: hidden;
+        /*revisit once drag component is added*/
+        overflow-y: hidden;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+
+
+        @media screen and (max-width: 860px) {
+            max-height: 15.5rem;
+        }
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+}
