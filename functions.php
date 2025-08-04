@@ -71,26 +71,26 @@ function enqueue_assets()
     // UIKit CSS from CDN
     wp_enqueue_style(
         'uikit-css',
-        'https://cdn.jsdelivr.net/npm/uikit@3.20.0/dist/css/uikit.min.css',
+        'https://cdn.jsdelivr.net/npm/uikit@3.23.11/dist/css/uikit.min.css',
         array(),
-        '3.20.0'
+        '3.23.11'
     );
 
     // UIKit JavaScript from CDN
     wp_enqueue_script(
         'uikit-js',
-        'https://cdn.jsdelivr.net/npm/uikit@3.20.0/dist/js/uikit.min.js',
+        'https://cdn.jsdelivr.net/npm/uikit@3.23.11/dist/js/uikit.min.js',
         array(),
-        '3.20.0',
+        '3.23.11',
         true
     );
 
     // UIKit Icons from CDN
     wp_enqueue_script(
         'uikit-icons',
-        'https://cdn.jsdelivr.net/npm/uikit@3.20.0/dist/js/uikit-icons.min.js',
+        'https://cdn.jsdelivr.net/npm/uikit@3.23.11/dist/js/uikit-icons.min.js',
         array('uikit-js'),
-        '3.20.0',
+        '3.23.11',
         true
     );
 

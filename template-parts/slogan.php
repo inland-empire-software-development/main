@@ -1,0 +1,1 @@
+<div id="slogan" class="container-full"><p>Building Communities</p><p>around Technology</p></div>
